@@ -1,0 +1,54 @@
+# 欄位映射「提案」：由 inspect-h5 依 2025-01-14-12-05-01.h5 自動產生（2026-10-04T18:01:06+08:00）
+# 未經使用者核對前不可當正式設定使用。核對後另存為 configs/field_mapping.yaml，
+# 並把 status 改成 confirmed（第 2 包 indexer 只接受 confirmed）。
+version: 0
+status: proposed
+source_file: "2025-01-14-12-05-01.h5"
+segments:
+  container: "/segments_info"   # 偵測到 38 段
+  id: group_name                 # 以子群組名稱當 segment_id
+  start: "start"
+  end: "end"
+  success: "success"   # 推測 True=成功、False=失敗（待確認）
+  text: "text"
+  time_unit: "s"   # 推測，待確認
+  time_base: "same_as"   # 參考 /timestamps/hand
+  time_reference: "/timestamps/hand"
+  children:
+    - container_pattern: "/segments_info/*/low_level"   # 第 1 層
+action_parse:
+  source: text
+  regex: '^\s*(?P<action>[A-Za-z][A-Za-z_\-]*)\s*(?P<part>.*?)\s*$'   # 第一個詞當 action（待確認）
+  target_action: insert   # 規格：只取一種 Insert 操作
+  target_part: null       # 候選：["square peg 1."]
+cameras:
+  "capture_node-camera-image":
+    video: "/capture_node-camera-image"
+    encoding: "mp4"
+    timestamps: "/timestamps/capture_node-camera-image"
+    frame_to_time: index   # 第 i 幀 ↔ 第 i 個時間戳（影片 2067 幀 / 時間 2067 筆，待確認）
+    role: null              # external / wrist / event，待確認
+  "hama1":
+    video: "/hama1"
+    encoding: "mp4"
+    timestamps: "/timestamps/hama1"
+    frame_to_time: index   # 第 i 幀 ↔ 第 i 個時間戳（影片 8199 幀 / 時間 8199 筆，待確認）
+    role: null              # external / wrist / event，待確認
+  "hama2":
+    video: "/hama2"
+    encoding: "mp4"
+    timestamps: "/timestamps/hama2"
+    frame_to_time: index   # 第 i 幀 ↔ 第 i 個時間戳（影片 8199 幀 / 時間 8199 筆，待確認）
+    role: null              # external / wrist / event，待確認
+  "hand":
+    video: "/hand"
+    encoding: "mp4"
+    timestamps: "/timestamps/hand"
+    frame_to_time: index   # 第 i 幀 ↔ 第 i 個時間戳（影片 7621 幀 / 時間 7621 筆，待確認）
+    role: null              # external / wrist / event，待確認
+missing_fields:   # 規格輸出需要、但資料中沒有：第 3 包人工標註
+  - failure_reason
+  - evidence_start_sec
+  - evidence_end_sec
+  - best_camera
+  - visible_evidence

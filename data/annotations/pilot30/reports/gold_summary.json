@@ -1,0 +1,46 @@
+{
+ "approved": 1,
+ "adjudicated": 29,
+ "disputed_unresolved": [],
+ "n": 30,
+ "label_version": "v2",
+ "reason_set": "bnc-v2",
+ "difficulty_defaulted": [
+  "2025-01-09-17-40-57__seg13",
+  "2025-01-09-18-34-34__seg11",
+  "2025-01-09-19-15-33__seg40",
+  "2025-01-09-19-15-33__seg41",
+  "2025-01-10-17-25-29__seg31",
+  "2025-01-10-17-54-09__seg14",
+  "2025-01-11-11-29-58__seg6",
+  "2025-01-13-09-43-29__seg11",
+  "2025-01-13-11-07-43__seg6",
+  "2025-01-13-11-44-13__seg16",
+  "2025-01-13-15-50-28__seg13",
+  "2025-01-13-16-57-41__seg2",
+  "2025-01-13-16-57-41__seg3",
+  "2025-01-13-17-46-07__seg2",
+  "2025-01-13-18-45-09__seg3",
+  "2025-01-14-11-53-50__seg15"
+ ],
+ "results": {
+  "failure": 20,
+  "success": 10
+ },
+ "failure_reasons": {
+  "incomplete_insert": 9,
+  "other": 1,
+  "misalignment": 5,
+  "board_lifted": 2,
+  "slip_or_drop": 2,
+  "unknown": 1
+ },
+ "visual_difficulty": {
+  "subtle": 4,
+  "clear": 25,
+  "not_visible": 1
+ },
+ "gold": "data/annotations/pilot30/gold.jsonl",
+ "primary": "human__張立醒.jsonl",
+ "n_adjudication_files": 1
+}

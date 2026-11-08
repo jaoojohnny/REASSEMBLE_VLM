@@ -1,0 +1,30 @@
+You are checking whether a robot completed an assembly step, using only the camera images below.
+
+Task: the robot arm must insert a {part} into its socket on the task board. {part_note}
+Success means: {success_definition}
+Failure means: {failure_definition}
+
+Cameras:
+{camera_lines}
+
+There are {n_images} images, numbered Image 1 to Image {n_images}. Each image is labeled with its camera and its time in seconds relative to the start of the action (negative = just before it). The images cover t = {t_min:+.2f} s to t = {t_max:+.2f} s.
+The last images can already show the robot's next movement, after this action ended. Judge the result from the state right after the gripper releases the connector, not from what the robot does next. Do not mistake other parts on the board for the BNC connector.
+
+Failure reasons (only when result is "failure"):
+{reason_lines}
+
+Think step by step before answering. Write your reasoning as plain text, without curly braces, under these four headings:
+1. Final state: for each camera, where is the BNC connector right after the gripper opens (on the socket, still in the gripper, on the board, not visible)? Is it upright and fully down? Name the image numbers you use.
+2. What happened: describe the approach, push, twist and release over time, and anything unusual (slipping, tilting, the board moving, touching the wrong place).
+3. Check: for each failure reason, say whether you see visible evidence for it (yes or no, with image numbers).
+4. Decision: success, failure, or uncertain (if the images do not let you decide), and why.
+
+Then, on the last lines, give ONE JSON object with exactly these keys:
+{{"result": "success" | "failure" | "uncertain",
+ "failure_reason": one of [{reason_keys}] or null,
+ "evidence_start_sec": number or null,
+ "evidence_end_sec": number or null,
+ "best_camera": one of [{camera_keys}] or null,
+ "visible_evidence": "one short sentence describing what is visible in the images that supports the answer",
+ "confidence": number between 0 and 1}}
+evidence_start_sec and evidence_end_sec give the time span (between {t_min:+.2f} and {t_max:+.2f}) of the images that show the evidence. best_camera is the camera that shows the evidence most clearly.

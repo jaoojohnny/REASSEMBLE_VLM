@@ -1,0 +1,90 @@
+{
+ "spec": {
+  "name": "dsub_ref10_dev90",
+  "action": "insert",
+  "part": "D-SUB",
+  "ratios": {
+   "ref": 0.1,
+   "dev": 0.9
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "splits": {
+  "ref": {
+   "n_groups": 6,
+   "n_segments": 7,
+   "n_failure": 1,
+   "n_success": 6,
+   "failure_rate": 0.143,
+   "by_date": {
+    "2025-01-11": 1,
+    "2025-01-13": 6
+   },
+   "failures_by_date": {
+    "2025-01-13": 1
+   },
+   "groups_with_failure": 1,
+   "failure_reasons": {
+    "（未標註）": 1
+   },
+   "n_gold": 0
+  },
+  "dev": {
+   "n_groups": 51,
+   "n_segments": 56,
+   "n_failure": 9,
+   "n_success": 47,
+   "failure_rate": 0.161,
+   "by_date": {
+    "2025-01-09": 16,
+    "2025-01-10": 10,
+    "2025-01-11": 8,
+    "2025-01-13": 16,
+    "2025-01-14": 6
+   },
+   "failures_by_date": {
+    "2025-01-09": 5,
+    "2025-01-10": 2,
+    "2025-01-11": 1,
+    "2025-01-13": 1
+   },
+   "groups_with_failure": 7,
+   "failure_reasons": {
+    "（未標註）": 9
+   },
+   "n_gold": 0
+  },
+  "all": {
+   "n_groups": 57,
+   "n_segments": 63,
+   "n_failure": 10,
+   "n_success": 53,
+   "failure_rate": 0.159,
+   "by_date": {
+    "2025-01-09": 16,
+    "2025-01-10": 10,
+    "2025-01-11": 9,
+    "2025-01-13": 22,
+    "2025-01-14": 6
+   },
+   "failures_by_date": {
+    "2025-01-09": 5,
+    "2025-01-10": 2,
+    "2025-01-11": 1,
+    "2025-01-13": 2
+   },
+   "groups_with_failure": 8,
+   "failure_reasons": {
+    "（未標註）": 10
+   },
+   "n_gold": 0
+  }
+ }
+}

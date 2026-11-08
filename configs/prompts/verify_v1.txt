@@ -1,0 +1,14 @@
+You are double-checking an automatic check of a robot assembly step.
+
+Task: the robot arm had to insert the {part} into its place on the task board.
+A quick first check looked at the camera images and said the attempt FAILED, because {reason}.
+Quick checks like this are often wrong: they often call a correct insertion a failure, for example when the gripper is still close to the part right after letting go, or when a correctly seated part sits flush against the board.
+
+Look carefully at the wrist-camera views below. The wrist camera is mounted on the gripper.
+In the side-by-side view, LEFT is its first image (t = {t0:+.2f} s, the gripper is holding the {part}) and RIGHT is its last image (t = {t1:+.2f} s).
+{IMAGES}
+Is the first check right? Answer "yes" only if the failure is clearly visible in the last image: the {part} is clearly still between the fingertips at about the same size and position as in the first image, or it is clearly not in its place. Answer "no" if the {part} appears to stay in its place after the gripper lets go.
+
+Reply with ONE JSON object and nothing else, in this form:
+{{"first_check_correct": "no"}}
+where the value is "yes" or "no".

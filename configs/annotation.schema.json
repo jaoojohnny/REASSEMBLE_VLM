@@ -1,0 +1,370 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "reassemble-vlm/annotation-v1",
+ "title": "REASSEMBLE × VLM 標註紀錄",
+ "description": "evidence_*_sec 為相對標註起點的秒數。evidence_end_sec ≥ evidence_start_sec 與「落在 [−start_buffer, 段長 + end_buffer]」需要段長，由 assembly_monitor.schema.validate_record 檢查。",
+ "type": "object",
+ "required": [
+  "segment_id",
+  "annotator",
+  "result",
+  "label_version",
+  "review_status"
+ ],
+ "additionalProperties": true,
+ "properties": {
+  "segment_id": {
+   "type": "string",
+   "pattern": "^(?P<rid>.+)__seg(?P<idx>\\d+)$"
+  },
+  "recording_id": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "segment_index": {
+   "type": [
+    "integer",
+    "null"
+   ],
+   "minimum": 0
+  },
+  "part": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "dataset_result": {
+   "enum": [
+    "success",
+    "failure",
+    null
+   ]
+  },
+  "result": {
+   "enum": [
+    "success",
+    "failure",
+    "uncertain"
+   ]
+  },
+  "failure_reason": {
+   "enum": [
+    "misalignment",
+    "incomplete_insert",
+    "slip_or_drop",
+    "board_lifted",
+    "wrong_contact",
+    "other",
+    "unknown",
+    null
+   ]
+  },
+  "evidence_start_sec": {
+   "type": [
+    "number",
+    "null"
+   ],
+   "minimum": -0.55
+  },
+  "evidence_end_sec": {
+   "type": [
+    "number",
+    "null"
+   ],
+   "minimum": -0.55
+  },
+  "best_camera": {
+   "enum": [
+    "hama1",
+    "hama2",
+    "hand",
+    null
+   ]
+  },
+  "visual_difficulty": {
+   "enum": [
+    "clear",
+    "subtle",
+    "not_visible",
+    null
+   ]
+  },
+  "camera_visibility": {
+   "type": "object",
+   "additionalProperties": false,
+   "properties": {
+    "hama1": {
+     "enum": [
+      "clear",
+      "partial",
+      "occluded",
+      null
+     ]
+    },
+    "hama2": {
+     "enum": [
+      "clear",
+      "partial",
+      "occluded",
+      null
+     ]
+    },
+    "hand": {
+     "enum": [
+      "clear",
+      "partial",
+      "occluded",
+      null
+     ]
+    }
+   }
+  },
+  "visible_evidence": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "notes": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "annotator": {
+   "type": "string",
+   "minLength": 1
+  },
+  "annotator_type": {
+   "enum": [
+    "human",
+    "ai",
+    "reference"
+   ]
+  },
+  "label_version": {
+   "type": "string",
+   "minLength": 1
+  },
+  "reason_set": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "review_status": {
+   "enum": [
+    "draft",
+    "submitted",
+    "approved",
+    "disputed",
+    "adjudicated",
+    "rejected"
+   ]
+  },
+  "created_at": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "updated_at": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "source": {
+   "type": [
+    "string",
+    "null"
+   ]
+  }
+ },
+ "allOf": [
+  {
+   "if": {
+    "properties": {
+     "result": {
+      "const": "failure"
+     },
+     "review_status": {
+      "not": {
+       "const": "draft"
+      }
+     }
+    },
+    "required": [
+     "result",
+     "review_status"
+    ]
+   },
+   "then": {
+    "required": [
+     "failure_reason"
+    ],
+    "properties": {
+     "failure_reason": {
+      "enum": [
+       "misalignment",
+       "incomplete_insert",
+       "slip_or_drop",
+       "board_lifted",
+       "wrong_contact",
+       "other",
+       "unknown"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "if": {
+    "properties": {
+     "result": {
+      "enum": [
+       "success",
+       "uncertain"
+      ]
+     }
+    },
+    "required": [
+     "result"
+    ]
+   },
+   "then": {
+    "properties": {
+     "failure_reason": {
+      "const": null
+     }
+    }
+   }
+  },
+  {
+   "if": {
+    "properties": {
+     "result": {
+      "enum": [
+       "success",
+       "failure"
+      ]
+     },
+     "annotator_type": {
+      "enum": [
+       "human",
+       "ai"
+      ]
+     },
+     "review_status": {
+      "not": {
+       "const": "draft"
+      }
+     }
+    },
+    "required": [
+     "result",
+     "review_status"
+    ]
+   },
+   "then": {
+    "required": [
+     "evidence_start_sec",
+     "evidence_end_sec",
+     "best_camera",
+     "visible_evidence"
+    ],
+    "properties": {
+     "evidence_start_sec": {
+      "type": "number"
+     },
+     "evidence_end_sec": {
+      "type": "number"
+     },
+     "best_camera": {
+      "enum": [
+       "hama1",
+       "hama2",
+       "hand"
+      ]
+     },
+     "visible_evidence": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  },
+  {
+   "if": {
+    "properties": {
+     "failure_reason": {
+      "enum": [
+       "other"
+      ]
+     },
+     "review_status": {
+      "not": {
+       "const": "draft"
+      }
+     }
+    },
+    "required": [
+     "failure_reason",
+     "review_status"
+    ]
+   },
+   "then": {
+    "required": [
+     "notes"
+    ],
+    "properties": {
+     "notes": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  },
+  {
+   "if": {
+    "properties": {
+     "label_version": {
+      "const": "v2"
+     },
+     "annotator_type": {
+      "enum": [
+       "human",
+       "ai"
+      ]
+     },
+     "review_status": {
+      "not": {
+       "const": "draft"
+      }
+     }
+    },
+    "required": [
+     "label_version",
+     "review_status"
+    ]
+   },
+   "then": {
+    "required": [
+     "visual_difficulty"
+    ],
+    "properties": {
+     "visual_difficulty": {
+      "enum": [
+       "clear",
+       "subtle",
+       "not_visible"
+      ]
+     }
+    }
+   }
+  }
+ ]
+}

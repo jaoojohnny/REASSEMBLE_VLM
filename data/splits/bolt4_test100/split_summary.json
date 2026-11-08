@@ -1,0 +1,72 @@
+{
+ "spec": {
+  "name": "bolt4_test100",
+  "action": "insert",
+  "part": "bolt 4",
+  "ratios": {
+   "test": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "splits": {
+  "test": {
+   "n_groups": 58,
+   "n_segments": 83,
+   "n_failure": 30,
+   "n_success": 53,
+   "failure_rate": 0.361,
+   "by_date": {
+    "2025-01-09": 17,
+    "2025-01-10": 12,
+    "2025-01-11": 11,
+    "2025-01-13": 33,
+    "2025-01-14": 10
+   },
+   "failures_by_date": {
+    "2025-01-09": 4,
+    "2025-01-10": 3,
+    "2025-01-11": 2,
+    "2025-01-13": 17,
+    "2025-01-14": 4
+   },
+   "groups_with_failure": 21,
+   "failure_reasons": {
+    "（未標註）": 30
+   },
+   "n_gold": 0
+  },
+  "all": {
+   "n_groups": 58,
+   "n_segments": 83,
+   "n_failure": 30,
+   "n_success": 53,
+   "failure_rate": 0.361,
+   "by_date": {
+    "2025-01-09": 17,
+    "2025-01-10": 12,
+    "2025-01-11": 11,
+    "2025-01-13": 33,
+    "2025-01-14": 10
+   },
+   "failures_by_date": {
+    "2025-01-09": 4,
+    "2025-01-10": 3,
+    "2025-01-11": 2,
+    "2025-01-13": 17,
+    "2025-01-14": 4
+   },
+   "groups_with_failure": 21,
+   "failure_reasons": {
+    "（未標註）": 30
+   },
+   "n_gold": 0
+  }
+ }
+}

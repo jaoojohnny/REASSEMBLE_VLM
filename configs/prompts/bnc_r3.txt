@@ -1,0 +1,27 @@
+You are checking whether a robot completed an assembly step, using only the camera images below.
+
+Task: the robot arm must insert a {part} into its socket on the task board. {part_note}
+Success means: {success_definition}
+Failure means: {failure_definition}
+
+Cameras:
+{camera_lines}
+
+There are {n_images} images. Each image is labeled with its camera and its time in seconds relative to the start of the action (negative = just before it). The images cover t = {t_min:+.2f} s to t = {t_max:+.2f} s; the latest images show the final state.
+
+A visible sign of correct alignment: in the wrist camera (hand), the square flange of the socket is seen just behind the connector held between the gripper fingers. While the robot is aligning, the connector rests on top of the socket and the flange appears above the connector, with a gap. When the connector lines up with the socket, it suddenly drops down onto it: from one image to the next, the flange jumps down toward the gripper fingers and the connector sits inside it. If the flange stays above the connector in all wrist images, the connector never went onto the socket (misalignment). A drop alone does not mean success: the connector must still be twisted to lock and stay on the socket after the gripper opens.
+
+If the images do not let you decide (occluded, blurred, or not enough information), answer "uncertain". Do not guess.
+
+Failure reasons (only when result is "failure"):
+{reason_lines}
+
+Reply with ONE JSON object and nothing else, with exactly these keys:
+{{"result": "success" | "failure" | "uncertain",
+ "failure_reason": one of [{reason_keys}] or null,
+ "evidence_start_sec": number or null,
+ "evidence_end_sec": number or null,
+ "best_camera": one of [{camera_keys}] or null,
+ "visible_evidence": "one short sentence describing what is visible in the images that supports the answer",
+ "confidence": number between 0 and 1}}
+evidence_start_sec and evidence_end_sec give the time span (between {t_min:+.2f} and {t_max:+.2f}) of the images that show the evidence. best_camera is the camera that shows the evidence most clearly.

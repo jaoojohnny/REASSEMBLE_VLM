@@ -1,0 +1,48 @@
+# 第 12 包：新的測試集（large gear 插入），只跑一次。之前的 final_test*.yaml 與結果都不動。
+# 方法清單在 2026-11-02 寫好：在任何 large gear 測試影格或結果被看到之前。2 個測試零件（round peg 1、large gear；使用者 2026-10-31 選「用 2 個、留 2 個」，
+# round peg 4、small gear 繼續保留）用同一套方法，各自產生報告，再由 python -m scripts.cascade_test 合併成 experiments/p12_final_pooled/report.md（主要比較看合併結果）。
+# 雙擊 run_final_test_p12.bat。主方法依 docs/package12_cascade.md 事先寫好的規則在乾淨開發集選出（只用 GPT）。
+final:
+  frozen: true
+  frozen_at: "2026-11-02T15:45:00+08:00"
+  decided: "主要問題：只用 GPT-6.1 Sol（第 12 包照事先寫好的規則在乾淨開發集選出）是否比只用本機 Qwen 機率門檻（τ 0.999089，第 11 包測試集主方法）好。2 個測試零件合併：McNemar p < 0.05、GPT 答對的段比較多，而且合併兩類平均較高，才算成立。次要：兩階段（Qwen 機率門檻 τ 0.999089 → GPT；第 10 包規則 Qwen 第三版 → GPT）的成績、問 GPT 的段數與費用；和 Qwen 第三版比。"
+  title: "測試集評估（第 12 包：large gear，GPT／兩階段）"
+  part: large gear
+  split_dir: data/splits/lgear_test100
+  out_dir: experiments
+  out_name: final_test_lgear
+  models: [configs/model.yaml, configs/model_p8.yaml, configs/model_skill2.yaml, configs/model_reason.yaml]
+  primary: gpt61_sol_ft_eb05_f4
+  notes:
+    - "large gear 是新的測試資料：第 12 包的方法與規則只在 4 個開發零件（square peg 2、round peg 3、D-SUB、medium gear）決定；large gear 全部段當測試集。"
+    - "開發集（乾淨開發集 195 段，兩類平均）：只用 GPT 97%、兩階段 Qwen 機率門檻→GPT 90%、兩階段第三版→GPT 89%、只用 Qwen 機率門檻 76%；全部 241 段：82%、75%、77%、66%。乾淨開發集偏向看得出結果的段，偏樂觀。"
+    - "「兩階段：Qwen 機率門檻 τ 0.999089 → GPT」是看過開發集結果之後才加進測試清單的次要方法（使用者選的方向；不影響主要問題）；它和主方法用同樣的 GPT 答案、和 Qwen 機率門檻用同樣的 Qwen 答案，不另外呼叫模型。"
+    - "要說明的是：部分段可能曾在第 6、7 包（BNC 小分類器、LoRA）與第 8–10 包小分類器的訓練池；同一支錄影會有好幾種零件。方法與提示詞都沒有依此調整（不訓練，門檻沿用第 11 包）。"
+    - "真實答案只用資料集的成功／失敗標記（沒有人工標準答案）。"
+    - "GPT 在全部段都跑（主方法就是只用 GPT）；兩階段的時間與費用只算有用到 GPT 的段（每段時間＝Qwen＋有用到時的 GPT）。"
+  methods:
+    - id: majority                          # 基準：一律答成功
+      kind: majority
+    - id: gpt61_sol_ft_eb05_f4              # ★ 主方法：只用 GPT-6.1 Sol（ft-generic，和第 10 包、第 12 包開發集相同）
+      kind: vlm
+      experiment: configs/experiment_test_lgear_gpt.yaml
+      model: gpt61_sol
+      frames: 4
+    - id: qwen3vl8b_prob_t0999              # 主要比較對象：只用本機 Qwen 機率門檻（第三版提示詞＋手腕裁切，失敗分數 > 0.999089 才判失敗）
+      kind: vlm
+      experiment: configs/experiment_test_lgear_v3.yaml
+      model: qwen3vl_8b_rscore_t0999
+      frames: 4
+    - id: hybrid_prob_gpt                   # 次要（看過開發集後加入）：兩階段，Qwen 機率門檻答「成功」就用它，其他改用 GPT
+      kind: cascade
+      first: qwen3vl8b_prob_t0999
+      second: gpt61_sol_ft_eb05_f4
+    - id: hybrid_v3_gpt                     # 次要：第 10 包規則的兩階段（Qwen＋Skill 第三版 → GPT）
+      kind: cascade
+      first: qwen3vl8b_v3_eb05_f4
+      second: gpt61_sol_ft_eb05_f4
+    - id: qwen3vl8b_v3_eb05_f4              # 對照：Qwen＋Skill 第三版（寫字回答），和之前的測試集相同
+      kind: vlm
+      experiment: configs/experiment_test_lgear_v3.yaml
+      model: qwen3vl_8b_zoomfix
+      frames: 4

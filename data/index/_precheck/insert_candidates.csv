@@ -1,0 +1,8 @@
+﻿part,n_segments,n_success,n_failure,failure_rate,n_recordings,mean_duration_s,test_failures_if_15pct,n_validation_error,n_validation_warn
+Ethernet,3,1,2,0.667,2,17.56,0.3,0,0
+USB,2,1,1,0.5,1,12.26,0.1,0,0
+BNC,1,0,1,1.0,1,29.15,0.1,0,0
+bolt 4,1,1,0,0.0,1,15.35,0.0,0,0
+large gear,1,1,0,0.0,1,16.12,0.0,0,0
+square peg 1,1,1,0,0.0,1,14.4,0.0,0,0
+waterproof,1,1,0,0.0,1,29.93,0.0,0,0

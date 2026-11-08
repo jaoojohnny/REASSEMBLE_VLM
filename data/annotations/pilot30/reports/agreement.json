@@ -1,0 +1,371 @@
+{
+ "task": "pilot30",
+ "generated_at": "2026-10-06T18:05:05+08:00",
+ "sources": {
+  "A": {
+   "annotator": "張立醒",
+   "annotator_type": "human",
+   "n": 30
+  },
+  "B": {
+   "annotator": "claude",
+   "annotator_type": "ai",
+   "n": 30
+  },
+  "C": {
+   "annotator": "dataset_lowlevel",
+   "annotator_type": "reference",
+   "n": 30
+  }
+ },
+ "pairs": {
+  "A|B": {
+   "names": [
+    "A",
+    "B"
+   ],
+   "n_a": 30,
+   "n_b": 30,
+   "n_common": 30,
+   "only_a": [],
+   "only_b": [],
+   "result": {
+    "n": 30,
+    "agree": 25,
+    "rate": 0.8333,
+    "kappa": 0.7,
+    "kappa_ci95": [
+     0.4896,
+     0.9286
+    ],
+    "rate_ci95": [
+     0.7,
+     0.9667
+    ]
+   },
+   "failure_reason": {
+    "n": 15,
+    "agree": 10,
+    "rate": 0.6667,
+    "kappa": 0.4718,
+    "kappa_ci95": [
+     0.0625,
+     0.8
+    ],
+    "rate_ci95": [
+     0.4,
+     0.8667
+    ],
+    "confusion": {
+     "incomplete_insert": {
+      "misalignment": 1,
+      "incomplete_insert": 4
+     },
+     "misalignment": {
+      "misalignment": 5,
+      "incomplete_insert": 2
+     },
+     "other": {
+      "other": 1
+     },
+     "slip_or_drop": {
+      "incomplete_insert": 2
+     }
+    }
+   },
+   "best_camera": {
+    "n": 30,
+    "agree": 23,
+    "rate": 0.7667,
+    "kappa": 0.0,
+    "kappa_ci95": [
+     0.0,
+     0.0
+    ],
+    "rate_ci95": [
+     0.6,
+     0.9
+    ]
+   },
+   "evidence": {
+    "n": 30,
+    "mean_iou": 0.1783,
+    "median_iou": 0.1149,
+    "mean_iou_ci95": [
+     0.1151,
+     0.2444
+    ],
+    "hit": 3,
+    "hit_rate": 0.1,
+    "start_mae_s": 6.367,
+    "end_mae_s": 1.433,
+    "iou_threshold": 0.5,
+    "endpoint_tolerance_sec": 1.0
+   },
+   "visibility": {
+    "hama1": {
+     "n": 30,
+     "agree": 12,
+     "rate": 0.4
+    },
+    "hama2": {
+     "n": 30,
+     "agree": 18,
+     "rate": 0.6
+    },
+    "hand": {
+     "n": 30,
+     "agree": 25,
+     "rate": 0.8333
+    }
+   },
+   "n_disputes": 14,
+   "dispute_fields": {
+    "result": 5,
+    "best_camera": 7,
+    "failure_reason": 5,
+    "evidence_length": 1
+   },
+   "blocking_fields": [
+    "result",
+    "failure_reason",
+    "best_camera"
+   ],
+   "n_with_differences": 29,
+   "difference_fields": {
+    "result": 5,
+    "evidence": 27,
+    "best_camera": 7,
+    "failure_reason": 5,
+    "evidence_length": 1
+   }
+  },
+  "A|C": {
+   "names": [
+    "A",
+    "C"
+   ],
+   "n_a": 30,
+   "n_b": 30,
+   "n_common": 30,
+   "only_a": [],
+   "only_b": [],
+   "result": {
+    "n": 30,
+    "agree": 30,
+    "rate": 1.0,
+    "kappa": 1.0,
+    "kappa_ci95": [
+     1.0,
+     1.0
+    ],
+    "rate_ci95": [
+     1.0,
+     1.0
+    ]
+   },
+   "failure_reason": {
+    "n": 20,
+    "agree": 11,
+    "rate": 0.55,
+    "kappa": 0.3358,
+    "kappa_ci95": [
+     0.0833,
+     0.6
+    ],
+    "rate_ci95": [
+     0.35,
+     0.75
+    ],
+    "confusion": {
+     "incomplete_insert": {
+      "incomplete_insert": 6,
+      "unknown": 1,
+      "misalignment": 1
+     },
+     "misalignment": {
+      "misalignment": 5,
+      "incomplete_insert": 2
+     },
+     "other": {
+      "unknown": 1
+     },
+     "slip_or_drop": {
+      "misalignment": 1,
+      "incomplete_insert": 1
+     },
+     "wrong_contact": {
+      "unknown": 1,
+      "incomplete_insert": 1
+     }
+    }
+   },
+   "best_camera": {
+    "n": 0,
+    "agree": 0,
+    "rate": null,
+    "kappa": null,
+    "kappa_ci95": null,
+    "rate_ci95": null
+   },
+   "evidence": {
+    "n": 27,
+    "mean_iou": 0.2063,
+    "median_iou": 0.2207,
+    "mean_iou_ci95": [
+     0.1326,
+     0.2818
+    ],
+    "hit": 1,
+    "hit_rate": 0.037,
+    "start_mae_s": 9.277,
+    "end_mae_s": 0.755,
+    "iou_threshold": 0.5,
+    "endpoint_tolerance_sec": 1.0
+   },
+   "visibility": {
+    "hama1": {
+     "n": 0,
+     "agree": 0,
+     "rate": null
+    },
+    "hama2": {
+     "n": 0,
+     "agree": 0,
+     "rate": null
+    },
+    "hand": {
+     "n": 0,
+     "agree": 0,
+     "rate": null
+    }
+   },
+   "n_disputes": 10,
+   "dispute_fields": {
+    "failure_reason": 9,
+    "evidence_length": 1
+   },
+   "blocking_fields": [
+    "result",
+    "failure_reason",
+    "best_camera"
+   ],
+   "n_with_differences": 29,
+   "difference_fields": {
+    "evidence": 26,
+    "failure_reason": 9,
+    "evidence_length": 1
+   }
+  },
+  "B|C": {
+   "names": [
+    "B",
+    "C"
+   ],
+   "n_a": 30,
+   "n_b": 30,
+   "n_common": 30,
+   "only_a": [],
+   "only_b": [],
+   "result": {
+    "n": 30,
+    "agree": 25,
+    "rate": 0.8333,
+    "kappa": 0.7,
+    "kappa_ci95": [
+     0.4896,
+     0.9286
+    ],
+    "rate_ci95": [
+     0.7,
+     0.9667
+    ]
+   },
+   "failure_reason": {
+    "n": 15,
+    "agree": 11,
+    "rate": 0.7333,
+    "kappa": 0.5276,
+    "kappa_ci95": [
+     0.1176,
+     0.8649
+    ],
+    "rate_ci95": [
+     0.4667,
+     0.9333
+    ],
+    "confusion": {
+     "incomplete_insert": {
+      "incomplete_insert": 6,
+      "misalignment": 2
+     },
+     "misalignment": {
+      "incomplete_insert": 1,
+      "misalignment": 5
+     },
+     "other": {
+      "unknown": 1
+     }
+    }
+   },
+   "best_camera": {
+    "n": 0,
+    "agree": 0,
+    "rate": null,
+    "kappa": null,
+    "kappa_ci95": null,
+    "rate_ci95": null
+   },
+   "evidence": {
+    "n": 27,
+    "mean_iou": 0.3817,
+    "median_iou": 0.3827,
+    "mean_iou_ci95": [
+     0.2612,
+     0.4924
+    ],
+    "hit": 14,
+    "hit_rate": 0.5185,
+    "start_mae_s": 5.489,
+    "end_mae_s": 0.805,
+    "iou_threshold": 0.5,
+    "endpoint_tolerance_sec": 1.0
+   },
+   "visibility": {
+    "hama1": {
+     "n": 0,
+     "agree": 0,
+     "rate": null
+    },
+    "hama2": {
+     "n": 0,
+     "agree": 0,
+     "rate": null
+    },
+    "hand": {
+     "n": 0,
+     "agree": 0,
+     "rate": null
+    }
+   },
+   "n_disputes": 9,
+   "dispute_fields": {
+    "result": 5,
+    "failure_reason": 4
+   },
+   "blocking_fields": [
+    "result",
+    "failure_reason",
+    "best_camera"
+   ],
+   "n_with_differences": 17,
+   "difference_fields": {
+    "result": 5,
+    "evidence": 13,
+    "failure_reason": 4
+   }
+  }
+ },
+ "primary": "A",
+ "second": "B"
+}

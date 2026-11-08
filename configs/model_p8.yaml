@@ -1,0 +1,45 @@
+# 第 8 包（2026-10-25 事先登記）：商業模型（API）與 Qwen＋放大鏡 Skill。model.yaml、model_train.yaml 都沒改；
+# 用 --models configs/model.yaml configs/model_p8.yaml 一起讀（key 重複會報錯）。跑過之後不要再改；要改另存新檔。
+# API key 放在專案資料夾的 .env（setup_api.bat 會建立），不寫在這裡。單價（美元／百萬 token）只用來估費用，
+# 取自官方價目表（2026-10-25 查詢：https://platform.claude.com/docs/en/about-claude/pricing、
+# https://developers.openai.com/api/docs/models）；實際費用以帳單為準。
+models:
+  claude_sonnet55:                # Anthropic：速度與能力平衡的中階模型
+    type: anthropic
+    model_id: claude-sonnet-5-5
+    license: commercial API
+    image_max_side: 512           # 和 Qwen 同樣的影格（長邊 512 的 JPEG）
+    max_tokens: 1024
+    request_timeout: 180
+    max_retries: 4
+    price_in_per_mtok: 2.0
+    price_out_per_mtok: 10.0
+
+  gpt61_sol:                      # OpenAI：介於旗艦與小模型之間的中階模型
+    type: openai
+    model_id: gpt-6.1-sol
+    license: commercial API
+    image_max_side: 512
+    image_detail: high            # 不再另外縮圖
+    max_tokens: 4096              # 含模型內部推理的 token
+    request_timeout: 180
+    max_retries: 4
+    price_in_per_mtok: 2.0
+    price_out_per_mtok: 10.0
+
+  qwen3vl_8b_zoom:                # Qwen3-VL-8B（和 model.yaml 的 qwen3vl_8b 完全相同）＋放大鏡 Skill
+    type: transformers
+    hf_id: Qwen/Qwen3-VL-8B-Instruct
+    revision: main
+    license: Apache-2.0
+    quantization: 4bit
+    quant_skip_modules: [model.visual, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    max_new_tokens: 384
+    skill: zoom                   # 先框出零件與插座 → 從原始 640x480 影格裁切放大 → 再判斷（src/assembly_monitor/skill.py）
+    zoom_side: 512                # 放大圖的長邊
+    zoom_margin: 0.3              # 框的每邊外擴 30%
+    zoom_min_frac: 0.25           # 裁切至少是短邊的 25%（避免框太小時放太大）
+    locate_max_new_tokens: 160

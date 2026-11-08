@@ -1,0 +1,46 @@
+# 第 10 包：新的測試集（square peg 1 插入，73 段、失敗 20），只跑一次。之前的 final_test*.yaml 與結果都不動。
+# 方法清單在 2026-10-30 寫好：在任何 square peg 1 測試影格或結果被看到之前。和 final_test_eth.yaml 是同一套方法，在兩個零件各測一次。
+# 兩階段（hybrid）的規則是看過 bolt 4 結果之後想到的（bolt 4 事後試算 78/83），所以要在這兩個沒用過的零件上驗證。
+# 雙擊 run_final_test_p10.bat：兩個零件依序跑 → experiments/final_test_sqpeg1/report.md。
+final:
+  frozen: true
+  frozen_at: "2026-10-30T12:45:00+08:00"
+  decided: "主要問題：兩階段（本地 Qwen＋Skill 第三版先判，沒有答成功的段才改用 GPT-6.1 Sol 的答案）是否比只用 Qwen＋Skill 第三版好。主方法＝兩階段，其他方法都和它比；最重要的比較是主方法 vs 只用 Qwen＋Skill 第三版。次要：和只用 GPT 比是否差不多，以及有多少段要用到 GPT。"
+  title: "測試集評估（第 10 包：square peg 1 新測試集，兩階段）"
+  part: square peg 1
+  split_dir: data/splits/sqpeg1_test100
+  out_dir: experiments
+  out_name: final_test_sqpeg1
+  models: [configs/model.yaml, configs/model_p8.yaml, configs/model_skill2.yaml]
+  primary: hybrid_v3_gpt
+  notes:
+    - "square peg 1 是新的測試資料：Skill 第三版的清單與裁切範圍只依 BNC 開發集決定；兩階段的規則在看到任何 square peg 1 結果之前寫好；73 段全部當測試集。"
+    - "要說明的是：square peg 1 有 26 段曾在第 6、7 包的訓練池（BNC 小分類器、LoRA），19 段在第 8 包 USB、6 段在第 9 包 bolt 4 小分類器的訓練池；第 7 包也算過 Qwen（ft-generic）在其中成功段的零樣本判斷（按零件群組彙整）。方法與提示詞都沒有依此調整；這次小分類器的訓練池不含任何 square peg 1 段。"
+    - "真實答案只用資料集的成功／失敗標記（沒有人工標準答案）。"
+    - "GPT 在全部段都跑（才能和只用 GPT 比）；兩階段的時間與費用只算有用到 GPT 的段（每段時間＝Qwen＋有用到時的 GPT）。"
+  methods:
+    - id: majority                          # 基準：一律答成功
+      kind: majority
+    - id: hybrid_v3_gpt                     # 主方法：兩階段。Qwen＋Skill 第三版答「成功」就用它，其他都改用 GPT 的答案
+      kind: cascade
+      first: qwen3vl8b_v3_eb05_f4
+      second: gpt61_sol_ft_eb05_f4
+    - id: qwen3vl8b_v3_eb05_f4              # 第一階段單獨：Qwen＋Skill 第三版（清單逐項回答＋手腕裁切）
+      kind: vlm
+      experiment: configs/experiment_sqpeg1_checklistf.yaml
+      model: qwen3vl_8b_zoomfix
+      frames: 4
+    - id: gpt61_sol_ft_eb05_f4              # 第二階段單獨：GPT-6.1 Sol（和 USB、bolt 4 相同設定）
+      kind: vlm
+      experiment: configs/experiment_sqpeg1_ft.yaml
+      model: gpt61_sol
+      frames: 4
+    - id: qwen3vl8b_ft_eb05_f4              # 沒有 Skill 的 Qwen（和之前的測試集相同設定）
+      kind: vlm
+      experiment: configs/experiment_sqpeg1_ft.yaml
+      model: qwen3vl_8b
+      frames: 4
+    - id: probe_sqpeg1_eb1_f1                # 做法 A：DINOv2-base＋邏輯迴歸，用 square peg 1 以外的零件訓練，+1 秒 1 幀
+      kind: probe
+      config: configs/probe_sqpeg1.yaml
+      frames: 1

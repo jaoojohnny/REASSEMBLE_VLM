@@ -1,0 +1,82 @@
+{
+ "spec": {
+  "name": "bnc_alldev",
+  "action": "insert",
+  "part": "BNC",
+  "ratios": {
+   "dev": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "splits": {
+  "dev": {
+   "n_groups": 62,
+   "n_segments": 86,
+   "n_failure": 30,
+   "n_success": 56,
+   "failure_rate": 0.349,
+   "by_date": {
+    "2025-01-09": 23,
+    "2025-01-10": 12,
+    "2025-01-11": 11,
+    "2025-01-13": 34,
+    "2025-01-14": 6
+   },
+   "failures_by_date": {
+    "2025-01-09": 11,
+    "2025-01-10": 2,
+    "2025-01-11": 3,
+    "2025-01-13": 14
+   },
+   "groups_with_failure": 22,
+   "failure_reasons": {
+    "board_lifted": 2,
+    "incomplete_insert": 13,
+    "misalignment": 6,
+    "other": 1,
+    "slip_or_drop": 3,
+    "unknown": 2,
+    "wrong_contact": 3
+   },
+   "n_gold": 86
+  },
+  "all": {
+   "n_groups": 62,
+   "n_segments": 86,
+   "n_failure": 30,
+   "n_success": 56,
+   "failure_rate": 0.349,
+   "by_date": {
+    "2025-01-09": 23,
+    "2025-01-10": 12,
+    "2025-01-11": 11,
+    "2025-01-13": 34,
+    "2025-01-14": 6
+   },
+   "failures_by_date": {
+    "2025-01-09": 11,
+    "2025-01-10": 2,
+    "2025-01-11": 3,
+    "2025-01-13": 14
+   },
+   "groups_with_failure": 22,
+   "failure_reasons": {
+    "board_lifted": 2,
+    "incomplete_insert": 13,
+    "misalignment": 6,
+    "other": 1,
+    "slip_or_drop": 3,
+    "unknown": 2,
+    "wrong_contact": 3
+   },
+   "n_gold": 86
+  }
+ }
+}

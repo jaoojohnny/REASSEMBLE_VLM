@@ -1,0 +1,28 @@
+# REASSEMBLE_VLM：docker compose 用法見 docs/docker.md
+#   docker compose build                    # 建映像（第一次約 8–10 GB，要下載 CUDA 版 torch）
+#   docker compose run --rm vlm             # 單元測試
+#   docker compose run --rm vlm python -m scripts.run_vlm --check   # 檢查 GPU 與套件
+services:
+  vlm:
+    build: .
+    image: reassemble-vlm:latest
+    working_dir: /workspace
+    env_file:                 # API key（複製 .env.example 成 .env 再填）；沒有 .env 也能跑
+      - path: .env
+        required: false
+    environment:
+      PYTHONUTF8: "1"
+      HF_HOME: /workspace/models/hf
+    volumes:                  # 資料、模型權重、結果都留在電腦上，不進映像
+      - ./data:/workspace/data
+      - ./models:/workspace/models
+      - ./experiments:/workspace/experiments
+      - ./logs:/workspace/logs
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: ["python", "-m", "pytest", "-q"]

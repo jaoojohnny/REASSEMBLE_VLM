@@ -1,0 +1,37 @@
+# 第 8 包：蒐集商業模型的推理（2026-10-27 決定，跑之前寫好）。只在 BNC 開發集 86 段，用來設計給 Qwen 的提示詞型 Skill（第三版）。
+# USB 是測試集，不拿來看推理、不拿來設計。
+# 和 model_p8.yaml 的 claude_sonnet55、gpt61_sol 是同一個模型；差別：
+#   - 提示詞改成 explain-v1（要求列出證據 evidence 與決定性線索 decisive_cue，再給 result）
+#   - Claude 打開推理摘要：thinking {type: adaptive, display: summarized}（Sonnet 5.5 預設 omitted，不回傳推理內容）；
+#     max_tokens 涵蓋「推理＋回答」，所以加大到 8000（10/25 用 1024，有 5 段推理就用完、沒給答案）
+#   - GPT 的推理在 Chat Completions 不回傳，只能靠 evidence／decisive_cue 欄位
+# 推理程度都用預設（Claude high、GPT medium）。官方說明（2026-10-27 查詢）：
+#   https://platform.claude.com/docs/en/build-with-claude/thinking 、
+#   https://platform.claude.com/docs/en/build-with-claude/thinking-steering-and-cost
+# 用 --models configs/model.yaml configs/model_p8.yaml configs/model_explain.yaml 一起讀。跑過之後不要再改；要改另存新檔。
+models:
+  claude_sonnet55_explain:
+    type: anthropic
+    model_id: claude-sonnet-5-5
+    license: commercial API
+    image_max_side: 512
+    max_tokens: 8000
+    request_timeout: 300
+    max_retries: 4
+    price_in_per_mtok: 2.0
+    price_out_per_mtok: 10.0
+    extra_params:
+      extra_body:                 # 直接放進請求內容（不受 SDK 版本限制）
+        thinking: {type: adaptive, display: summarized}
+
+  gpt61_sol_explain:
+    type: openai
+    model_id: gpt-6.1-sol
+    license: commercial API
+    image_max_side: 512
+    image_detail: high
+    max_tokens: 8000
+    request_timeout: 300
+    max_retries: 4
+    price_in_per_mtok: 2.0
+    price_out_per_mtok: 10.0

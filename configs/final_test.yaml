@@ -1,0 +1,54 @@
+# 第 6 包：測試集最終評估（只跑一次）。
+# 方法在開發集比完後選定（experiments/dev_evaluation/report.md、experiments/prompt_versions.md，2026-10-14）。
+# 使用者已確認凍結（frozen_at）。雙擊 run_final_test.bat：擷取測試段影格 → 跑各方法 → 評分。之後不要再改這份檔案與它引用的設定。
+# 第一次執行會把凍結內容的雜湊寫進 experiments/final_test/lock.json；之後設定一改就拒絕執行。
+#
+# 選法（事先定好的規則）：主方法＝開發集兩類平均最高的 VLM 設定；同分時看成功被誤判，再同分選幀數少的（較快）。
+# 其他方法是事先決定要一起在測試集比較的對照，不是用來挑最好的：
+#   - 一律答成功（基準）
+#   - 做法 A（有訓練的小分類器）在開發集最好的設定
+#   - 主方法的原始設定（最後一張 +2 秒），看「改成 +0.5 秒」的效果在測試集是否還在
+#   - 主方法＋「對準時接頭下墜」線索（R3），測試集的對不準失敗比開發集多，可以檢驗這條線索
+#   - Qwen3.5-9B、Gemma 4 12B 各自在開發集最好的設定（比較不同模型）
+
+final:
+  frozen: true
+  frozen_at: "2026-10-14T14:20:25+08:00"   # 使用者在對話中確認凍結
+  decided: "開發集 20 段：Qwen3-VL-8B 第 1 版提示詞、最後一張 +0.5 秒的 4 幀與 8 幀都是 17/20、抓到失敗 6/7、成功被誤判 2/13、兩類平均 85%（VLM 中最高），同分選 4 幀；做法 A 以 +1 秒 1 幀最好（兩類平均 89%）；R1 分步驟、R2 思考模式、R3 下墜線索在開發集都沒有比第 1 版好。"
+  split_dir: data/splits/bnc_dev25_test75_s0
+  out_dir: experiments
+  out_name: final_test
+  models: configs/model.yaml
+  primary: qwen3vl8b_p1_eb05_f4
+  methods:
+    - id: majority                       # 基準：一律答成功（開發集 65%、兩類平均 50%）
+      kind: majority
+    - id: probe_eb1_f1                   # 做法 A：DINOv2 特徵＋邏輯迴歸，用其他零件訓練（開發集 18/20，兩類平均 89%）
+      kind: probe
+      config: configs/probe_eb1.yaml
+      frames: 1
+    - id: qwen3vl8b_p1_eb05_f4           # 主方法（開發集 17/20，兩類平均 85%）
+      kind: vlm
+      experiment: configs/experiment_e05.yaml
+      model: qwen3vl_8b
+      frames: 4
+    - id: qwen3vl8b_p1_eb2_f8            # 主方法的原始設定：最後一張 +2 秒（開發集 11/20，兩類平均 62%）
+      kind: vlm
+      experiment: configs/experiment.yaml
+      model: qwen3vl_8b
+      frames: 8
+    - id: qwen3vl8b_r3_eb05_f4           # 主方法＋下墜線索（開發集 16/20，兩類平均 81%）
+      kind: vlm
+      experiment: configs/experiment_r3.yaml
+      model: qwen3vl_8b
+      frames: 4
+    - id: qwen35_9b_p1_eb05_f1           # Qwen3.5-9B 在開發集最好的設定（16/20，兩類平均 81%）
+      kind: vlm
+      experiment: configs/experiment_e05.yaml
+      model: qwen35_9b
+      frames: 1
+    - id: gemma4_12b_p1_eb2_f8           # Gemma 4 12B 在開發集最好的設定（15/20，兩類平均 74%）
+      kind: vlm
+      experiment: configs/experiment.yaml
+      model: gemma4_12b
+      frames: 8

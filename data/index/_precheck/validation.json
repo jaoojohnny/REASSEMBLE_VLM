@@ -1,0 +1,18 @@
+{
+ "generated_at": "2026-10-05T02:09:57+08:00",
+ "mapping": {
+  "path": "configs\\field_mapping.yaml",
+  "confirmed_at": "2026-10-04"
+ },
+ "n_recordings": 3,
+ "n_failed_recordings": 0,
+ "segment_status_counts": {
+  "excluded": 6,
+  "ok": 56
+ },
+ "code_counts": {},
+ "recording_issue_counts": {},
+ "failed_recordings": [],
+ "recordings_with_issues": [],
+ "items": []
+}

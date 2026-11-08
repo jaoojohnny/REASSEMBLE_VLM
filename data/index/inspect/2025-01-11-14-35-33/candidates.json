@@ -1,0 +1,2978 @@
+{
+ "file": {
+  "path": "data\\raw\\2025-01-11-14-35-33.h5",
+  "name": "2025-01-11-14-35-33.h5",
+  "stem": "2025-01-11-14-35-33",
+  "size_bytes": 1242248068,
+  "mtime": "2026-10-04T17:58:17+08:00",
+  "inspected_at": "2026-10-04T18:01:06+08:00",
+  "tool": "assembly_monitor.inspect_h5 0.1.0",
+  "h5py": "3.16.0",
+  "hdf5": "2.0.0",
+  "options": {
+   "preview_n": 5,
+   "max_read_mb": 64.0,
+   "media_probe": true,
+   "count_frames": true,
+   "collapse_threshold": 8,
+   "expected_cameras": [],
+   "max_depth": null
+  },
+  "libver": [
+   "earliest",
+   "v200"
+  ],
+  "userblock_size": 0
+ },
+ "segments": {
+  "patterns": [
+   {
+    "pattern": "/segments_info",
+    "level": 0,
+    "n_containers": 1,
+    "n_segments": 19,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [
+      "index"
+     ]
+    },
+    "keys_consistent": true,
+    "sub_groups": {
+     "low_level": 17
+    },
+    "non_segment_children": [],
+    "reason_like_keys": []
+   },
+   {
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "n_containers": 17,
+    "n_segments": 40,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": []
+    },
+    "keys_consistent": true,
+    "sub_groups": {},
+    "non_segment_children": [],
+    "reason_like_keys": []
+   }
+  ],
+  "containers": [
+   {
+    "path": "/segments_info",
+    "pattern": "/segments_info",
+    "n_segments": 19,
+    "n_with_start_end": 19,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [
+      "index"
+     ],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {
+     "low_level": 17
+    },
+    "non_segment_children": [],
+    "level": 0,
+    "parent_segment_path": null
+   },
+   {
+    "path": "/segments_info/1/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/1"
+   },
+   {
+    "path": "/segments_info/2/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/2"
+   },
+   {
+    "path": "/segments_info/3/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/3"
+   },
+   {
+    "path": "/segments_info/4/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 3,
+    "n_with_start_end": 3,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/4"
+   },
+   {
+    "path": "/segments_info/5/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/5"
+   },
+   {
+    "path": "/segments_info/6/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 3,
+    "n_with_start_end": 3,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/6"
+   },
+   {
+    "path": "/segments_info/7/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/7"
+   },
+   {
+    "path": "/segments_info/8/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 1,
+    "n_with_start_end": 1,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/8"
+   },
+   {
+    "path": "/segments_info/9/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/9"
+   },
+   {
+    "path": "/segments_info/10/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/10"
+   },
+   {
+    "path": "/segments_info/11/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 3,
+    "n_with_start_end": 3,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/11"
+   },
+   {
+    "path": "/segments_info/12/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/12"
+   },
+   {
+    "path": "/segments_info/13/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 4,
+    "n_with_start_end": 4,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/13"
+   },
+   {
+    "path": "/segments_info/14/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 1,
+    "n_with_start_end": 1,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/14"
+   },
+   {
+    "path": "/segments_info/15/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 3,
+    "n_with_start_end": 3,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/15"
+   },
+   {
+    "path": "/segments_info/16/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/16"
+   },
+   {
+    "path": "/segments_info/17/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 4,
+    "n_with_start_end": 4,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/17"
+   }
+  ],
+  "rows": [
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "0",
+    "path": "/segments_info/0",
+    "parent_path": null,
+    "start": 1736602533.5975876,
+    "end": 1736602536.933699,
+    "duration": 3.336111307144165,
+    "success": true,
+    "success_raw": true,
+    "text": "No action.",
+    "extra": {
+     "index": 0
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "1",
+    "path": "/segments_info/1",
+    "parent_path": null,
+    "start": 1736602536.9474883,
+    "end": 1736602549.4808338,
+    "duration": 12.533345460891724,
+    "success": true,
+    "success_raw": true,
+    "text": "Pick waterproof.",
+    "extra": {
+     "index": 1
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "2",
+    "path": "/segments_info/2",
+    "parent_path": null,
+    "start": 1736602549.4976473,
+    "end": 1736602556.2308574,
+    "duration": 6.73321008682251,
+    "success": true,
+    "success_raw": true,
+    "text": "Place waterproof.",
+    "extra": {
+     "index": 2
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "3",
+    "path": "/segments_info/3",
+    "parent_path": null,
+    "start": 1736602556.2476642,
+    "end": 1736602565.8141832,
+    "duration": 9.566519021987915,
+    "success": true,
+    "success_raw": true,
+    "text": "Pick waterproof.",
+    "extra": {
+     "index": 3
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "4",
+    "path": "/segments_info/4",
+    "parent_path": null,
+    "start": 1736602565.8308656,
+    "end": 1736602595.764194,
+    "duration": 29.93332839012146,
+    "success": true,
+    "success_raw": true,
+    "text": "Insert waterproof.",
+    "extra": {
+     "index": 4
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "5",
+    "path": "/segments_info/5",
+    "parent_path": null,
+    "start": 1736602595.7808263,
+    "end": 1736602602.9975617,
+    "duration": 7.216735363006592,
+    "success": true,
+    "success_raw": true,
+    "text": "Pick Ethernet.",
+    "extra": {
+     "index": 5
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "6",
+    "path": "/segments_info/6",
+    "parent_path": null,
+    "start": 1736602603.0142434,
+    "end": 1736602613.3308568,
+    "duration": 10.31661343574524,
+    "success": true,
+    "success_raw": true,
+    "text": "Insert Ethernet.",
+    "extra": {
+     "index": 6
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "7",
+    "path": "/segments_info/7",
+    "parent_path": null,
+    "start": 1736602613.347538,
+    "end": 1736602621.1976447,
+    "duration": 7.850106716156006,
+    "success": true,
+    "success_raw": true,
+    "text": "Pick USB.",
+    "extra": {
+     "index": 7
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "8",
+    "path": "/segments_info/8",
+    "parent_path": null,
+    "start": 1736602621.214198,
+    "end": 1736602628.914117,
+    "duration": 7.699918985366821,
+    "success": false,
+    "success_raw": false,
+    "text": "Insert USB.",
+    "extra": {
+     "index": 8
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "9",
+    "path": "/segments_info/9",
+    "parent_path": null,
+    "start": 1736602628.9308748,
+    "end": 1736602638.0308862,
+    "duration": 9.100011348724365,
+    "success": true,
+    "success_raw": true,
+    "text": "Place USB.",
+    "extra": {
+     "index": 9
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "10",
+    "path": "/segments_info/10",
+    "parent_path": null,
+    "start": 1736602638.0475984,
+    "end": 1736602644.8975787,
+    "duration": 6.849980354309082,
+    "success": true,
+    "success_raw": true,
+    "text": "Pick USB.",
+    "extra": {
+     "index": 10
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "11",
+    "path": "/segments_info/11",
+    "parent_path": null,
+    "start": 1736602644.914262,
+    "end": 1736602661.730831,
+    "duration": 16.816568851470947,
+    "success": true,
+    "success_raw": true,
+    "text": "Insert USB.",
+    "extra": {
+     "index": 11
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "12",
+    "path": "/segments_info/12",
+    "parent_path": null,
+    "start": 1736602661.7475202,
+    "end": 1736602668.8182487,
+    "duration": 7.070728540420532,
+    "success": true,
+    "success_raw": true,
+    "text": "Pick bolt 4.",
+    "extra": {
+     "index": 12
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "13",
+    "path": "/segments_info/13",
+    "parent_path": null,
+    "start": 1736602668.8339796,
+    "end": 1736602684.180838,
+    "duration": 15.346858501434326,
+    "success": true,
+    "success_raw": true,
+    "text": "Insert bolt 4.",
+    "extra": {
+     "index": 13
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "14",
+    "path": "/segments_info/14",
+    "parent_path": null,
+    "start": 1736602684.1977797,
+    "end": 1736602691.5642576,
+    "duration": 7.366477966308594,
+    "success": true,
+    "success_raw": true,
+    "text": "Pick large gear.",
+    "extra": {
+     "index": 14
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "15",
+    "path": "/segments_info/15",
+    "parent_path": null,
+    "start": 1736602691.580837,
+    "end": 1736602707.6978135,
+    "duration": 16.116976499557495,
+    "success": true,
+    "success_raw": true,
+    "text": "Insert large gear.",
+    "extra": {
+     "index": 15
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "16",
+    "path": "/segments_info/16",
+    "parent_path": null,
+    "start": 1736602707.7142403,
+    "end": 1736602717.247562,
+    "duration": 9.533321619033813,
+    "success": true,
+    "success_raw": true,
+    "text": "Pick BNC.",
+    "extra": {
+     "index": 16
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "17",
+    "path": "/segments_info/17",
+    "parent_path": null,
+    "start": 1736602717.2642314,
+    "end": 1736602746.4143002,
+    "duration": 29.150068759918213,
+    "success": false,
+    "success_raw": false,
+    "text": "Insert BNC.",
+    "extra": {
+     "index": 17
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "18",
+    "path": "/segments_info/18",
+    "parent_path": null,
+    "start": 1736602746.4308991,
+    "end": 1736602747.3977258,
+    "duration": 0.9668266773223877,
+    "success": true,
+    "success_raw": true,
+    "text": "No action.",
+    "extra": {
+     "index": 18
+    }
+   },
+   {
+    "container": "/segments_info/1/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/1/low_level/0",
+    "parent_path": "/segments_info/1",
+    "start": 1736602536.9474883,
+    "end": 1736602547.0234883,
+    "duration": 10.075999975204468,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/1/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/1/low_level/1",
+    "parent_path": "/segments_info/1",
+    "start": 1736602547.0234883,
+    "end": 1736602549.4804883,
+    "duration": 2.4570000171661377,
+    "success": true,
+    "success_raw": true,
+    "text": "Lift",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/2/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/2/low_level/0",
+    "parent_path": "/segments_info/2",
+    "start": 1736602549.4976473,
+    "end": 1736602555.7846472,
+    "duration": 6.286999940872192,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/2/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/2/low_level/1",
+    "parent_path": "/segments_info/2",
+    "start": 1736602555.7846472,
+    "end": 1736602556.2306473,
+    "duration": 0.4460000991821289,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/3/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/3/low_level/0",
+    "parent_path": "/segments_info/3",
+    "start": 1736602556.2476642,
+    "end": 1736602565.380664,
+    "duration": 9.132999897003174,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/3/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/3/low_level/1",
+    "parent_path": "/segments_info/3",
+    "start": 1736602565.380664,
+    "end": 1736602565.8136642,
+    "duration": 0.4330000877380371,
+    "success": true,
+    "success_raw": true,
+    "text": "Lift",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/4/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/4/low_level/0",
+    "parent_path": "/segments_info/4",
+    "start": 1736602565.8308656,
+    "end": 1736602575.2068655,
+    "duration": 9.375999927520752,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/4/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/4/low_level/1",
+    "parent_path": "/segments_info/4",
+    "start": 1736602575.2068655,
+    "end": 1736602589.7028656,
+    "duration": 14.496000051498413,
+    "success": true,
+    "success_raw": true,
+    "text": "Align",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/4/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/4/low_level/2",
+    "parent_path": "/segments_info/4",
+    "start": 1736602589.7028656,
+    "end": 1736602595.7641866,
+    "duration": 6.061321020126343,
+    "success": true,
+    "success_raw": true,
+    "text": "Push",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/5/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/5/low_level/0",
+    "parent_path": "/segments_info/5",
+    "start": 1736602595.7808263,
+    "end": 1736602602.4958262,
+    "duration": 6.7149999141693115,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/5/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/5/low_level/1",
+    "parent_path": "/segments_info/5",
+    "start": 1736602602.4958262,
+    "end": 1736602602.9968264,
+    "duration": 0.501000165939331,
+    "success": true,
+    "success_raw": true,
+    "text": "Lift",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/6/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/6/low_level/0",
+    "parent_path": "/segments_info/6",
+    "start": 1736602603.0142434,
+    "end": 1736602609.0022433,
+    "duration": 5.98799991607666,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/6/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/6/low_level/1",
+    "parent_path": "/segments_info/6",
+    "start": 1736602609.0022433,
+    "end": 1736602612.5902433,
+    "duration": 3.5880000591278076,
+    "success": true,
+    "success_raw": true,
+    "text": "Align",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/6/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/6/low_level/2",
+    "parent_path": "/segments_info/6",
+    "start": 1736602612.5902433,
+    "end": 1736602613.3302433,
+    "duration": 0.7400000095367432,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/7/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/7/low_level/0",
+    "parent_path": "/segments_info/7",
+    "start": 1736602613.347538,
+    "end": 1736602620.716538,
+    "duration": 7.36899995803833,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/7/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/7/low_level/1",
+    "parent_path": "/segments_info/7",
+    "start": 1736602620.716538,
+    "end": 1736602621.197538,
+    "duration": 0.4809999465942383,
+    "success": true,
+    "success_raw": true,
+    "text": "Lift",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/8/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/8/low_level/0",
+    "parent_path": "/segments_info/8",
+    "start": 1736602621.214198,
+    "end": 1736602628.914077,
+    "duration": 7.699878931045532,
+    "success": false,
+    "success_raw": false,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/9/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/9/low_level/0",
+    "parent_path": "/segments_info/9",
+    "start": 1736602628.9308748,
+    "end": 1736602636.4088748,
+    "duration": 7.477999925613403,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/9/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/9/low_level/1",
+    "parent_path": "/segments_info/9",
+    "start": 1736602636.4088748,
+    "end": 1736602638.0298748,
+    "duration": 1.621000051498413,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/10/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/10/low_level/0",
+    "parent_path": "/segments_info/10",
+    "start": 1736602638.0475984,
+    "end": 1736602644.6345983,
+    "duration": 6.586999893188477,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/10/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/10/low_level/1",
+    "parent_path": "/segments_info/10",
+    "start": 1736602644.6345983,
+    "end": 1736602644.8965983,
+    "duration": 0.26200008392333984,
+    "success": true,
+    "success_raw": true,
+    "text": "Lift",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/11/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/11/low_level/0",
+    "parent_path": "/segments_info/11",
+    "start": 1736602644.914262,
+    "end": 1736602656.3902621,
+    "duration": 11.4760000705719,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/11/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/11/low_level/1",
+    "parent_path": "/segments_info/11",
+    "start": 1736602656.3902621,
+    "end": 1736602660.690262,
+    "duration": 4.299999952316284,
+    "success": true,
+    "success_raw": true,
+    "text": "Align",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/11/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/11/low_level/2",
+    "parent_path": "/segments_info/11",
+    "start": 1736602660.690262,
+    "end": 1736602661.730262,
+    "duration": 1.0399999618530273,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/12/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/12/low_level/0",
+    "parent_path": "/segments_info/12",
+    "start": 1736602661.7475202,
+    "end": 1736602667.8845203,
+    "duration": 6.13700008392334,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/12/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/12/low_level/1",
+    "parent_path": "/segments_info/12",
+    "start": 1736602667.8845203,
+    "end": 1736602668.8182402,
+    "duration": 0.9337198734283447,
+    "success": true,
+    "success_raw": true,
+    "text": "Lift",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/13/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/13/low_level/0",
+    "parent_path": "/segments_info/13",
+    "start": 1736602668.8339796,
+    "end": 1736602676.7109797,
+    "duration": 7.877000093460083,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/13/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/13/low_level/1",
+    "parent_path": "/segments_info/13",
+    "start": 1736602676.7109797,
+    "end": 1736602677.6759796,
+    "duration": 0.9649999141693115,
+    "success": true,
+    "success_raw": true,
+    "text": "Align",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/13/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/13/low_level/2",
+    "parent_path": "/segments_info/13",
+    "start": 1736602677.6759796,
+    "end": 1736602683.4759796,
+    "duration": 5.799999952316284,
+    "success": true,
+    "success_raw": true,
+    "text": "Twist",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/13/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "3",
+    "path": "/segments_info/13/low_level/3",
+    "parent_path": "/segments_info/13",
+    "start": 1736602683.4759796,
+    "end": 1736602684.1799796,
+    "duration": 0.7039999961853027,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/14/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/14/low_level/0",
+    "parent_path": "/segments_info/14",
+    "start": 1736602684.1977797,
+    "end": 1736602691.5641816,
+    "duration": 7.36640191078186,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/15/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/15/low_level/0",
+    "parent_path": "/segments_info/15",
+    "start": 1736602691.580837,
+    "end": 1736602699.5858371,
+    "duration": 8.005000114440918,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/15/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/15/low_level/1",
+    "parent_path": "/segments_info/15",
+    "start": 1736602699.5858371,
+    "end": 1736602702.111837,
+    "duration": 2.5259997844696045,
+    "success": true,
+    "success_raw": true,
+    "text": "Align",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/15/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/15/low_level/2",
+    "parent_path": "/segments_info/15",
+    "start": 1736602702.111837,
+    "end": 1736602707.697792,
+    "duration": 5.5859551429748535,
+    "success": true,
+    "success_raw": true,
+    "text": "Push",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/16/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/16/low_level/0",
+    "parent_path": "/segments_info/16",
+    "start": 1736602707.7142403,
+    "end": 1736602716.7302403,
+    "duration": 9.016000032424927,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/16/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/16/low_level/1",
+    "parent_path": "/segments_info/16",
+    "start": 1736602716.7302403,
+    "end": 1736602717.2475483,
+    "duration": 0.5173079967498779,
+    "success": true,
+    "success_raw": true,
+    "text": "Lift",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/17/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/17/low_level/0",
+    "parent_path": "/segments_info/17",
+    "start": 1736602717.2642314,
+    "end": 1736602724.3462315,
+    "duration": 7.082000017166138,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/17/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/17/low_level/1",
+    "parent_path": "/segments_info/17",
+    "start": 1736602724.3462315,
+    "end": 1736602730.8222315,
+    "duration": 6.476000070571899,
+    "success": true,
+    "success_raw": true,
+    "text": "Align",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/17/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/17/low_level/2",
+    "parent_path": "/segments_info/17",
+    "start": 1736602730.8222315,
+    "end": 1736602741.7542315,
+    "duration": 10.931999921798706,
+    "success": true,
+    "success_raw": true,
+    "text": "Twist",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/17/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "3",
+    "path": "/segments_info/17/low_level/3",
+    "parent_path": "/segments_info/17",
+    "start": 1736602741.7542315,
+    "end": 1736602746.4142315,
+    "duration": 4.6600000858306885,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   }
+  ],
+  "n_level0": 19,
+  "n_level1plus": 40,
+  "actions": {
+   "level0": {
+    "no": {
+     "count": 2,
+     "success_true": 2,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "action.": {
+       "count": 2,
+       "success_true": 2,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "pick": {
+     "count": 8,
+     "success_true": 8,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "waterproof.": {
+       "count": 2,
+       "success_true": 2,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "Ethernet.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "USB.": {
+       "count": 2,
+       "success_true": 2,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "bolt 4.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "large gear.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "BNC.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "place": {
+     "count": 2,
+     "success_true": 2,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "waterproof.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "USB.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "insert": {
+     "count": 7,
+     "success_true": 5,
+     "success_false": 2,
+     "success_unknown": 0,
+     "objects": {
+      "waterproof.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "Ethernet.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "USB.": {
+       "count": 2,
+       "success_true": 1,
+       "success_false": 1,
+       "success_unknown": 0
+      },
+      "bolt 4.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "large gear.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "BNC.": {
+       "count": 1,
+       "success_true": 0,
+       "success_false": 1,
+       "success_unknown": 0
+      }
+     }
+    }
+   },
+   "level1": {
+    "grasp": {
+     "count": 8,
+     "success_true": 8,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 8,
+       "success_true": 8,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "lift": {
+     "count": 7,
+     "success_true": 7,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 7,
+       "success_true": 7,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "approach": {
+     "count": 9,
+     "success_true": 8,
+     "success_false": 1,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 9,
+       "success_true": 8,
+       "success_false": 1,
+       "success_unknown": 0
+      }
+     }
+    },
+    "release": {
+     "count": 6,
+     "success_true": 6,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 6,
+       "success_true": 6,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "align": {
+     "count": 6,
+     "success_true": 6,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 6,
+       "success_true": 6,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "push": {
+     "count": 2,
+     "success_true": 2,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 2,
+       "success_true": 2,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "twist": {
+     "count": 2,
+     "success_true": 2,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 2,
+       "success_true": 2,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    }
+   }
+  }
+ },
+ "streams": {
+  "cameras": [
+   {
+    "name": "capture_node-camera-image",
+    "path": "/capture_node-camera-image",
+    "encoding": "mp4",
+    "bytes": 3606641,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "h264",
+    "width": 346,
+    "height": 260,
+    "fps_nominal": 5.72,
+    "frames": 1231,
+    "frames_source": "header",
+    "duration_s": 215.2097902097902,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/capture_node-camera-image",
+    "ts_n": 1231,
+    "ts_first": 1736602533.613433,
+    "ts_last": 1736602747.3373556,
+    "ts_rate_hz": 5.719414463860803,
+    "ts_span_s": 213.7239227294922,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   },
+   {
+    "name": "hama1",
+    "path": "/hama1",
+    "encoding": "mp4",
+    "bytes": 11028246,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "h264",
+    "width": 640,
+    "height": 480,
+    "fps_nominal": 30.0,
+    "frames": 6415,
+    "frames_source": "header",
+    "duration_s": 213.83333333333334,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/hama1",
+    "ts_n": 6415,
+    "ts_first": 1736602533.585039,
+    "ts_last": 1736602747.38793,
+    "ts_rate_hz": 31.043164189709277,
+    "ts_span_s": 213.80289101600647,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   },
+   {
+    "name": "hama2",
+    "path": "/hama2",
+    "encoding": "mp4",
+    "bytes": 10042356,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "h264",
+    "width": 640,
+    "height": 480,
+    "fps_nominal": 30.0,
+    "frames": 6414,
+    "frames_source": "header",
+    "duration_s": 213.8,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/hama2",
+    "ts_n": 6414,
+    "ts_first": 1736602533.611329,
+    "ts_last": 1736602747.380925,
+    "ts_rate_hz": 31.018140673416113,
+    "ts_span_s": 213.76959586143494,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   },
+   {
+    "name": "hand",
+    "path": "/hand",
+    "encoding": "mp4",
+    "bytes": 12483105,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "h264",
+    "width": 640,
+    "height": 480,
+    "fps_nominal": 30.0,
+    "frames": 5941,
+    "frames_source": "header",
+    "duration_s": 198.03333333333333,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/hand",
+    "ts_n": 5941,
+    "ts_first": 1736602533.5874014,
+    "ts_last": 1736602747.3584704,
+    "ts_rate_hz": 29.9658425585574,
+    "ts_span_s": 213.7710690498352,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   }
+  ],
+  "audio": [],
+  "image_arrays": [],
+  "other_streams": [
+   {
+    "name": "events",
+    "path": "/events",
+    "shape": [
+     32629104,
+     3
+    ],
+    "dtype": "int64",
+    "timestamps": "/timestamps/events",
+    "ts_n": 32629104,
+    "ts_first": 1736602533.5742,
+    "ts_last": 1736602747.363188,
+    "ts_rate_hz": 322638.76923076925,
+    "ts_span_s": 213.78898811340332,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": true,
+    "length_match": true
+   },
+   {
+    "name": "compensated_base_force",
+    "path": "/robot_state/compensated_base_force",
+    "shape": [
+     108200,
+     3
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/compensated_base_force",
+    "ts_n": 108200,
+    "ts_first": 1736602533.5814753,
+    "ts_last": 1736602747.406062,
+    "ts_rate_hz": 504.12307692307695,
+    "ts_span_s": 213.82458662986755,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "compensated_base_torque",
+    "path": "/robot_state/compensated_base_torque",
+    "shape": [
+     108200,
+     3
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/compensated_base_torque",
+    "ts_n": 108200,
+    "ts_first": 1736602533.5814753,
+    "ts_last": 1736602747.406062,
+    "ts_rate_hz": 504.12307692307695,
+    "ts_span_s": 213.82458662986755,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "gripper_efforts",
+    "path": "/robot_state/gripper_efforts",
+    "shape": [
+     207768,
+     2
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/gripper_efforts",
+    "ts_n": 207768,
+    "ts_first": 1736602533.5895631,
+    "ts_last": 1736602747.4056213,
+    "ts_rate_hz": 1003.9023456199138,
+    "ts_span_s": 213.8160581588745,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "gripper_positions",
+    "path": "/robot_state/gripper_positions",
+    "shape": [
+     207768,
+     2
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/gripper_positions",
+    "ts_n": 207768,
+    "ts_first": 1736602533.5895631,
+    "ts_last": 1736602747.4056213,
+    "ts_rate_hz": 1003.9023456199138,
+    "ts_span_s": 213.8160581588745,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "gripper_velocities",
+    "path": "/robot_state/gripper_velocities",
+    "shape": [
+     207768,
+     2
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/gripper_velocities",
+    "ts_n": 207768,
+    "ts_first": 1736602533.5895631,
+    "ts_last": 1736602747.4056213,
+    "ts_rate_hz": 1003.9023456199138,
+    "ts_span_s": 213.8160581588745,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "joint_efforts",
+    "path": "/robot_state/joint_efforts",
+    "shape": [
+     207768,
+     7
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/joint_efforts",
+    "ts_n": 207768,
+    "ts_first": 1736602533.5895631,
+    "ts_last": 1736602747.4056213,
+    "ts_rate_hz": 1003.9023456199138,
+    "ts_span_s": 213.8160581588745,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "joint_positions",
+    "path": "/robot_state/joint_positions",
+    "shape": [
+     207768,
+     7
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/joint_positions",
+    "ts_n": 207768,
+    "ts_first": 1736602533.5895631,
+    "ts_last": 1736602747.4056213,
+    "ts_rate_hz": 1003.9023456199138,
+    "ts_span_s": 213.8160581588745,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "joint_velocities",
+    "path": "/robot_state/joint_velocities",
+    "shape": [
+     207768,
+     7
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/joint_velocities",
+    "ts_n": 207768,
+    "ts_first": 1736602533.5895631,
+    "ts_last": 1736602747.4056213,
+    "ts_rate_hz": 1003.9023456199138,
+    "ts_span_s": 213.8160581588745,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "measured_force",
+    "path": "/robot_state/measured_force",
+    "shape": [
+     213834,
+     3
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/measured_force",
+    "ts_n": 213834,
+    "ts_first": 1736602533.578984,
+    "ts_last": 1736602747.4064577,
+    "ts_rate_hz": 2014.5552353506243,
+    "ts_span_s": 213.8274736404419,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "measured_torque",
+    "path": "/robot_state/measured_torque",
+    "shape": [
+     213834,
+     3
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/measured_torque",
+    "ts_n": 213834,
+    "ts_first": 1736602533.578984,
+    "ts_last": 1736602747.4064577,
+    "ts_rate_hz": 2014.5552353506243,
+    "ts_span_s": 213.8274736404419,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "pose",
+    "path": "/robot_state/pose",
+    "shape": [
+     122541,
+     7
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/pose",
+    "ts_n": 122541,
+    "ts_first": 1736602533.5783205,
+    "ts_last": 1736602747.4060688,
+    "ts_rate_hz": 604.5407898529836,
+    "ts_span_s": 213.82774829864502,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "velocity",
+    "path": "/robot_state/velocity",
+    "shape": [
+     122456,
+     6
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/velocity",
+    "ts_n": 122456,
+    "ts_first": 1736602533.578712,
+    "ts_last": 1736602747.4048655,
+    "ts_rate_hz": 614.1001464128843,
+    "ts_span_s": 213.8261535167694,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   }
+  ],
+  "time_arrays": [
+   {
+    "path": "/timestamps/capture_node-camera-image",
+    "n": 1231,
+    "first": 1736602533.613433,
+    "last": 1736602747.3373556,
+    "min": 1736602533.613433,
+    "max": 1736602747.3373556,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.17484307289123535,
+    "median_dt_s": 0.17484307289123535,
+    "rate_hz": 5.719414463860803,
+    "span_s": 213.7239227294922,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.18292474746704102,
+    "first_utc": "2025-01-11T13:35:33.613+00:00",
+    "last_utc": "2025-01-11T13:39:07.337+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/compensated_base_force",
+    "n": 108200,
+    "first": 1736602533.5814753,
+    "last": 1736602747.406062,
+    "min": 1736602533.5814753,
+    "max": 1736602747.406062,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.001983642578125,
+    "median_dt_s": 0.001983642578125,
+    "rate_hz": 504.12307692307695,
+    "span_s": 213.82458662986755,
+    "n_gaps_gt_3x_median": 577,
+    "max_dt_s": 0.023298978805541992,
+    "first_utc": "2025-01-11T13:35:33.581+00:00",
+    "last_utc": "2025-01-11T13:39:07.406+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/compensated_base_torque",
+    "n": 108200,
+    "first": 1736602533.5814753,
+    "last": 1736602747.406062,
+    "min": 1736602533.5814753,
+    "max": 1736602747.406062,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.001983642578125,
+    "median_dt_s": 0.001983642578125,
+    "rate_hz": 504.12307692307695,
+    "span_s": 213.82458662986755,
+    "n_gaps_gt_3x_median": 577,
+    "max_dt_s": 0.023298978805541992,
+    "first_utc": "2025-01-11T13:35:33.581+00:00",
+    "last_utc": "2025-01-11T13:39:07.406+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/events",
+    "n": 32629104,
+    "first": 1736602533.5742,
+    "last": 1736602747.363188,
+    "min": 1736602533.5742,
+    "max": 1736602747.363188,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 274534,
+    "median_dt": 3.0994415283203125e-06,
+    "median_dt_s": 3.0994415283203125e-06,
+    "rate_hz": 322638.76923076925,
+    "span_s": 213.78898811340332,
+    "n_gaps_gt_3x_median": 381438,
+    "max_dt_s": 0.0003600120544433594,
+    "first_utc": "2025-01-11T13:35:33.574+00:00",
+    "last_utc": "2025-01-11T13:39:07.363+00:00",
+    "sampled": true,
+    "note": "陣列過大（32629104 筆），只取 10 段各 200000 筆做統計",
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/gripper_efforts",
+    "n": 207768,
+    "first": 1736602533.5895631,
+    "last": 1736602747.4056213,
+    "min": 1736602533.5895631,
+    "max": 1736602747.4056213,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009961128234863281,
+    "median_dt_s": 0.0009961128234863281,
+    "rate_hz": 1003.9023456199138,
+    "span_s": 213.8160581588745,
+    "n_gaps_gt_3x_median": 5435,
+    "max_dt_s": 0.04760909080505371,
+    "first_utc": "2025-01-11T13:35:33.589+00:00",
+    "last_utc": "2025-01-11T13:39:07.405+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/gripper_positions",
+    "n": 207768,
+    "first": 1736602533.5895631,
+    "last": 1736602747.4056213,
+    "min": 1736602533.5895631,
+    "max": 1736602747.4056213,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009961128234863281,
+    "median_dt_s": 0.0009961128234863281,
+    "rate_hz": 1003.9023456199138,
+    "span_s": 213.8160581588745,
+    "n_gaps_gt_3x_median": 5435,
+    "max_dt_s": 0.04760909080505371,
+    "first_utc": "2025-01-11T13:35:33.589+00:00",
+    "last_utc": "2025-01-11T13:39:07.405+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/gripper_velocities",
+    "n": 207768,
+    "first": 1736602533.5895631,
+    "last": 1736602747.4056213,
+    "min": 1736602533.5895631,
+    "max": 1736602747.4056213,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009961128234863281,
+    "median_dt_s": 0.0009961128234863281,
+    "rate_hz": 1003.9023456199138,
+    "span_s": 213.8160581588745,
+    "n_gaps_gt_3x_median": 5435,
+    "max_dt_s": 0.04760909080505371,
+    "first_utc": "2025-01-11T13:35:33.589+00:00",
+    "last_utc": "2025-01-11T13:39:07.405+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/hama1",
+    "n": 6415,
+    "first": 1736602533.585039,
+    "last": 1736602747.38793,
+    "min": 1736602533.585039,
+    "max": 1736602747.38793,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.03221321105957031,
+    "median_dt_s": 0.03221321105957031,
+    "rate_hz": 31.043164189709277,
+    "span_s": 213.80289101600647,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.048491716384887695,
+    "first_utc": "2025-01-11T13:35:33.585+00:00",
+    "last_utc": "2025-01-11T13:39:07.387+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/hama2",
+    "n": 6414,
+    "first": 1736602533.611329,
+    "last": 1736602747.380925,
+    "min": 1736602533.611329,
+    "max": 1736602747.380925,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.03223919868469238,
+    "median_dt_s": 0.03223919868469238,
+    "rate_hz": 31.018140673416113,
+    "span_s": 213.76959586143494,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.04802870750427246,
+    "first_utc": "2025-01-11T13:35:33.611+00:00",
+    "last_utc": "2025-01-11T13:39:07.380+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/hand",
+    "n": 5941,
+    "first": 1736602533.5874014,
+    "last": 1736602747.3584704,
+    "min": 1736602533.5874014,
+    "max": 1736602747.3584704,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.03337132930755615,
+    "median_dt_s": 0.03337132930755615,
+    "rate_hz": 29.9658425585574,
+    "span_s": 213.7710690498352,
+    "n_gaps_gt_3x_median": 147,
+    "max_dt_s": 0.15925121307373047,
+    "first_utc": "2025-01-11T13:35:33.587+00:00",
+    "last_utc": "2025-01-11T13:39:07.358+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/joint_efforts",
+    "n": 207768,
+    "first": 1736602533.5895631,
+    "last": 1736602747.4056213,
+    "min": 1736602533.5895631,
+    "max": 1736602747.4056213,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009961128234863281,
+    "median_dt_s": 0.0009961128234863281,
+    "rate_hz": 1003.9023456199138,
+    "span_s": 213.8160581588745,
+    "n_gaps_gt_3x_median": 5435,
+    "max_dt_s": 0.04760909080505371,
+    "first_utc": "2025-01-11T13:35:33.589+00:00",
+    "last_utc": "2025-01-11T13:39:07.405+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/joint_positions",
+    "n": 207768,
+    "first": 1736602533.5895631,
+    "last": 1736602747.4056213,
+    "min": 1736602533.5895631,
+    "max": 1736602747.4056213,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009961128234863281,
+    "median_dt_s": 0.0009961128234863281,
+    "rate_hz": 1003.9023456199138,
+    "span_s": 213.8160581588745,
+    "n_gaps_gt_3x_median": 5435,
+    "max_dt_s": 0.04760909080505371,
+    "first_utc": "2025-01-11T13:35:33.589+00:00",
+    "last_utc": "2025-01-11T13:39:07.405+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/joint_velocities",
+    "n": 207768,
+    "first": 1736602533.5895631,
+    "last": 1736602747.4056213,
+    "min": 1736602533.5895631,
+    "max": 1736602747.4056213,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009961128234863281,
+    "median_dt_s": 0.0009961128234863281,
+    "rate_hz": 1003.9023456199138,
+    "span_s": 213.8160581588745,
+    "n_gaps_gt_3x_median": 5435,
+    "max_dt_s": 0.04760909080505371,
+    "first_utc": "2025-01-11T13:35:33.589+00:00",
+    "last_utc": "2025-01-11T13:39:07.405+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/measured_force",
+    "n": 213834,
+    "first": 1736602533.578984,
+    "last": 1736602747.4064577,
+    "min": 1736602533.578984,
+    "max": 1736602747.4064577,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0004963874816894531,
+    "median_dt_s": 0.0004963874816894531,
+    "rate_hz": 2014.5552353506243,
+    "span_s": 213.8274736404419,
+    "n_gaps_gt_3x_median": 106073,
+    "max_dt_s": 0.019442081451416016,
+    "first_utc": "2025-01-11T13:35:33.578+00:00",
+    "last_utc": "2025-01-11T13:39:07.406+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/measured_torque",
+    "n": 213834,
+    "first": 1736602533.578984,
+    "last": 1736602747.4064577,
+    "min": 1736602533.578984,
+    "max": 1736602747.4064577,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0004963874816894531,
+    "median_dt_s": 0.0004963874816894531,
+    "rate_hz": 2014.5552353506243,
+    "span_s": 213.8274736404419,
+    "n_gaps_gt_3x_median": 106073,
+    "max_dt_s": 0.019442081451416016,
+    "first_utc": "2025-01-11T13:35:33.578+00:00",
+    "last_utc": "2025-01-11T13:39:07.406+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/pose",
+    "n": 122541,
+    "first": 1736602533.5783205,
+    "last": 1736602747.4060688,
+    "min": 1736602533.5783205,
+    "max": 1736602747.4060688,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0016541481018066406,
+    "median_dt_s": 0.0016541481018066406,
+    "rate_hz": 604.5407898529836,
+    "span_s": 213.82774829864502,
+    "n_gaps_gt_3x_median": 1305,
+    "max_dt_s": 0.4210507869720459,
+    "first_utc": "2025-01-11T13:35:33.578+00:00",
+    "last_utc": "2025-01-11T13:39:07.406+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/velocity",
+    "n": 122456,
+    "first": 1736602533.578712,
+    "last": 1736602747.4048655,
+    "min": 1736602533.578712,
+    "max": 1736602747.4048655,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0016283988952636719,
+    "median_dt_s": 0.0016283988952636719,
+    "rate_hz": 614.1001464128843,
+    "span_s": 213.8261535167694,
+    "n_gaps_gt_3x_median": 1415,
+    "max_dt_s": 0.42809629440307617,
+    "first_utc": "2025-01-11T13:35:33.578+00:00",
+    "last_utc": "2025-01-11T13:39:07.404+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   }
+  ],
+  "unpaired_time_arrays": [],
+  "expected_cameras_missing": []
+ },
+ "time_base": {
+  "segment_min": 1736602533.5975876,
+  "segment_max": 1736602747.3977258,
+  "n_segments": 19,
+  "candidates": [
+   {
+    "timestamps": "/timestamps/capture_node-camera-image",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.613433,
+    "ts_max": 1736602747.3373556,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/compensated_base_force",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.5814753,
+    "ts_max": 1736602747.406062,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/compensated_base_torque",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.5814753,
+    "ts_max": 1736602747.406062,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/events",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.5742,
+    "ts_max": 1736602747.363188,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/gripper_efforts",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.5895631,
+    "ts_max": 1736602747.4056213,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/gripper_positions",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.5895631,
+    "ts_max": 1736602747.4056213,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/gripper_velocities",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.5895631,
+    "ts_max": 1736602747.4056213,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/hama1",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.585039,
+    "ts_max": 1736602747.38793,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/hama2",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.611329,
+    "ts_max": 1736602747.380925,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/hand",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.5874014,
+    "ts_max": 1736602747.3584704,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/joint_efforts",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.5895631,
+    "ts_max": 1736602747.4056213,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/joint_positions",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.5895631,
+    "ts_max": 1736602747.4056213,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/joint_velocities",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.5895631,
+    "ts_max": 1736602747.4056213,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/measured_force",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.578984,
+    "ts_max": 1736602747.4064577,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/measured_torque",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.578984,
+    "ts_max": 1736602747.4064577,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/pose",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.5783205,
+    "ts_max": 1736602747.4060688,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/velocity",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736602533.578712,
+    "ts_max": 1736602747.4048655,
+    "unit_guess": "s"
+   }
+  ],
+  "relation": "same_as",
+  "reference": "/timestamps/hand",
+  "fraction_inside": 1.0,
+  "unit_guess": "s"
+ },
+ "anomalies": [
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/compensated_base_force 有 577 處間隔大於中位數 3 倍（最大 0.023299 秒）",
+   "path": "/timestamps/compensated_base_force"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/compensated_base_torque 有 577 處間隔大於中位數 3 倍（最大 0.023299 秒）",
+   "path": "/timestamps/compensated_base_torque"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/events 有 381438 處間隔大於中位數 3 倍（最大 0.000360012 秒）",
+   "path": "/timestamps/events"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/gripper_efforts 有 5435 處間隔大於中位數 3 倍（最大 0.0476091 秒）",
+   "path": "/timestamps/gripper_efforts"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/gripper_positions 有 5435 處間隔大於中位數 3 倍（最大 0.0476091 秒）",
+   "path": "/timestamps/gripper_positions"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/gripper_velocities 有 5435 處間隔大於中位數 3 倍（最大 0.0476091 秒）",
+   "path": "/timestamps/gripper_velocities"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/hand 有 147 處間隔大於中位數 3 倍（最大 0.159251 秒）",
+   "path": "/timestamps/hand"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/joint_efforts 有 5435 處間隔大於中位數 3 倍（最大 0.0476091 秒）",
+   "path": "/timestamps/joint_efforts"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/joint_positions 有 5435 處間隔大於中位數 3 倍（最大 0.0476091 秒）",
+   "path": "/timestamps/joint_positions"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/joint_velocities 有 5435 處間隔大於中位數 3 倍（最大 0.0476091 秒）",
+   "path": "/timestamps/joint_velocities"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/measured_force 有 106073 處間隔大於中位數 3 倍（最大 0.0194421 秒）",
+   "path": "/timestamps/measured_force"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/measured_torque 有 106073 處間隔大於中位數 3 倍（最大 0.0194421 秒）",
+   "path": "/timestamps/measured_torque"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/pose 有 1305 處間隔大於中位數 3 倍（最大 0.421051 秒）",
+   "path": "/timestamps/pose"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/velocity 有 1415 處間隔大於中位數 3 倍（最大 0.428096 秒）",
+   "path": "/timestamps/velocity"
+  }
+ ],
+ "manual_check": [
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "4",
+   "path": "/segments_info/4",
+   "parent_path": null,
+   "start": 1736602565.8308656,
+   "end": 1736602595.764194,
+   "duration": 29.93332839012146,
+   "success": true,
+   "success_raw": true,
+   "text": "Insert waterproof.",
+   "extra": {
+    "index": 4
+   }
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "6",
+   "path": "/segments_info/6",
+   "parent_path": null,
+   "start": 1736602603.0142434,
+   "end": 1736602613.3308568,
+   "duration": 10.31661343574524,
+   "success": true,
+   "success_raw": true,
+   "text": "Insert Ethernet.",
+   "extra": {
+    "index": 6
+   }
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "8",
+   "path": "/segments_info/8",
+   "parent_path": null,
+   "start": 1736602621.214198,
+   "end": 1736602628.914117,
+   "duration": 7.699918985366821,
+   "success": false,
+   "success_raw": false,
+   "text": "Insert USB.",
+   "extra": {
+    "index": 8
+   }
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "11",
+   "path": "/segments_info/11",
+   "parent_path": null,
+   "start": 1736602644.914262,
+   "end": 1736602661.730831,
+   "duration": 16.816568851470947,
+   "success": true,
+   "success_raw": true,
+   "text": "Insert USB.",
+   "extra": {
+    "index": 11
+   }
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "13",
+   "path": "/segments_info/13",
+   "parent_path": null,
+   "start": 1736602668.8339796,
+   "end": 1736602684.180838,
+   "duration": 15.346858501434326,
+   "success": true,
+   "success_raw": true,
+   "text": "Insert bolt 4.",
+   "extra": {
+    "index": 13
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "Q1",
+   "topic": "segment 欄位",
+   "question": "`/segments_info`（第 0 層，共 19 段）：start=`start`、end=`end`、success=`success`、text=`text`，其他欄位 ['index']。這些是否就是 segment 起訖、成功標記與動作描述？",
+   "evidence": {
+    "sub_groups": {
+     "low_level": 17
+    },
+    "non_segment_children": []
+   }
+  },
+  {
+   "id": "Q2",
+   "topic": "segment 欄位",
+   "question": "`/segments_info/*/low_level`（第 1 層，共 40 段，分散在 17 個容器）：start=`start`、end=`end`、success=`success`、text=`text`，其他欄位 無。這些是否就是 segment 起訖、成功標記與動作描述？",
+   "evidence": {
+    "sub_groups": {},
+    "non_segment_children": []
+   }
+  },
+  {
+   "id": "Q3",
+   "topic": "時間單位與基準",
+   "question": "segment 起訖範圍 1736602533.597588–1736602747.397726 落在 `/timestamps/hand` 的範圍內（100%），推測兩者同一時間基準、單位 s。請確認單位與是否為 Unix 時間。",
+   "evidence": [
+    {
+     "timestamps": "/timestamps/capture_node-camera-image",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.613433,
+     "ts_max": 1736602747.3373556,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/compensated_base_force",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.5814753,
+     "ts_max": 1736602747.406062,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/compensated_base_torque",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.5814753,
+     "ts_max": 1736602747.406062,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/events",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.5742,
+     "ts_max": 1736602747.363188,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/gripper_efforts",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.5895631,
+     "ts_max": 1736602747.4056213,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/gripper_positions",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.5895631,
+     "ts_max": 1736602747.4056213,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/gripper_velocities",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.5895631,
+     "ts_max": 1736602747.4056213,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/hama1",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.585039,
+     "ts_max": 1736602747.38793,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/hama2",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.611329,
+     "ts_max": 1736602747.380925,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/hand",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.5874014,
+     "ts_max": 1736602747.3584704,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/joint_efforts",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.5895631,
+     "ts_max": 1736602747.4056213,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/joint_positions",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.5895631,
+     "ts_max": 1736602747.4056213,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/joint_velocities",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.5895631,
+     "ts_max": 1736602747.4056213,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/measured_force",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.578984,
+     "ts_max": 1736602747.4064577,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/measured_torque",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.578984,
+     "ts_max": 1736602747.4064577,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/pose",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.5783205,
+     "ts_max": 1736602747.4060688,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/velocity",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736602533.578712,
+     "ts_max": 1736602747.4048655,
+     "unit_guess": "s"
+    }
+   ]
+  },
+  {
+   "id": "Q4",
+   "topic": "action / part 解析",
+   "question": "高層 text 第一個詞的分佈：{'pick': 8, 'insert': 7, 'no': 2, 'place': 2}。是否以第一個詞當 action、其餘字串當零件（part）？",
+   "evidence": null
+  },
+  {
+   "id": "Q5",
+   "topic": "Insert 零件候選",
+   "question": "這些樣本中的 Insert 零件：{'USB.': '2 段（成功 1 / 失敗 1）', 'waterproof.': '1 段（成功 1 / 失敗 0）', 'Ethernet.': '1 段（成功 1 / 失敗 0）', 'bolt 4.': '1 段（成功 1 / 失敗 0）', 'large gear.': '1 段（成功 1 / 失敗 0）', 'BNC.': '1 段（成功 0 / 失敗 1）'}。研究要選哪一種？（失敗數需等第 2 包全量索引才準）",
+   "evidence": null
+  },
+  {
+   "id": "Q6",
+   "topic": "失敗原因與證據時間",
+   "question": "資料中沒有失敗原因、證據時間欄位（符合規格預期）。這些將在第 3 包走人工標註流程，請確認。",
+   "evidence": null
+  },
+  {
+   "id": "Q7",
+   "topic": "低階 segment",
+   "question": "第 1 層（如 Low_level）動作分佈：{'grasp': 8, 'lift': 7, 'approach': 9, 'release': 6, 'align': 6, 'push': 2, 'twist': 2}。要不要拿來當證據時間的候選區間？",
+   "evidence": null
+  },
+  {
+   "id": "Q8",
+   "topic": "相機清單",
+   "question": "偵測到的內嵌影片：{'capture_node-camera-image': '346x260, 5.72 fps, 1231 幀', 'hama1': '640x480, 30 fps, 6415 幀', 'hama2': '640x480, 30 fps, 6414 幀', 'hand': '640x480, 30 fps, 5941 幀'}。哪些是外部視角、哪個是腕部相機？best_camera 的候選集合為何？",
+   "evidence": null
+  },
+  {
+   "id": "Q9",
+   "topic": "影格與時間戳",
+   "question": "capture_node-camera-image：影片 1231 幀、標稱 5.72 fps；`/timestamps/capture_node-camera-image` 有 1231 筆，實測約 5.71941 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  },
+  {
+   "id": "Q10",
+   "topic": "影格與時間戳",
+   "question": "hama1：影片 6415 幀、標稱 30 fps；`/timestamps/hama1` 有 6415 筆，實測約 31.0432 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  },
+  {
+   "id": "Q11",
+   "topic": "影格與時間戳",
+   "question": "hama2：影片 6414 幀、標稱 30 fps；`/timestamps/hama2` 有 6414 筆，實測約 31.0181 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  },
+  {
+   "id": "Q12",
+   "topic": "影格與時間戳",
+   "question": "hand：影片 5941 幀、標稱 30 fps；`/timestamps/hand` 有 5941 筆，實測約 29.9658 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  }
+ ]
+}

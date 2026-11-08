@@ -1,0 +1,46 @@
+# 資料集設定。路徑都相對於專案根目錄（執行指令時的工作目錄），可用 CLI 參數覆寫。
+# 注意：這裡刻意「不寫任何 HDF5 key」。欄位對應等第 1 包核對完 questions.md 後，
+# 再整理成 configs/field_mapping.yaml（第 2 包 indexer 讀取）。
+
+dataset:
+  name: REASSEMBLE
+  record_url: https://researchdata.tuwien.ac.at/records/0ewrv-8cb44
+  zip_url: https://researchdata.tuwien.ac.at/records/0ewrv-8cb44/files/data.zip?download=1
+  readme_url: https://researchdata.tuwien.ac.at/records/0ewrv-8cb44/files/README.txt?download=1
+  license: CC-BY-4.0   # 引用：Sliwowski et al., 2025, arXiv:2502.05086
+
+paths:
+  raw_dir: data/raw              # HDF5 原檔（不進 Git）
+  index_dir: data/index          # 索引與結構報告
+  inspect_dir: data/index/inspect
+  logs_dir: logs
+
+samples:                         # fetch-samples 預設值
+  n: 3                           # 規格：先用 1–3 個檔案做 smoke test
+  strategy: spread               # spread=依錄製時間取頭/中/尾；smallest；random
+  seed: 0
+  member_suffix: .h5
+  exclude_known_issues: true     # 排除下方官方註記有問題的錄製檔
+  max_total_gb: 3.0              # 下載量上限（zip 內為壓縮大小；解壓後約大 4–5 倍），超過就停止
+  with_readme: true              # 一併下載官方 README.txt（約 8 KB）
+
+# 官方 README「File comments」列出的問題錄製檔（smoke test 先避開；之後索引時仍要處理）
+known_issue_files:
+  - 2025-01-10-15-28-50.h5   # hand cam missing at beginning
+  - 2025-01-10-16-17-40.h5   # missing hand cam
+  - 2025-01-10-17-10-38.h5   # hand cam missing at beginning
+  - 2025-01-10-17-54-09.h5   # no empty action at beginning
+  - 2025-01-11-14-22-09.h5   # no empty action at beginning
+  - 2025-01-11-14-45-48.h5   # F/T not valid for last action
+  - 2025-01-11-15-27-19.h5   # F/T not valid for last action
+  - 2025-01-11-15-35-08.h5   # F/T not valid for last action
+  - 2025-01-13-11-16-17.h5   # gripper broke for last action
+  - 2025-01-13-11-18-57.h5   # pose not available for last action
+
+inspect:                         # inspect-h5 預設值
+  expected_cameras: []           # 核對後再填，例如 [hama1, hama2, hand]；缺少時報 error
+  preview_n: 5                   # 每個陣列預覽頭尾幾筆
+  max_read_mb: 64                # 單一陣列整段讀取上限；超過只抽樣
+  media_probe: true              # 探測內嵌 mp4/mp3 的幀數、fps、解析度
+  count_frames: true             # 標頭沒有幀數時逐包計數
+  collapse_threshold: 8          # tree.txt 中同構子群組超過此數就摺疊

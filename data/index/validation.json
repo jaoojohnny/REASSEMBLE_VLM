@@ -1,0 +1,138 @@
+{
+ "generated_at": "2026-10-05T05:47:20+08:00",
+ "mapping": {
+  "path": "configs\\field_mapping.yaml",
+  "confirmed_at": "2026-10-04"
+ },
+ "n_recordings": 149,
+ "n_failed_recordings": 0,
+ "segment_status_counts": {
+  "excluded": 312,
+  "ok": 4547,
+  "warn": 4
+ },
+ "code_counts": {
+  "W_NO_FRAMES:hand": 6,
+  "W_SHORT": 3
+ },
+ "recording_issue_counts": {
+  "W_KNOWN_ISSUE": 10,
+  "W_CAMERA_MISSING": 1
+ },
+ "failed_recordings": [],
+ "recordings_with_issues": [
+  {
+   "recording_id": "2025-01-10-15-28-50",
+   "source": "zip:data/2025-01-10-15-28-50.h5",
+   "issues": [
+    "W_KNOWN_ISSUE"
+   ]
+  },
+  {
+   "recording_id": "2025-01-10-16-17-40",
+   "source": "zip:data/2025-01-10-16-17-40.h5",
+   "issues": [
+    "W_KNOWN_ISSUE",
+    "W_CAMERA_MISSING:hand"
+   ]
+  },
+  {
+   "recording_id": "2025-01-10-17-10-38",
+   "source": "zip:data/2025-01-10-17-10-38.h5",
+   "issues": [
+    "W_KNOWN_ISSUE"
+   ]
+  },
+  {
+   "recording_id": "2025-01-10-17-54-09",
+   "source": "zip:data/2025-01-10-17-54-09.h5",
+   "issues": [
+    "W_KNOWN_ISSUE"
+   ]
+  },
+  {
+   "recording_id": "2025-01-11-14-22-09",
+   "source": "zip:data/2025-01-11-14-22-09.h5",
+   "issues": [
+    "W_KNOWN_ISSUE"
+   ]
+  },
+  {
+   "recording_id": "2025-01-11-14-45-48",
+   "source": "zip:data/2025-01-11-14-45-48.h5",
+   "issues": [
+    "W_KNOWN_ISSUE"
+   ]
+  },
+  {
+   "recording_id": "2025-01-11-15-27-19",
+   "source": "zip:data/2025-01-11-15-27-19.h5",
+   "issues": [
+    "W_KNOWN_ISSUE"
+   ]
+  },
+  {
+   "recording_id": "2025-01-11-15-35-08",
+   "source": "zip:data/2025-01-11-15-35-08.h5",
+   "issues": [
+    "W_KNOWN_ISSUE"
+   ]
+  },
+  {
+   "recording_id": "2025-01-13-11-16-17",
+   "source": "zip:data/2025-01-13-11-16-17.h5",
+   "issues": [
+    "W_KNOWN_ISSUE"
+   ]
+  },
+  {
+   "recording_id": "2025-01-13-11-18-57",
+   "source": "zip:data/2025-01-13-11-18-57.h5",
+   "issues": [
+    "W_KNOWN_ISSUE"
+   ]
+  }
+ ],
+ "items": [
+  {
+   "recording_id": "2025-01-09-14-47-32",
+   "segment_id": "32",
+   "source": "zip:data/2025-01-09-14-47-32.h5",
+   "text": "Insert BNC.",
+   "status": "warn",
+   "codes": [
+    "W_NO_FRAMES:hand"
+   ]
+  },
+  {
+   "recording_id": "2025-01-10-15-28-50",
+   "segment_id": "1",
+   "source": "zip:data/2025-01-10-15-28-50.h5",
+   "text": "Pick BNC.",
+   "status": "warn",
+   "codes": [
+    "W_NO_FRAMES:hand"
+   ]
+  },
+  {
+   "recording_id": "2025-01-10-17-10-38",
+   "segment_id": "1",
+   "source": "zip:data/2025-01-10-17-10-38.h5",
+   "text": "Pick BNC.",
+   "status": "warn",
+   "codes": [
+    "W_NO_FRAMES:hand"
+   ]
+  },
+  {
+   "recording_id": "2025-01-14-11-53-50",
+   "segment_id": "12",
+   "source": "zip:data/2025-01-14-11-53-50.h5",
+   "text": "Insert medium gear.",
+   "status": "warn",
+   "codes": [
+    "W_SHORT"
+   ]
+  }
+ ]
+}

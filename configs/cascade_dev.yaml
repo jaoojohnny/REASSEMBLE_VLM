@@ -1,0 +1,14 @@
+# 第 12 包開發集（2026-10-31）：兩階段——本機 Qwen 機率門檻先判，判失敗才問 GPT。報告：python -m scripts.cascade_dev
+# 第一階段的機率、零件與切分沿用第 11 包（configs/reason_dev.yaml）；第二階段 GPT 在 4 個開發零件的 dev 段各跑一次。
+# 主要看第 11 包的乾淨開發集（experiments/clean_dev_p11）。挑選規則：docs/package12_cascade.md。
+# 測試集（之後凍結才用；使用者 2026-10-31 選「用 2 個、留 2 個」）：round peg 1、large gear；繼續保留：round peg 4、small gear。
+cascade_dev:
+  out_dir: experiments/p12_cascade_dev
+  reason_dev: configs/reason_dev.yaml
+  clean_dir: experiments/clean_dev_p11
+  blind_dir: experiments/blind_review_dev30_v1
+  gpt_experiments:
+    sqpeg2: configs/experiment_cdev_sqpeg2_gpt.yaml
+    rpeg3: configs/experiment_cdev_rpeg3_gpt.yaml
+    dsub: configs/experiment_cdev_dsub_gpt.yaml
+    mgear: configs/experiment_cdev_mgear_gpt.yaml

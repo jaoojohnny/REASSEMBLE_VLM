@@ -1,0 +1,122 @@
+assembly_monitor.inspect_h5 0.1.0 | 2026-10-04T17:55:07+08:00
+檔案：data\derived\synthetic\synthetic_normal.h5（369.3 KB）
+h5py 3.16.0 / HDF5 2.0.0
+圖例：[G] 群組  [D] 資料集  [L] 外部連結；shape=() 是純量；opaque 是不透明位元組（常見於內嵌 mp4/mp3）
+注意：欄位意義全是推測，請看 questions.md 核對。
+
+/ [G] 8 項  attrs {"note": "synthetic test file (not REASSEMBLE data)", "schema": "synthetic-v1"}
+├── cam_left [D] shape=() opaque[6.8 KB]
+│     ↳ 偵測為 mp4（6.8 KB，讀取方式 file-offset）：mpeg4 32x24，標稱 30 fps，90 幀（header），3 s，[pyav 18.1.0]
+├── cam_right [D] shape=() opaque[6.8 KB]
+│     ↳ 偵測為 mp4（6.8 KB，讀取方式 file-offset）：mpeg4 32x24，標稱 30 fps，90 幀（header），3 s，[pyav 18.1.0]
+├── cam_wrist [D] shape=() opaque[6.8 KB]
+│     ↳ 偵測為 mp4（6.8 KB，讀取方式 file-offset）：mpeg4 32x24，標稱 30 fps，90 幀（header），3 s，[pyav 18.1.0]
+├── events [D] shape=(4000, 3) int16  layout=chunked  chunks=(2000, 3)  gzip(4)  儲存 16.0 KB
+│     ↳ 角落 [0:5, 0:3] [[255, 191, 153], [80, 92, 12], [22, 4, 52], [243, 194, 273], [151, 181, 291]]
+├── mic_wrist [D] shape=(2058,) uint8
+│     ↳ 偵測為 mp3（2.0 KB，讀取方式 file-offset）；探測失敗：{'av': "InvalidDataError: [Errno 1094995529] Invalid data found when processing input: '<none>'"}
+├── robot [G] 2 項
+│   ├── force [D] shape=(3000, 3) float32
+│   │     ↳ 角落 [0:5, 0:3] [[-0.532885, 1.04983, -0.457996], [-1.44897, 1.96998, -0.474752], [-0.0259012, -1.21416, -2.03442], [-0.0325374, 0.896192, 0.658567], [-0.3…
+│   └── joint_pos [D] shape=(3000, 7) float64  layout=chunked  chunks=(500, 7)  gzip(4)  儲存 157.7 KB
+│         ↳ 角落 [0:5, 0:3] [[-0.656603, 1.15108, -0.873445], [2.04396, 0.615711, 1.32037], [-0.0381562, 0.75729, -1.36938], [-1.96013, 0.597184, -0.838883], [-0.90700…
+├── segments_info [G] 4 項
+│   ├── 0 [G] 5 項
+│   │   ├── end [D] shape=() float64  = 1736420000.7
+│   │   ├── Low_level [G] 3 項
+│   │   │   ├── 0 [G] 4 項
+│   │   │   │   ├── end [D] shape=() float64  = 1736420000.3
+│   │   │   │   ├── start [D] shape=() float64  = 1736420000.1
+│   │   │   │   ├── success [D] shape=() bool  = true
+│   │   │   │   └── text [D] shape=() str(vlen,utf-8)  = "Approach"
+│   │   │   ├── 1 [G] 4 項
+│   │   │   │   ├── end [D] shape=() float64  = 1736420000.5
+│   │   │   │   ├── start [D] shape=() float64  = 1736420000.3
+│   │   │   │   ├── success [D] shape=() bool  = true
+│   │   │   │   └── text [D] shape=() str(vlen,utf-8)  = "Align"
+│   │   │   └── 2 [G] 4 項
+│   │   │       ├── end [D] shape=() float64  = 1736420000.7
+│   │   │       ├── start [D] shape=() float64  = 1736420000.5
+│   │   │       ├── success [D] shape=() bool  = true
+│   │   │       └── text [D] shape=() str(vlen,utf-8)  = "Push"
+│   │   ├── start [D] shape=() float64  = 1736420000.1
+│   │   ├── success [D] shape=() bool  = true
+│   │   └── text [D] shape=() str(vlen,utf-8)  = "Pick round peg 1"
+│   ├── 1 [G] 5 項
+│   │   ├── end [D] shape=() float64  = 1736420001.4
+│   │   ├── Low_level [G] 3 項
+│   │   │   ├── 0 [G] 4 項
+│   │   │   │   ├── end [D] shape=() float64  = 1736420000.933334
+│   │   │   │   ├── start [D] shape=() float64  = 1736420000.7
+│   │   │   │   ├── success [D] shape=() bool  = true
+│   │   │   │   └── text [D] shape=() str(vlen,utf-8)  = "Approach"
+│   │   │   ├── 1 [G] 4 項
+│   │   │   │   ├── end [D] shape=() float64  = 1736420001.166667
+│   │   │   │   ├── start [D] shape=() float64  = 1736420000.933334
+│   │   │   │   ├── success [D] shape=() bool  = true
+│   │   │   │   └── text [D] shape=() str(vlen,utf-8)  = "Align"
+│   │   │   └── 2 [G] 4 項
+│   │   │       ├── end [D] shape=() float64  = 1736420001.4
+│   │   │       ├── start [D] shape=() float64  = 1736420001.166667
+│   │   │       ├── success [D] shape=() bool  = true
+│   │   │       └── text [D] shape=() str(vlen,utf-8)  = "Push"
+│   │   ├── start [D] shape=() float64  = 1736420000.7
+│   │   ├── success [D] shape=() bool  = true
+│   │   └── text [D] shape=() str(vlen,utf-8)  = "Insert round peg 1"
+│   ├── 2 [G] 5 項
+│   │   ├── end [D] shape=() float64  = 1736420002.1
+│   │   ├── Low_level [G] 3 項
+│   │   │   ├── 0 [G] 4 項
+│   │   │   │   ├── end [D] shape=() float64  = 1736420001.633334
+│   │   │   │   ├── start [D] shape=() float64  = 1736420001.4
+│   │   │   │   ├── success [D] shape=() bool  = true
+│   │   │   │   └── text [D] shape=() str(vlen,utf-8)  = "Approach"
+│   │   │   ├── 1 [G] 4 項
+│   │   │   │   ├── end [D] shape=() float64  = 1736420001.866666
+│   │   │   │   ├── start [D] shape=() float64  = 1736420001.633334
+│   │   │   │   ├── success [D] shape=() bool  = true
+│   │   │   │   └── text [D] shape=() str(vlen,utf-8)  = "Align"
+│   │   │   └── 2 [G] 4 項
+│   │   │       ├── end [D] shape=() float64  = 1736420002.1
+│   │   │       ├── start [D] shape=() float64  = 1736420001.866666
+│   │   │       ├── success [D] shape=() bool  = true
+│   │   │       └── text [D] shape=() str(vlen,utf-8)  = "Push"
+│   │   ├── start [D] shape=() float64  = 1736420001.4
+│   │   ├── success [D] shape=() bool  = true
+│   │   └── text [D] shape=() str(vlen,utf-8)  = "Pick square peg 2"
+│   └── 3 [G] 5 項
+│       ├── end [D] shape=() float64  = 1736420002.9
+│       ├── Low_level [G] 3 項
+│       │   ├── 0 [G] 4 項
+│       │   │   ├── end [D] shape=() float64  = 1736420002.366666
+│       │   │   ├── start [D] shape=() float64  = 1736420002.1
+│       │   │   ├── success [D] shape=() bool  = true
+│       │   │   └── text [D] shape=() str(vlen,utf-8)  = "Approach"
+│       │   ├── 1 [G] 4 項
+│       │   │   ├── end [D] shape=() float64  = 1736420002.633334
+│       │   │   ├── start [D] shape=() float64  = 1736420002.366666
+│       │   │   ├── success [D] shape=() bool  = true
+│       │   │   └── text [D] shape=() str(vlen,utf-8)  = "Align"
+│       │   └── 2 [G] 4 項
+│       │       ├── end [D] shape=() float64  = 1736420002.9
+│       │       ├── start [D] shape=() float64  = 1736420002.633334
+│       │       ├── success [D] shape=() bool  = false
+│       │       └── text [D] shape=() str(vlen,utf-8)  = "Push"
+│       ├── start [D] shape=() float64  = 1736420002.1
+│       ├── success [D] shape=() bool  = false
+│       └── text [D] shape=() str(vlen,utf-8)  = "Insert square peg 2"
+└── timestamps [G] 7 項
+    ├── cam_left [D] shape=(90,) float64
+    │     ↳ 時間軸：n=90，1736420000.001871 → 1736420002.96681（推測單位 s、Unix 時間，2025-01-09T10:53:20.001+00:00 起），中位間隔 33.284 ms ≈ 30.045 Hz，單調不減
+    ├── cam_right [D] shape=(90,) float64
+    │     ↳ 時間軸：n=90，1736420000.000902 → 1736420002.968582（推測單位 s、Unix 時間，2025-01-09T10:53:20.000+00:00 起），中位間隔 33.379 ms ≈ 29.959 Hz，單調不減
+    ├── cam_wrist [D] shape=(90,) float64
+    │     ↳ 時間軸：n=90，1736420000.000386 → 1736420002.967975（推測單位 s、Unix 時間，2025-01-09T10:53:20.000+00:00 起），中位間隔 33.502 ms ≈ 29.849 Hz，單調不減
+    ├── events [D] shape=(4000,) float64
+    │     ↳ 時間軸：n=4000，1736420000.000287 → 1736420002.999529（推測單位 s、Unix 時間，2025-01-09T10:53:20.000+00:00 起），中位間隔 0.518 ms ≈ 1931.079 Hz，單調不減，大間隔 509 處
+    ├── force [D] shape=(3000,) float64
+    │     ↳ 時間軸：n=3000，1736420000 → 1736420002.999（推測單位 s、Unix 時間，2025-01-09T10:53:20.000+00:00 起），中位間隔 1.000 ms ≈ 1000.072 Hz，單調不減
+    ├── joint_pos [D] shape=(3000,) float64
+    │     ↳ 時間軸：n=3000，1736420000 → 1736420002.999（推測單位 s、Unix 時間，2025-01-09T10:53:20.000+00:00 起），中位間隔 1.000 ms ≈ 1000.072 Hz，單調不減
+    └── mic_wrist [D] shape=(150,) float64
+          ↳ 時間軸：n=150，1736420000 → 1736420002.98（推測單位 s、Unix 時間，2025-01-09T10:53:20.000+00:00 起），中位間隔 20.000 ms ≈ 50.000 Hz，單調不減

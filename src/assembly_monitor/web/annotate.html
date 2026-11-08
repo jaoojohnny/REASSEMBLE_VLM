@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>標註</title>
+<style>
+:root{--bg:#f4f5f7;--panel:#fff;--ink:#1f2328;--muted:#656d76;--line:#d0d7de;--ok:#1a7f37;--bad:#cf222e;--warn:#9a6700;--accent:#0969da;--ev:#fb8500}
+*{box-sizing:border-box}
+body{margin:0;font:14px/1.45 system-ui,"Microsoft JhengHei","PingFang TC",sans-serif;background:var(--bg);color:var(--ink)}
+header{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:8px 14px;background:#24292f;color:#fff;position:sticky;top:0;z-index:5}
+header .title{font-weight:600;margin-right:8px}
+header input{padding:3px 6px;border-radius:4px;border:1px solid #57606a}
+header button,header .btn{background:#2f81f7;color:#fff;border:0;border-radius:5px;padding:5px 10px;cursor:pointer;font:inherit}
+header .btn.secondary,header button.secondary{background:#57606a}
+header a{color:#9ecbff}
+#saveState{color:#8c959f;font-size:12px}
+#banner{margin:8px 14px 0;display:none;padding:8px 12px;border-radius:6px}
+#banner.show{display:block}
+#banner.info{background:#ddf4ff;border:1px solid #54aeff}
+#banner.warn{background:#fff8c5;border:1px solid #d4a72c}
+#banner.error{background:#ffebe9;border:1px solid #ff8182}
+#banner button{margin-left:8px}
+main{display:grid;grid-template-columns:230px 1fr;gap:12px;padding:12px 14px}
+nav{background:var(--panel);border:1px solid var(--line);border-radius:8px;max-height:calc(100vh - 90px);overflow:auto;position:sticky;top:60px}
+nav .tools{padding:6px 8px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}
+nav .item{padding:6px 8px;border-bottom:1px solid #eaeef2;cursor:pointer;font-size:12.5px;display:flex;gap:6px;align-items:center}
+nav .item:hover{background:#f6f8fa}
+nav .item.cur{background:#ddf4ff}
+nav .item .dot{width:10px;height:10px;border-radius:50%;border:2px solid #8c959f;flex:none}
+nav .item.draft .dot{background:linear-gradient(90deg,#8c959f 50%,transparent 50%)}
+nav .item.done .dot{background:var(--ok);border-color:var(--ok)}
+nav .item.invalid .dot{background:var(--bad);border-color:var(--bad)}
+nav .item .lab{font-weight:600;width:14px}
+nav .item .lab.f{color:var(--bad)}nav .item .lab.s{color:var(--ok)}
+nav .item .dis{color:var(--warn);font-size:11px}
+section#work{min-width:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-bottom:10px}
+#segTitle{font-size:15px;font-weight:600}
+#segTitle .ds{padding:1px 8px;border-radius:10px;color:#fff;font-size:12.5px;margin-left:6px}
+#segTitle .ds.failure{background:var(--bad)}#segTitle .ds.success{background:var(--ok)}
+#cams{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+#cams.big{grid-template-columns:3fr 1fr;grid-auto-rows:min-content;align-items:start}
+#cams.big figure.big{grid-row:1 / span 2}
+#cams.big figure.big img{max-height:64vh}
+figure{margin:0;position:relative;background:#000;border-radius:6px;overflow:hidden;cursor:zoom-in}
+#cams.big figure.big{cursor:zoom-out}
+figure img{width:100%;display:block;aspect-ratio:4/3;object-fit:contain;background:#000}
+figure figcaption{position:absolute;left:0;top:0;background:rgba(0,0,0,.65);color:#fff;font-size:12px;padding:2px 6px;border-bottom-right-radius:6px}
+figure .ft{position:absolute;left:0;bottom:0;background:rgba(0,0,0,.65);color:#fff;font-size:12px;padding:2px 6px;border-top-right-radius:6px}
+figure .ft.far{background:#9a6700}
+figure.best{outline:3px solid var(--accent)}
+#tl{position:relative;height:74px;margin:6px 0 0;user-select:none;cursor:pointer;background:#f6f8fa;border:1px solid var(--line);border-radius:6px}
+#tl .seg{position:absolute;top:0;bottom:0;background:rgba(26,127,55,.10);border-left:2px solid var(--ok);border-right:2px solid var(--ok)}
+#tl .skill{position:absolute;top:4px;height:22px;border-radius:4px;font-size:11px;color:#fff;padding:3px 4px;overflow:hidden;white-space:nowrap;background:#6e7781;border:1px solid #fff}
+#tl .skill.bad{background:var(--bad)}
+#tl .ev{position:absolute;top:30px;height:14px;background:var(--ev);opacity:.8;border-radius:3px}
+#tl .ref{position:absolute;height:5px;border-radius:2px;opacity:.85}
+#tl .cursor{position:absolute;top:0;bottom:0;width:2px;background:var(--accent)}
+#tl .tick{position:absolute;bottom:0;height:8px;border-left:1px solid #8c959f}
+#tl .tick span{position:absolute;bottom:8px;left:2px;font-size:10px;color:var(--muted)}
+#transport{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px}
+#transport button{min-width:38px;padding:4px 8px;border:1px solid var(--line);background:#f6f8fa;border-radius:5px;cursor:pointer;font:inherit}
+#transport .t{font-variant-numeric:tabular-nums;font-weight:600;margin-left:8px}
+#transport .phase{color:var(--muted)}
+#transport label{margin-left:auto;font-size:12.5px;color:var(--muted)}
+form .row{display:grid;grid-template-columns:120px 1fr;gap:8px;padding:6px 0;border-bottom:1px dashed #eaeef2;align-items:start}
+form .row:last-child{border-bottom:0}
+form .row > .k{font-weight:600;padding-top:3px}
+form .opts{display:flex;flex-wrap:wrap;gap:6px 14px}
+form .opts label{cursor:pointer}
+form .reason{display:block;margin:2px 0}
+form .reason small{color:var(--muted);margin-left:4px}
+form .disabled{opacity:.45;pointer-events:none}
+form input[type=number]{width:90px}
+form textarea{width:100%;min-height:52px;font:inherit;padding:5px;border:1px solid var(--line);border-radius:5px}
+form button{padding:4px 9px;border:1px solid var(--line);background:#f6f8fa;border-radius:5px;cursor:pointer;font:inherit}
+form .primary{background:var(--ok);color:#fff;border-color:var(--ok);font-weight:600;padding:6px 14px}
+.vis{display:grid;grid-template-columns:70px 1fr;gap:2px 8px}
+#errs{color:var(--bad);margin:6px 0 0;padding-left:18px}
+#status{font-size:12.5px;color:var(--muted);margin-left:10px}
+#compare table{border-collapse:collapse;width:100%;font-size:12.5px}
+#compare th,#compare td{border:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
+#compare td.dis{background:#fff8c5}
+#help{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;z-index:20}
+#help.show{display:block}
+#help .box{background:#fff;max-width:760px;margin:5vh auto;border-radius:10px;padding:16px 20px;max-height:88vh;overflow:auto}
+kbd{border:1px solid #8c959f;border-bottom-width:2px;border-radius:4px;padding:0 5px;font-size:12px;background:#f6f8fa}
+@media (max-width:900px){main{grid-template-columns:1fr}nav{position:static;max-height:220px}#cams{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <span class="title" id="title">標註</span>
+  <label>標註者 <input id="annotator" size="10" placeholder="例如 A"></label>
+  <span id="progress"></span>
+  <button id="btnJsonl" type="button">匯出 JSONL</button>
+  <button id="btnCsv" type="button" class="secondary">匯出 CSV</button>
+  <label class="btn secondary">匯入…<input type="file" id="fileImport" accept=".jsonl,.csv,.json" hidden></label>
+  <a href="#" id="btnHelp">說明與快捷鍵</a>
+  <span id="saveState"></span>
+</header>
+<div id="banner"></div>
+<main>
+  <nav id="list"></nav>
+  <section id="work">
+    <div class="card">
+      <div id="segTitle"></div>
+      <div id="cams" style="margin-top:8px"></div>
+      <div id="tl"></div>
+      <div id="transport">
+        <button type="button" data-act="back1" title="Shift+←">−1 秒</button>
+        <button type="button" data-act="prev" title="←">◀</button>
+        <button type="button" data-act="play" id="btnPlay" title="空白鍵">▶ 播放</button>
+        <button type="button" data-act="next" title="→">▶</button>
+        <button type="button" data-act="fwd1" title="Shift+→">+1 秒</button>
+        <select id="speed" title="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select>
+        <span class="t" id="tnow"></span><span class="phase" id="phase"></span>
+        <label><input type="checkbox" id="showSkills"> 顯示資料集低階技能</label>
+      </div>
+    </div>
+    <div class="card" id="compare" hidden></div>
+    <form class="card" id="form" autocomplete="off" onsubmit="return false">
+      <div class="row"><div class="k">結果</div><div class="opts" id="fResult"></div></div>
+      <div class="row"><div class="k">失敗原因</div><div id="fReason"></div></div>
+      <div class="row" id="rowDiff"><div class="k">畫面難度</div><div id="fDiff"></div></div>
+      <div class="row"><div class="k">證據區間</div><div>
+        起 <input type="number" step="0.1" id="evA"> 秒 <button type="button" data-act="setA" title="[">設為目前時間 [</button> <button type="button" data-act="goA">跳到</button>
+        　迄 <input type="number" step="0.1" id="evB"> 秒 <button type="button" data-act="setB" title="]">設為目前時間 ]</button> <button type="button" data-act="goB">跳到</button>
+        　<button type="button" data-act="clearEv">清除</button> <span id="evLen" style="color:var(--muted)"></span>
+        <div style="color:var(--muted);font-size:12px" id="evHint">秒數相對於標註起點（0＝資料集標註的開始）；畫面上看得到成敗依據的那一段。</div>
+      </div></div>
+      <div class="row"><div class="k">最佳視角</div><div class="opts" id="fCam"></div></div>
+      <div class="row"><div class="k">接觸區可見度</div><div class="vis" id="fVis"></div></div>
+      <div class="row"><div class="k">看得到的依據</div><div><textarea id="fEvidence" placeholder="例：接頭停在插座外側，夾爪放開後接頭倒在板上"></textarea></div></div>
+      <div class="row"><div class="k">備註</div><div><textarea id="fNotes" placeholder="不確定的地方、選「其他」時的原因"></textarea></div></div>
+      <div class="row"><div class="k"></div><div>
+        <button type="button" class="primary" id="btnDone">✔ 標完，下一段</button>
+        <button type="button" id="btnReopen">改回草稿</button>
+        <span id="status"></span>
+        <ul id="errs"></ul>
+      </div></div>
+    </form>
+  </section>
+</main>
+<div id="help"><div class="box" id="helpBox"></div></div>
+<script src="data.js"></script>
+<script src="compare_data.js" onerror="void 0"></script>
+<script>
+(function () {
+  'use strict';
+  const D = window.ANNOT;
+  if (!D) { document.body.innerHTML = '<p style="padding:20px">找不到 data.js：請用 annotate build 重新產生這個資料夾。</p>'; return; }
+  const CMP = window.ANNOT_COMPARE || null;
+  const CFG = D.config;
+  const params = new URLSearchParams(location.search);
+  const MODE = params.get('mode') === 'adjudicate' && CMP ? 'adjudicate' : 'annotate';
+  const SEGS = D.segments;
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmt = (v, k = 2) => (v == null || !isFinite(v) ? '—' : (v >= 0 ? '+' : '') + Number(v).toFixed(k));
+  const isNum = (v) => typeof v === 'number' && isFinite(v);
+  const LS = (() => { try { localStorage.setItem('__am', '1'); localStorage.removeItem('__am'); return localStorage; } catch (e) { return null; } })();
+  const st = { annotator: '', records: {}, cur: 0, t: 0, playing: null, speed: 1, bigCam: null, onlyDisputes: MODE === 'adjudicate',
+               showSkills: D.show_skills !== false, pendingImport: null };
+
+  // ------------------------------------------------------------ 儲存
+  const storeKey = () => `reassemble-annot:v1:${D.task}:${MODE}:${st.annotator}`;
+  function loadStore() {
+    if (!LS || !st.annotator) return {};
+    let recs = {};
+    try { recs = JSON.parse(LS.getItem(storeKey()) || '{}') || {}; } catch (e) { return {}; }
+    if (MODE === 'adjudicate') {  // 裁決頁換了新版類別：舊草稿升級版本（新版是舊版的延伸），之後依新版規則檢查
+      for (const r of Object.values(recs)) {
+        if (r && r.label_version !== CFG.label_version) {
+          r.annotated_label_version = r.annotated_label_version || r.label_version;
+          r.label_version = CFG.label_version; r.reason_set = CFG.reason_set;
+        }
+      }
+    }
+    return recs;
+  }
+  function saveStore() {
+    if (!st.annotator) return;
+    if (!LS) { $('saveState').textContent = '瀏覽器不允許自動儲存，請記得匯出'; return; }
+    try { LS.setItem(storeKey(), JSON.stringify(st.records)); $('saveState').textContent = '已自動儲存 ' + new Date().toLocaleTimeString(); }
+    catch (e) { banner('自動儲存失敗（' + e.message + '），請先匯出 JSONL 備份。', 'error'); }
+  }
+  function nowIso() {
+    const d = new Date(), tz = -d.getTimezoneOffset(), p = (n) => String(Math.floor(Math.abs(n))).padStart(2, '0');
+    return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}${tz >= 0 ? '+' : '-'}${p(tz / 60)}:${p(tz % 60)}`;
+  }
+  function banner(html, kind = 'info') { const b = $('banner'); b.className = 'show ' + kind; b.innerHTML = html; }
+  function clearBanner() { $('banner').className = ''; $('banner').innerHTML = ''; }
+
+  // ------------------------------------------------------------ 紀錄
+  function primaryRec(seg) {
+    if (!CMP) return null;
+    const s = CMP.sources[CMP.primary];
+    return s && s.records ? s.records[seg.id] || null : null;
+  }
+  function initialRecord(seg) {
+    const base = {
+      segment_id: seg.id, recording_id: seg.recording_id, segment_index: seg.segment_index, part: D.part,
+      dataset_result: seg.dataset_result, result: seg.dataset_result, failure_reason: null,
+      evidence_start_sec: null, evidence_end_sec: null, best_camera: null, visual_difficulty: null,
+      visible_evidence: '', notes: '', camera_visibility: Object.fromEntries(CFG.cameras.map((c) => [c, null])),
+      annotator: st.annotator, annotator_type: 'human', label_version: CFG.label_version, reason_set: CFG.reason_set,
+      review_status: 'draft', created_at: nowIso(), updated_at: nowIso(), source: MODE === 'adjudicate' ? 'adjudication-page' : 'annotate-page',
+    };
+    const p = MODE === 'adjudicate' ? primaryRec(seg) : null;
+    if (p) {
+      for (const k of ['result', 'failure_reason', 'evidence_start_sec', 'evidence_end_sec', 'best_camera', 'visual_difficulty', 'visible_evidence', 'notes']) base[k] = p[k] == null ? base[k] : p[k];
+      base.camera_visibility = Object.assign({}, base.camera_visibility, p.camera_visibility || {});
+    }
+    return base;
+  }
+  const seg = () => SEGS[st.cur];
+  const recOf = (s) => st.records[s.id] || null;
+  function ensureRec(s) { if (!st.records[s.id]) st.records[s.id] = initialRecord(s); return st.records[s.id]; }
+  const doneStatus = MODE === 'adjudicate' ? 'adjudicated' : 'submitted';
+  const DIFF = CFG.difficulty || {};
+  const hasDiff = Object.keys(DIFF).length > 0;
+  const needsDiff = (r) => hasDiff && !!CFG.difficulty_required && r.label_version === CFG.label_version && r.annotator_type !== 'reference';
+
+  function validate(r, s, complete) {
+    const e = [];
+    if (!r.annotator) e.push('請先在上方填「標註者」');
+    if (!(r.result in CFG.results)) e.push('請選結果');
+    if (r.failure_reason != null && !(r.failure_reason in CFG.reasons)) e.push('失敗原因不在清單內');
+    if (r.result !== 'failure' && r.failure_reason != null) e.push('只有結果是「失敗」才能選失敗原因');
+    const a = r.evidence_start_sec, b = r.evidence_end_sec;
+    if ((a == null) !== (b == null)) e.push('證據區間的起點與終點要一起填');
+    if (a != null && !isNum(a)) e.push('證據起點必須是數字');
+    if (b != null && !isNum(b)) e.push('證據終點必須是數字');
+    if (isNum(a) && isNum(b) && a > b) e.push('證據起點大於終點');
+    const w0 = s.window[0], w1 = s.window[1], tol = CFG.tolerance_sec || 0.05;
+    for (const [n, v] of [['起點', a], ['終點', b]]) if (isNum(v) && (v < w0 - tol || v > w1 + tol)) e.push(`證據${n} ${v} 超出這段的範圍 [${w0.toFixed(2)}, ${w1.toFixed(2)}] 秒`);
+    if (r.best_camera != null && !CFG.cameras.includes(r.best_camera)) e.push('最佳視角不在清單內');
+    if (r.visual_difficulty != null && !(r.visual_difficulty in DIFF)) e.push('畫面難度不在清單內');
+    if (complete) {
+      if (r.result === 'failure' && r.failure_reason == null) e.push('結果是失敗：請選失敗原因');
+      if (r.failure_reason && (CFG.reasons[r.failure_reason] || {}).requires_notes && !(r.notes || '').trim()) e.push('選「' + CFG.reasons[r.failure_reason].zh + '」時請在備註寫出原因');
+      if (CFG.evidence_required_for.includes(r.result)) {
+        if (a == null || b == null) e.push('請設定證據區間（起點與終點）');
+        if (r.best_camera == null) e.push('請選最佳視角');
+        if (!(r.visible_evidence || '').trim()) e.push('請寫「看得到的依據」');
+        if (isNum(a) && isNum(b) && CFG.evidence_min_len && b - a < CFG.evidence_min_len && r.label_version === CFG.label_version)
+          e.push(`證據區間太短（${(b - a).toFixed(2)} 秒），起點和終點要分別設定`);
+      }
+      if (needsDiff(r) && !r.visual_difficulty) e.push('請選「畫面難度」');
+    }
+    return e;
+  }
+  function statusOf(s) {
+    const r = recOf(s);
+    if (!r) return 'todo';
+    if (r.review_status === doneStatus) return validate(r, s, true).length ? 'invalid' : 'done';
+    return 'draft';
+  }
+  function touch(r) {
+    r.updated_at = nowIso();
+    r.annotator = st.annotator;
+    if (r.review_status === doneStatus && validate(r, seg(), true).length) {
+      r.review_status = 'draft';
+      banner('這段原本已標完，修改後有欄位不完整，已改回草稿。', 'warn');
+    }
+    saveStore();
+    renderList();
+    renderStatus();
+  }
+
+  // ------------------------------------------------------------ 畫面
+  const disputes = () => (CMP && CMP.disputes) || {};
+  function visibleSegs() { return SEGS.map((s, i) => [s, i]).filter(([s]) => !st.onlyDisputes || disputes()[s.id]); }
+  function renderList() {
+    const nav = $('list');
+    const pool = MODE === 'adjudicate' ? SEGS.filter((s) => disputes()[s.id]) : SEGS;
+    const done = pool.filter((s) => statusOf(s) === 'done').length, draft = pool.filter((s) => statusOf(s) === 'draft').length;
+    $('progress').textContent = `${MODE === 'adjudicate' ? '已裁決' : '已完成'} ${done} / ${pool.length}${MODE === 'adjudicate' ? ' 爭議段' : ''}${draft ? `（草稿 ${draft}）` : ''}`;
+    let html = '';
+    if (MODE === 'adjudicate') html += `<div class="tools"><label><input type="checkbox" id="onlyDis" ${st.onlyDisputes ? 'checked' : ''}> 只看爭議段（${Object.keys(disputes()).length}）</label></div>`;
+    for (const [s, i] of visibleSegs()) {
+      const d = disputes()[s.id];
+      html += `<div class="item ${i === st.cur ? 'cur' : ''} ${statusOf(s)}" data-i="${i}"><span class="dot"></span>` +
+        `<span class="lab ${s.dataset_result === 'failure' ? 'f' : 's'}">${s.dataset_result === 'failure' ? '✗' : '✓'}</span>` +
+        `<span>#${s.n} ${esc(s.recording_id.slice(5))} · ${s.segment_index}${d ? ` <span class="dis">爭議：${esc(d.join(','))}</span>` : ''}</span></div>`;
+    }
+    nav.innerHTML = html;
+    const od = $('onlyDis');
+    if (od) od.onchange = () => { st.onlyDisputes = od.checked; renderList(); };
+    const curEl = nav.querySelector('.item.cur');
+    if (curEl && curEl.scrollIntoViewIfNeeded) curEl.scrollIntoViewIfNeeded(false);
+  }
+  function framePath(s, cam, k) { return `frames/${s.id}/${cam}__${String(k).padStart(4, '0')}.jpg`; }
+  function nearest(arr, t) {
+    let lo = 0, hi = arr.length - 1;
+    if (hi < 0) return -1;
+    while (lo < hi) { const m = (lo + hi) >> 1; if (arr[m] < t) lo = m + 1; else hi = m; }
+    if (lo > 0 && Math.abs(arr[lo - 1] - t) <= Math.abs(arr[lo] - t)) lo--;
+    return lo;
+  }
+  function renderSeg() {
+    const s = seg();
+    const r = recOf(s);
+    $('segTitle').innerHTML = `#${s.n}　${esc(s.recording_id)} · seg ${s.segment_index} · ${esc(s.text)}` +
+      `<span class="ds ${s.dataset_result}">資料集：${s.dataset_result === 'failure' ? '失敗' : s.dataset_result === 'success' ? '成功' : '—'}</span>` +
+      `<span style="color:var(--muted);font-weight:400;margin-left:10px">標註長度 ${s.duration.toFixed(2)} 秒；畫面範圍 ${fmt(s.window[0])} ～ ${fmt(s.window[1])} 秒</span>`;
+    const cams = $('cams');
+    cams.className = st.bigCam ? 'big' : '';
+    cams.innerHTML = CFG.cameras.map((c) => `<figure data-cam="${c}" class="${st.bigCam === c ? 'big' : ''} ${r && r.best_camera === c ? 'best' : ''}">` +
+      `<img alt="${c}"><figcaption>${c}</figcaption><span class="ft"></span></figure>`).join('');
+    if (st.bigCam) {  // 放大的那台放第一個
+      const big = cams.querySelector(`figure[data-cam="${st.bigCam}"]`);
+      if (big) cams.prepend(big);
+    }
+    for (const f of cams.querySelectorAll('figure')) f.onclick = () => { st.bigCam = st.bigCam === f.dataset.cam ? null : f.dataset.cam; renderSeg(); };
+    renderTimeline();
+    fillForm();
+    renderCompare();
+    updateFrames();
+  }
+  function xPct(s, t) { return ((t - s.window[0]) / (s.window[1] - s.window[0])) * 100; }
+  function renderTimeline() {
+    const s = seg(), r = recOf(s), tl = $('tl');
+    let h = `<div class="seg" style="left:${xPct(s, 0)}%;width:${xPct(s, s.duration) - xPct(s, 0)}%"></div>`;
+    if (st.showSkills) for (const k of s.skills || []) {
+      const l = xPct(s, Math.max(k.start, s.window[0])), w = Math.max(0.4, xPct(s, Math.min(k.end, s.window[1])) - l);
+      h += `<div class="skill ${k.success === false ? 'bad' : ''}" style="left:${l}%;width:${w}%" title="${esc(k.text)} ${fmt(k.start)}～${fmt(k.end)} 秒 ${k.success === false ? '失敗' : '成功'}">${esc(k.text)}${k.success === false ? ' ✗' : ''}</div>`;
+    }
+    if (r && isNum(r.evidence_start_sec) && isNum(r.evidence_end_sec)) {
+      const l = xPct(s, r.evidence_start_sec), w = Math.max(0.4, xPct(s, r.evidence_end_sec) - l);
+      h += `<div class="ev" style="left:${l}%;width:${w}%" title="證據區間"></div>`;
+    }
+    if (MODE === 'adjudicate' && CMP) {
+      const colors = ['#0969da', '#8250df', '#6e7781'];
+      Object.keys(CMP.sources).forEach((k, i) => {
+        const x = CMP.sources[k].records[s.id];
+        if (x && isNum(x.evidence_start_sec) && isNum(x.evidence_end_sec)) {
+          const l = xPct(s, x.evidence_start_sec), w = Math.max(0.4, xPct(s, x.evidence_end_sec) - l);
+          h += `<div class="ref" style="top:${47 + i * 6}px;left:${l}%;width:${w}%;background:${colors[i % 3]}" title="${esc(k)} 的證據區間"></div>`;
+        }
+      });
+    }
+    const span = s.window[1] - s.window[0];
+    const step = span <= 15 ? 1 : span <= 40 ? 2 : span <= 90 ? 5 : 10;
+    for (let t = Math.ceil(s.window[0] / step) * step; t <= s.window[1]; t += step) h += `<div class="tick" style="left:${xPct(s, t)}%"><span>${t}</span></div>`;
+    h += `<div class="cursor" id="cursor"></div>`;
+    tl.innerHTML = h;
+    placeCursor();
+  }
+  function placeCursor() { const c = $('cursor'); if (c) c.style.left = xPct(seg(), st.t) + '%'; }
+  function phaseAt(s, t) {
+    if (t < 0) return '標註起點前';
+    if (t > s.duration) return '標註終點後';
+    const k = (s.skills || []).find((x) => x.start <= t && t <= x.end);
+    return k ? `${k.text}${k.success === false ? '（資料集：失敗）' : ''}` : '標註區間內';
+  }
+  function updateFrames() {
+    const s = seg();
+    for (const f of $('cams').querySelectorAll('figure')) {
+      const cam = f.dataset.cam, c = s.cams[cam];
+      const img = f.querySelector('img'), ft = f.querySelector('.ft');
+      if (!c || !c.t.length) { img.removeAttribute('src'); ft.textContent = '沒有畫面'; continue; }
+      const k = nearest(c.t, st.t);
+      const p = framePath(s, cam, k);
+      if (img.getAttribute('src') !== p) img.setAttribute('src', p);
+      const far = Math.abs(c.t[k] - st.t) > 0.25;
+      ft.textContent = `t=${fmt(c.t[k])}s` + (far ? `（最近的畫面，差 ${Math.abs(c.t[k] - st.t).toFixed(2)} 秒）` : '');
+      ft.classList.toggle('far', far);
+      for (let j = 1; j <= 6; j++) if (k + j < c.t.length) { const im = new Image(); im.src = framePath(s, cam, k + j); }
+    }
+    $('tnow').textContent = `t = ${fmt(st.t)} 秒`;
+    $('phase').textContent = '　' + (st.showSkills ? phaseAt(s, st.t) : (st.t < 0 ? '標註起點前' : st.t > s.duration ? '標註終點後' : '標註區間內'));
+    placeCursor();
+  }
+  function seek(t) {
+    const s = seg();
+    st.t = Math.min(Math.max(t, s.window[0]), s.window[1]);
+    updateFrames();
+  }
+  function step(dir) { seek(st.t + dir / (D.fps || 5)); }
+
+  // ------------------------------------------------------------ 表單
+  function radios(name, opts, value, extraCls = '') {
+    return opts.map(([v, label, small]) => `<label class="${extraCls}"><input type="radio" name="${name}" value="${esc(v)}" ${value === v ? 'checked' : ''}> ${esc(label)}${small ? `<small>${esc(small)}</small>` : ''}</label>`).join('');
+  }
+  function buildForm() {  // 選項只跟設定有關，建立一次；換段只改勾選狀態（避免點擊時元素被換掉）
+    $('fResult').innerHTML = radios('result', Object.entries(CFG.results).map(([k, v]) => [k, v.zh, '']), null);
+    $('fReason').innerHTML = radios('reason', Object.entries(CFG.reasons).map(([k, v]) => [k, `${v.zh}（${k}）`, v.definition]), null, 'reason');
+    $('fCam').innerHTML = radios('cam', CFG.cameras.map((c, i) => [c, `${c}　[${i + 1}]`, '']), null);
+    $('fDiff').innerHTML = radios('diff', Object.entries(DIFF).map(([k, v]) => [k, `${v.zh}（${k}）`, v.definition || '']), null, 'reason');
+    $('rowDiff').hidden = !hasDiff;
+    if (CFG.evidence_hint) $('evHint').textContent = '秒數相對於標註起點（0＝資料集標註的開始）。' + CFG.evidence_hint;
+    $('fVis').innerHTML = CFG.cameras.map((c) => `<span>${c}</span><span class="opts">${radios('vis_' + c, Object.entries(CFG.visibility).map(([k, v]) => [k, v.zh, '']), null)}</span>`).join('');
+    $('btnDone').textContent = MODE === 'adjudicate' ? '✔ 裁決完成，下一段' : '✔ 標完，下一段';
+    for (const el of $('form').querySelectorAll('input[type=radio]')) el.onchange = onRadio;
+  }
+  function setRadio(name, value) { for (const el of document.getElementsByName(name)) el.checked = value != null && el.value === value; }
+  function fillForm() {
+    const s = seg(), r = recOf(s) || initialRecord(s);
+    $('form').classList.toggle('disabled', !st.annotator);
+    setRadio('result', r.result);
+    setRadio('reason', r.failure_reason);
+    setRadio('cam', r.best_camera);
+    setRadio('diff', r.visual_difficulty);
+    for (const c of CFG.cameras) setRadio('vis_' + c, (r.camera_visibility || {})[c]);
+    $('fReason').classList.toggle('disabled', r.result !== 'failure');
+    $('evA').value = isNum(r.evidence_start_sec) ? r.evidence_start_sec : '';
+    $('evB').value = isNum(r.evidence_end_sec) ? r.evidence_end_sec : '';
+    $('evLen').textContent = isNum(r.evidence_start_sec) && isNum(r.evidence_end_sec) ? `長 ${(r.evidence_end_sec - r.evidence_start_sec).toFixed(2)} 秒` : '';
+    $('fEvidence').value = r.visible_evidence || '';
+    $('fNotes').value = r.notes || '';
+    for (const f of $('cams').querySelectorAll('figure')) f.classList.toggle('best', f.dataset.cam === r.best_camera);
+    renderStatus();
+  }
+  function renderStatus() {
+    const s = seg(), r = recOf(s);
+    const map = { todo: '尚未開始', draft: '草稿（自動儲存）', done: MODE === 'adjudicate' ? '已裁決' : '已標完', invalid: '已標完但有欄位不完整' };
+    $('status').textContent = map[statusOf(s)];
+    $('btnReopen').style.display = r && r.review_status === doneStatus ? '' : 'none';
+    const errs = r ? validate(r, s, false) : [];
+    $('errs').innerHTML = errs.map((e) => `<li>${esc(e)}</li>`).join('');
+  }
+  function onRadio(ev) {
+    if (!st.annotator) return;
+    const s = seg(), r = ensureRec(s), n = ev.target.name, v = ev.target.value;
+    if (n === 'result') { r.result = v; if (v !== 'failure') r.failure_reason = null; }
+    else if (n === 'reason') r.failure_reason = v;
+    else if (n === 'cam') r.best_camera = v;
+    else if (n === 'diff') r.visual_difficulty = v;
+    else if (n.startsWith('vis_')) { r.camera_visibility = r.camera_visibility || {}; r.camera_visibility[n.slice(4)] = v; }
+    ev.target.blur();
+    touch(r);
+    fillForm();
+  }
+  function numOrNull(x) { const s = String(x).trim(); if (!s) return null; const v = Number(s.replace(',', '.')); return isFinite(v) ? Math.round(v * 1000) / 1000 : s; }
+  function setEvidence(which, value) {
+    if (!st.annotator) return;
+    const s = seg(), r = ensureRec(s);
+    if (which === 'A') { r.evidence_start_sec = value; if (isNum(value) && isNum(r.evidence_end_sec) && r.evidence_end_sec < value) r.evidence_end_sec = value; }
+    else { r.evidence_end_sec = value; if (isNum(value) && isNum(r.evidence_start_sec) && r.evidence_start_sec > value) r.evidence_start_sec = value; }
+    touch(r);
+    $('evA').value = isNum(r.evidence_start_sec) ? r.evidence_start_sec : '';
+    $('evB').value = isNum(r.evidence_end_sec) ? r.evidence_end_sec : '';
+    $('evLen').textContent = isNum(r.evidence_start_sec) && isNum(r.evidence_end_sec) ? `長 ${(r.evidence_end_sec - r.evidence_start_sec).toFixed(2)} 秒` : '';
+    renderTimeline();
+  }
+  function goto(i, t) {
+    stop();
+    st.cur = Math.max(0, Math.min(SEGS.length - 1, i));
+    st.t = t == null ? SEGS[st.cur].window[0] : t;
+    renderList();
+    renderSeg();
+    if (LS && st.annotator) try { LS.setItem(`reassemble-annot:v1:${D.task}:${MODE}:cursor`, String(st.cur)); } catch (e) { /* 忽略 */ }
+  }
+  function nextUnfinished() {
+    for (let j = 1; j <= SEGS.length; j++) {
+      const i = (st.cur + j) % SEGS.length, s = SEGS[i];
+      if ((!st.onlyDisputes || disputes()[s.id]) && statusOf(s) !== 'done') return i;
+    }
+    return -1;
+  }
+  function markDone() {
+    if (!st.annotator) { banner('請先在上方填「標註者」。', 'warn'); $('annotator').focus(); return; }
+    const s = seg(), r = recOf(s) || initialRecord(s);
+    const errs = validate(r, s, true);
+    if (errs.length) { $('errs').innerHTML = errs.map((e) => `<li>${esc(e)}</li>`).join(''); banner('還有欄位要填：' + esc(errs.join('；')), 'warn'); return; }
+    st.records[s.id] = r;
+    r.review_status = doneStatus;
+    touch(r);
+    clearBanner();
+    const n = nextUnfinished();
+    if (n < 0) { banner(`全部${MODE === 'adjudicate' ? '裁決' : '標'}完了！請按上方「匯出 JSONL」，檔案會存到瀏覽器的下載資料夾。`, 'info'); renderSeg(); }
+    else goto(n);
+  }
+
+  // ------------------------------------------------------------ 比較（裁決模式）
+  function renderCompare() {
+    const box = $('compare');
+    if (MODE !== 'adjudicate' || !CMP) { box.hidden = true; return; }
+    box.hidden = false;
+    const s = seg(), dis = disputes()[s.id] || [];
+    const tname = { human: '人', ai: 'AI', reference: '資料集規則' };
+    const zh = (k) => (k && CFG.reasons[k] ? CFG.reasons[k].zh : k || '—');
+    let h = `<b>比較與裁決</b>　${dis.length ? `爭議欄位：<b style="color:var(--warn)">${esc(dis.join('、'))}</b>` : '這段沒有爭議（可直接標完）'}` +
+      '<table><tr><th>來源</th><th>結果</th><th>失敗原因</th><th>證據區間（秒）</th><th>最佳視角</th><th>看得到的依據／備註</th><th></th></tr>';
+    for (const [k, src] of Object.entries(CMP.sources)) {
+      const x = src.records[s.id];
+      if (!x) { h += `<tr><td>${esc(k)} ${esc(src.annotator)}（${tname[src.annotator_type] || ''}）</td><td colspan="6">沒有這段</td></tr>`; continue; }
+      const c = (f) => (dis.includes(f) ? ' class="dis"' : '');
+      h += `<tr><td>${esc(k)} ${esc(src.annotator)}（${tname[src.annotator_type] || ''}）</td><td${c('result')}>${esc(x.result)}</td><td${c('failure_reason')}>${esc(zh(x.failure_reason))}</td>` +
+        `<td${c('evidence')}>${isNum(x.evidence_start_sec) ? `${fmt(x.evidence_start_sec)} ～ ${fmt(x.evidence_end_sec)} <button type="button" data-go="${x.evidence_start_sec}">看</button>` : '—'}</td>` +
+        `<td${c('best_camera')}>${esc(x.best_camera || '—')}</td><td>${esc(x.visible_evidence || '')}${x.notes ? `<br><small>${esc(x.notes)}</small>` : ''}</td>` +
+        `<td>${src.annotator_type !== 'reference' ? `<button type="button" data-use="${esc(k)}">套用這一列</button>` : ''}</td></tr>`;
+    }
+    h += '</table><div style="color:var(--muted);font-size:12px;margin-top:4px">時間軸下方的細線＝各來源的證據區間。裁決只決定你最後採用的答案；按「套用這一列」會把該來源的結果、原因、證據區間、最佳視角、依據帶進下面的表單。</div>';
+    box.innerHTML = h;
+    for (const b of box.querySelectorAll('button[data-go]')) b.onclick = () => seek(Number(b.dataset.go));
+    for (const b of box.querySelectorAll('button[data-use]')) b.onclick = () => {
+      if (!st.annotator) { banner('請先在上方填「標註者」。', 'warn'); return; }
+      const x = CMP.sources[b.dataset.use].records[s.id], r = ensureRec(s);
+      for (const f of ['result', 'failure_reason', 'evidence_start_sec', 'evidence_end_sec', 'best_camera', 'visible_evidence']) r[f] = x[f] == null ? (f === 'visible_evidence' ? '' : null) : x[f];
+      r.camera_visibility = Object.assign({}, r.camera_visibility || {}, x.camera_visibility || {});
+      touch(r);
+      renderSeg();
+    };
+  }
+
+  // ------------------------------------------------------------ 匯出、匯入
+  const OUT_FIELDS = ['segment_id', 'recording_id', 'segment_index', 'part', 'dataset_result', 'result', 'failure_reason', 'evidence_start_sec',
+    'evidence_end_sec', 'best_camera', 'visual_difficulty', 'visible_evidence', 'notes', 'camera_visibility', 'annotator', 'annotator_type', 'label_version',
+    'reason_set', 'review_status', 'created_at', 'updated_at', 'source'];
+  function exportRecords() {
+    return SEGS.map((s) => st.records[s.id]).filter(Boolean).map((r) => {
+      const o = {};
+      for (const f of OUT_FIELDS) o[f] = r[f] === undefined ? null : r[f];
+      for (const f of Object.keys(r)) if (!(f in o)) o[f] = r[f];
+      o.annotator = st.annotator;
+      return o;
+    });
+  }
+  function stamp() { const d = new Date(), p = (n) => String(n).padStart(2, '0'); return `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}`; }
+  function fileBase() { const a = st.annotator.replace(/[^\w一-鿿-]+/g, '_'); return `${D.task}__${MODE === 'adjudicate' ? 'adjudication__' : ''}${a}__${stamp()}`; }
+  function download(name, text, type) {
+    const blob = new Blob([text], { type });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  }
+  function exportJsonl() {
+    if (!st.annotator) { banner('請先填「標註者」。', 'warn'); return; }
+    const recs = exportRecords();
+    if (!recs.length) { banner('還沒有任何標註可以匯出。', 'warn'); return; }
+    const name = fileBase() + '.jsonl';
+    download(name, recs.map((r) => JSON.stringify(r)).join('\n') + '\n', 'application/x-ndjson');
+    banner(`已匯出 ${recs.length} 筆：<b>${esc(name)}</b>（在瀏覽器的下載資料夾）。接著雙擊 compare_pilot.bat 收檔並比較。`, 'info');
+  }
+  function csvCell(v) { if (v == null) return ''; const s = typeof v === 'object' ? JSON.stringify(v) : String(v); return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; }
+  function exportCsv() {
+    if (!st.annotator) { banner('請先填「標註者」。', 'warn'); return; }
+    const recs = exportRecords();
+    if (!recs.length) { banner('還沒有任何標註可以匯出。', 'warn'); return; }
+    const cols = CFG.csv_fields;
+    const lines = [cols.join(',')];
+    for (const r of recs) lines.push(cols.map((c) => (c.startsWith('vis_') ? csvCell((r.camera_visibility || {})[c.slice(4)]) : csvCell(r[c]))).join(','));
+    const name = fileBase() + '.csv';
+    download(name, '﻿' + lines.join('\r\n') + '\r\n', 'text/csv;charset=utf-8');
+    banner(`已匯出 CSV：<b>${esc(name)}</b>`, 'info');
+  }
+  function parseCsv(text) {
+    const rows = []; let row = [], cur = '', q = false;
+    for (let i = 0; i < text.length; i++) {
+      const ch = text[i];
+      if (q) { if (ch === '"') { if (text[i + 1] === '"') { cur += '"'; i++; } else q = false; } else cur += ch; }
+      else if (ch === '"') q = true;
+      else if (ch === ',') { row.push(cur); cur = ''; }
+      else if (ch === '\n' || ch === '\r') { if (ch === '\r' && text[i + 1] === '\n') i++; row.push(cur); rows.push(row); row = []; cur = ''; }
+      else cur += ch;
+    }
+    if (cur !== '' || row.length) { row.push(cur); rows.push(row); }
+    const head = (rows.shift() || []).map((h) => h.replace(/^﻿/, ''));
+    return rows.filter((r) => r.some((x) => x !== '')).map((r) => {
+      const o = { camera_visibility: {} };
+      head.forEach((h, j) => {
+        const v = r[j] == null ? '' : r[j];
+        if (h.startsWith('vis_')) o.camera_visibility[h.slice(4)] = v || null;
+        else if (['evidence_start_sec', 'evidence_end_sec', 'segment_index'].includes(h)) o[h] = numOrNull(v);
+        else if (['visible_evidence', 'notes', 'source'].includes(h)) o[h] = v;
+        else o[h] = v === '' ? null : v;
+      });
+      return o;
+    });
+  }
+  function onImportFile(ev) {
+    const file = ev.target.files[0];
+    ev.target.value = '';
+    if (!file) return;
+    if (!st.annotator) { banner('請先填「標註者」，再匯入。', 'warn'); return; }
+    const fr = new FileReader();
+    fr.onload = () => {
+      let recs = [];
+      try {
+        const text = String(fr.result).replace(/^﻿/, '');
+        if (/\.csv$/i.test(file.name)) recs = parseCsv(text);
+        else if (/\.json$/i.test(file.name)) { const d = JSON.parse(text); recs = Array.isArray(d) ? d : d.records || []; }
+        else recs = text.split(/\r?\n/).filter((l) => l.trim()).map((l) => JSON.parse(l));
+      } catch (e) { banner('檔案讀取失敗：' + esc(e.message), 'error'); return; }
+      const known = recs.filter((r) => SEGS.some((s) => s.id === r.segment_id));
+      const overwrite = known.filter((r) => st.records[r.segment_id]).length;
+      st.pendingImport = known;
+      banner(`「${esc(file.name)}」有 ${recs.length} 筆，其中 ${known.length} 筆屬於這個任務（會覆蓋目前 ${overwrite} 筆）。` +
+        `<button type="button" id="impOk">確定匯入</button><button type="button" id="impNo">取消</button>`, 'warn');
+      $('impOk').onclick = () => {
+        for (const r of st.pendingImport) {
+          const s = SEGS.find((x) => x.id === r.segment_id);
+          const base = st.records[r.segment_id] || initialRecord(s);
+          const merged = Object.assign({}, base);
+          for (const [k, v] of Object.entries(r)) {
+            if (k === 'dataset_result') continue;  // 原始標籤以資料為準
+            if (k === 'camera_visibility') merged.camera_visibility = Object.assign({}, base.camera_visibility || {}, v || {});
+            else merged[k] = v;
+          }
+          merged.annotator = st.annotator;
+          st.records[r.segment_id] = merged;
+        }
+        st.pendingImport = null;
+        saveStore();
+        renderList();
+        renderSeg();
+        banner('匯入完成。', 'info');
+      };
+      $('impNo').onclick = () => { st.pendingImport = null; clearBanner(); };
+    };
+    fr.readAsText(file, 'utf-8');
+  }
+
+  // ------------------------------------------------------------ 播放與快捷鍵
+  function play() {
+    if (st.playing) return stop();
+    const s = seg();
+    if (st.t >= s.window[1] - 1e-6) st.t = s.window[0];
+    $('btnPlay').textContent = '❚❚ 暫停';
+    const dt = 1 / (D.fps || 5);
+    st.playing = setInterval(() => {
+      if (st.t + dt > seg().window[1] + 1e-6) { stop(); return; }
+      seek(st.t + dt);
+    }, (1000 * dt) / st.speed);
+  }
+  function stop() { if (st.playing) clearInterval(st.playing); st.playing = null; $('btnPlay').textContent = '▶ 播放'; }
+  function act(a) {
+    const s = seg(), r = recOf(s);
+    switch (a) {
+      case 'back1': seek(st.t - 1); break;
+      case 'fwd1': seek(st.t + 1); break;
+      case 'prev': step(-1); break;
+      case 'next': step(1); break;
+      case 'play': play(); break;
+      case 'setA': setEvidence('A', Math.round(st.t * 100) / 100); break;
+      case 'setB': setEvidence('B', Math.round(st.t * 100) / 100); break;
+      case 'goA': if (r && isNum(r.evidence_start_sec)) seek(r.evidence_start_sec); break;
+      case 'goB': if (r && isNum(r.evidence_end_sec)) seek(r.evidence_end_sec); break;
+      case 'clearEv': if (r) { r.evidence_start_sec = null; r.evidence_end_sec = null; touch(r); fillForm(); renderTimeline(); } break;
+      default: break;
+    }
+  }
+  document.addEventListener('click', (e) => { const b = e.target.closest('[data-act]'); if (b) { act(b.dataset.act); b.blur(); } });
+  document.addEventListener('keydown', (e) => {
+    if ($('help').classList.contains('show')) { if (e.key === 'Escape' || e.key === '?') $('help').classList.remove('show'); return; }
+    const tag = (e.target.tagName || '').toLowerCase(), type = (e.target.type || '').toLowerCase();
+    const typing = (tag === 'input' && !['radio', 'checkbox', 'button'].includes(type)) || tag === 'textarea' || tag === 'select';
+    if (typing) { if (e.key === 'Escape') e.target.blur(); return; }
+    const k = e.key;
+    if (k === 'ArrowLeft' || k === 'ArrowRight') { e.preventDefault(); if (e.shiftKey) seek(st.t + (k === 'ArrowLeft' ? -1 : 1)); else step(k === 'ArrowLeft' ? -1 : 1); }
+    else if (k === ' ') { e.preventDefault(); play(); }
+    else if (k === '[') act('setA');
+    else if (k === ']') act('setB');
+    else if (k === 'Home') { e.preventDefault(); seek(seg().window[0]); }
+    else if (k === 'End') { e.preventDefault(); seek(seg().window[1]); }
+    else if (k === 'PageUp') { e.preventDefault(); goto(st.cur - 1); }
+    else if (k === 'PageDown') { e.preventDefault(); goto(st.cur + 1); }
+    else if (k === '?') $('help').classList.add('show');
+    else if (/^[1-9]$/.test(k) && CFG.cameras[Number(k) - 1] && st.annotator) {
+      const r = ensureRec(seg()); r.best_camera = CFG.cameras[Number(k) - 1]; touch(r); fillForm();
+    }
+  });
+  // 時間軸點擊／拖曳
+  (function () {
+    const tl = $('tl');
+    let drag = false;
+    const at = (ev) => { const b = tl.getBoundingClientRect(), s = seg(); return s.window[0] + ((ev.clientX - b.left) / b.width) * (s.window[1] - s.window[0]); };
+    tl.addEventListener('mousedown', (ev) => { drag = true; stop(); seek(at(ev)); });
+    window.addEventListener('mousemove', (ev) => { if (drag) seek(at(ev)); });
+    window.addEventListener('mouseup', () => { drag = false; });
+  })();
+
+  // ------------------------------------------------------------ 初始化
+  function helpHtml() {
+    const rs = Object.entries(CFG.reasons).map(([k, v]) => `<li><b>${esc(v.zh)}</b>（${k}）：${esc(v.definition)}</li>`).join('');
+    return `<h2>${MODE === 'adjudicate' ? '裁決模式' : '標註'}說明</h2>
+      <p>${MODE === 'adjudicate' ? '左側預設只列出爭議段。上方表格是各來源的答案（黃色＝不一致的欄位），決定你最後採用的答案後按「裁決完成」。匯出的檔名含 adjudication。' :
+        '每段先看完整個過程（可按播放），再填：結果、失敗原因（失敗才要）、證據區間、最佳視角、各視角可見度、看得到的依據。按「標完，下一段」才算完成；中途離開會自動存在這台電腦的瀏覽器裡。'}</p>
+      <p><b>證據區間</b>：${CFG.evidence_hint ? esc(CFG.evidence_hint) : '從「畫面上第一次看得出成敗」到「足以確認」的那一段'}。秒數相對資料集標註起點，可以落在起點前 ${CFG.start_buffer} 秒到終點後 ${CFG.end_buffer} 秒之間${CFG.evidence_min_len ? `；長度至少 ${CFG.evidence_min_len} 秒（起點、終點要分別設定）` : ''}。</p>
+      <p><b>失敗原因</b>（${esc(CFG.reason_set)}）：</p><ul>${rs}</ul>
+      ${hasDiff ? `<p><b>畫面難度</b>：結果在畫面上有多容易看出來。</p><ul>${Object.entries(DIFF).map(([k, v]) => `<li><b>${esc(v.zh)}</b>（${esc(k)}）：${esc(v.definition || '')}</li>`).join('')}</ul>` : ''}
+      <p>腕部相機看不到板子有沒有被帶起，請也看外部相機（hama1、hama2）。</p>
+      <p><b>最佳視角</b>：最能看清楚證據的那台相機。<b>可見度</b>：接頭與插座的接觸區在各視角看得多清楚。</p>
+      <h3>快捷鍵</h3><p><kbd>←</kbd>/<kbd>→</kbd> 前後一格（${(1 / (D.fps || 5)).toFixed(1)} 秒）　<kbd>Shift</kbd>+<kbd>←</kbd>/<kbd>→</kbd> 前後 1 秒　<kbd>空白鍵</kbd> 播放／暫停
+      <kbd>[</kbd> 設證據起點　<kbd>]</kbd> 設證據終點　<kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> 選最佳視角　<kbd>Home</kbd>/<kbd>End</kbd> 跳到頭尾
+      <kbd>PageUp</kbd>/<kbd>PageDown</kbd> 上一段／下一段　點畫面＝放大該視角　<kbd>?</kbd> 開關這個說明</p>
+      <p>標完後按「匯出 JSONL」（存到下載資料夾），再雙擊 <b>compare_pilot.bat</b>。</p>
+      <p style="text-align:right"><button type="button" onclick="document.getElementById('help').classList.remove('show')">關閉</button></p>`;
+  }
+  function setAnnotator(name, initial) {
+    const nm = (name || '').trim();
+    if (!initial && nm === st.annotator) return;  // 失焦時重複的 change 事件不要重畫
+    st.annotator = nm;
+    st.records = loadStore();
+    if (LS) try { LS.setItem('reassemble-annot:v1:last-annotator', st.annotator); } catch (e) { /* 忽略 */ }
+    if (!st.annotator) banner('請先在上方輸入「標註者」代號（例如你的名字縮寫），之後才會開始自動儲存。', 'warn');
+    else clearBanner();
+    renderList();
+    if (initial) renderSeg();
+    else { renderTimeline(); fillForm(); }  // 只更新內容，不重建按鈕
+  }
+  document.title = (MODE === 'adjudicate' ? '裁決：' : '標註：') + D.title;
+  $('title').textContent = (MODE === 'adjudicate' ? '【裁決】' : '') + D.title;
+  $('helpBox').innerHTML = helpHtml();
+  $('btnHelp').onclick = (e) => { e.preventDefault(); $('help').classList.add('show'); };
+  $('help').onclick = (e) => { if (e.target.id === 'help') $('help').classList.remove('show'); };
+  $('btnJsonl').onclick = exportJsonl;
+  $('btnCsv').onclick = exportCsv;
+  $('fileImport').onchange = onImportFile;
+  $('btnDone').onclick = markDone;
+  $('btnReopen').onclick = () => { const r = recOf(seg()); if (r) { r.review_status = 'draft'; touch(r); } };
+  $('speed').onchange = () => { st.speed = Number($('speed').value) || 1; if (st.playing) { stop(); play(); } };
+  $('showSkills').checked = st.showSkills;
+  $('showSkills').onchange = () => { st.showSkills = $('showSkills').checked; renderTimeline(); updateFrames(); };
+  $('list').addEventListener('click', (e) => { const it = e.target.closest('.item'); if (it) goto(Number(it.dataset.i)); });
+  $('annotator').addEventListener('change', () => setAnnotator($('annotator').value));
+  for (const [id, f] of [['evA', 'A'], ['evB', 'B']]) $(id).addEventListener('change', () => setEvidence(f, numOrNull($(id).value)));
+  $('fEvidence').addEventListener('input', () => { if (!st.annotator) return; const r = ensureRec(seg()); r.visible_evidence = $('fEvidence').value; touch(r); });
+  $('fNotes').addEventListener('input', () => { if (!st.annotator) return; const r = ensureRec(seg()); r.notes = $('fNotes').value; touch(r); });
+  const last = LS ? LS.getItem('reassemble-annot:v1:last-annotator') || '' : '';
+  $('annotator').value = last;
+  let start = 0;
+  if (MODE === 'adjudicate') { const firstDis = SEGS.findIndex((s) => disputes()[s.id]); start = firstDis < 0 ? 0 : firstDis; }
+  else if (LS) { const c = Number(LS.getItem(`reassemble-annot:v1:${D.task}:${MODE}:cursor`)); if (c >= 0 && c < SEGS.length) start = c; }
+  st.cur = start;
+  st.t = SEGS[start].window[0];
+  buildForm();
+  setAnnotator(last, true);
+  if (MODE === 'adjudicate') banner(`裁決模式：共 ${Object.keys(disputes()).length} 段有爭議。上方表格比較各來源的答案，決定後按「裁決完成，下一段」。` +
+    (hasDiff ? `每段都要選「畫面難度」。沒有爭議、也沒有在這裡裁決的段，gold 會沿用你的答案，畫面難度設為「${esc((DIFF[CFG.difficulty_default] || {}).zh || CFG.difficulty_default || '—')}」；要改的話，取消勾選左上「只看爭議段」，打開那段修改後按「裁決完成」。` : ''), 'info');
+  window.__annot = { st, validate, exportRecords, goto, seek };  // 測試用
+})();
+</script>
+</body>
+</html>

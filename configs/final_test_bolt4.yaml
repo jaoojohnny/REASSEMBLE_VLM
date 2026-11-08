@@ -1,0 +1,60 @@
+# 第 9 包：新的測試集（bolt 4 螺栓插入，83 段、失敗 30），只跑一次。之前的 final_test*.yaml 與結果都不動。
+# 方法清單在 2026-10-30 寫好：在任何 bolt 4 測試影格或結果被看到之前。Skill 第三版（檢查清單＋手腕固定裁切）是 2026-10-28
+# 在 BNC 開發集定案的，這裡原封不動拿來驗證它能不能用在別的零件。
+# 雙擊 run_final_test_bolt4.bat：訓練池影格 → 測試段影格 → 每個方法跑一次 → 評分＋執行時間 → experiments/final_test_bolt4/report.md。
+# 第一次執行會把本檔、模型設定、實驗設定、提示詞、做法 A 設定的雜湊寫進 experiments/final_test_bolt4/lock.json，之後改了就拒絕執行。
+final:
+  frozen: true
+  frozen_at: "2026-10-30T10:30:00+08:00"
+  decided: "主要問題：Skill 第三版（從 GPT／Claude 在 BNC 開發集的推理整理出的檢查清單，加上手腕相機固定裁切）在新零件上是否比沒有 Skill 的本地 Qwen3-VL-8B 好。主方法＝第三版，其他方法都和它比；最重要的比較是主方法 vs 沒有 Skill 的 Qwen。"
+  title: "測試集評估（第 9 包：bolt 4 新測試集）"
+  part: bolt 4
+  split_dir: data/splits/bolt4_test100
+  out_dir: experiments
+  out_name: final_test_bolt4
+  models: [configs/model.yaml, configs/model_p8.yaml, configs/model_skill2.yaml, configs/model_p9.yaml]
+  primary: qwen3vl8b_v3_eb05_f4
+  notes:
+    - "bolt 4 是新的測試資料：Skill 第三版的清單與裁切範圍只依 BNC 開發集決定；bolt 4 的 83 段全部當測試集。"
+    - "要說明的是：bolt 4 有 32 段曾在第 6、7 包的訓練池（BNC 小分類器、LoRA），21 段在第 8 包 USB 小分類器的訓練池；第 7 包也算過 Qwen（ft-generic）在其中 20 段成功的零樣本判斷（13 段被判失敗）。這次的方法與提示詞都沒有依此調整；bolt 4 的小分類器訓練池不含任何 bolt 4 段。"
+    - "真實答案只用資料集的成功／失敗標記（bolt 4 沒有人工標準答案）。"
+    - "提示詞裡的零件名稱是 bolt；清單和任務定義都不提零件專屬細節。手腕固定裁切的範圍（中間 60%×60%）是看 BNC 的手腕影格決定的。"
+    - "Claude 的 max_tokens 從 USB 的 1024 改成 8000（configs/model_p9.yaml），避免推理用完上限沒有答案；GPT 設定和 USB 相同。"
+    - "在 86 段 BNC 開發集上試過 7 種 Skill，第三版這組是最好的（74/86）；所以這次是它第一次在沒看過的零件上驗證。"
+  methods:
+    - id: majority                          # 基準：一律答成功
+      kind: majority
+    - id: qwen3vl8b_v3_eb05_f4              # 主方法：Skill 第三版＝檢查清單（逐項回答）＋手腕固定裁切
+      kind: vlm
+      experiment: configs/experiment_bolt4_checklistf.yaml
+      model: qwen3vl_8b_zoomfix
+      frames: 4
+    - id: qwen3vl8b_ft_eb05_f4              # 沒有 Skill 的 Qwen（和 USB 測試集的主方法相同設定）
+      kind: vlm
+      experiment: configs/experiment_bolt4_ft.yaml
+      model: qwen3vl_8b
+      frames: 4
+    - id: qwen3vl8b_crop_eb05_f4            # 只加手腕固定裁切（Skill 第二版 A）
+      kind: vlm
+      experiment: configs/experiment_bolt4_ft.yaml
+      model: qwen3vl_8b_zoomfix
+      frames: 4
+    - id: qwen3vl8b_checklist_eb05_f4       # 只加檢查清單（逐項回答），不裁切
+      kind: vlm
+      experiment: configs/experiment_bolt4_checklistf.yaml
+      model: qwen3vl_8b
+      frames: 4
+    - id: probe_bolt4_eb1_f1                # 做法 A：DINOv2-base＋邏輯迴歸，用 bolt 4 以外的零件訓練，+1 秒 1 幀
+      kind: probe
+      config: configs/probe_bolt4.yaml
+      frames: 1
+    - id: gpt61_sol_ft_eb05_f4              # 商業模型：GPT-6.1 Sol（和 USB 相同設定）
+      kind: vlm
+      experiment: configs/experiment_bolt4_ft.yaml
+      model: gpt61_sol
+      frames: 4
+    - id: claude_sonnet55_ft_eb05_f4        # 商業模型：Claude Sonnet 5.5（max_tokens 8000）
+      kind: vlm
+      experiment: configs/experiment_bolt4_ft.yaml
+      model: claude_sonnet55_8k
+      frames: 4

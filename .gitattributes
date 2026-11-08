@@ -1,0 +1,3 @@
+# Windows 一鍵檔保持 CRLF（測試會檢查）；其他文字檔交給 git 自動處理
+* text=auto
+*.bat text eol=crlf

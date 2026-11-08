@@ -1,0 +1,48 @@
+{
+ "name": "rpeg1_test100",
+ "created_at": "2026-11-02T15:51:53+08:00",
+ "tool": "assembly_monitor.split 0.1.0",
+ "spec": {
+  "name": "rpeg1_test100",
+  "action": "insert",
+  "part": "round peg 1",
+  "ratios": {
+   "test": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "counts": {
+  "test": {
+   "n_groups": 56,
+   "n_segments": 65,
+   "n_failure": 10,
+   "n_success": 55
+  },
+  "all": {
+   "n_groups": 56,
+   "n_segments": 65,
+   "n_failure": 10,
+   "n_success": 55
+  }
+ },
+ "lock": {
+  "segments_sha256": "24039fc0c773596927b766d8077986f51477c131731eacc6d11bdc13dc2d397f",
+  "per_split": {
+   "test": {
+    "n_segments": 65,
+    "sha256": "e39ac0da57c8e009f54621e85e308de0a523a9331ab06163d9164940cfc9a343"
+   }
+  }
+ },
+ "split_csv_sha256": "65f724d9627debc7a3122240f797697fff4e4d555da21000fccaf9bfa5224e66",
+ "locked": true,
+ "leakage_status": "pass",
+ "note": "test 清單已鎖定：開發階段只用 dev；最終評估才讀 test（load_split(..., allow_test=True)）。"
+}

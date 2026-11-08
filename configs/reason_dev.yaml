@@ -1,0 +1,13 @@
+# 第 11 包開發集（v4＝第二輪，結合 Codex，2026-10-31 加入）：4 個新零件（2026-10-30 使用者選「4 開發＋4 測試」）。報告：python -m scripts.reason_dev
+# 測試集（之後凍結才用）：square peg 4、square peg 3、round peg 2、waterproof；備用：round peg 1、round peg 4、large gear、small gear。
+reason_dev:
+  out_dir: experiments/p11_reason_dev
+  parts:
+    - {key: sqpeg2, name: square peg 2, v3: configs/experiment_rdev_sqpeg2_v3.yaml, contrast: configs/experiment_rdev_sqpeg2_contrast.yaml,
+       v4: configs/experiment_rdev_sqpeg2_v4.yaml}
+    - {key: rpeg3, name: round peg 3, v3: configs/experiment_rdev_rpeg3_v3.yaml, contrast: configs/experiment_rdev_rpeg3_contrast.yaml,
+       v4: configs/experiment_rdev_rpeg3_v4.yaml}
+    - {key: dsub, name: D-SUB, v3: configs/experiment_rdev_dsub_v3.yaml, contrast: configs/experiment_rdev_dsub_contrast.yaml,
+       v4: configs/experiment_rdev_dsub_v4.yaml}
+    - {key: mgear, name: medium gear, v3: configs/experiment_rdev_mgear_v3.yaml, contrast: configs/experiment_rdev_mgear_contrast.yaml,
+       v4: configs/experiment_rdev_mgear_v4.yaml}

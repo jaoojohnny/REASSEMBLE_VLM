@@ -1,0 +1,1858 @@
+{
+ "file": {
+  "path": "data\\raw\\2025-01-09-13-57-17.h5",
+  "name": "2025-01-09-13-57-17.h5",
+  "stem": "2025-01-09-13-57-17",
+  "size_bytes": 382120140,
+  "mtime": "2026-10-04T17:56:04+08:00",
+  "inspected_at": "2026-10-04T18:01:05+08:00",
+  "tool": "assembly_monitor.inspect_h5 0.1.0",
+  "h5py": "3.16.0",
+  "hdf5": "2.0.0",
+  "options": {
+   "preview_n": 5,
+   "max_read_mb": 64.0,
+   "media_probe": true,
+   "count_frames": true,
+   "collapse_threshold": 8,
+   "expected_cameras": [],
+   "max_depth": null
+  },
+  "libver": [
+   "earliest",
+   "v200"
+  ],
+  "userblock_size": 0
+ },
+ "segments": {
+  "patterns": [
+   {
+    "pattern": "/segments_info",
+    "level": 0,
+    "n_containers": 1,
+    "n_segments": 5,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [
+      "index"
+     ]
+    },
+    "keys_consistent": true,
+    "sub_groups": {
+     "low_level": 3
+    },
+    "non_segment_children": [],
+    "reason_like_keys": []
+   },
+   {
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "n_containers": 3,
+    "n_segments": 8,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": []
+    },
+    "keys_consistent": true,
+    "sub_groups": {},
+    "non_segment_children": [],
+    "reason_like_keys": []
+   }
+  ],
+  "containers": [
+   {
+    "path": "/segments_info",
+    "pattern": "/segments_info",
+    "n_segments": 5,
+    "n_with_start_end": 5,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [
+      "index"
+     ],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {
+     "low_level": 3
+    },
+    "non_segment_children": [],
+    "level": 0,
+    "parent_segment_path": null
+   },
+   {
+    "path": "/segments_info/1/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/1"
+   },
+   {
+    "path": "/segments_info/2/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 3,
+    "n_with_start_end": 3,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/2"
+   },
+   {
+    "path": "/segments_info/3/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 3,
+    "n_with_start_end": 3,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/3"
+   }
+  ],
+  "rows": [
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "0",
+    "path": "/segments_info/0",
+    "parent_path": null,
+    "start": 1736427437.7950916,
+    "end": 1736427449.4950447,
+    "duration": 11.699953079223633,
+    "success": true,
+    "success_raw": true,
+    "text": "No action.",
+    "extra": {
+     "index": 0
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "1",
+    "path": "/segments_info/1",
+    "parent_path": null,
+    "start": 1736427449.511793,
+    "end": 1736427461.8951142,
+    "duration": 12.383321285247803,
+    "success": true,
+    "success_raw": true,
+    "text": "Pick Ethernet.",
+    "extra": {
+     "index": 1
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "2",
+    "path": "/segments_info/2",
+    "parent_path": null,
+    "start": 1736427461.9118068,
+    "end": 1736427485.967381,
+    "duration": 24.05557417869568,
+    "success": false,
+    "success_raw": false,
+    "text": "Insert Ethernet.",
+    "extra": {
+     "index": 2
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "3",
+    "path": "/segments_info/3",
+    "parent_path": null,
+    "start": 1736427485.978471,
+    "end": 1736427504.2783637,
+    "duration": 18.29989266395569,
+    "success": false,
+    "success_raw": false,
+    "text": "Insert Ethernet.",
+    "extra": {
+     "index": 3
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "4",
+    "path": "/segments_info/4",
+    "parent_path": null,
+    "start": 1736427504.297776,
+    "end": 1736427539.8617945,
+    "duration": 35.5640184879303,
+    "success": true,
+    "success_raw": true,
+    "text": "No action.",
+    "extra": {
+     "index": 4
+    }
+   },
+   {
+    "container": "/segments_info/1/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/1/low_level/0",
+    "parent_path": "/segments_info/1",
+    "start": 1736427449.511793,
+    "end": 1736427460.1407928,
+    "duration": 10.628999948501587,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/1/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/1/low_level/1",
+    "parent_path": "/segments_info/1",
+    "start": 1736427460.1407928,
+    "end": 1736427461.8951,
+    "duration": 1.7543072700500488,
+    "success": true,
+    "success_raw": true,
+    "text": "Lift",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/2/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/2/low_level/0",
+    "parent_path": "/segments_info/2",
+    "start": 1736427461.9118068,
+    "end": 1736427475.7878067,
+    "duration": 13.875999927520752,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/2/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/2/low_level/1",
+    "parent_path": "/segments_info/2",
+    "start": 1736427475.7878067,
+    "end": 1736427485.012807,
+    "duration": 9.225000143051147,
+    "success": false,
+    "success_raw": false,
+    "text": "Align",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/2/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/2/low_level/2",
+    "parent_path": "/segments_info/2",
+    "start": 1736427485.0148067,
+    "end": 1736427485.967357,
+    "duration": 0.9525501728057861,
+    "success": true,
+    "success_raw": true,
+    "text": "Lift",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/3/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/3/low_level/0",
+    "parent_path": "/segments_info/3",
+    "start": 1736427485.978471,
+    "end": 1736427493.089471,
+    "duration": 7.111000061035156,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/3/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/3/low_level/1",
+    "parent_path": "/segments_info/3",
+    "start": 1736427493.089471,
+    "end": 1736427499.879471,
+    "duration": 6.789999961853027,
+    "success": true,
+    "success_raw": true,
+    "text": "Align",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/3/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/3/low_level/2",
+    "parent_path": "/segments_info/3",
+    "start": 1736427499.879471,
+    "end": 1736427504.2783232,
+    "duration": 4.398852109909058,
+    "success": true,
+    "success_raw": true,
+    "text": "Lift",
+    "extra": {}
+   }
+  ],
+  "n_level0": 5,
+  "n_level1plus": 8,
+  "actions": {
+   "level0": {
+    "no": {
+     "count": 2,
+     "success_true": 2,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "action.": {
+       "count": 2,
+       "success_true": 2,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "pick": {
+     "count": 1,
+     "success_true": 1,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "Ethernet.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "insert": {
+     "count": 2,
+     "success_true": 0,
+     "success_false": 2,
+     "success_unknown": 0,
+     "objects": {
+      "Ethernet.": {
+       "count": 2,
+       "success_true": 0,
+       "success_false": 2,
+       "success_unknown": 0
+      }
+     }
+    }
+   },
+   "level1": {
+    "grasp": {
+     "count": 1,
+     "success_true": 1,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "lift": {
+     "count": 3,
+     "success_true": 3,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 3,
+       "success_true": 3,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "approach": {
+     "count": 2,
+     "success_true": 2,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 2,
+       "success_true": 2,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "align": {
+     "count": 2,
+     "success_true": 1,
+     "success_false": 1,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 2,
+       "success_true": 1,
+       "success_false": 1,
+       "success_unknown": 0
+      }
+     }
+    }
+   }
+  }
+ },
+ "streams": {
+  "cameras": [
+   {
+    "name": "capture_node-camera-image",
+    "path": "/capture_node-camera-image",
+    "encoding": "mp4",
+    "bytes": 1233736,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "h264",
+    "width": 346,
+    "height": 260,
+    "fps_nominal": 5.72,
+    "frames": 611,
+    "frames_source": "header",
+    "duration_s": 106.81818181818181,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/capture_node-camera-image",
+    "ts_n": 611,
+    "ts_first": 1736427437.889511,
+    "ts_last": 1736427539.7415545,
+    "ts_rate_hz": 5.715132079610898,
+    "ts_span_s": 101.85204339027405,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   },
+   {
+    "name": "hama1",
+    "path": "/hama1",
+    "encoding": "mp4",
+    "bytes": 4532694,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "h264",
+    "width": 640,
+    "height": 480,
+    "fps_nominal": 30.0,
+    "frames": 3062,
+    "frames_source": "header",
+    "duration_s": 102.06666666666666,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/hama1",
+    "ts_n": 3062,
+    "ts_first": 1736427437.8118465,
+    "ts_last": 1736427539.8423264,
+    "ts_rate_hz": 31.117323243564062,
+    "ts_span_s": 102.0304799079895,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   },
+   {
+    "name": "hama2",
+    "path": "/hama2",
+    "encoding": "mp4",
+    "bytes": 3810174,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "h264",
+    "width": 640,
+    "height": 480,
+    "fps_nominal": 30.0,
+    "frames": 3062,
+    "frames_source": "header",
+    "duration_s": 102.06666666666666,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/hama2",
+    "ts_n": 3062,
+    "ts_first": 1736427437.8062105,
+    "ts_last": 1736427539.8363354,
+    "ts_rate_hz": 31.06431639757073,
+    "ts_span_s": 102.03012490272522,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   },
+   {
+    "name": "hand",
+    "path": "/hand",
+    "encoding": "mp4",
+    "bytes": 5515440,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "h264",
+    "width": 640,
+    "height": 480,
+    "fps_nominal": 30.0,
+    "frames": 2934,
+    "frames_source": "header",
+    "duration_s": 97.8,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/hand",
+    "ts_n": 2934,
+    "ts_first": 1736427437.8060622,
+    "ts_last": 1736427539.84589,
+    "ts_rate_hz": 29.976015208473292,
+    "ts_span_s": 102.03982782363892,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   }
+  ],
+  "audio": [],
+  "image_arrays": [],
+  "other_streams": [
+   {
+    "name": "events",
+    "path": "/events",
+    "shape": [
+     9154240,
+     3
+    ],
+    "dtype": "int64",
+    "timestamps": "/timestamps/events",
+    "ts_n": 9154240,
+    "ts_first": 1736427437.772704,
+    "ts_last": 1736427539.861693,
+    "ts_rate_hz": 127100.12121212122,
+    "ts_span_s": 102.08898901939392,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": true,
+    "length_match": true
+   },
+   {
+    "name": "compensated_base_force",
+    "path": "/robot_state/compensated_base_force",
+    "shape": [
+     52328,
+     3
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/compensated_base_force",
+    "ts_n": 52328,
+    "ts_first": 1736427437.778643,
+    "ts_last": 1736427539.8615427,
+    "ts_rate_hz": 504.6082771896054,
+    "ts_span_s": 102.08289980888367,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "compensated_base_torque",
+    "path": "/robot_state/compensated_base_torque",
+    "shape": [
+     52328,
+     3
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/compensated_base_torque",
+    "ts_n": 52328,
+    "ts_first": 1736427437.778643,
+    "ts_last": 1736427539.8615427,
+    "ts_rate_hz": 504.6082771896054,
+    "ts_span_s": 102.08289980888367,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "gripper_efforts",
+    "path": "/robot_state/gripper_efforts",
+    "shape": [
+     99044,
+     2
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/gripper_efforts",
+    "ts_n": 99044,
+    "ts_first": 1736427437.7875264,
+    "ts_last": 1736427539.8626082,
+    "ts_rate_hz": 1003.6621201244317,
+    "ts_span_s": 102.07508182525635,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "gripper_positions",
+    "path": "/robot_state/gripper_positions",
+    "shape": [
+     99044,
+     2
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/gripper_positions",
+    "ts_n": 99044,
+    "ts_first": 1736427437.7875264,
+    "ts_last": 1736427539.8626082,
+    "ts_rate_hz": 1003.6621201244317,
+    "ts_span_s": 102.07508182525635,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "gripper_velocities",
+    "path": "/robot_state/gripper_velocities",
+    "shape": [
+     99044,
+     2
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/gripper_velocities",
+    "ts_n": 99044,
+    "ts_first": 1736427437.7875264,
+    "ts_last": 1736427539.8626082,
+    "ts_rate_hz": 1003.6621201244317,
+    "ts_span_s": 102.07508182525635,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "joint_efforts",
+    "path": "/robot_state/joint_efforts",
+    "shape": [
+     99044,
+     7
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/joint_efforts",
+    "ts_n": 99044,
+    "ts_first": 1736427437.7875264,
+    "ts_last": 1736427539.8626082,
+    "ts_rate_hz": 1003.6621201244317,
+    "ts_span_s": 102.07508182525635,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "joint_positions",
+    "path": "/robot_state/joint_positions",
+    "shape": [
+     99044,
+     7
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/joint_positions",
+    "ts_n": 99044,
+    "ts_first": 1736427437.7875264,
+    "ts_last": 1736427539.8626082,
+    "ts_rate_hz": 1003.6621201244317,
+    "ts_span_s": 102.07508182525635,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "joint_velocities",
+    "path": "/robot_state/joint_velocities",
+    "shape": [
+     99044,
+     7
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/joint_velocities",
+    "ts_n": 99044,
+    "ts_first": 1736427437.7875264,
+    "ts_last": 1736427539.8626082,
+    "ts_rate_hz": 1003.6621201244317,
+    "ts_span_s": 102.07508182525635,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "measured_force",
+    "path": "/robot_state/measured_force",
+    "shape": [
+     102088,
+     3
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/measured_force",
+    "ts_n": 102088,
+    "ts_first": 1736427437.778108,
+    "ts_last": 1736427539.862529,
+    "ts_rate_hz": 1741.8205980066446,
+    "ts_span_s": 102.08442115783691,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "measured_torque",
+    "path": "/robot_state/measured_torque",
+    "shape": [
+     102088,
+     3
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/measured_torque",
+    "ts_n": 102088,
+    "ts_first": 1736427437.778108,
+    "ts_last": 1736427539.862529,
+    "ts_rate_hz": 1741.8205980066446,
+    "ts_span_s": 102.08442115783691,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "pose",
+    "path": "/robot_state/pose",
+    "shape": [
+     58350,
+     7
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/pose",
+    "ts_n": 58350,
+    "ts_first": 1736427437.7774258,
+    "ts_last": 1736427539.8636632,
+    "ts_rate_hz": 597.564325402479,
+    "ts_span_s": 102.08623743057251,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "velocity",
+    "path": "/robot_state/velocity",
+    "shape": [
+     58334,
+     6
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/velocity",
+    "ts_n": 58334,
+    "ts_first": 1736427437.7779644,
+    "ts_last": 1736427539.8642628,
+    "ts_rate_hz": 607.34202143064,
+    "ts_span_s": 102.08629846572876,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   }
+  ],
+  "time_arrays": [
+   {
+    "path": "/timestamps/capture_node-camera-image",
+    "n": 611,
+    "first": 1736427437.889511,
+    "last": 1736427539.7415545,
+    "min": 1736427437.889511,
+    "max": 1736427539.7415545,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.17497408390045166,
+    "median_dt_s": 0.17497408390045166,
+    "rate_hz": 5.715132079610898,
+    "span_s": 101.85204339027405,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.18991565704345703,
+    "first_utc": "2025-01-09T12:57:17.889+00:00",
+    "last_utc": "2025-01-09T12:58:59.741+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/compensated_base_force",
+    "n": 52328,
+    "first": 1736427437.778643,
+    "last": 1736427539.8615427,
+    "min": 1736427437.778643,
+    "max": 1736427539.8615427,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0019817352294921875,
+    "median_dt_s": 0.0019817352294921875,
+    "rate_hz": 504.6082771896054,
+    "span_s": 102.08289980888367,
+    "n_gaps_gt_3x_median": 288,
+    "max_dt_s": 0.034395456314086914,
+    "first_utc": "2025-01-09T12:57:17.778+00:00",
+    "last_utc": "2025-01-09T12:58:59.861+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/compensated_base_torque",
+    "n": 52328,
+    "first": 1736427437.778643,
+    "last": 1736427539.8615427,
+    "min": 1736427437.778643,
+    "max": 1736427539.8615427,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0019817352294921875,
+    "median_dt_s": 0.0019817352294921875,
+    "rate_hz": 504.6082771896054,
+    "span_s": 102.08289980888367,
+    "n_gaps_gt_3x_median": 288,
+    "max_dt_s": 0.034395456314086914,
+    "first_utc": "2025-01-09T12:57:17.778+00:00",
+    "last_utc": "2025-01-09T12:58:59.861+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/events",
+    "n": 9154240,
+    "first": 1736427437.772704,
+    "last": 1736427539.861693,
+    "min": 1736427437.772704,
+    "max": 1736427539.861693,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 97553,
+    "median_dt": 7.867813110351562e-06,
+    "median_dt_s": 7.867813110351562e-06,
+    "rate_hz": 127100.12121212122,
+    "span_s": 102.08898901939392,
+    "n_gaps_gt_3x_median": 309307,
+    "max_dt_s": 0.0003161430358886719,
+    "first_utc": "2025-01-09T12:57:17.772+00:00",
+    "last_utc": "2025-01-09T12:58:59.861+00:00",
+    "sampled": true,
+    "note": "陣列過大（9154240 筆），只取 10 段各 200000 筆做統計",
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/gripper_efforts",
+    "n": 99044,
+    "first": 1736427437.7875264,
+    "last": 1736427539.8626082,
+    "min": 1736427437.7875264,
+    "max": 1736427539.8626082,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009963512420654297,
+    "median_dt_s": 0.0009963512420654297,
+    "rate_hz": 1003.6621201244317,
+    "span_s": 102.07508182525635,
+    "n_gaps_gt_3x_median": 2502,
+    "max_dt_s": 0.04379582405090332,
+    "first_utc": "2025-01-09T12:57:17.787+00:00",
+    "last_utc": "2025-01-09T12:58:59.862+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/gripper_positions",
+    "n": 99044,
+    "first": 1736427437.7875264,
+    "last": 1736427539.8626082,
+    "min": 1736427437.7875264,
+    "max": 1736427539.8626082,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009963512420654297,
+    "median_dt_s": 0.0009963512420654297,
+    "rate_hz": 1003.6621201244317,
+    "span_s": 102.07508182525635,
+    "n_gaps_gt_3x_median": 2502,
+    "max_dt_s": 0.04379582405090332,
+    "first_utc": "2025-01-09T12:57:17.787+00:00",
+    "last_utc": "2025-01-09T12:58:59.862+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/gripper_velocities",
+    "n": 99044,
+    "first": 1736427437.7875264,
+    "last": 1736427539.8626082,
+    "min": 1736427437.7875264,
+    "max": 1736427539.8626082,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009963512420654297,
+    "median_dt_s": 0.0009963512420654297,
+    "rate_hz": 1003.6621201244317,
+    "span_s": 102.07508182525635,
+    "n_gaps_gt_3x_median": 2502,
+    "max_dt_s": 0.04379582405090332,
+    "first_utc": "2025-01-09T12:57:17.787+00:00",
+    "last_utc": "2025-01-09T12:58:59.862+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/hama1",
+    "n": 3062,
+    "first": 1736427437.8118465,
+    "last": 1736427539.8423264,
+    "min": 1736427437.8118465,
+    "max": 1736427539.8423264,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.03213644027709961,
+    "median_dt_s": 0.03213644027709961,
+    "rate_hz": 31.117323243564062,
+    "span_s": 102.0304799079895,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.06944537162780762,
+    "first_utc": "2025-01-09T12:57:17.811+00:00",
+    "last_utc": "2025-01-09T12:58:59.842+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/hama2",
+    "n": 3062,
+    "first": 1736427437.8062105,
+    "last": 1736427539.8363354,
+    "min": 1736427437.8062105,
+    "max": 1736427539.8363354,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.03219127655029297,
+    "median_dt_s": 0.03219127655029297,
+    "rate_hz": 31.06431639757073,
+    "span_s": 102.03012490272522,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.05516815185546875,
+    "first_utc": "2025-01-09T12:57:17.806+00:00",
+    "last_utc": "2025-01-09T12:58:59.836+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/hand",
+    "n": 2934,
+    "first": 1736427437.8060622,
+    "last": 1736427539.84589,
+    "min": 1736427437.8060622,
+    "max": 1736427539.84589,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.03336000442504883,
+    "median_dt_s": 0.03336000442504883,
+    "rate_hz": 29.976015208473292,
+    "span_s": 102.03982782363892,
+    "n_gaps_gt_3x_median": 34,
+    "max_dt_s": 0.13213706016540527,
+    "first_utc": "2025-01-09T12:57:17.806+00:00",
+    "last_utc": "2025-01-09T12:58:59.845+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/joint_efforts",
+    "n": 99044,
+    "first": 1736427437.7875264,
+    "last": 1736427539.8626082,
+    "min": 1736427437.7875264,
+    "max": 1736427539.8626082,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009963512420654297,
+    "median_dt_s": 0.0009963512420654297,
+    "rate_hz": 1003.6621201244317,
+    "span_s": 102.07508182525635,
+    "n_gaps_gt_3x_median": 2502,
+    "max_dt_s": 0.04379582405090332,
+    "first_utc": "2025-01-09T12:57:17.787+00:00",
+    "last_utc": "2025-01-09T12:58:59.862+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/joint_positions",
+    "n": 99044,
+    "first": 1736427437.7875264,
+    "last": 1736427539.8626082,
+    "min": 1736427437.7875264,
+    "max": 1736427539.8626082,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009963512420654297,
+    "median_dt_s": 0.0009963512420654297,
+    "rate_hz": 1003.6621201244317,
+    "span_s": 102.07508182525635,
+    "n_gaps_gt_3x_median": 2502,
+    "max_dt_s": 0.04379582405090332,
+    "first_utc": "2025-01-09T12:57:17.787+00:00",
+    "last_utc": "2025-01-09T12:58:59.862+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/joint_velocities",
+    "n": 99044,
+    "first": 1736427437.7875264,
+    "last": 1736427539.8626082,
+    "min": 1736427437.7875264,
+    "max": 1736427539.8626082,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009963512420654297,
+    "median_dt_s": 0.0009963512420654297,
+    "rate_hz": 1003.6621201244317,
+    "span_s": 102.07508182525635,
+    "n_gaps_gt_3x_median": 2502,
+    "max_dt_s": 0.04379582405090332,
+    "first_utc": "2025-01-09T12:57:17.787+00:00",
+    "last_utc": "2025-01-09T12:58:59.862+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/measured_force",
+    "n": 102088,
+    "first": 1736427437.778108,
+    "last": 1736427539.862529,
+    "min": 1736427437.778108,
+    "max": 1736427539.862529,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0005741119384765625,
+    "median_dt_s": 0.0005741119384765625,
+    "rate_hz": 1741.8205980066446,
+    "span_s": 102.08442115783691,
+    "n_gaps_gt_3x_median": 50353,
+    "max_dt_s": 0.0427706241607666,
+    "first_utc": "2025-01-09T12:57:17.778+00:00",
+    "last_utc": "2025-01-09T12:58:59.862+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/measured_torque",
+    "n": 102088,
+    "first": 1736427437.778108,
+    "last": 1736427539.862529,
+    "min": 1736427437.778108,
+    "max": 1736427539.862529,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0005741119384765625,
+    "median_dt_s": 0.0005741119384765625,
+    "rate_hz": 1741.8205980066446,
+    "span_s": 102.08442115783691,
+    "n_gaps_gt_3x_median": 50353,
+    "max_dt_s": 0.0427706241607666,
+    "first_utc": "2025-01-09T12:57:17.778+00:00",
+    "last_utc": "2025-01-09T12:58:59.862+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/pose",
+    "n": 58350,
+    "first": 1736427437.7774258,
+    "last": 1736427539.8636632,
+    "min": 1736427437.7774258,
+    "max": 1736427539.8636632,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0016734600067138672,
+    "median_dt_s": 0.0016734600067138672,
+    "rate_hz": 597.564325402479,
+    "span_s": 102.08623743057251,
+    "n_gaps_gt_3x_median": 471,
+    "max_dt_s": 0.04353833198547363,
+    "first_utc": "2025-01-09T12:57:17.777+00:00",
+    "last_utc": "2025-01-09T12:58:59.863+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/velocity",
+    "n": 58334,
+    "first": 1736427437.7779644,
+    "last": 1736427539.8642628,
+    "min": 1736427437.7779644,
+    "max": 1736427539.8642628,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0016465187072753906,
+    "median_dt_s": 0.0016465187072753906,
+    "rate_hz": 607.34202143064,
+    "span_s": 102.08629846572876,
+    "n_gaps_gt_3x_median": 543,
+    "max_dt_s": 0.04309391975402832,
+    "first_utc": "2025-01-09T12:57:17.777+00:00",
+    "last_utc": "2025-01-09T12:58:59.864+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   }
+  ],
+  "unpaired_time_arrays": [],
+  "expected_cameras_missing": []
+ },
+ "time_base": {
+  "segment_min": 1736427437.7950916,
+  "segment_max": 1736427539.8617945,
+  "n_segments": 5,
+  "candidates": [
+   {
+    "timestamps": "/timestamps/capture_node-camera-image",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.889511,
+    "ts_max": 1736427539.7415545,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/compensated_base_force",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.778643,
+    "ts_max": 1736427539.8615427,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/compensated_base_torque",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.778643,
+    "ts_max": 1736427539.8615427,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/events",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.772704,
+    "ts_max": 1736427539.861693,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/gripper_efforts",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.7875264,
+    "ts_max": 1736427539.8626082,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/gripper_positions",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.7875264,
+    "ts_max": 1736427539.8626082,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/gripper_velocities",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.7875264,
+    "ts_max": 1736427539.8626082,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/hama1",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.8118465,
+    "ts_max": 1736427539.8423264,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/hama2",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.8062105,
+    "ts_max": 1736427539.8363354,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/hand",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.8060622,
+    "ts_max": 1736427539.84589,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/joint_efforts",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.7875264,
+    "ts_max": 1736427539.8626082,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/joint_positions",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.7875264,
+    "ts_max": 1736427539.8626082,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/joint_velocities",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.7875264,
+    "ts_max": 1736427539.8626082,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/measured_force",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.778108,
+    "ts_max": 1736427539.862529,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/measured_torque",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.778108,
+    "ts_max": 1736427539.862529,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/pose",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.7774258,
+    "ts_max": 1736427539.8636632,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/velocity",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736427437.7779644,
+    "ts_max": 1736427539.8642628,
+    "unit_guess": "s"
+   }
+  ],
+  "relation": "same_as",
+  "reference": "/timestamps/hand",
+  "fraction_inside": 1.0,
+  "unit_guess": "s"
+ },
+ "anomalies": [
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/compensated_base_force 有 288 處間隔大於中位數 3 倍（最大 0.0343955 秒）",
+   "path": "/timestamps/compensated_base_force"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/compensated_base_torque 有 288 處間隔大於中位數 3 倍（最大 0.0343955 秒）",
+   "path": "/timestamps/compensated_base_torque"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/events 有 309307 處間隔大於中位數 3 倍（最大 0.000316143 秒）",
+   "path": "/timestamps/events"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/gripper_efforts 有 2502 處間隔大於中位數 3 倍（最大 0.0437958 秒）",
+   "path": "/timestamps/gripper_efforts"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/gripper_positions 有 2502 處間隔大於中位數 3 倍（最大 0.0437958 秒）",
+   "path": "/timestamps/gripper_positions"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/gripper_velocities 有 2502 處間隔大於中位數 3 倍（最大 0.0437958 秒）",
+   "path": "/timestamps/gripper_velocities"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/hand 有 34 處間隔大於中位數 3 倍（最大 0.132137 秒）",
+   "path": "/timestamps/hand"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/joint_efforts 有 2502 處間隔大於中位數 3 倍（最大 0.0437958 秒）",
+   "path": "/timestamps/joint_efforts"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/joint_positions 有 2502 處間隔大於中位數 3 倍（最大 0.0437958 秒）",
+   "path": "/timestamps/joint_positions"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/joint_velocities 有 2502 處間隔大於中位數 3 倍（最大 0.0437958 秒）",
+   "path": "/timestamps/joint_velocities"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/measured_force 有 50353 處間隔大於中位數 3 倍（最大 0.0427706 秒）",
+   "path": "/timestamps/measured_force"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/measured_torque 有 50353 處間隔大於中位數 3 倍（最大 0.0427706 秒）",
+   "path": "/timestamps/measured_torque"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/pose 有 471 處間隔大於中位數 3 倍（最大 0.0435383 秒）",
+   "path": "/timestamps/pose"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/velocity 有 543 處間隔大於中位數 3 倍（最大 0.0430939 秒）",
+   "path": "/timestamps/velocity"
+  }
+ ],
+ "manual_check": [
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "0",
+   "path": "/segments_info/0",
+   "parent_path": null,
+   "start": 1736427437.7950916,
+   "end": 1736427449.4950447,
+   "duration": 11.699953079223633,
+   "success": true,
+   "success_raw": true,
+   "text": "No action.",
+   "extra": {
+    "index": 0
+   }
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "1",
+   "path": "/segments_info/1",
+   "parent_path": null,
+   "start": 1736427449.511793,
+   "end": 1736427461.8951142,
+   "duration": 12.383321285247803,
+   "success": true,
+   "success_raw": true,
+   "text": "Pick Ethernet.",
+   "extra": {
+    "index": 1
+   }
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "2",
+   "path": "/segments_info/2",
+   "parent_path": null,
+   "start": 1736427461.9118068,
+   "end": 1736427485.967381,
+   "duration": 24.05557417869568,
+   "success": false,
+   "success_raw": false,
+   "text": "Insert Ethernet.",
+   "extra": {
+    "index": 2
+   }
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "3",
+   "path": "/segments_info/3",
+   "parent_path": null,
+   "start": 1736427485.978471,
+   "end": 1736427504.2783637,
+   "duration": 18.29989266395569,
+   "success": false,
+   "success_raw": false,
+   "text": "Insert Ethernet.",
+   "extra": {
+    "index": 3
+   }
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "4",
+   "path": "/segments_info/4",
+   "parent_path": null,
+   "start": 1736427504.297776,
+   "end": 1736427539.8617945,
+   "duration": 35.5640184879303,
+   "success": true,
+   "success_raw": true,
+   "text": "No action.",
+   "extra": {
+    "index": 4
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "Q1",
+   "topic": "segment 欄位",
+   "question": "`/segments_info`（第 0 層，共 5 段）：start=`start`、end=`end`、success=`success`、text=`text`，其他欄位 ['index']。這些是否就是 segment 起訖、成功標記與動作描述？",
+   "evidence": {
+    "sub_groups": {
+     "low_level": 3
+    },
+    "non_segment_children": []
+   }
+  },
+  {
+   "id": "Q2",
+   "topic": "segment 欄位",
+   "question": "`/segments_info/*/low_level`（第 1 層，共 8 段，分散在 3 個容器）：start=`start`、end=`end`、success=`success`、text=`text`，其他欄位 無。這些是否就是 segment 起訖、成功標記與動作描述？",
+   "evidence": {
+    "sub_groups": {},
+    "non_segment_children": []
+   }
+  },
+  {
+   "id": "Q3",
+   "topic": "時間單位與基準",
+   "question": "segment 起訖範圍 1736427437.795092–1736427539.861794 落在 `/timestamps/hand` 的範圍內（100%），推測兩者同一時間基準、單位 s。請確認單位與是否為 Unix 時間。",
+   "evidence": [
+    {
+     "timestamps": "/timestamps/capture_node-camera-image",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.889511,
+     "ts_max": 1736427539.7415545,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/compensated_base_force",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.778643,
+     "ts_max": 1736427539.8615427,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/compensated_base_torque",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.778643,
+     "ts_max": 1736427539.8615427,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/events",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.772704,
+     "ts_max": 1736427539.861693,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/gripper_efforts",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.7875264,
+     "ts_max": 1736427539.8626082,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/gripper_positions",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.7875264,
+     "ts_max": 1736427539.8626082,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/gripper_velocities",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.7875264,
+     "ts_max": 1736427539.8626082,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/hama1",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.8118465,
+     "ts_max": 1736427539.8423264,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/hama2",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.8062105,
+     "ts_max": 1736427539.8363354,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/hand",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.8060622,
+     "ts_max": 1736427539.84589,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/joint_efforts",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.7875264,
+     "ts_max": 1736427539.8626082,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/joint_positions",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.7875264,
+     "ts_max": 1736427539.8626082,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/joint_velocities",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.7875264,
+     "ts_max": 1736427539.8626082,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/measured_force",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.778108,
+     "ts_max": 1736427539.862529,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/measured_torque",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.778108,
+     "ts_max": 1736427539.862529,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/pose",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.7774258,
+     "ts_max": 1736427539.8636632,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/velocity",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736427437.7779644,
+     "ts_max": 1736427539.8642628,
+     "unit_guess": "s"
+    }
+   ]
+  },
+  {
+   "id": "Q4",
+   "topic": "action / part 解析",
+   "question": "高層 text 第一個詞的分佈：{'no': 2, 'insert': 2, 'pick': 1}。是否以第一個詞當 action、其餘字串當零件（part）？",
+   "evidence": null
+  },
+  {
+   "id": "Q5",
+   "topic": "Insert 零件候選",
+   "question": "這些樣本中的 Insert 零件：{'Ethernet.': '2 段（成功 0 / 失敗 2）'}。研究要選哪一種？（失敗數需等第 2 包全量索引才準）",
+   "evidence": null
+  },
+  {
+   "id": "Q6",
+   "topic": "失敗原因與證據時間",
+   "question": "資料中沒有失敗原因、證據時間欄位（符合規格預期）。這些將在第 3 包走人工標註流程，請確認。",
+   "evidence": null
+  },
+  {
+   "id": "Q7",
+   "topic": "低階 segment",
+   "question": "第 1 層（如 Low_level）動作分佈：{'grasp': 1, 'lift': 3, 'approach': 2, 'align': 2}。要不要拿來當證據時間的候選區間？",
+   "evidence": null
+  },
+  {
+   "id": "Q8",
+   "topic": "相機清單",
+   "question": "偵測到的內嵌影片：{'capture_node-camera-image': '346x260, 5.72 fps, 611 幀', 'hama1': '640x480, 30 fps, 3062 幀', 'hama2': '640x480, 30 fps, 3062 幀', 'hand': '640x480, 30 fps, 2934 幀'}。哪些是外部視角、哪個是腕部相機？best_camera 的候選集合為何？",
+   "evidence": null
+  },
+  {
+   "id": "Q9",
+   "topic": "影格與時間戳",
+   "question": "capture_node-camera-image：影片 611 幀、標稱 5.72 fps；`/timestamps/capture_node-camera-image` 有 611 筆，實測約 5.71513 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  },
+  {
+   "id": "Q10",
+   "topic": "影格與時間戳",
+   "question": "hama1：影片 3062 幀、標稱 30 fps；`/timestamps/hama1` 有 3062 筆，實測約 31.1173 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  },
+  {
+   "id": "Q11",
+   "topic": "影格與時間戳",
+   "question": "hama2：影片 3062 幀、標稱 30 fps；`/timestamps/hama2` 有 3062 筆，實測約 31.0643 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  },
+  {
+   "id": "Q12",
+   "topic": "影格與時間戳",
+   "question": "hand：影片 2934 幀、標稱 30 fps；`/timestamps/hand` 有 2934 筆，實測約 29.976 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  }
+ ]
+}

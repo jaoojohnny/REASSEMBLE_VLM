@@ -1,0 +1,59 @@
+{
+ "name": "bnc_dev25_test75_s0",
+ "created_at": "2026-10-14T13:03:06+08:00",
+ "tool": "assembly_monitor.split 0.1.0",
+ "spec": {
+  "name": "bnc_dev25_test75_s0",
+  "action": "insert",
+  "part": "BNC",
+  "ratios": {
+   "dev": 0.25,
+   "test": 0.75
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "counts": {
+  "dev": {
+   "n_groups": 14,
+   "n_segments": 20,
+   "n_failure": 7,
+   "n_success": 13
+  },
+  "test": {
+   "n_groups": 48,
+   "n_segments": 66,
+   "n_failure": 23,
+   "n_success": 43
+  },
+  "all": {
+   "n_groups": 62,
+   "n_segments": 86,
+   "n_failure": 30,
+   "n_success": 56
+  }
+ },
+ "lock": {
+  "segments_sha256": "c5864bcb1ccb02db0280676beb1cd9d9991f53d422e31773a4678a0008fcf0a7",
+  "per_split": {
+   "dev": {
+    "n_segments": 20,
+    "sha256": "94690476431e87b2889cdd4650cda12dfc82e330fe30665a8c3895406a5cec68"
+   },
+   "test": {
+    "n_segments": 66,
+    "sha256": "d3c553258bdc53d267ae6073bd6c162d36aa981abd78a5ad091e7c38b4d5d9f8"
+   }
+  }
+ },
+ "split_csv_sha256": "56cf860a8d5cb73ac2f6484268fd5ea1e60b0fcff87db99caf4079522276abd1",
+ "locked": true,
+ "leakage_status": "warn",
+ "note": "test 清單已鎖定：開發階段只用 dev；最終評估才讀 test（load_split(..., allow_test=True)）。"
+}

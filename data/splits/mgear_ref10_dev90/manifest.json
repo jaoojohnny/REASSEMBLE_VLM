@@ -1,0 +1,59 @@
+{
+ "name": "mgear_ref10_dev90",
+ "created_at": "2026-10-30T20:46:07+08:00",
+ "tool": "assembly_monitor.split 0.1.0",
+ "spec": {
+  "name": "mgear_ref10_dev90",
+  "action": "insert",
+  "part": "medium gear",
+  "ratios": {
+   "ref": 0.1,
+   "dev": 0.9
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "counts": {
+  "ref": {
+   "n_groups": 6,
+   "n_segments": 6,
+   "n_failure": 1,
+   "n_success": 5
+  },
+  "dev": {
+   "n_groups": 51,
+   "n_segments": 57,
+   "n_failure": 7,
+   "n_success": 50
+  },
+  "all": {
+   "n_groups": 57,
+   "n_segments": 63,
+   "n_failure": 8,
+   "n_success": 55
+  }
+ },
+ "lock": {
+  "segments_sha256": "ef6178b76f64f45f836084a8aaf3eb82a87a733ec1c4501046264004ad21fd8f",
+  "per_split": {
+   "dev": {
+    "n_segments": 57,
+    "sha256": "b6ffc0c59ddbbb5b0ed18bca0037494cc6781db1d6a7611f28fc7a903d569cfb"
+   },
+   "ref": {
+    "n_segments": 6,
+    "sha256": "744246dfd9e5dce910bf7750bf69a5638de1ba73b40488b6789665a51e8a09df"
+   }
+  }
+ },
+ "split_csv_sha256": "6c02e5611e3308c20628a688bd7332250271d1d7ceea2b2b56af37edcd237081",
+ "locked": true,
+ "leakage_status": "pass",
+ "note": "test 清單已鎖定：開發階段只用 dev；最終評估才讀 test（load_split(..., allow_test=True)）。"
+}

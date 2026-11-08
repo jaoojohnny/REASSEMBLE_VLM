@@ -1,0 +1,4 @@
+﻿recording_id,source,size_bytes,n_segments,n_excluded,n_insert,status,recording_issues,hama1_frames,hama1_n_timestamps,hama1_rate_hz,hama2_frames,hama2_n_timestamps,hama2_rate_hz,hand_frames,hand_n_timestamps,hand_rate_hz,capture_node-camera-image_frames,capture_node-camera-image_n_timestamps,capture_node-camera-image_rate_hz
+2025-01-09-13-57-17,data\raw\2025-01-09-13-57-17.h5,382120140,5,2,2,ok,,3062,3062,31.1173,3062,3062,31.0643,2934,2934,29.9760,611,611,5.7151
+2025-01-11-14-35-33,data\raw\2025-01-11-14-35-33.h5,1242248068,19,2,7,ok,,6415,6415,31.0432,6414,6414,31.0181,5941,5941,29.9658,1231,1231,5.7194
+2025-01-14-12-05-01,data\raw\2025-01-14-12-05-01.h5,1819979888,38,2,1,ok,,8199,8199,30.9881,8199,8199,31.0189,7621,7621,29.9679,2067,2067,7.5738

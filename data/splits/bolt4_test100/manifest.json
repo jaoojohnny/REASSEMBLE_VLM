@@ -1,0 +1,48 @@
+{
+ "name": "bolt4_test100",
+ "created_at": "2026-10-30T10:54:08+08:00",
+ "tool": "assembly_monitor.split 0.1.0",
+ "spec": {
+  "name": "bolt4_test100",
+  "action": "insert",
+  "part": "bolt 4",
+  "ratios": {
+   "test": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "counts": {
+  "test": {
+   "n_groups": 58,
+   "n_segments": 83,
+   "n_failure": 30,
+   "n_success": 53
+  },
+  "all": {
+   "n_groups": 58,
+   "n_segments": 83,
+   "n_failure": 30,
+   "n_success": 53
+  }
+ },
+ "lock": {
+  "segments_sha256": "afb62b53bba6159c893270f6628b53ac6908cabf3eec39a7cfef50d7190de552",
+  "per_split": {
+   "test": {
+    "n_segments": 83,
+    "sha256": "59beba0186d81a6bdc08a97de6cbe6c01c7ae73648afe333d67e41aff484a09b"
+   }
+  }
+ },
+ "split_csv_sha256": "ff96464bd5137f38560b71738b534d330fe10058f75b0237bcb9e20913c5ad56",
+ "locked": true,
+ "leakage_status": "pass",
+ "note": "test 清單已鎖定：開發階段只用 dev；最終評估才讀 test（load_split(..., allow_test=True)）。"
+}

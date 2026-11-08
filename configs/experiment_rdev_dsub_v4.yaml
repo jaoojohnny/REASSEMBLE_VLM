@@ -1,0 +1,36 @@
+# 第 11 包開發集（2026-10-30）：D-SUB，切分 data/splits/dsub_ref10_dev90（ref 10%＝看範例的範例來源、不評分；dev 90%＝評分）。
+# 第二輪（2026-10-31，結合 Codex 的 evidence_review）：提示詞 checklist-fields-v2＋最後兩張手腕裁切＋手腕第二次觀察（模型 qwen3vl_8b_rv4）。
+# 任務文字和 bolt 4／Ethernet／square peg 1 相同，只換零件名稱、切分與影格資料夾。
+experiment:
+  name: rdev_dsub_v4
+  models: [qwen3vl_8b_rv4]
+  split_dir: data/splits/dsub_ref10_dev90
+  include: [dev]
+  frames_root: data/derived/frames/insert_D_SUB
+  sampling_template: uniform_n{n}_sb0.5_eb0.5_jpg
+  frames: [4]
+  cameras: [hama1, hama2, hand]
+  out_dir: experiments
+  timeout_sec: 180
+  repair_retry: true
+  evidence_tolerance_sec: 0.05
+  prompt:
+    version: checklist-fields-v2
+    template: configs/prompts/checklist_fields_v2.txt
+  task:
+    part: D-SUB connector
+    part_note: ""
+    success_definition: the part ends up fully inserted in its place on the board; after the gripper opens and moves away, the part stays there.
+    failure_definition: at the end of the images, the part is not correctly and fully inserted (for example beside its place, tilted, not fully in, dropped, or carried away by the gripper), or the board was moved.
+    cameras:
+      hama1: external camera 1 (fixed, looks at the task board)
+      hama2: external camera 2 (fixed, another angle on the task board)
+      hand: wrist camera mounted on the gripper (moves with the gripper)
+    failure_reasons:   # 提示詞不顯示（只答成敗）；保留是為了和標註設定的類別一致（程式會檢查）
+      misalignment: 'connector not aligned with the socket: offset, tilted, or stopped next to it; not coaxial with the socket while pushing or twisting'
+      incomplete_insert: 'connector is on the socket (coaxial) but not pushed fully or not twisted to lock: too little rotation, rotated back before release, pulled straight off, or loose after release'
+      slip_or_drop: connector slips, rotates or drops in the gripper, including sliding out of the closed gripper
+      board_lifted: the board or fixture is lifted, pushed or moved while inserting, twisting or lifting
+      wrong_contact: touches the wrong place (board surface, another part, a wrong socket) or collides, never reaching the correct socket
+      other: none of the above
+      unknown: a failure is visible but the cause cannot be determined from the images

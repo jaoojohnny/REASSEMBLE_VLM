@@ -1,0 +1,40 @@
+# 由 python -m scripts.probe sweep --config configs\probe_sweep_v2.yaml 自動產生（2026-10-16T09:46:06+08:00），請不要手動修改。
+# 挑選規則：訓練池（其他零件）依錄影分組交叉驗證的平衡準確率最高；BNC 開發集只看不挑。
+# 選到：siglip2_b384，最後一張 +0.5 秒，8 幀，時間彙整 last_mean，交叉驗證平衡準確率 0.731。
+probe:
+  name: probe_v2_siglip2_b384_eb0p5
+  experiment_name: dev_probe_v2
+  final_experiment_name: final_test_train
+  split_dir: data/splits/bnc_dev25_test75_s0
+  index_dir: data/index
+  action: insert
+  target_part: BNC
+  frames_root: data/derived/frames
+  sampling_template: uniform_n{n}_sb0.5_eb0.5_jpg
+  end_buffer: 0.5
+  frames:
+  - 8
+  cameras:
+  - hama1
+  - hama2
+  - hand
+  out_dir: experiments
+  encoder:
+    hf_id: google/siglip2-base-patch16-384
+    revision: main
+    dtype: float16
+    batch_size: 32
+    submodule: vision_model
+    pool: pooler_mean
+  classifier:
+    C_grid:
+    - 0.01
+    - 0.1
+    - 1.0
+    pca_grid:
+    - 32
+    - 64
+    cv_folds: 5
+    seed: 0
+  temporal:
+  - last_mean

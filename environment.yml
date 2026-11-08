@@ -1,0 +1,11 @@
+# 手動建立環境用：conda env create -f environment.yml
+# （setup_windows.bat 會自動做同樣的事）
+name: reassemble-vlm
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -r requirements.txt

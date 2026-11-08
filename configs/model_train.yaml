@@ -1,0 +1,42 @@
+# 第 7 包（訓練）新增的模型。configs/model.yaml 已被第 6 包的凍結設定引用，不能再改，所以新模型放在這裡。
+# 使用時兩份一起讀：--models configs/model.yaml configs/model_train.yaml（key 不可重複）。
+models:
+  qwen3vl_8b_ft:              # Qwen3-VL-8B ＋ LoRA（configs/finetune_qwen3vl8b.yaml 訓練出來的 adapter）
+    type: transformers
+    hf_id: Qwen/Qwen3-VL-8B-Instruct   # 基礎模型和 qwen3vl_8b 完全相同（已下載，不必再下載）
+    revision: main
+    license: Apache-2.0
+    quantization: 4bit
+    quant_skip_modules: [model.visual, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    max_new_tokens: 64        # 只需要回答 {"result": ...}
+    adapter_path: models/ft/qwen3vl8b_lora_r16/final
+
+  qwen3vl_8b_ft_smoke:        # 只給 run_finetune.bat 的試跑用：確認 adapter 能載入、能回答（幾段而已，不評分）
+    type: transformers
+    hf_id: Qwen/Qwen3-VL-8B-Instruct
+    revision: main
+    license: Apache-2.0
+    quantization: 4bit
+    quant_skip_modules: [model.visual, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    max_new_tokens: 64
+    adapter_path: models/ft/qwen3vl8b_lora_r16_smoke/final
+
+  dinov2_large:               # 做法 A 改良：較大的 DINOv2（約 1.2 GB）
+    type: encoder
+    hf_id: facebook/dinov2-large
+    revision: main
+    license: Apache-2.0
+    allow_patterns: ["*.json", "*.safetensors"]
+
+  siglip2_b384:               # 做法 A 改良：SigLIP 2（384 px 輸入，約 1.5 GB；只用影像分支）
+    type: encoder
+    hf_id: google/siglip2-base-patch16-384
+    revision: main
+    license: Apache-2.0
+    allow_patterns: ["*.json", "*.safetensors"]

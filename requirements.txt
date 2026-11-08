@@ -1,0 +1,11 @@
+# 第 1～4 包所需套件。之後的 VLM 推論套件在第 5 包依 RTX 3060 VRAM 評估後再加。
+h5py>=3.9
+numpy>=1.24
+pyyaml>=6.0
+requests>=2.28
+tqdm>=4.64
+av>=12.0                       # PyAV：探測內嵌 mp4 的幀數 / fps（之後也用來依時間戳取影格）
+opencv-python-headless>=4.8    # 備援探測、合成測試影片、之後輸出 PNG/JPEG
+pytest>=7.4
+jsonschema>=4.18             # 第 4 包：用 JSON Schema 驗證標註檔（測試用）
+pyarrow>=15                  # 第 13 包：讀 LeRobot 格式（外部資料 REBOOT）的表格

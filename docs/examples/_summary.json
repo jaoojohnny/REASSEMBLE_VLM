@@ -1,0 +1,56 @@
+{
+ "generated_at": "2026-10-04T17:55:07+08:00",
+ "files": [
+  {
+   "file": "synthetic_normal.h5",
+   "size": "369.3 KB",
+   "cameras": [
+    "cam_left",
+    "cam_right",
+    "cam_wrist"
+   ],
+   "n_time_arrays": 7,
+   "n_level0": 4,
+   "n_level1plus": 12,
+   "insert": "2（1/1）",
+   "errors": 0,
+   "warns": 0
+  }
+ ],
+ "failures": [],
+ "camera_presence": {
+  "cam_left": [
+   "synthetic_normal.h5"
+  ],
+  "cam_right": [
+   "synthetic_normal.h5"
+  ],
+  "cam_wrist": [
+   "synthetic_normal.h5"
+  ]
+ },
+ "paths_not_in_all_files": {},
+ "level0_verbs": {
+  "pick": 2,
+  "insert": 2
+ },
+ "insert_objects": {
+  "round peg 1": {
+   "count": 1,
+   "success": 1,
+   "failure": 0
+  },
+  "square peg 2": {
+   "count": 1,
+   "success": 0,
+   "failure": 1
+  }
+ },
+ "anomaly_counts": [
+  {
+   "severity": "info",
+   "code": "TS_GAPS",
+   "count": 1
+  }
+ ]
+}

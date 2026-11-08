@@ -1,0 +1,2 @@
+# 第 7 包：LoRA 微調。torch / transformers 沿用已安裝的版本（run_finetune.bat 會用 -c 固定版本，避免被升級）。
+peft>=0.17

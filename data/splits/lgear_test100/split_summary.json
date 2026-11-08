@@ -1,0 +1,66 @@
+{
+ "spec": {
+  "name": "lgear_test100",
+  "action": "insert",
+  "part": "large gear",
+  "ratios": {
+   "test": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "splits": {
+  "test": {
+   "n_groups": 57,
+   "n_segments": 63,
+   "n_failure": 6,
+   "n_success": 57,
+   "failure_rate": 0.095,
+   "by_date": {
+    "2025-01-09": 15,
+    "2025-01-10": 9,
+    "2025-01-11": 9,
+    "2025-01-13": 24,
+    "2025-01-14": 6
+   },
+   "failures_by_date": {
+    "2025-01-09": 2,
+    "2025-01-13": 4
+   },
+   "groups_with_failure": 3,
+   "failure_reasons": {
+    "（未標註）": 6
+   },
+   "n_gold": 0
+  },
+  "all": {
+   "n_groups": 57,
+   "n_segments": 63,
+   "n_failure": 6,
+   "n_success": 57,
+   "failure_rate": 0.095,
+   "by_date": {
+    "2025-01-09": 15,
+    "2025-01-10": 9,
+    "2025-01-11": 9,
+    "2025-01-13": 24,
+    "2025-01-14": 6
+   },
+   "failures_by_date": {
+    "2025-01-09": 2,
+    "2025-01-13": 4
+   },
+   "groups_with_failure": 3,
+   "failure_reasons": {
+    "（未標註）": 6
+   },
+   "n_gold": 0
+  }
+ }
+}

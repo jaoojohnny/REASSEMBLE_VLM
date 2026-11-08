@@ -1,0 +1,71 @@
+# 第 2 包 indexer 的欄位映射「提案」（第 1 包依 3 個真實樣本整理，2026-10-04）
+# 依據：data/index/inspect/<檔名>/candidates.json 與 tree.txt
+#   2025-01-09-13-57-17.h5、2025-01-11-14-35-33.h5、2025-01-14-12-05-01.h5（三檔結構一致）
+# 使用方式：逐項核對（尤其標「待確認」者）→ 另存為 configs/field_mapping.yaml → status 改成 confirmed。
+# 第 2 包 indexer 只接受 status: confirmed。
+
+version: 1
+status: proposed
+
+segments:
+  container: /segments_info          # 子群組 0..N-1，依示範順序命名
+  id: group_name                     # 實測與子群組內 index 欄位一致（3 檔全部相同）
+  fields:
+    start: start                     # float64，Unix 秒（UTC）
+    end: end                         # float64，Unix 秒
+    success: success                 # bool；推測 True=成功、False=失敗（待確認）
+    text: text                       # vlen ASCII，例如 "Insert Ethernet."
+    order: index                     # int64；官方 README 沒寫，實測等於子群組名稱
+  time_unit: s
+  time_base: unix_epoch              # 3 檔的 segment 起訖 100% 落在 /timestamps/hand 範圍內
+  exclude_text: ["No action."]       # 頭尾的閒置段，不算動作（待確認）
+  low_level:
+    container: low_level             # 實測是小寫 low_level（官方 README 的樹狀圖寫 Low_level）
+    fields: {start: start, end: end, success: success, text: text}   # text 是定長 bytes，例如 b"Align"
+    use_as: evidence_interval_candidates   # 待確認：是否拿低階技能區間當證據時間候選
+
+action_parse:
+  source: text
+  regex: '^\s*(?P<action>[A-Za-z]+)\s+(?P<part>.+?)\.?\s*$'   # 第一個詞=action，其餘去掉句尾句號=part
+  action_lowercase: true
+  actions_seen: [pick, insert, remove, place]
+  target_action: insert
+  target_part: null                  # 待選；樣本內 Insert：Ethernet 3 段（成 1 / 敗 2）、USB 2（1/1）、BNC 1（0/1）、
+                                     # bolt 4、large gear、square peg 1、waterproof 各 1（全成功）——需第 2 包全量統計後再選
+
+cameras:                             # 4 個內嵌 mp4（h264），第 i 幀 ↔ timestamps 第 i 筆（3 檔 × 4 相機幀數 = 時間戳筆數）
+  hama1:
+    video: /hama1
+    timestamps: /timestamps/hama1
+    resolution: [640, 480]
+    role: external                   # 推測：HAMA C-600 Pro 外部相機 1（待確認）
+  hama2:
+    video: /hama2
+    timestamps: /timestamps/hama2
+    resolution: [640, 480]
+    role: external                   # 推測：外部相機 2（待確認）
+  hand:
+    video: /hand
+    timestamps: /timestamps/hand
+    resolution: [640, 480]
+    role: wrist                      # 推測：腕部相機（論文：RealSense D435i）（待確認）
+  capture_node-camera-image:
+    video: /capture_node-camera-image   # 官方 README 寫 capture_node，實際 key 有 -camera-image
+    timestamps: /timestamps/capture_node-camera-image
+    resolution: [346, 260]
+    role: event                      # 推測：DAVIS346 事件相機的影像化輸出，約 5.7–7.6 fps（待確認）
+  frame_to_time: index
+  seconds_from: timestamps           # 不可用 frame_idx / 30：mp4 標稱 30 fps，但時間戳實測約 31.0 Hz（hama）/ 30.0 Hz（hand）
+  best_camera_candidates: [hama1, hama2, hand]   # 待確認：事件相機要不要納入
+
+not_used_in_main_experiment:         # 規格範圍外，只記錄位置
+  audio: [/hama1_audio, /hama2_audio, /hand_audio]   # int64 陣列逐位元組存放的 mp3，timestamps 群組裡沒有音訊時間
+  events: /events                    # (N, 3) int64：x, y, polarity；時間 /timestamps/events
+  robot_state: /robot_state          # 12 個陣列，各自有同名時間戳
+
+missing_fields:                      # 規格輸出需要、但資料中沒有 → 第 4 包人工標註
+  - failure_reason
+  - evidence_start_sec
+  - evidence_end_sec
+  - best_camera
+  - visible_evidence

@@ -1,0 +1,48 @@
+{
+ "name": "wproof_test100",
+ "created_at": "2026-10-31T13:41:10+08:00",
+ "tool": "assembly_monitor.split 0.1.0",
+ "spec": {
+  "name": "wproof_test100",
+  "action": "insert",
+  "part": "waterproof",
+  "ratios": {
+   "test": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "counts": {
+  "test": {
+   "n_groups": 58,
+   "n_segments": 64,
+   "n_failure": 8,
+   "n_success": 56
+  },
+  "all": {
+   "n_groups": 58,
+   "n_segments": 64,
+   "n_failure": 8,
+   "n_success": 56
+  }
+ },
+ "lock": {
+  "segments_sha256": "5c682bf9541d49aac3ab54e480ccec43b9b7e91a66747f758414467c4594d0e6",
+  "per_split": {
+   "test": {
+    "n_segments": 64,
+    "sha256": "e9198f88dec035597b5a321fb36db2ac0a6c11fcd3d5379b8be28a1b2d2ff94a"
+   }
+  }
+ },
+ "split_csv_sha256": "53bc338e414a3a7e08817e8612e1a1bb67367e631a141ea8de2b3716437c6ab0",
+ "locked": true,
+ "leakage_status": "pass",
+ "note": "test 清單已鎖定：開發階段只用 dev；最終評估才讀 test（load_split(..., allow_test=True)）。"
+}

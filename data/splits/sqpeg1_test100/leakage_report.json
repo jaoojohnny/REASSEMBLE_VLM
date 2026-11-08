@@ -1,0 +1,52 @@
+{
+ "status": "pass",
+ "generated_at": "2026-10-30T12:49:41+08:00",
+ "checks": [
+  {
+   "id": "segment_unique",
+   "title": "每段只出現一次",
+   "status": "pass",
+   "detail": "重複 0 段",
+   "examples": []
+  },
+  {
+   "id": "group_crossing",
+   "title": "同一 group 不跨集合（P4-1）",
+   "status": "pass",
+   "detail": "56 個 group，跨集合 0 個",
+   "examples": []
+  },
+  {
+   "id": "time_overlap",
+   "title": "同錄製檔不同集合的段，取影格視窗不重疊",
+   "status": "pass",
+   "detail": "錄製檔分在多個集合 0 個；視窗重疊 0 對",
+   "examples": []
+  },
+  {
+   "id": "recording_time_overlap",
+   "title": "不同集合的錄製檔，錄影時間不重疊",
+   "status": "pass",
+   "detail": "有時間範圍的錄製檔 56 個；不同集合且重疊 0 對",
+   "examples": []
+  },
+  {
+   "id": "source_duplicates",
+   "title": "來源檔雜湊不重複出現在不同集合",
+   "status": "pass",
+   "detail": "比對 56 個錄製檔的來源雜湊；重複 0 組，其中跨集合 0 組",
+   "examples": []
+  },
+  {
+   "id": "derived_samples",
+   "title": "衍生檔（各相機、1/4/8 幀、緩衝版本、標註影格）都跟著所屬段的集合（P4-2）",
+   "status": "pass",
+   "detail": "掃描 38415 個衍生檔，屬於本切分 3560 個（{'test': 3560}；{'image': 3316, 'meta': 244}），其他零件或無法對應 34855 個；同一 group 出現在多個集合的衍生檔 0 個",
+   "examples": [],
+   "n_files": 3560,
+   "per_split": {
+    "test": 3560
+   }
+  }
+ ]
+}

@@ -1,0 +1,317 @@
+{
+ "recording_id": "2025-01-10-16-17-40",
+ "source": "zip:data/2025-01-10-16-17-40.h5",
+ "file_name": "2025-01-10-16-17-40.h5",
+ "size_bytes": 218979938,
+ "indexed_at": "2026-10-05T03:13:03+08:00",
+ "tool": "assembly_monitor.index 0.1.0",
+ "mapping": {
+  "path": "configs\\field_mapping.yaml",
+  "confirmed_at": "2026-10-04"
+ },
+ "status": "ok",
+ "recording_issues": [
+  "W_KNOWN_ISSUE",
+  "W_CAMERA_MISSING:hand"
+ ],
+ "cameras": {
+  "hama1": {
+   "name": "hama1",
+   "role": "external",
+   "video": "/hama1",
+   "timestamps": "/timestamps/hama1",
+   "has_video": true,
+   "has_timestamps": true,
+   "n_timestamps": 1479,
+   "t_first": 1736522261.069097,
+   "t_last": 1736522310.336643,
+   "monotonic": true,
+   "rate_hz": 31.14065736622887,
+   "frames": 1479,
+   "fps_nominal": 30.0,
+   "width": 640,
+   "height": 480,
+   "codec": "h264",
+   "present": true
+  },
+  "hama2": {
+   "name": "hama2",
+   "role": "external",
+   "video": "/hama2",
+   "timestamps": "/timestamps/hama2",
+   "has_video": true,
+   "has_timestamps": true,
+   "n_timestamps": 1479,
+   "t_first": 1736522261.0736563,
+   "t_last": 1736522310.339522,
+   "monotonic": true,
+   "rate_hz": 31.036732277638006,
+   "frames": 1479,
+   "fps_nominal": 30.0,
+   "width": 640,
+   "height": 480,
+   "codec": "h264",
+   "present": true
+  },
+  "hand": {
+   "name": "hand",
+   "role": "wrist",
+   "video": "/hand",
+   "timestamps": "/timestamps/hand",
+   "has_video": false,
+   "has_timestamps": false,
+   "present": false
+  },
+  "capture_node-camera-image": {
+   "name": "capture_node-camera-image",
+   "role": "event",
+   "video": "/capture_node-camera-image",
+   "timestamps": "/timestamps/capture_node-camera-image",
+   "has_video": true,
+   "has_timestamps": true,
+   "n_timestamps": 387,
+   "t_first": 1736522261.065495,
+   "t_last": 1736522310.2916164,
+   "monotonic": true,
+   "rate_hz": 7.876834320526737,
+   "frames": 387,
+   "fps_nominal": 7.88,
+   "width": 346,
+   "height": 260,
+   "codec": "h264",
+   "present": true
+  }
+ },
+ "segments": [
+  {
+   "recording_id": "2025-01-10-16-17-40",
+   "segment_id": "0",
+   "order": 0,
+   "source_path": "zip:data/2025-01-10-16-17-40.h5",
+   "text": "No action.",
+   "action": "no",
+   "part": "action",
+   "excluded": true,
+   "start_unix": 1736522261.0546343,
+   "end_unix": 1736522266.171318,
+   "duration_s": 5.116683721542358,
+   "success": true,
+   "codes": [],
+   "frames": {
+    "hama1": 154,
+    "hama2": 154,
+    "capture_node-camera-image": 58
+   },
+   "frame_count": 154,
+   "camera_ids": [
+    "hama1",
+    "hama2"
+   ],
+   "n_skills": 0,
+   "next_gap_s": 0.016678333282470703,
+   "start_sec": -0.010860681533813477,
+   "end_sec": 5.105823040008545,
+   "validation_status": "excluded"
+  },
+  {
+   "recording_id": "2025-01-10-16-17-40",
+   "segment_id": "1",
+   "order": 1,
+   "source_path": "zip:data/2025-01-10-16-17-40.h5",
+   "text": "Pick BNC.",
+   "action": "pick",
+   "part": "BNC",
+   "excluded": false,
+   "start_unix": 1736522266.1879964,
+   "end_unix": 1736522277.3049026,
+   "duration_s": 11.11690616607666,
+   "success": true,
+   "codes": [],
+   "frames": {
+    "hama1": 334,
+    "hama2": 334,
+    "capture_node-camera-image": 101
+   },
+   "frame_count": 334,
+   "camera_ids": [
+    "hama1",
+    "hama2"
+   ],
+   "n_skills": 2,
+   "prev_gap_s": 0.016678333282470703,
+   "next_gap_s": 0.016702890396118164,
+   "start_sec": 5.122501373291016,
+   "end_sec": 16.239407539367676,
+   "validation_status": "ok"
+  },
+  {
+   "recording_id": "2025-01-10-16-17-40",
+   "segment_id": "2",
+   "order": 2,
+   "source_path": "zip:data/2025-01-10-16-17-40.h5",
+   "text": "Insert BNC.",
+   "action": "insert",
+   "part": "BNC",
+   "excluded": false,
+   "start_unix": 1736522277.3216054,
+   "end_unix": 1736522308.0213416,
+   "duration_s": 30.69973611831665,
+   "success": true,
+   "codes": [],
+   "frames": {
+    "hama1": 921,
+    "hama2": 921,
+    "capture_node-camera-image": 214
+   },
+   "frame_count": 921,
+   "camera_ids": [
+    "hama1",
+    "hama2"
+   ],
+   "n_skills": 4,
+   "prev_gap_s": 0.016702890396118164,
+   "next_gap_s": 0.016759634017944336,
+   "start_sec": 16.256110429763794,
+   "end_sec": 46.955846548080444,
+   "validation_status": "ok"
+  },
+  {
+   "recording_id": "2025-01-10-16-17-40",
+   "segment_id": "3",
+   "order": 3,
+   "source_path": "zip:data/2025-01-10-16-17-40.h5",
+   "text": "No action.",
+   "action": "no",
+   "part": "action",
+   "excluded": true,
+   "start_unix": 1736522308.0381012,
+   "end_unix": 1736522310.354736,
+   "duration_s": 2.3166348934173584,
+   "success": true,
+   "codes": [],
+   "frames": {
+    "hama1": 69,
+    "hama2": 70,
+    "capture_node-camera-image": 14
+   },
+   "frame_count": 69,
+   "camera_ids": [
+    "hama1",
+    "hama2"
+   ],
+   "n_skills": 0,
+   "prev_gap_s": 0.016759634017944336,
+   "start_sec": 46.97260618209839,
+   "end_sec": 49.28924107551575,
+   "validation_status": "excluded"
+  }
+ ],
+ "skills": [
+  {
+   "recording_id": "2025-01-10-16-17-40",
+   "segment_id": "1",
+   "skill_id": "0",
+   "text": "Grasp",
+   "start_unix": 1736522266.1879964,
+   "end_unix": 1736522276.7039964,
+   "duration_s": 10.516000032424927,
+   "success": true,
+   "codes": [],
+   "start_sec": 5.122501373291016,
+   "end_sec": 15.638501405715942,
+   "validation_status": "ok"
+  },
+  {
+   "recording_id": "2025-01-10-16-17-40",
+   "segment_id": "1",
+   "skill_id": "1",
+   "text": "Lift",
+   "start_unix": 1736522276.7039964,
+   "end_unix": 1736522277.3039963,
+   "duration_s": 0.5999999046325684,
+   "success": true,
+   "codes": [],
+   "start_sec": 15.638501405715942,
+   "end_sec": 16.23850131034851,
+   "validation_status": "ok"
+  },
+  {
+   "recording_id": "2025-01-10-16-17-40",
+   "segment_id": "2",
+   "skill_id": "0",
+   "text": "Approach",
+   "start_unix": 1736522277.3216054,
+   "end_unix": 1736522287.4976056,
+   "duration_s": 10.176000118255615,
+   "success": true,
+   "codes": [],
+   "start_sec": 16.256110429763794,
+   "end_sec": 26.43211054801941,
+   "validation_status": "ok"
+  },
+  {
+   "recording_id": "2025-01-10-16-17-40",
+   "segment_id": "2",
+   "skill_id": "1",
+   "text": "Align",
+   "start_unix": 1736522287.4976056,
+   "end_unix": 1736522292.2776055,
+   "duration_s": 4.7799999713897705,
+   "success": true,
+   "codes": [],
+   "start_sec": 26.43211054801941,
+   "end_sec": 31.21211051940918,
+   "validation_status": "ok"
+  },
+  {
+   "recording_id": "2025-01-10-16-17-40",
+   "segment_id": "2",
+   "skill_id": "2",
+   "text": "Twist",
+   "start_unix": 1736522292.2776055,
+   "end_unix": 1736522302.1586053,
+   "duration_s": 9.88099980354309,
+   "success": true,
+   "codes": [],
+   "start_sec": 31.21211051940918,
+   "end_sec": 41.09311032295227,
+   "validation_status": "ok"
+  },
+  {
+   "recording_id": "2025-01-10-16-17-40",
+   "segment_id": "2",
+   "skill_id": "3",
+   "text": "Release",
+   "start_unix": 1736522302.1586053,
+   "end_unix": 1736522308.0206053,
+   "duration_s": 5.861999988555908,
+   "success": true,
+   "codes": [],
+   "start_sec": 41.09311032295227,
+   "end_sec": 46.95511031150818,
+   "validation_status": "ok"
+  }
+ ],
+ "t0_unix": 1736522261.065495,
+ "source_size_bytes": 218979938,
+ "source_compressed_bytes": 48719349,
+ "source_crc32": "045b6595",
+ "source_sha256": "56528867087538bb0dcd860008db9a42f4d7475b5d241208ead71e8362919812",
+ "slim": {
+  "path": "data\\slim\\2025-01-10-16-17-40.h5",
+  "size_bytes": 5061034,
+  "copied": [
+   "/hama1",
+   "/timestamps/hama1",
+   "/hama2",
+   "/timestamps/hama2",
+   "/capture_node-camera-image",
+   "/timestamps/capture_node-camera-image",
+   "/segments_info"
+  ],
+  "missing": [
+   "/hand",
+   "/timestamps/hand"
+  ]
+ }
+}

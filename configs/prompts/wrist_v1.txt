@@ -1,0 +1,13 @@
+These images come from the wrist camera of a robot. The camera is mounted on the gripper and moves with it. They show one attempt to insert the {part} into its place on a task board.
+In the side-by-side view, LEFT is the first image (t = {t0:+.2f} s, the gripper is holding the {part}) and RIGHT is the last image (t = {t1:+.2f} s). After it come enlarged crops of the last two images (details of those images; enlarging adds no new detail).
+{IMAGES}
+Judge the FINAL state. These are NOT signs of failure by themselves: the gripper is still close to the {part} right after letting go; the fingers hide part of the {part}; a correctly inserted {part} sits flush against the board.
+Answer "yes" only when it is clearly visible.
+
+1. At the end, is the {part} still held between the fingertips (at about the same size and position as in the first image), or moving away together with the gripper?
+2. After the gripper lets go, is the place on the board clearly empty, or is the {part} clearly lying tilted or beside its place?
+If both answers are "no", the result is success.
+
+Reply with ONE JSON object and nothing else, in this form:
+{{"held_by_gripper": "no", "place_empty_or_part_misplaced": "no", "result": "success"}}
+where each check is "yes" or "no" and "result" is "success" or "failure".

@@ -1,0 +1,48 @@
+{
+ "name": "sqpeg1_test100",
+ "created_at": "2026-10-30T12:49:41+08:00",
+ "tool": "assembly_monitor.split 0.1.0",
+ "spec": {
+  "name": "sqpeg1_test100",
+  "action": "insert",
+  "part": "square peg 1",
+  "ratios": {
+   "test": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "counts": {
+  "test": {
+   "n_groups": 56,
+   "n_segments": 73,
+   "n_failure": 20,
+   "n_success": 53
+  },
+  "all": {
+   "n_groups": 56,
+   "n_segments": 73,
+   "n_failure": 20,
+   "n_success": 53
+  }
+ },
+ "lock": {
+  "segments_sha256": "17ca01ba6ad5c1e8ba08ec09a1d6052ff690abfef7dd30e353cf77f16504d76f",
+  "per_split": {
+   "test": {
+    "n_segments": 73,
+    "sha256": "ae15d037b41bd1fa78be9a3f59e99039fb73f6224d7e2a1cf264601b2e84bc7d"
+   }
+  }
+ },
+ "split_csv_sha256": "e5bd01ba7f4109fc76c3b0c1a1af505f2932cc98d2da0290c1b51b6970b4d317",
+ "locked": true,
+ "leakage_status": "pass",
+ "note": "test 清單已鎖定：開發階段只用 dev；最終評估才讀 test（load_split(..., allow_test=True)）。"
+}

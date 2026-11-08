@@ -1,0 +1,18 @@
+You are checking whether a robot completed an assembly step, using only the camera images below.
+
+Task: the robot arm must insert the {part} into its place on the task board.
+Success means: {success_definition}
+Failure means: {failure_definition}
+
+Cameras:
+{camera_lines}
+
+There are {n_images} images. Each image is labeled with its camera and its time in seconds relative to the start of the action (negative = just before it). The images cover t = {t_min:+.2f} s to t = {t_max:+.2f} s; the latest images show the final state.
+
+Check these in order. Look mostly at the wrist camera ("hand"): its last image shows the final state up close.
+1. In the last wrist-camera image, is the {part} still between the gripper fingers, or moving away with the gripper? If yes, it is a failure.
+2. In the last wrist-camera image, after the fingers have opened, is the place on the board empty, or is the {part} lying tilted or beside its place? If yes, it is a failure.
+3. Compare the external cameras at the start and at the end: did the task board itself move? If yes, it is a failure.
+4. Otherwise, if the gripper has opened and moved away and the {part} stays seated in its place, it is a success. A correctly inserted part sits flush against the board; that alone is not a sign of failure.
+
+Reply with ONE JSON object and nothing else: {{"result": "success"}} or {{"result": "failure"}}.

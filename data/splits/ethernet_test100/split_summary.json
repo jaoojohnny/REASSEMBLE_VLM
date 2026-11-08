@@ -1,0 +1,72 @@
+{
+ "spec": {
+  "name": "ethernet_test100",
+  "action": "insert",
+  "part": "Ethernet",
+  "ratios": {
+   "test": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "splits": {
+  "test": {
+   "n_groups": 59,
+   "n_segments": 72,
+   "n_failure": 20,
+   "n_success": 52,
+   "failure_rate": 0.278,
+   "by_date": {
+    "2025-01-09": 21,
+    "2025-01-10": 11,
+    "2025-01-11": 11,
+    "2025-01-13": 22,
+    "2025-01-14": 7
+   },
+   "failures_by_date": {
+    "2025-01-09": 10,
+    "2025-01-10": 2,
+    "2025-01-11": 3,
+    "2025-01-13": 3,
+    "2025-01-14": 2
+   },
+   "groups_with_failure": 17,
+   "failure_reasons": {
+    "（未標註）": 20
+   },
+   "n_gold": 0
+  },
+  "all": {
+   "n_groups": 59,
+   "n_segments": 72,
+   "n_failure": 20,
+   "n_success": 52,
+   "failure_rate": 0.278,
+   "by_date": {
+    "2025-01-09": 21,
+    "2025-01-10": 11,
+    "2025-01-11": 11,
+    "2025-01-13": 22,
+    "2025-01-14": 7
+   },
+   "failures_by_date": {
+    "2025-01-09": 10,
+    "2025-01-10": 2,
+    "2025-01-11": 3,
+    "2025-01-13": 3,
+    "2025-01-14": 2
+   },
+   "groups_with_failure": 17,
+   "failure_reasons": {
+    "（未標註）": 20
+   },
+   "n_gold": 0
+  }
+ }
+}

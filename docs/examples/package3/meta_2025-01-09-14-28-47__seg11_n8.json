@@ -1,0 +1,331 @@
+{
+ "recording_id": "2025-01-09-14-28-47",
+ "segment_id": "11",
+ "text": "Insert BNC.",
+ "label_success": true,
+ "start_unix": 1736429528.359288,
+ "end_unix": 1736429574.092708,
+ "duration_s": 45.7334201335907,
+ "window_unix": [
+  1736429527.859288,
+  1736429576.092708
+ ],
+ "sampling": {
+  "n_frames": 8,
+  "start_buffer": 0.5,
+  "end_buffer": 2.0,
+  "fmt": "jpg",
+  "jpeg_quality": 95,
+  "strategy": "uniform",
+  "seed": 0
+ },
+ "cameras": [
+  {
+   "segment_id": "2025-01-09-14-28-47__seg11",
+   "camera": "hama1",
+   "source_times_sec": [
+    -0.48,
+    6.3841,
+    13.2844,
+    20.1843,
+    27.066,
+    33.9528,
+    40.8527,
+    47.7216
+   ],
+   "frame_paths": [
+    "hama1__00__t-000.480s__f005996.jpg",
+    "hama1__01__t+006.384s__f006202.jpg",
+    "hama1__02__t+013.284s__f006409.jpg",
+    "hama1__03__t+020.184s__f006616.jpg",
+    "hama1__04__t+027.066s__f006822.jpg",
+    "hama1__05__t+033.953s__f007029.jpg",
+    "hama1__06__t+040.853s__f007236.jpg",
+    "hama1__07__t+047.722s__f007442.jpg"
+   ],
+   "sampling": "uniform",
+   "n_frames": 8,
+   "frames": [
+    {
+     "target_unix": 1736429527.859288,
+     "frame_idx": 5996,
+     "source_unix": 1736429527.879253,
+     "delta_s": 0.019964933395385742,
+     "far": false,
+     "missing": null,
+     "path": "hama1__00__t-000.480s__f005996.jpg"
+    },
+    {
+     "target_unix": 1736429534.7497766,
+     "frame_idx": 6202,
+     "source_unix": 1736429534.7433913,
+     "delta_s": -0.006385326385498047,
+     "far": false,
+     "missing": null,
+     "path": "hama1__01__t+006.384s__f006202.jpg"
+    },
+    {
+     "target_unix": 1736429541.6402652,
+     "frame_idx": 6409,
+     "source_unix": 1736429541.64365,
+     "delta_s": 0.003384828567504883,
+     "far": false,
+     "missing": null,
+     "path": "hama1__02__t+013.284s__f006409.jpg"
+    },
+    {
+     "target_unix": 1736429548.5307539,
+     "frame_idx": 6616,
+     "source_unix": 1736429548.5436318,
+     "delta_s": 0.012877941131591797,
+     "far": false,
+     "missing": null,
+     "path": "hama1__03__t+020.184s__f006616.jpg"
+    },
+    {
+     "target_unix": 1736429555.4212422,
+     "frame_idx": 6822,
+     "source_unix": 1736429555.4252567,
+     "delta_s": 0.004014492034912109,
+     "far": false,
+     "missing": null,
+     "path": "hama1__04__t+027.066s__f006822.jpg"
+    },
+    {
+     "target_unix": 1736429562.3117309,
+     "frame_idx": 7029,
+     "source_unix": 1736429562.3121078,
+     "delta_s": 0.0003769397735595703,
+     "far": false,
+     "missing": null,
+     "path": "hama1__05__t+033.953s__f007029.jpg"
+    },
+    {
+     "target_unix": 1736429569.2022195,
+     "frame_idx": 7236,
+     "source_unix": 1736429569.2119951,
+     "delta_s": 0.009775638580322266,
+     "far": false,
+     "missing": null,
+     "path": "hama1__06__t+040.853s__f007236.jpg"
+    },
+    {
+     "target_unix": 1736429576.092708,
+     "frame_idx": 7442,
+     "source_unix": 1736429576.080871,
+     "delta_s": -0.011837005615234375,
+     "far": false,
+     "missing": null,
+     "path": "hama1__07__t+047.722s__f007442.jpg"
+    }
+   ]
+  },
+  {
+   "segment_id": "2025-01-09-14-28-47__seg11",
+   "camera": "hama2",
+   "source_times_sec": [
+    -0.4786,
+    6.3855,
+    13.2855,
+    20.1856,
+    27.0538,
+    33.9546,
+    40.8543,
+    47.7235
+   ],
+   "frame_paths": [
+    "hama2__00__t-000.479s__f005996.jpg",
+    "hama2__01__t+006.386s__f006202.jpg",
+    "hama2__02__t+013.285s__f006409.jpg",
+    "hama2__03__t+020.186s__f006616.jpg",
+    "hama2__04__t+027.054s__f006822.jpg",
+    "hama2__05__t+033.955s__f007029.jpg",
+    "hama2__06__t+040.854s__f007236.jpg",
+    "hama2__07__t+047.724s__f007442.jpg"
+   ],
+   "sampling": "uniform",
+   "n_frames": 8,
+   "frames": [
+    {
+     "target_unix": 1736429527.859288,
+     "frame_idx": 5996,
+     "source_unix": 1736429527.8806758,
+     "delta_s": 0.021387815475463867,
+     "far": false,
+     "missing": null,
+     "path": "hama2__00__t-000.479s__f005996.jpg"
+    },
+    {
+     "target_unix": 1736429534.7497766,
+     "frame_idx": 6202,
+     "source_unix": 1736429534.7447903,
+     "delta_s": -0.004986286163330078,
+     "far": false,
+     "missing": null,
+     "path": "hama2__01__t+006.386s__f006202.jpg"
+    },
+    {
+     "target_unix": 1736429541.6402652,
+     "frame_idx": 6409,
+     "source_unix": 1736429541.6447833,
+     "delta_s": 0.004518032073974609,
+     "far": false,
+     "missing": null,
+     "path": "hama2__02__t+013.285s__f006409.jpg"
+    },
+    {
+     "target_unix": 1736429548.5307539,
+     "frame_idx": 6616,
+     "source_unix": 1736429548.5448682,
+     "delta_s": 0.0141143798828125,
+     "far": false,
+     "missing": null,
+     "path": "hama2__03__t+020.186s__f006616.jpg"
+    },
+    {
+     "target_unix": 1736429555.4212422,
+     "frame_idx": 6822,
+     "source_unix": 1736429555.4130857,
+     "delta_s": -0.008156538009643555,
+     "far": false,
+     "missing": null,
+     "path": "hama2__04__t+027.054s__f006822.jpg"
+    },
+    {
+     "target_unix": 1736429562.3117309,
+     "frame_idx": 7029,
+     "source_unix": 1736429562.3139064,
+     "delta_s": 0.002175569534301758,
+     "far": false,
+     "missing": null,
+     "path": "hama2__05__t+033.955s__f007029.jpg"
+    },
+    {
+     "target_unix": 1736429569.2022195,
+     "frame_idx": 7236,
+     "source_unix": 1736429569.2135775,
+     "delta_s": 0.011358022689819336,
+     "far": false,
+     "missing": null,
+     "path": "hama2__06__t+040.854s__f007236.jpg"
+    },
+    {
+     "target_unix": 1736429576.092708,
+     "frame_idx": 7442,
+     "source_unix": 1736429576.0828164,
+     "delta_s": -0.009891748428344727,
+     "far": false,
+     "missing": null,
+     "path": "hama2__07__t+047.724s__f007442.jpg"
+    }
+   ]
+  },
+  {
+   "segment_id": "2025-01-09-14-28-47__seg11",
+   "camera": "hand",
+   "source_times_sec": [
+    -0.4895,
+    6.3671,
+    13.2874,
+    20.1589,
+    27.0579,
+    33.9409,
+    40.8408,
+    47.6467
+   ],
+   "frame_paths": [
+    "hand__00__t-000.490s__f005659.jpg",
+    "hand__01__t+006.367s__f005849.jpg",
+    "hand__02__t+013.287s__f006037.jpg",
+    "hand__03__t+020.159s__f006226.jpg",
+    "hand__04__t+027.058s__f006414.jpg",
+    "hand__05__t+033.941s__f006603.jpg",
+    "hand__06__t+040.841s__f006794.jpg",
+    "hand__07__t+047.647s__f006985.jpg"
+   ],
+   "sampling": "uniform",
+   "n_frames": 8,
+   "frames": [
+    {
+     "target_unix": 1736429527.859288,
+     "frame_idx": 5659,
+     "source_unix": 1736429527.8697789,
+     "delta_s": 0.010490894317626953,
+     "far": false,
+     "missing": null,
+     "path": "hand__00__t-000.490s__f005659.jpg"
+    },
+    {
+     "target_unix": 1736429534.7497766,
+     "frame_idx": 5849,
+     "source_unix": 1736429534.726434,
+     "delta_s": -0.023342609405517578,
+     "far": false,
+     "missing": null,
+     "path": "hand__01__t+006.367s__f005849.jpg"
+    },
+    {
+     "target_unix": 1736429541.6402652,
+     "frame_idx": 6037,
+     "source_unix": 1736429541.646655,
+     "delta_s": 0.0063898563385009766,
+     "far": false,
+     "missing": null,
+     "path": "hand__02__t+013.287s__f006037.jpg"
+    },
+    {
+     "target_unix": 1736429548.5307539,
+     "frame_idx": 6226,
+     "source_unix": 1736429548.5181465,
+     "delta_s": -0.012607336044311523,
+     "far": false,
+     "missing": null,
+     "path": "hand__03__t+020.159s__f006226.jpg"
+    },
+    {
+     "target_unix": 1736429555.4212422,
+     "frame_idx": 6414,
+     "source_unix": 1736429555.4172306,
+     "delta_s": -0.004011631011962891,
+     "far": false,
+     "missing": null,
+     "path": "hand__04__t+027.058s__f006414.jpg"
+    },
+    {
+     "target_unix": 1736429562.3117309,
+     "frame_idx": 6603,
+     "source_unix": 1736429562.3001676,
+     "delta_s": -0.011563301086425781,
+     "far": false,
+     "missing": null,
+     "path": "hand__05__t+033.941s__f006603.jpg"
+    },
+    {
+     "target_unix": 1736429569.2022195,
+     "frame_idx": 6794,
+     "source_unix": 1736429569.2000537,
+     "delta_s": -0.0021657943725585938,
+     "far": false,
+     "missing": null,
+     "path": "hand__06__t+040.841s__f006794.jpg"
+    },
+    {
+     "target_unix": 1736429576.092708,
+     "frame_idx": 6985,
+     "source_unix": 1736429576.0059824,
+     "delta_s": -0.08672571182250977,
+     "far": false,
+     "missing": null,
+     "path": "hand__07__t+047.647s__f006985.jpg"
+    }
+   ]
+  }
+ ],
+ "source": {
+  "slim": "2025-01-09-14-28-47.h5",
+  "fingerprint": "110243661:1791137889533510900"
+ },
+ "cache_key": "ee72efcfaaf236db",
+ "created_at": "2026-10-05T14:45:09+08:00",
+ "tool": "assembly_monitor.extract 0.1.0"
+}

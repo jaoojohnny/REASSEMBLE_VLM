@@ -1,0 +1,38 @@
+# 第 11 包：新的測試集（square peg 4 插入），只跑一次。之前的 final_test*.yaml 與結果都不動。
+# 方法清單在 2026-10-31 寫好：在任何 square peg 4 測試影格或結果被看到之前。4 個測試零件（square peg 4、square peg 3、round peg 2、waterproof）用同一套方法，
+# 各自產生報告，再由 python -m scripts.reason_test 合併成 experiments/p11_final_pooled/report.md（主要比較看合併結果）。
+# 雙擊 run_final_test_p11.bat。
+final:
+  frozen: true
+  frozen_at: "2026-10-31T13:34:00+08:00"
+  decided: "主要問題：機率門檻（不讀 Qwen 寫的 yes/no，改讀它說 yes 的機率；失敗分數 > 0.999089 才判失敗）是否比 Qwen＋Skill 第三版（寫字回答）好。4 個測試零件合併：McNemar p < 0.05 且合併兩類平均較高，才算成立。次要：手腕第二次觀察（結合 Codex 的想法，開發集和機率門檻並列）和第三版、和機率門檻比。"
+  title: "測試集評估（第 11 包：square peg 4，推理方式）"
+  part: square peg 4
+  split_dir: data/splits/sqpeg4_test100
+  out_dir: experiments
+  out_name: final_test_sqpeg4
+  models: [configs/model.yaml, configs/model_p8.yaml, configs/model_skill2.yaml, configs/model_reason.yaml]
+  primary: qwen3vl8b_prob_t0999
+  notes:
+    - "square peg 4 是新的測試資料：方法在 4 個開發零件（square peg 2、round peg 3、D-SUB、medium gear）兩輪挑選（第二輪看過第一輪結果才設計），門檻 0.999089 用 4 個開發零件合起來選；square peg 4 全部段當測試集。"
+    - "開發集成績（241 段）：第三版 58%、機率門檻 64%（留一個零件）、手腕第二次觀察 64%（兩類平均）；機率門檻在 medium gear 變差。"
+    - "要說明的是：部分段可能曾在第 6、7 包（BNC 小分類器、LoRA）與第 8–10 包小分類器的訓練池；第 7 包算過 Qwen 在其他零件成功段的零樣本判斷（按零件群組彙整）。同一支錄影會有好幾種零件，開發零件和測試零件可能在同一支錄影裡（Qwen 不訓練，只選一個門檻）。方法與提示詞都沒有依此調整。"
+    - "真實答案只用資料集的成功／失敗標記（沒有人工標準答案）。"
+  methods:
+    - id: majority                          # 基準：一律答成功
+      kind: majority
+    - id: qwen3vl8b_prob_t0999              # ★ 主方法：機率門檻（第三版提示詞＋手腕裁切，讀機率，失敗分數 > 0.999089 才判失敗）
+      kind: vlm
+      experiment: configs/experiment_test_sqpeg4_v3.yaml
+      model: qwen3vl_8b_rscore_t0999
+      frames: 4
+    - id: qwen3vl8b_wrist_05                # 次要：手腕第二次觀察（新清單＋兩張裁切；第二次只看手腕、不給第一次答案；0.5）
+      kind: vlm
+      experiment: configs/experiment_test_sqpeg4_v4.yaml
+      model: qwen3vl_8b_rv4_wrist
+      frames: 4
+    - id: qwen3vl8b_v3_eb05_f4              # 對照：Qwen＋Skill 第三版（寫字回答），和之前的測試集相同
+      kind: vlm
+      experiment: configs/experiment_test_sqpeg4_v3.yaml
+      model: qwen3vl_8b_zoomfix
+      frames: 4

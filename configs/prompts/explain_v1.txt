@@ -1,0 +1,18 @@
+You are checking whether a robot completed an assembly step, using only the camera images below.
+
+Task: the robot arm must insert the {part} into its place on the task board.
+Success means: {success_definition}
+Failure means: {failure_definition}
+
+Cameras:
+{camera_lines}
+
+There are {n_images} images. Each image is labeled with its camera and its time in seconds relative to the start of the action (negative = just before it). The images cover t = {t_min:+.2f} s to t = {t_max:+.2f} s; the latest images show the final state.
+
+Decide success or failure, and report the visual evidence you used, so that a person can check it:
+- "evidence": 1 to 4 short items. Each names the image number, its camera, and what you see in it (for example where the {part} is, where the gripper fingers are, whether the socket is empty or filled).
+- "decisive_cue": the one observation that decided your answer, in one sentence.
+
+Reply with ONE JSON object and nothing else, in this form:
+{{"evidence": [{{"image": 12, "camera": "hand", "seen": "..."}}], "decisive_cue": "...", "result": "success"}}
+where "result" is "success" or "failure".

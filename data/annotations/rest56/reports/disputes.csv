@@ -1,0 +1,8 @@
+﻿segment_id,dataset_result,disputes,differences,result_a,result_b,reason_a,reason_b,camera_a,camera_b,evidence_a,evidence_b,iou,reference_reason,reference_evidence
+2025-01-09-14-47-32__seg32,failure,failure_reason,failure_reason,failure,failure,other,unknown,hama1,hama1,"[0.01, 12.59]","[0.0, 12.6]",0.9984,wrong_contact,"[0.0, 12.583]"
+2025-01-09-17-23-07__seg12,failure,failure_reason,failure_reason,failure,failure,misalignment,incomplete_insert,hand,hand,"[16.36, 32.98]","[16.4, 34.4]",0.9191,wrong_contact,"[0.0, 33.168]"
+2025-01-09-17-23-07__seg17,failure,failure_reason,failure_reason,failure,failure,slip_or_drop,incomplete_insert,hand,hand,"[7.49, 10.68]","[7.5, 11.5]",0.793,unknown,"[None, None]"
+2025-01-09-17-40-57__seg14,failure,failure_reason,failure_reason;evidence,failure,failure,incomplete_insert,misalignment,hand,hand,"[20.26, 33.08]","[6.5, 33.3]",0.4784,unknown,"[None, None]"
+2025-01-09-18-08-36__seg17,failure,failure_reason;best_camera,failure_reason;best_camera,failure,failure,other,wrong_contact,hama1,hand,"[-0.01, 3.26]","[0.0, 3.3]",0.9849,wrong_contact,"[0.0, 3.316]"
+2025-01-13-11-23-17__seg27,failure,failure_reason,failure_reason,failure,failure,slip_or_drop,incomplete_insert,hand,hand,"[4.87, 7.96]","[5.4, 8.4]",0.7252,incomplete_insert,"[5.491, 8.032]"
+2025-01-13-19-04-46__seg2,failure,failure_reason,failure_reason;evidence,failure,failure,misalignment,incomplete_insert,hand,hand,"[12.39, 17.95]","[17.5, 20.3]",0.0569,incomplete_insert,"[12.392, 19.333]"

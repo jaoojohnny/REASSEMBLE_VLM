@@ -1,0 +1,20 @@
+# 不放進 Docker 映像的東西（執行時用 volume 掛進來，見 docker-compose.yml）
+.git
+.env
+.env.*
+!.env.example
+data/raw
+data/derived
+data/slim
+models
+experiments
+logs
+docs/*.pptx
+docs/*.pdf
+**/__pycache__
+**/*.pyc
+.pytest_cache
+*.h5
+*.hdf5
+*.zip
+*.lnk

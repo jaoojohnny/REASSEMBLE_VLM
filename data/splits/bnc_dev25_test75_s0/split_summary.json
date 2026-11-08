@@ -1,0 +1,107 @@
+{
+ "spec": {
+  "name": "bnc_dev25_test75_s0",
+  "action": "insert",
+  "part": "BNC",
+  "ratios": {
+   "dev": 0.25,
+   "test": 0.75
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "splits": {
+  "dev": {
+   "n_groups": 14,
+   "n_segments": 20,
+   "n_failure": 7,
+   "n_success": 13,
+   "failure_rate": 0.35,
+   "by_date": {
+    "2025-01-09": 1,
+    "2025-01-10": 4,
+    "2025-01-11": 3,
+    "2025-01-13": 12
+   },
+   "failures_by_date": {
+    "2025-01-10": 1,
+    "2025-01-13": 6
+   },
+   "groups_with_failure": 4,
+   "failure_reasons": {
+    "incomplete_insert": 4,
+    "misalignment": 1,
+    "slip_or_drop": 2
+   },
+   "n_gold": 20
+  },
+  "test": {
+   "n_groups": 48,
+   "n_segments": 66,
+   "n_failure": 23,
+   "n_success": 43,
+   "failure_rate": 0.348,
+   "by_date": {
+    "2025-01-09": 22,
+    "2025-01-10": 8,
+    "2025-01-11": 8,
+    "2025-01-13": 22,
+    "2025-01-14": 6
+   },
+   "failures_by_date": {
+    "2025-01-09": 11,
+    "2025-01-10": 1,
+    "2025-01-11": 3,
+    "2025-01-13": 8
+   },
+   "groups_with_failure": 18,
+   "failure_reasons": {
+    "board_lifted": 2,
+    "incomplete_insert": 9,
+    "misalignment": 5,
+    "other": 1,
+    "slip_or_drop": 1,
+    "unknown": 2,
+    "wrong_contact": 3
+   },
+   "n_gold": 66
+  },
+  "all": {
+   "n_groups": 62,
+   "n_segments": 86,
+   "n_failure": 30,
+   "n_success": 56,
+   "failure_rate": 0.349,
+   "by_date": {
+    "2025-01-09": 23,
+    "2025-01-10": 12,
+    "2025-01-11": 11,
+    "2025-01-13": 34,
+    "2025-01-14": 6
+   },
+   "failures_by_date": {
+    "2025-01-09": 11,
+    "2025-01-10": 2,
+    "2025-01-11": 3,
+    "2025-01-13": 14
+   },
+   "groups_with_failure": 22,
+   "failure_reasons": {
+    "board_lifted": 2,
+    "incomplete_insert": 13,
+    "misalignment": 6,
+    "other": 1,
+    "slip_or_drop": 3,
+    "unknown": 2,
+    "wrong_contact": 3
+   },
+   "n_gold": 86
+  }
+ }
+}

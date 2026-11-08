@@ -1,0 +1,1146 @@
+{
+ "file": {
+  "path": "data\\derived\\synthetic\\synthetic_normal.h5",
+  "name": "synthetic_normal.h5",
+  "stem": "synthetic_normal",
+  "size_bytes": 378113,
+  "mtime": "2026-10-04T17:55:07+08:00",
+  "inspected_at": "2026-10-04T17:55:07+08:00",
+  "tool": "assembly_monitor.inspect_h5 0.1.0",
+  "h5py": "3.16.0",
+  "hdf5": "2.0.0",
+  "options": {
+   "preview_n": 5,
+   "max_read_mb": 64.0,
+   "media_probe": true,
+   "count_frames": true,
+   "collapse_threshold": 8,
+   "expected_cameras": [],
+   "max_depth": null
+  },
+  "libver": [
+   "earliest",
+   "v200"
+  ],
+  "userblock_size": 0
+ },
+ "segments": {
+  "patterns": [
+   {
+    "pattern": "/segments_info",
+    "level": 0,
+    "n_containers": 1,
+    "n_segments": 4,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": []
+    },
+    "keys_consistent": true,
+    "sub_groups": {
+     "Low_level": 4
+    },
+    "non_segment_children": [],
+    "reason_like_keys": []
+   },
+   {
+    "pattern": "/segments_info/*/Low_level",
+    "level": 1,
+    "n_containers": 4,
+    "n_segments": 12,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": []
+    },
+    "keys_consistent": true,
+    "sub_groups": {},
+    "non_segment_children": [],
+    "reason_like_keys": []
+   }
+  ],
+  "containers": [
+   {
+    "path": "/segments_info",
+    "pattern": "/segments_info",
+    "n_segments": 4,
+    "n_with_start_end": 4,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {
+     "Low_level": 4
+    },
+    "non_segment_children": [],
+    "level": 0,
+    "parent_segment_path": null
+   },
+   {
+    "path": "/segments_info/0/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "n_segments": 3,
+    "n_with_start_end": 3,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/0"
+   },
+   {
+    "path": "/segments_info/1/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "n_segments": 3,
+    "n_with_start_end": 3,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/1"
+   },
+   {
+    "path": "/segments_info/2/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "n_segments": 3,
+    "n_with_start_end": 3,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/2"
+   },
+   {
+    "path": "/segments_info/3/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "n_segments": 3,
+    "n_with_start_end": 3,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/3"
+   }
+  ],
+  "rows": [
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "0",
+    "path": "/segments_info/0",
+    "parent_path": null,
+    "start": 1736420000.1,
+    "end": 1736420000.7,
+    "duration": 0.6000001430511475,
+    "success": true,
+    "success_raw": true,
+    "text": "Pick round peg 1",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "1",
+    "path": "/segments_info/1",
+    "parent_path": null,
+    "start": 1736420000.7,
+    "end": 1736420001.4,
+    "duration": 0.7000000476837158,
+    "success": true,
+    "success_raw": true,
+    "text": "Insert round peg 1",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "2",
+    "path": "/segments_info/2",
+    "parent_path": null,
+    "start": 1736420001.4,
+    "end": 1736420002.1,
+    "duration": 0.6999998092651367,
+    "success": true,
+    "success_raw": true,
+    "text": "Pick square peg 2",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "3",
+    "path": "/segments_info/3",
+    "parent_path": null,
+    "start": 1736420002.1,
+    "end": 1736420002.9,
+    "duration": 0.8000001907348633,
+    "success": false,
+    "success_raw": false,
+    "text": "Insert square peg 2",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/0/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/0/Low_level/0",
+    "parent_path": "/segments_info/0",
+    "start": 1736420000.1,
+    "end": 1736420000.3,
+    "duration": 0.20000004768371582,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/0/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/0/Low_level/1",
+    "parent_path": "/segments_info/0",
+    "start": 1736420000.3,
+    "end": 1736420000.5,
+    "duration": 0.20000004768371582,
+    "success": true,
+    "success_raw": true,
+    "text": "Align",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/0/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/0/Low_level/2",
+    "parent_path": "/segments_info/0",
+    "start": 1736420000.5,
+    "end": 1736420000.7,
+    "duration": 0.20000004768371582,
+    "success": true,
+    "success_raw": true,
+    "text": "Push",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/1/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/1/Low_level/0",
+    "parent_path": "/segments_info/1",
+    "start": 1736420000.7,
+    "end": 1736420000.9333334,
+    "duration": 0.23333334922790527,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/1/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/1/Low_level/1",
+    "parent_path": "/segments_info/1",
+    "start": 1736420000.9333334,
+    "end": 1736420001.1666667,
+    "duration": 0.23333334922790527,
+    "success": true,
+    "success_raw": true,
+    "text": "Align",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/1/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/1/Low_level/2",
+    "parent_path": "/segments_info/1",
+    "start": 1736420001.1666667,
+    "end": 1736420001.4,
+    "duration": 0.23333334922790527,
+    "success": true,
+    "success_raw": true,
+    "text": "Push",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/2/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/2/Low_level/0",
+    "parent_path": "/segments_info/2",
+    "start": 1736420001.4,
+    "end": 1736420001.6333334,
+    "duration": 0.23333334922790527,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/2/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/2/Low_level/1",
+    "parent_path": "/segments_info/2",
+    "start": 1736420001.6333334,
+    "end": 1736420001.8666666,
+    "duration": 0.23333311080932617,
+    "success": true,
+    "success_raw": true,
+    "text": "Align",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/2/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/2/Low_level/2",
+    "parent_path": "/segments_info/2",
+    "start": 1736420001.8666666,
+    "end": 1736420002.1,
+    "duration": 0.23333334922790527,
+    "success": true,
+    "success_raw": true,
+    "text": "Push",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/3/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/3/Low_level/0",
+    "parent_path": "/segments_info/3",
+    "start": 1736420002.1,
+    "end": 1736420002.3666666,
+    "duration": 0.2666666507720947,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/3/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/3/Low_level/1",
+    "parent_path": "/segments_info/3",
+    "start": 1736420002.3666666,
+    "end": 1736420002.6333334,
+    "duration": 0.26666688919067383,
+    "success": true,
+    "success_raw": true,
+    "text": "Align",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/3/Low_level",
+    "pattern": "/segments_info/*/Low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/3/Low_level/2",
+    "parent_path": "/segments_info/3",
+    "start": 1736420002.6333334,
+    "end": 1736420002.9,
+    "duration": 0.2666666507720947,
+    "success": false,
+    "success_raw": false,
+    "text": "Push",
+    "extra": {}
+   }
+  ],
+  "n_level0": 4,
+  "n_level1plus": 12,
+  "actions": {
+   "level0": {
+    "pick": {
+     "count": 2,
+     "success_true": 2,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "round peg 1": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "square peg 2": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "insert": {
+     "count": 2,
+     "success_true": 1,
+     "success_false": 1,
+     "success_unknown": 0,
+     "objects": {
+      "round peg 1": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "square peg 2": {
+       "count": 1,
+       "success_true": 0,
+       "success_false": 1,
+       "success_unknown": 0
+      }
+     }
+    }
+   },
+   "level1": {
+    "approach": {
+     "count": 4,
+     "success_true": 4,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 4,
+       "success_true": 4,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "align": {
+     "count": 4,
+     "success_true": 4,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 4,
+       "success_true": 4,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "push": {
+     "count": 4,
+     "success_true": 3,
+     "success_false": 1,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 4,
+       "success_true": 3,
+       "success_false": 1,
+       "success_unknown": 0
+      }
+     }
+    }
+   }
+  }
+ },
+ "streams": {
+  "cameras": [
+   {
+    "name": "cam_left",
+    "path": "/cam_left",
+    "encoding": "mp4",
+    "bytes": 6961,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "mpeg4",
+    "width": 32,
+    "height": 24,
+    "fps_nominal": 30.0,
+    "frames": 90,
+    "frames_source": "header",
+    "duration_s": 3.0,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/cam_left",
+    "ts_n": 90,
+    "ts_first": 1736420000.001871,
+    "ts_last": 1736420002.9668102,
+    "ts_rate_hz": 30.04472715290612,
+    "ts_span_s": 2.9649391174316406,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   },
+   {
+    "name": "cam_right",
+    "path": "/cam_right",
+    "encoding": "mp4",
+    "bytes": 6961,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "mpeg4",
+    "width": 32,
+    "height": 24,
+    "fps_nominal": 30.0,
+    "frames": 90,
+    "frames_source": "header",
+    "duration_s": 3.0,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/cam_right",
+    "ts_n": 90,
+    "ts_first": 1736420000.0009022,
+    "ts_last": 1736420002.9685822,
+    "ts_rate_hz": 29.95910029214077,
+    "ts_span_s": 2.967679977416992,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   },
+   {
+    "name": "cam_wrist",
+    "path": "/cam_wrist",
+    "encoding": "mp4",
+    "bytes": 6961,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "mpeg4",
+    "width": 32,
+    "height": 24,
+    "fps_nominal": 30.0,
+    "frames": 90,
+    "frames_source": "header",
+    "duration_s": 3.0,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/cam_wrist",
+    "ts_n": 90,
+    "ts_first": 1736420000.0003862,
+    "ts_last": 1736420002.9679751,
+    "ts_rate_hz": 29.84908587573034,
+    "ts_span_s": 2.9675889015197754,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   }
+  ],
+  "audio": [
+   {
+    "name": "mic_wrist",
+    "path": "/mic_wrist",
+    "encoding": "mp3",
+    "bytes": 2058,
+    "probe_ok": false,
+    "sample_rate": null,
+    "channels": null,
+    "duration_s": null,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/mic_wrist",
+    "ts_n": 150,
+    "ts_first": 1736420000.0,
+    "ts_last": 1736420002.98,
+    "ts_rate_hz": 50.000047683761295,
+    "ts_span_s": 2.9800000190734863,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false
+   }
+  ],
+  "image_arrays": [],
+  "other_streams": [
+   {
+    "name": "events",
+    "path": "/events",
+    "shape": [
+     4000,
+     3
+    ],
+    "dtype": "int16",
+    "timestamps": "/timestamps/events",
+    "ts_n": 4000,
+    "ts_first": 1736420000.000287,
+    "ts_last": 1736420002.9995294,
+    "ts_rate_hz": 1931.0791896869246,
+    "ts_span_s": 2.9992423057556152,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "force",
+    "path": "/robot/force",
+    "shape": [
+     3000,
+     3
+    ],
+    "dtype": "float32",
+    "timestamps": "/timestamps/force",
+    "ts_n": 3000,
+    "ts_first": 1736420000.0,
+    "ts_last": 1736420002.999,
+    "ts_rate_hz": 1000.072484501669,
+    "ts_span_s": 2.999000072479248,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "joint_pos",
+    "path": "/robot/joint_pos",
+    "shape": [
+     3000,
+     7
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/joint_pos",
+    "ts_n": 3000,
+    "ts_first": 1736420000.0,
+    "ts_last": 1736420002.999,
+    "ts_rate_hz": 1000.072484501669,
+    "ts_span_s": 2.999000072479248,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   }
+  ],
+  "time_arrays": [
+   {
+    "path": "/timestamps/cam_left",
+    "n": 90,
+    "first": 1736420000.001871,
+    "last": 1736420002.9668102,
+    "min": 1736420000.001871,
+    "max": 1736420002.9668102,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.03328371047973633,
+    "median_dt_s": 0.03328371047973633,
+    "rate_hz": 30.04472715290612,
+    "span_s": 2.9649391174316406,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.035057783126831055,
+    "first_utc": "2025-01-09T10:53:20.001+00:00",
+    "last_utc": "2025-01-09T10:53:22.966+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/cam_right",
+    "n": 90,
+    "first": 1736420000.0009022,
+    "last": 1736420002.9685822,
+    "min": 1736420000.0009022,
+    "max": 1736420002.9685822,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.03337883949279785,
+    "median_dt_s": 0.03337883949279785,
+    "rate_hz": 29.95910029214077,
+    "span_s": 2.967679977416992,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.034998178482055664,
+    "first_utc": "2025-01-09T10:53:20.000+00:00",
+    "last_utc": "2025-01-09T10:53:22.968+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/cam_wrist",
+    "n": 90,
+    "first": 1736420000.0003862,
+    "last": 1736420002.9679751,
+    "min": 1736420000.0003862,
+    "max": 1736420002.9679751,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.03350186347961426,
+    "median_dt_s": 0.03350186347961426,
+    "rate_hz": 29.84908587573034,
+    "span_s": 2.9675889015197754,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.03515934944152832,
+    "first_utc": "2025-01-09T10:53:20.000+00:00",
+    "last_utc": "2025-01-09T10:53:22.967+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/events",
+    "n": 4000,
+    "first": 1736420000.000287,
+    "last": 1736420002.9995294,
+    "min": 1736420000.000287,
+    "max": 1736420002.9995294,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0005178451538085938,
+    "median_dt_s": 0.0005178451538085938,
+    "rate_hz": 1931.0791896869246,
+    "span_s": 2.9992423057556152,
+    "n_gaps_gt_3x_median": 509,
+    "max_dt_s": 0.005391836166381836,
+    "first_utc": "2025-01-09T10:53:20.000+00:00",
+    "last_utc": "2025-01-09T10:53:22.999+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/force",
+    "n": 3000,
+    "first": 1736420000.0,
+    "last": 1736420002.999,
+    "min": 1736420000.0,
+    "max": 1736420002.999,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009999275207519531,
+    "median_dt_s": 0.0009999275207519531,
+    "rate_hz": 1000.072484501669,
+    "span_s": 2.999000072479248,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.0010001659393310547,
+    "first_utc": "2025-01-09T10:53:20.000+00:00",
+    "last_utc": "2025-01-09T10:53:22.999+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/joint_pos",
+    "n": 3000,
+    "first": 1736420000.0,
+    "last": 1736420002.999,
+    "min": 1736420000.0,
+    "max": 1736420002.999,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009999275207519531,
+    "median_dt_s": 0.0009999275207519531,
+    "rate_hz": 1000.072484501669,
+    "span_s": 2.999000072479248,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.0010001659393310547,
+    "first_utc": "2025-01-09T10:53:20.000+00:00",
+    "last_utc": "2025-01-09T10:53:22.999+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/mic_wrist",
+    "n": 150,
+    "first": 1736420000.0,
+    "last": 1736420002.98,
+    "min": 1736420000.0,
+    "max": 1736420002.98,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.019999980926513672,
+    "median_dt_s": 0.019999980926513672,
+    "rate_hz": 50.000047683761295,
+    "span_s": 2.9800000190734863,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.020000219345092773,
+    "first_utc": "2025-01-09T10:53:20.000+00:00",
+    "last_utc": "2025-01-09T10:53:22.980+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   }
+  ],
+  "unpaired_time_arrays": [],
+  "expected_cameras_missing": []
+ },
+ "time_base": {
+  "segment_min": 1736420000.1,
+  "segment_max": 1736420002.9,
+  "n_segments": 4,
+  "candidates": [
+   {
+    "timestamps": "/timestamps/cam_left",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736420000.001871,
+    "ts_max": 1736420002.9668102,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/cam_right",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736420000.0009022,
+    "ts_max": 1736420002.9685822,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/cam_wrist",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736420000.0003862,
+    "ts_max": 1736420002.9679751,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/events",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736420000.000287,
+    "ts_max": 1736420002.9995294,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/force",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736420000.0,
+    "ts_max": 1736420002.999,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/joint_pos",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736420000.0,
+    "ts_max": 1736420002.999,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/mic_wrist",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736420000.0,
+    "ts_max": 1736420002.98,
+    "unit_guess": "s"
+   }
+  ],
+  "relation": "same_as",
+  "reference": "/timestamps/cam_left",
+  "fraction_inside": 1.0,
+  "unit_guess": "s"
+ },
+ "anomalies": [
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/events 有 509 處間隔大於中位數 3 倍（最大 0.00539184 秒）",
+   "path": "/timestamps/events"
+  }
+ ],
+ "manual_check": [
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "0",
+   "path": "/segments_info/0",
+   "parent_path": null,
+   "start": 1736420000.1,
+   "end": 1736420000.7,
+   "duration": 0.6000001430511475,
+   "success": true,
+   "success_raw": true,
+   "text": "Pick round peg 1",
+   "extra": {}
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "1",
+   "path": "/segments_info/1",
+   "parent_path": null,
+   "start": 1736420000.7,
+   "end": 1736420001.4,
+   "duration": 0.7000000476837158,
+   "success": true,
+   "success_raw": true,
+   "text": "Insert round peg 1",
+   "extra": {}
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "2",
+   "path": "/segments_info/2",
+   "parent_path": null,
+   "start": 1736420001.4,
+   "end": 1736420002.1,
+   "duration": 0.6999998092651367,
+   "success": true,
+   "success_raw": true,
+   "text": "Pick square peg 2",
+   "extra": {}
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "3",
+   "path": "/segments_info/3",
+   "parent_path": null,
+   "start": 1736420002.1,
+   "end": 1736420002.9,
+   "duration": 0.8000001907348633,
+   "success": false,
+   "success_raw": false,
+   "text": "Insert square peg 2",
+   "extra": {}
+  }
+ ],
+ "questions": [
+  {
+   "id": "Q1",
+   "topic": "segment 欄位",
+   "question": "`/segments_info`（第 0 層，共 4 段）：start=`start`、end=`end`、success=`success`、text=`text`，其他欄位 無。這些是否就是 segment 起訖、成功標記與動作描述？",
+   "evidence": {
+    "sub_groups": {
+     "Low_level": 4
+    },
+    "non_segment_children": []
+   }
+  },
+  {
+   "id": "Q2",
+   "topic": "segment 欄位",
+   "question": "`/segments_info/*/Low_level`（第 1 層，共 12 段，分散在 4 個容器）：start=`start`、end=`end`、success=`success`、text=`text`，其他欄位 無。這些是否就是 segment 起訖、成功標記與動作描述？",
+   "evidence": {
+    "sub_groups": {},
+    "non_segment_children": []
+   }
+  },
+  {
+   "id": "Q3",
+   "topic": "時間單位與基準",
+   "question": "segment 起訖範圍 1736420000.1–1736420002.9 落在 `/timestamps/cam_left` 的範圍內（100%），推測兩者同一時間基準、單位 s。請確認單位與是否為 Unix 時間。",
+   "evidence": [
+    {
+     "timestamps": "/timestamps/cam_left",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736420000.001871,
+     "ts_max": 1736420002.9668102,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/cam_right",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736420000.0009022,
+     "ts_max": 1736420002.9685822,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/cam_wrist",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736420000.0003862,
+     "ts_max": 1736420002.9679751,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/events",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736420000.000287,
+     "ts_max": 1736420002.9995294,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/force",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736420000.0,
+     "ts_max": 1736420002.999,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/joint_pos",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736420000.0,
+     "ts_max": 1736420002.999,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/mic_wrist",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736420000.0,
+     "ts_max": 1736420002.98,
+     "unit_guess": "s"
+    }
+   ]
+  },
+  {
+   "id": "Q4",
+   "topic": "action / part 解析",
+   "question": "高層 text 第一個詞的分佈：{'pick': 2, 'insert': 2}。是否以第一個詞當 action、其餘字串當零件（part）？",
+   "evidence": null
+  },
+  {
+   "id": "Q5",
+   "topic": "Insert 零件候選",
+   "question": "這些樣本中的 Insert 零件：{'round peg 1': '1 段（成功 1 / 失敗 0）', 'square peg 2': '1 段（成功 0 / 失敗 1）'}。研究要選哪一種？（失敗數需等第 2 包全量索引才準）",
+   "evidence": null
+  },
+  {
+   "id": "Q6",
+   "topic": "失敗原因與證據時間",
+   "question": "資料中沒有失敗原因、證據時間欄位（符合規格預期）。這些將在第 3 包走人工標註流程，請確認。",
+   "evidence": null
+  },
+  {
+   "id": "Q7",
+   "topic": "低階 segment",
+   "question": "第 1 層（如 Low_level）動作分佈：{'approach': 4, 'align': 4, 'push': 4}。要不要拿來當證據時間的候選區間？",
+   "evidence": null
+  },
+  {
+   "id": "Q8",
+   "topic": "相機清單",
+   "question": "偵測到的內嵌影片：{'cam_left': '32x24, 30 fps, 90 幀', 'cam_right': '32x24, 30 fps, 90 幀', 'cam_wrist': '32x24, 30 fps, 90 幀'}。哪些是外部視角、哪個是腕部相機？best_camera 的候選集合為何？",
+   "evidence": null
+  },
+  {
+   "id": "Q9",
+   "topic": "影格與時間戳",
+   "question": "cam_left：影片 90 幀、標稱 30 fps；`/timestamps/cam_left` 有 90 筆，實測約 30.0447 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  },
+  {
+   "id": "Q10",
+   "topic": "影格與時間戳",
+   "question": "cam_right：影片 90 幀、標稱 30 fps；`/timestamps/cam_right` 有 90 筆，實測約 29.9591 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  },
+  {
+   "id": "Q11",
+   "topic": "影格與時間戳",
+   "question": "cam_wrist：影片 90 幀、標稱 30 fps；`/timestamps/cam_wrist` 有 90 筆，實測約 29.8491 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  }
+ ]
+}

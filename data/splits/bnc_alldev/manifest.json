@@ -1,0 +1,48 @@
+{
+ "name": "bnc_alldev",
+ "created_at": "2026-10-25T12:25:47+00:00",
+ "tool": "assembly_monitor.split 0.1.0",
+ "spec": {
+  "name": "bnc_alldev",
+  "action": "insert",
+  "part": "BNC",
+  "ratios": {
+   "dev": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "counts": {
+  "dev": {
+   "n_groups": 62,
+   "n_segments": 86,
+   "n_failure": 30,
+   "n_success": 56
+  },
+  "all": {
+   "n_groups": 62,
+   "n_segments": 86,
+   "n_failure": 30,
+   "n_success": 56
+  }
+ },
+ "lock": {
+  "segments_sha256": "039432fa1eb1a5fa5f5306a3a5aca0299aded90a14db6ae593d2f468d04a6232",
+  "per_split": {
+   "dev": {
+    "n_segments": 86,
+    "sha256": "9315f99716deabfd57afd1257914d8a2fe515e5fc64d04b0c752bc90e3a15c9c"
+   }
+  }
+ },
+ "split_csv_sha256": "d4ada2469cf026c3559df73f519122c3ba4cb88673eb38d02de8cc059636a2ee",
+ "locked": true,
+ "leakage_status": "pass",
+ "note": "test 清單已鎖定：開發階段只用 dev；最終評估才讀 test（load_split(..., allow_test=True)）。"
+}

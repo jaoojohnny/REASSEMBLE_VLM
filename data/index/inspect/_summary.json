@@ -1,0 +1,128 @@
+{
+ "generated_at": "2026-10-04T18:01:06+08:00",
+ "files": [
+  {
+   "file": "2025-01-09-13-57-17.h5",
+   "size": "364.4 MB",
+   "cameras": [
+    "capture_node-camera-image",
+    "hama1",
+    "hama2",
+    "hand"
+   ],
+   "n_time_arrays": 17,
+   "n_level0": 5,
+   "n_level1plus": 8,
+   "insert": "2（0/2）",
+   "errors": 0,
+   "warns": 0
+  },
+  {
+   "file": "2025-01-11-14-35-33.h5",
+   "size": "1.2 GB",
+   "cameras": [
+    "capture_node-camera-image",
+    "hama1",
+    "hama2",
+    "hand"
+   ],
+   "n_time_arrays": 17,
+   "n_level0": 19,
+   "n_level1plus": 40,
+   "insert": "7（5/2）",
+   "errors": 0,
+   "warns": 0
+  },
+  {
+   "file": "2025-01-14-12-05-01.h5",
+   "size": "1.7 GB",
+   "cameras": [
+    "capture_node-camera-image",
+    "hama1",
+    "hama2",
+    "hand"
+   ],
+   "n_time_arrays": 17,
+   "n_level0": 38,
+   "n_level1plus": 75,
+   "insert": "1（1/0）",
+   "errors": 0,
+   "warns": 0
+  }
+ ],
+ "failures": [],
+ "camera_presence": {
+  "capture_node-camera-image": [
+   "2025-01-09-13-57-17.h5",
+   "2025-01-11-14-35-33.h5",
+   "2025-01-14-12-05-01.h5"
+  ],
+  "hama1": [
+   "2025-01-09-13-57-17.h5",
+   "2025-01-11-14-35-33.h5",
+   "2025-01-14-12-05-01.h5"
+  ],
+  "hama2": [
+   "2025-01-09-13-57-17.h5",
+   "2025-01-11-14-35-33.h5",
+   "2025-01-14-12-05-01.h5"
+  ],
+  "hand": [
+   "2025-01-09-13-57-17.h5",
+   "2025-01-11-14-35-33.h5",
+   "2025-01-14-12-05-01.h5"
+  ]
+ },
+ "paths_not_in_all_files": {},
+ "level0_verbs": {
+  "place": 19,
+  "remove": 17,
+  "pick": 10,
+  "insert": 10,
+  "no": 6
+ },
+ "insert_objects": {
+  "BNC.": {
+   "count": 1,
+   "success": 0,
+   "failure": 1
+  },
+  "Ethernet.": {
+   "count": 3,
+   "success": 1,
+   "failure": 2
+  },
+  "USB.": {
+   "count": 2,
+   "success": 1,
+   "failure": 1
+  },
+  "bolt 4.": {
+   "count": 1,
+   "success": 1,
+   "failure": 0
+  },
+  "large gear.": {
+   "count": 1,
+   "success": 1,
+   "failure": 0
+  },
+  "square peg 1.": {
+   "count": 1,
+   "success": 1,
+   "failure": 0
+  },
+  "waterproof.": {
+   "count": 1,
+   "success": 1,
+   "failure": 0
+  }
+ },
+ "anomaly_counts": [
+  {
+   "severity": "info",
+   "code": "TS_GAPS",
+   "count": 42
+  }
+ ]
+}

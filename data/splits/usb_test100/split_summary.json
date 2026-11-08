@@ -1,0 +1,72 @@
+{
+ "spec": {
+  "name": "usb_test100",
+  "action": "insert",
+  "part": "USB",
+  "ratios": {
+   "test": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "splits": {
+  "test": {
+   "n_groups": 56,
+   "n_segments": 70,
+   "n_failure": 21,
+   "n_success": 49,
+   "failure_rate": 0.3,
+   "by_date": {
+    "2025-01-09": 15,
+    "2025-01-10": 9,
+    "2025-01-11": 14,
+    "2025-01-13": 25,
+    "2025-01-14": 7
+   },
+   "failures_by_date": {
+    "2025-01-09": 6,
+    "2025-01-10": 1,
+    "2025-01-11": 5,
+    "2025-01-13": 8,
+    "2025-01-14": 1
+   },
+   "groups_with_failure": 17,
+   "failure_reasons": {
+    "（未標註）": 21
+   },
+   "n_gold": 0
+  },
+  "all": {
+   "n_groups": 56,
+   "n_segments": 70,
+   "n_failure": 21,
+   "n_success": 49,
+   "failure_rate": 0.3,
+   "by_date": {
+    "2025-01-09": 15,
+    "2025-01-10": 9,
+    "2025-01-11": 14,
+    "2025-01-13": 25,
+    "2025-01-14": 7
+   },
+   "failures_by_date": {
+    "2025-01-09": 6,
+    "2025-01-10": 1,
+    "2025-01-11": 5,
+    "2025-01-13": 8,
+    "2025-01-14": 1
+   },
+   "groups_with_failure": 17,
+   "failure_reasons": {
+    "（未標註）": 21
+   },
+   "n_gold": 0
+  }
+ }
+}

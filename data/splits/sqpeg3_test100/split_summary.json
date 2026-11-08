@@ -1,0 +1,72 @@
+{
+ "spec": {
+  "name": "sqpeg3_test100",
+  "action": "insert",
+  "part": "square peg 3",
+  "ratios": {
+   "test": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "splits": {
+  "test": {
+   "n_groups": 57,
+   "n_segments": 66,
+   "n_failure": 13,
+   "n_success": 53,
+   "failure_rate": 0.197,
+   "by_date": {
+    "2025-01-09": 18,
+    "2025-01-10": 10,
+    "2025-01-11": 8,
+    "2025-01-13": 23,
+    "2025-01-14": 7
+   },
+   "failures_by_date": {
+    "2025-01-09": 4,
+    "2025-01-10": 1,
+    "2025-01-11": 1,
+    "2025-01-13": 5,
+    "2025-01-14": 2
+   },
+   "groups_with_failure": 12,
+   "failure_reasons": {
+    "（未標註）": 13
+   },
+   "n_gold": 0
+  },
+  "all": {
+   "n_groups": 57,
+   "n_segments": 66,
+   "n_failure": 13,
+   "n_success": 53,
+   "failure_rate": 0.197,
+   "by_date": {
+    "2025-01-09": 18,
+    "2025-01-10": 10,
+    "2025-01-11": 8,
+    "2025-01-13": 23,
+    "2025-01-14": 7
+   },
+   "failures_by_date": {
+    "2025-01-09": 4,
+    "2025-01-10": 1,
+    "2025-01-11": 1,
+    "2025-01-13": 5,
+    "2025-01-14": 2
+   },
+   "groups_with_failure": 12,
+   "failure_reasons": {
+    "（未標註）": 13
+   },
+   "n_gold": 0
+  }
+ }
+}

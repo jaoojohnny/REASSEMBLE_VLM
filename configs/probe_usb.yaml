@@ -1,0 +1,31 @@
+# 第 8 包（2026-10-25 事先登記）：做法 A（小分類器）在 USB 測試集。設定和第 6 包的 probe_eb1（DINOv2-base、+1 秒、1 幀）
+# 完全相同，只換目標零件：訓練池＝USB 以外的所有零件（包含 BNC），而且錄影不在 USB 測試集的錄影裡（只讀錄影 ID）。
+# BNC 的舊測試集已不再當測試集，所以 BNC 可以進訓練池。測試集凍結後只評一次。
+probe:
+  name: probe_usb_dinov2_eb1
+  experiment_name: dev_usb_probe   # USB 沒有開發集；這個名稱只是設定需要
+  final_experiment_name: final_test_usb
+  split_dir: data/splits/usb_test100
+  index_dir: data/index
+  action: insert
+  target_part: USB
+  frames_root: data/derived/frames
+  sampling_template: "uniform_n{n}_sb0.5_eb1_jpg"
+  end_buffer: 1
+  frames: [1]
+  cameras: [hama1, hama2, hand]
+  out_dir: experiments
+  encoder:                        # 凍結，不訓練；每張圖取 CLS＋patch 平均（1536 維）
+    hf_id: facebook/dinov2-base
+    revision: main
+    dtype: float16
+    batch_size: 32
+    processor_kwargs:             # 不做中央裁切（避免切掉畫面左右兩側）；224x294 維持約 4:3，兩邊都是 14 的倍數
+      do_center_crop: false
+      size: {height: 224, width: 294}
+
+  classifier:                     # 標準化 → PCA → 邏輯迴歸（失敗、成功等權）
+    C_grid: [0.01, 0.1, 1.0]
+    pca_grid: [32, 64]
+    cv_folds: 5                   # 依錄影分組的交叉驗證（同一支錄影不會同時在訓練和驗證）
+    seed: 0

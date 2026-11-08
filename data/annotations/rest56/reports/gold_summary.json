@@ -1,0 +1,28 @@
+{
+ "approved": 49,
+ "adjudicated": 7,
+ "disputed_unresolved": [],
+ "n": 56,
+ "label_version": "v2",
+ "reason_set": "bnc-v2",
+ "difficulty_defaulted": [],
+ "results": {
+  "success": 46,
+  "failure": 10
+ },
+ "failure_reasons": {
+  "wrong_contact": 3,
+  "incomplete_insert": 4,
+  "unknown": 1,
+  "misalignment": 1,
+  "slip_or_drop": 1
+ },
+ "visual_difficulty": {
+  "clear": 52,
+  "subtle": 3,
+  "not_visible": 1
+ },
+ "gold": "data\\annotations\\rest56\\gold.jsonl",
+ "primary": "human__張立醒.jsonl",
+ "n_adjudication_files": 1
+}

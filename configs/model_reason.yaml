@@ -1,0 +1,113 @@
+# 第 11 包：讓 Qwen 判斷更準的推理方式（2026-10-30 設計，只在 4 個新零件的開發集挑選；說明見 docs/package11_reason.md）。
+# 模型本身和第三版（model_skill2.yaml 的 qwen3vl_8b_zoomfix）完全相同：Qwen3-VL-8B 4-bit、長邊 512、手腕固定裁切 [0.2, 0.2, 0.8, 0.8]。
+# 差別是「怎麼得到答案」（src/assembly_monitor/reason.py）：
+#   reason: score  → 強制作答，一次前向計算讀每一項答 yes 的機率；decision 決定怎麼從機率變成成功／失敗
+#   reason: verify → 第一階段同 score（rule any、0.5）；判失敗時再看手腕並排圖與裁切圖，問「第一階段對不對」
+#   contrast: true → 多一張手腕相機「第一張｜最後一張」並排圖（配 contrast-v1 提示詞）
+#   fewshot        → 範例（由實驗的 model_overrides 指定每個零件的 ref 集）
+# 開發集一律用 decision {rule: any, threshold: 0.5}（約等於原本寫字的答案）；門檻在開發集事後用存下的機率選，
+# 選好之後另存新 key（例如 ..._t090）給測試集用。跑過之後不要再改；要改另存新檔。
+# 用 --models configs/model.yaml configs/model_p8.yaml configs/model_skill2.yaml configs/model_reason.yaml 一起讀。
+models:
+  qwen3vl_8b_rverify:             # 方法 1＋3：機率（第一階段）＋答失敗再檢查一次（第二階段）
+    type: transformers
+    hf_id: Qwen/Qwen3-VL-8B-Instruct
+    revision: main
+    license: Apache-2.0
+    quantization: 4bit
+    quant_skip_modules: [model.visual, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    reason: verify
+    decision: {rule: any, threshold: 0.5}
+    zoom_fixed_box: [0.2, 0.2, 0.8, 0.8]
+    zoom_side: 512
+    contrast_side: 1024
+    verify_template: configs/prompts/verify_v1.txt
+
+  qwen3vl_8b_rcontrast:           # 方法 2：前後對照（實驗要用 contrast-v1 提示詞）
+    type: transformers
+    hf_id: Qwen/Qwen3-VL-8B-Instruct
+    revision: main
+    license: Apache-2.0
+    quantization: 4bit
+    quant_skip_modules: [model.visual, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    reason: score
+    decision: {rule: any, threshold: 0.5}
+    zoom_fixed_box: [0.2, 0.2, 0.8, 0.8]
+    zoom_side: 512
+    contrast: true
+    contrast_side: 1024
+
+  qwen3vl_8b_rfewshot:            # 方法 4：看範例（每個零件 1 成功＋1 失敗；fewshot 由實驗的 model_overrides 給）
+    type: transformers
+    hf_id: Qwen/Qwen3-VL-8B-Instruct
+    revision: main
+    license: Apache-2.0
+    quantization: 4bit
+    quant_skip_modules: [model.visual, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    reason: score
+    decision: {rule: any, threshold: 0.5}
+    zoom_fixed_box: [0.2, 0.2, 0.8, 0.8]
+    zoom_side: 512
+    fewshot_required: true        # 沒有 fewshot 就停止（避免不小心跑成沒有範例）
+
+  # ---- 第二輪（2026-10-31）：使用者要求結合 Codex 的 evidence_review 修改 Skill 與提示詞 ----
+  qwen3vl_8b_rv4:                 # 5＋6＋7：新清單 checklist-fields-v2（實驗指定）＋最後兩張手腕裁切；再加手腕第二次觀察（wrist-v1）
+    type: transformers
+    hf_id: Qwen/Qwen3-VL-8B-Instruct
+    revision: main
+    license: Apache-2.0
+    quantization: 4bit
+    quant_skip_modules: [model.visual, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    reason: score
+    decision: {rule: any, threshold: 0.5}   # 開發集：第一次觀察任一項 > 0.5；合併規則在報告裡用存下的機率算
+    zoom_fixed_box: [0.2, 0.2, 0.8, 0.8]
+    zoom_side: 512
+    zoom_last_n: 2                # Codex：裁切最後兩張手腕影格
+    contrast_side: 1024           # 第二次觀察的並排圖
+    second_view: configs/prompts/wrist_v1.txt
+
+  # ---- 測試集用（2026-10-31 凍結；只由 configs/final_test_{sqpeg4,sqpeg3,rpeg2,wproof}.yaml 使用，不要再改）----
+  qwen3vl_8b_rscore_t0999:        # ★ 主方法：1 機率門檻。和 qwen3vl_8b_rverify 的第一階段相同（第三版提示詞＋最後一張手腕裁切），
+    type: transformers            #   失敗分數 > τ 判失敗；τ＝0.999089（4 個開發零件合起來選，logit 7）
+    hf_id: Qwen/Qwen3-VL-8B-Instruct
+    revision: main
+    license: Apache-2.0
+    quantization: 4bit
+    quant_skip_modules: [model.visual, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    reason: score
+    decision: {rule: combined, threshold: 0.999089}
+    zoom_fixed_box: [0.2, 0.2, 0.8, 0.8]
+    zoom_side: 512
+
+  qwen3vl_8b_rv4_wrist:           # 次要方法：6 手腕第二次觀察（0.5）。和 qwen3vl_8b_rv4 相同（兩次觀察都算、都存），只用第二次觀察判斷
+    type: transformers
+    hf_id: Qwen/Qwen3-VL-8B-Instruct
+    revision: main
+    license: Apache-2.0
+    quantization: 4bit
+    quant_skip_modules: [model.visual, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    reason: score
+    decision: {rule: second_any, threshold: 0.5}
+    zoom_fixed_box: [0.2, 0.2, 0.8, 0.8]
+    zoom_side: 512
+    zoom_last_n: 2
+    contrast_side: 1024
+    second_view: configs/prompts/wrist_v1.txt

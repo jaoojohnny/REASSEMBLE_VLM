@@ -1,0 +1,44 @@
+# 第 8 包：新的測試集（USB 接頭插入，70 段、失敗 21），只跑一次。第 6、7 包的 final_test*.yaml 與結果都不動。
+# 方法清單在 2026-10-25 寫好：在任何 USB 影格或結果被看到之前；BNC（86 段，改當開發集）只用來確認程式能跑。
+# 雙擊 run_final_test_usb.bat：訓練池影格 → 測試段影格 → 每個方法跑一次 → 評分＋執行時間 → experiments/final_test_usb/report.md。
+# 第一次執行會把本檔、模型設定、實驗設定、提示詞、做法 A 設定的雜湊寫進 experiments/final_test_usb/lock.json，之後改了就拒絕執行。
+# 商業模型需要 API key（setup_api.bat）；沒有 key 時那兩個方法會失敗、其他照跑，之後補好 key 再雙擊一次會接著跑（同一份設定）。
+final:
+  frozen: true
+  frozen_at: "2026-10-25T20:20:00+08:00"
+  decided: "學長 2026-10-25 的建議：換一個新的測試資料、把商業模型（Claude、GPT）加入比較，再和 DINOv2 小分類器、Qwen3-VL-8B 比一次，並報告執行時間。主方法＝本地 Qwen3-VL-8B（不訓練、ft-generic 提示詞），其他方法都和它比。"
+  title: "測試集評估（第 8 包：USB 新測試集）"
+  part: USB
+  split_dir: data/splits/usb_test100
+  out_dir: experiments
+  out_name: final_test_usb
+  models: [configs/model.yaml, configs/model_p8.yaml]
+  primary: qwen3vl8b_ft_eb05_f4
+  notes:
+    - "USB 是新的測試資料：之前所有設計（提示詞、影格時間、分類器設定）都只依 BNC 決定；USB 的 70 段全部當測試集。"
+    - "要說明的是：USB 有 20 段曾在第 6、7 包當「其他零件」進過訓練池（訓練 BNC 的小分類器與 LoRA），第 7 包再訓練時也算過 Qwen（ft-generic）在這 20 段的零樣本判斷（15 段成功中 8 段被判失敗）。這次的方法與提示詞都沒有依此調整；USB 的小分類器訓練池不含任何 USB 段。"
+    - "真實答案只用資料集的成功／失敗標記（USB 沒有人工標準答案）；BNC 上 gold 和資料集標記 86/86 一致。"
+    - "商業模型和 Qwen 用同一個提示詞、同一批影格（長邊 512）；API 的時間含網路來回，費用是依官方單價估計。"
+    - "放大鏡 Skill 只在 BNC 開發集試，不在這次測試集。"
+  methods:
+    - id: majority                       # 基準：一律答成功
+      kind: majority
+    - id: qwen3vl8b_ft_eb05_f4           # 主方法：本地 Qwen3-VL-8B（4-bit，RTX 3060），ft-generic，4 幀，+0.5 秒
+      kind: vlm
+      experiment: configs/experiment_usb_ft.yaml
+      model: qwen3vl_8b
+      frames: 4
+    - id: probe_usb_eb1_f1               # 做法 A：DINOv2-base 特徵＋邏輯迴歸，用 USB 以外的零件訓練，+1 秒 1 幀
+      kind: probe
+      config: configs/probe_usb.yaml
+      frames: 1
+    - id: claude_sonnet55_ft_eb05_f4     # 商業模型：Claude Sonnet 5.5（API），同提示詞同影格
+      kind: vlm
+      experiment: configs/experiment_usb_ft.yaml
+      model: claude_sonnet55
+      frames: 4
+    - id: gpt61_sol_ft_eb05_f4           # 商業模型：GPT-6.1 Sol（API），同提示詞同影格
+      kind: vlm
+      experiment: configs/experiment_usb_ft.yaml
+      model: gpt61_sol
+      frames: 4

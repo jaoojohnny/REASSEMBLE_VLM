@@ -1,0 +1,33 @@
+# 再訓練（2026-10-16 使用者選「VLM 特徵＋小分類器」，只看開發集、不再動測試集）。事先登記：在跑任何特徵之前寫好。
+# 想法：LoRA 改模型權重會崩成常數；改成「模型不動，只讀它看完畫面後的內部特徵，再用其他零件訓練一個邏輯迴歸」。
+#   - 輸入和第 7 包相同：ft-generic 提示詞（每段換成該零件名稱）、4 幀 × 3 相機、最後一張 +0.5 秒、長邊 512。
+#   - 特徵取在模型「正要寫出 success／failure」的位置（提示詞＋ {"result": " 之後）：
+#       zs    ＝模型自己的判斷分數 log P(failure) − log P(success)（1 維；等於把零樣本判斷用其他零件重新校準門檻）
+#       L50／L75／L100 ＝語言模型第 50%／75%／最後一層在該位置的隱藏狀態（4096 維）
+#   - 分類器和做法 A 相同：標準化 → PCA → 邏輯迴歸（失敗、成功等權），依錄影分組 5 折交叉驗證挑超參數。
+# 挑選規則：訓練池交叉驗證平衡準確率最高 → 失敗召回 → 維度少（zs 優先）→ 下面的順序。BNC 開發集只看、不挑。
+# 測試集：不讀（程式只載入訓練池與開發集）。結果在報告裡標成「探索性，只有開發集」。
+# 執行：run_vlm_probe.bat。跑過之後不要再改；要新版本另存新檔、換 name。
+vlm_probe:
+  name: vlmprobe_qwen3vl8b
+  base_model: qwen3vl_8b             # configs/model.yaml 的 key（只讀）
+  models: configs/model.yaml
+  prompt_experiment: configs/experiment_ft.yaml
+  part_names_from: configs/finetune_qwen3vl8b.yaml   # 零件名稱和 LoRA 訓練時完全相同
+  split_dir: data/splits/bnc_dev25_test75_s0
+  index_dir: data/index
+  action: insert
+  target_part: BNC
+  frames_root: data/derived/frames
+  n_frames: 4
+  cache_dir: experiments/_ft_inputs  # 和 LoRA 共用縮好的影格
+  feature_dir: experiments/_features/vlm_qwen3vl8b_generic
+  layers: [0.5, 0.75, 1.0]           # 第幾層（比例）；1.0＝最後一層
+  features: [zs, L50, L75, L100]
+  experiment_name: dev_vlm_probe     # 開發集結果：experiments/dev_vlm_probe/<name>_<特徵>/f4
+  selection_out: experiments/vlm_probe_selection
+  classifier:
+    C_grid: [0.001, 0.01, 0.1, 1.0]
+    pca_grid: [16, 32, 64]
+    cv_folds: 5
+    seed: 0

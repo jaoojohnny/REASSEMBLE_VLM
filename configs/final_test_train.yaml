@@ -1,0 +1,53 @@
+# 第 7 包（訓練）：測試集評估，只跑一次。第 6 包的 configs/final_test.yaml 與 experiments/final_test 不動。
+# 方法清單在 2026-10-16 15:00（+08:00）寫好：在 LoRA 正式訓練完成、看到微調模型的開發集結果之前。
+# 清單照 docs/package7_training.md 事先寫的「測試集（之後）」：不依開發集結果增減方法。
+# 雙擊 run_final_test_train.bat：擷取需要的測試段影格 → 每個方法跑一次 → 評分 → experiments/final_test_train/report.md。
+# 第一次執行會把本檔、模型設定、實驗設定、提示詞、做法 A 設定與 LoRA adapter 權重的雜湊寫進 experiments/final_test_train/lock.json，
+# 之後任何一個改了就拒絕執行。
+#
+# 說明：測試集在第 6 包（不訓練）已用過一次；這是第 7 包（訓練）的一次。第 6 包的兩個方法在這裡用同樣的設定重跑
+# （貪婪解碼、固定 seed，結果應和第 6 包相同），讓所有方法在同一次執行裡比較。
+
+final:
+  frozen: true
+  frozen_at: "2026-10-16T16:45:00+08:00"   # LoRA 訓練與開發集推論完成後凍結；方法清單在 15:00 已寫好、沒有改
+  decided: "事先登記（docs/package7_training.md）：主問題是「用其他零件做 LoRA 微調，是否比同一個提示詞、沒有微調的同一個模型好」，所以主方法＝LoRA 微調模型；對照＝同提示詞原始模型、第 6 包主方法、第 6 包做法 A、依交叉驗證挑出的改良做法 A、一律答成功。"
+  title: "測試集評估（第 7 包：訓練）"
+  split_dir: data/splits/bnc_dev25_test75_s0
+  out_dir: experiments
+  out_name: final_test_train
+  models: [configs/model.yaml, configs/model_train.yaml]
+  primary: qwen3vl8b_ft_eb05_f4
+  notes:
+    - "測試集第二次使用：第 6 包（不訓練，2026-10-14）一次、第 7 包（訓練）這一次；兩次之間沒有依測試結果改任何設定。"
+    - "LoRA：只用其他零件的 368 段訓練，固定 2 輪、用最後一輪（configs/finetune_qwen3vl8b.yaml）；BNC 一段都沒進訓練。"
+    - "改良做法 A：依訓練池交叉驗證挑選（experiments/probe_selection/selection.md），BNC 開發集沒有參與挑選。"
+    - "開發集（凍結前已知，不影響方法清單）：LoRA 微調後輸出幾乎是常數（第 1 輪 20 段全判失敗、第 2 輪＝最後一輪全判成功，開發集 13/20、兩類平均 50%）；同提示詞原始模型 18/20、兩類平均 89%。原因分析見 docs/package7_training.md。"
+  methods:
+    - id: majority                       # 基準：一律答成功
+      kind: majority
+    - id: qwen3vl8b_ft_eb05_f4           # 主方法：Qwen3-VL-8B ＋ LoRA（ft-generic 提示詞，4 幀，+0.5 秒）
+      kind: vlm
+      experiment: configs/experiment_ft.yaml
+      model: qwen3vl_8b_ft
+      frames: 4
+    - id: qwen3vl8b_generic_eb05_f4      # 對照：同一個提示詞、沒有微調
+      kind: vlm
+      experiment: configs/experiment_ft.yaml
+      model: qwen3vl_8b
+      frames: 4
+    - id: qwen3vl8b_p1_eb05_f4           # 第 6 包主方法（第 1 版提示詞），同設定重跑
+      kind: vlm
+      experiment: configs/experiment_e05.yaml
+      model: qwen3vl_8b
+      frames: 4
+    - id: probe_eb1_f1                   # 第 6 包做法 A（DINOv2-base，+1 秒 1 幀），同設定重跑；輸出放在本次資料夾
+      kind: probe
+      config: configs/probe_eb1.yaml
+      frames: 1
+      final_experiment_name: final_test_train
+    - id: probe_v2_siglip2_eb05_f8       # 改良做法 A：交叉驗證選到 SigLIP 2、+0.5 秒、8 幀、最後一張＋時間平均
+      kind: probe
+      config: configs/probe_v2_selected.yaml
+      frames: 8
+      temporal: last_mean

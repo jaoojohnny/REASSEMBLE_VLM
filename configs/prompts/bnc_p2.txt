@@ -1,0 +1,33 @@
+You are checking whether a robot completed an assembly step, using only the camera images below.
+
+Task: the robot arm must insert a {part} into its socket on the task board. {part_note}
+Success means: {success_definition}
+Failure means: {failure_definition}
+
+Cameras:
+{camera_lines}
+
+There are {n_images} images, numbered Image 1 to Image {n_images}. Each image is labeled with its camera and its time in seconds relative to the start of the action (negative = just before it). The images cover t = {t_min:+.2f} s to t = {t_max:+.2f} s; the latest images show the final state, after the gripper has opened.
+
+What you can and cannot see:
+- These are a few still images, not a video. The small twist that locks the connector is usually NOT visible in them. Do not conclude that the connector was "not twisted" or "not locked" only because you cannot see the twist.
+- Judge from what is visible, above all in the final images: Is the connector sitting on the socket, upright and fully down? Did the gripper open and move away without taking the connector with it? Is the connector, or the board, somewhere it should not be?
+- Look at the external cameras (hama1, hama2) as well as the wrist camera. The wrist camera moves with the gripper, so it can hide problems such as the board being lifted.
+
+How to decide:
+- "failure": at least one image shows concrete, visible evidence of a failure. For example: the connector is beside the socket, tilted, or clearly not fully down; it is lying on the board, falling, or slipping in the gripper; it leaves with the gripper; or the board moves. Name the image number(s) that show it.
+- "success": the final images show the connector on the socket after the gripper released it, and no image shows a visible sign of failure.
+- "uncertain": the images do not let you decide (occluded, blurred, or the final state is not visible). Do not guess.
+
+Failure reasons (only when result is "failure"):
+{reason_lines}
+
+Reply with ONE JSON object and nothing else, with exactly these keys:
+{{"result": "success" | "failure" | "uncertain",
+ "failure_reason": one of [{reason_keys}] or null,
+ "evidence_start_sec": number or null,
+ "evidence_end_sec": number or null,
+ "best_camera": one of [{camera_keys}] or null,
+ "visible_evidence": "one short sentence that names the image number(s) and what is visible in them",
+ "confidence": number between 0 and 1}}
+evidence_start_sec and evidence_end_sec give the time span (between {t_min:+.2f} and {t_max:+.2f}) of the images that show the evidence. best_camera is the camera that shows the evidence most clearly. confidence is how likely your result is correct; use a lower value when the evidence is small or indirect.

@@ -1,0 +1,48 @@
+{
+ "name": "usb_test100",
+ "created_at": "2026-10-25T12:25:32+00:00",
+ "tool": "assembly_monitor.split 0.1.0",
+ "spec": {
+  "name": "usb_test100",
+  "action": "insert",
+  "part": "USB",
+  "ratios": {
+   "test": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "counts": {
+  "test": {
+   "n_groups": 56,
+   "n_segments": 70,
+   "n_failure": 21,
+   "n_success": 49
+  },
+  "all": {
+   "n_groups": 56,
+   "n_segments": 70,
+   "n_failure": 21,
+   "n_success": 49
+  }
+ },
+ "lock": {
+  "segments_sha256": "4c43a7c46854f3ef7ee40bcb906fb82a00c86f5dbced5bbb1abdecdf72533f00",
+  "per_split": {
+   "test": {
+    "n_segments": 70,
+    "sha256": "2749627046b6b59c7ad78cdcdd20ebc44d3a0bc814a859498f834de40b4d8512"
+   }
+  }
+ },
+ "split_csv_sha256": "e75d733e101b7167e73dd1ab4150624bf0c02f9593847b4bdbc0d73507f3ddcc",
+ "locked": true,
+ "leakage_status": "pass",
+ "note": "test 清單已鎖定：開發階段只用 dev；最終評估才讀 test（load_split(..., allow_test=True)）。"
+}

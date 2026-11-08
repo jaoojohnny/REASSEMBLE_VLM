@@ -1,0 +1,36 @@
+{
+ "name": "reboot_cyl_dev",
+ "created_at": "2026-11-06T00:49:05+08:00",
+ "tool": "assembly_monitor.reboot_run",
+ "spec": {
+  "name": "reboot_cyl_dev",
+  "source": "REBOOT 16 mm cylinder (dev)",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 0.5
+  },
+  "segment_s": 3.0
+ },
+ "counts": {
+  "dev": {
+   "n_groups": 85,
+   "n_segments": 147,
+   "n_failure": 23,
+   "n_success": 124
+  }
+ },
+ "lock": {
+  "segments_sha256": "602e30fe87eb23b8e42788cdc8a4894108bbf229227d0e9a04e54179a94f9526",
+  "per_split": {
+   "dev": {
+    "n_segments": 147,
+    "sha256": "606a97606b3a3cba1cad830b0d908f6e899c3aebb5c426c0852aea2a44a00b19"
+   }
+  }
+ },
+ "split_csv_sha256": "eb781606742abb08ca9b695c97a4943569ee25bac2e30b33a1a95fcc2b3431cf",
+ "locked": true,
+ "leakage_status": "not_checked",
+ "note": "REBOOT 圓柱開發集：全部是 dev。成功段有兩種結尾（seg1＝放開前、seg2＝放開後），失敗段 seg0。"
+}

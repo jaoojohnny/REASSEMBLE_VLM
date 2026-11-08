@@ -1,0 +1,291 @@
+{
+ "status": "warn",
+ "generated_at": "2026-10-14T13:03:05+08:00",
+ "checks": [
+  {
+   "id": "segment_unique",
+   "title": "每段只出現一次",
+   "status": "pass",
+   "detail": "重複 0 段",
+   "examples": []
+  },
+  {
+   "id": "group_crossing",
+   "title": "同一 group 不跨集合（P4-1）",
+   "status": "pass",
+   "detail": "62 個 group，跨集合 0 個",
+   "examples": []
+  },
+  {
+   "id": "time_overlap",
+   "title": "同錄製檔不同集合的段，取影格視窗不重疊",
+   "status": "pass",
+   "detail": "錄製檔分在多個集合 0 個；視窗重疊 0 對",
+   "examples": []
+  },
+  {
+   "id": "recording_time_overlap",
+   "title": "不同集合的錄製檔，錄影時間不重疊",
+   "status": "pass",
+   "detail": "有時間範圍的錄製檔 62 個；不同集合且重疊 0 對",
+   "examples": []
+  },
+  {
+   "id": "source_duplicates",
+   "title": "來源檔雜湊不重複出現在不同集合",
+   "status": "pass",
+   "detail": "比對 62 個錄製檔的來源雜湊；重複 0 組，其中跨集合 0 組",
+   "examples": []
+  },
+  {
+   "id": "derived_samples",
+   "title": "衍生檔（各相機、1/4/8 幀、緩衝版本、標註影格）都跟著所屬段的集合（P4-2）",
+   "status": "pass",
+   "detail": "掃描 39099 個衍生檔，屬於本切分 39045 個（{'dev': 10804, 'test': 28241}；{'image': 38677, 'meta': 368}），其他零件或無法對應 54 個；同一 group 出現在多個集合的衍生檔 0 個",
+   "examples": [],
+   "n_files": 39045,
+   "per_split": {
+    "dev": 10804,
+    "test": 28241
+   }
+  },
+  {
+   "id": "image_hash_exact",
+   "title": "影格位元組完全相同的檔案不跨集合（P4-4）",
+   "status": "pass",
+   "detail": "雜湊 38677 張影像；跨集合完全相同 0 組；讀不到 0 張",
+   "examples": []
+  },
+  {
+   "id": "image_hash_near",
+   "title": "近似影格跨集合（dHash 漢明距離 ≤ 4；同一對段每台相機都有 ≥ 50% 影格近似＝疑似重複序列）",
+   "status": "warn",
+   "detail": "比對 38224 張單相機影格（合成圖 453 張不比）；在另一集合找得到近似影格的張數（依相機）：hama1 9015／12864、hama2 6882／12863、hand 563／12497，分布在 566 組段配對；疑似重複序列 1 組；請打開 examples 裡的影格確認是不是同一段畫面",
+   "examples": [
+    {
+     "a": "2025-01-13-19-08-03__seg2",
+     "a_split": "dev",
+     "b": "2025-01-10-16-17-40__seg2",
+     "b_split": "test",
+     "min_coverage": 0.581,
+     "coverage": {
+      "hama1": 0.581,
+      "hama2": 0.807
+     },
+     "near_pairs": 7514,
+     "min_distance": 2,
+     "example": [
+      "rest56/frames/2025-01-13-19-08-03__seg2/hama2__0068.jpg",
+      "rest56/frames/2025-01-10-16-17-40__seg2/hama2__0106.jpg"
+     ],
+     "suspect": true
+    }
+   ],
+   "n_pairs": 657378,
+   "n_segment_pairs": 566,
+   "per_camera": {
+    "hama1": 466262,
+    "hama2": 189424,
+    "hand": 1692
+   },
+   "frames_with_match": {
+    "hama1": 9015,
+    "hama2": 6882,
+    "hand": 563
+   },
+   "frames_per_camera": {
+    "hama1": 12864,
+    "hama2": 12863,
+    "hand": 12497
+   },
+   "top_pairs": [
+    {
+     "a": "2025-01-13-19-08-03__seg2",
+     "a_split": "dev",
+     "b": "2025-01-10-16-17-40__seg2",
+     "b_split": "test",
+     "min_coverage": 0.581,
+     "coverage": {
+      "hama1": 0.581,
+      "hama2": 0.807
+     },
+     "near_pairs": 7514,
+     "min_distance": 2,
+     "example": [
+      "rest56/frames/2025-01-13-19-08-03__seg2/hama2__0068.jpg",
+      "rest56/frames/2025-01-10-16-17-40__seg2/hama2__0106.jpg"
+     ],
+     "suspect": true
+    },
+    {
+     "a": "2025-01-13-18-59-44__seg14",
+     "a_split": "dev",
+     "b": "2025-01-13-19-04-46__seg2",
+     "b_split": "test",
+     "min_coverage": 0.409,
+     "coverage": {
+      "hama1": 1.0,
+      "hama2": 0.883,
+      "hand": 0.409
+     },
+     "near_pairs": 13528,
+     "min_distance": 0,
+     "example": [
+      "rest56/frames/2025-01-13-18-59-44__seg14/hama1__0028.jpg",
+      "rest56/frames/2025-01-13-19-04-46__seg2/hama1__0022.jpg"
+     ],
+     "suspect": false
+    },
+    {
+     "a": "2025-01-13-18-59-44__seg14",
+     "a_split": "dev",
+     "b": "2025-01-13-19-04-46__seg5",
+     "b_split": "test",
+     "min_coverage": 0.27,
+     "coverage": {
+      "hama1": 0.89,
+      "hama2": 0.857,
+      "hand": 0.27
+     },
+     "near_pairs": 16244,
+     "min_distance": 0,
+     "example": [
+      "uniform_n1_sb0.5_eb0.5_jpg/segments/2025-01-13-18-59-44__seg14/hama1__00__t+018.898s__f005428.jpg",
+      "uniform_n8_sb0.5_eb2_jpg/segments/2025-01-13-19-04-46__seg5/hama1__05__t+016.518s__f001804.jpg"
+     ],
+     "suspect": false
+    },
+    {
+     "a": "2025-01-10-18-12-06__seg31",
+     "a_split": "dev",
+     "b": "2025-01-10-16-17-40__seg2",
+     "b_split": "test",
+     "min_coverage": 0.109,
+     "coverage": {
+      "hama1": 0.838,
+      "hama2": 0.109
+     },
+     "near_pairs": 3095,
+     "min_distance": 2,
+     "example": [
+      "uniform_n4_sb0.5_eb0.5_jpg/segments/2025-01-10-18-12-06__seg31/hama1__01__t+013.953s__f012565.jpg",
+      "rest56/frames/2025-01-10-16-17-40__seg2/hama1__0003.jpg"
+     ],
+     "suspect": false
+    },
+    {
+     "a": "2025-01-09-16-44-57__seg8",
+     "a_split": "dev",
+     "b": "2025-01-10-16-17-40__seg2",
+     "b_split": "test",
+     "min_coverage": 0.078,
+     "coverage": {
+      "hama1": 0.078,
+      "hama2": 0.219
+     },
+     "near_pairs": 395,
+     "min_distance": 2,
+     "example": [
+      "rest56/frames/2025-01-09-16-44-57__seg8/hama2__0019.jpg",
+      "rest56/frames/2025-01-10-16-17-40__seg2/hama2__0020.jpg"
+     ],
+     "suspect": false
+    },
+    {
+     "a": "2025-01-10-15-49-06__seg10",
+     "a_split": "dev",
+     "b": "2025-01-13-19-19-46__seg2",
+     "b_split": "test",
+     "min_coverage": 0.073,
+     "coverage": {
+      "hama1": 0.977,
+      "hama2": 0.28,
+      "hand": 0.073
+     },
+     "near_pairs": 10912,
+     "min_distance": 1,
+     "example": [
+      "rest56/frames/2025-01-10-15-49-06__seg10/hama1__0080.jpg",
+      "rest56/frames/2025-01-13-19-19-46__seg2/hama1__0024.jpg"
+     ],
+     "suspect": false
+    },
+    {
+     "a": "2025-01-10-18-12-06__seg34",
+     "a_split": "dev",
+     "b": "2025-01-13-17-57-45__seg8",
+     "b_split": "test",
+     "min_coverage": 0.066,
+     "coverage": {
+      "hama1": 0.917,
+      "hama2": 0.215,
+      "hand": 0.066
+     },
+     "near_pairs": 4801,
+     "min_distance": 2,
+     "example": [
+      "uniform_n8_sb0.5_eb1_jpg/segments/2025-01-10-18-12-06__seg34/hama1__06__t+020.453s__f014422.jpg",
+      "uniform_n4_sb0.5_eb2_jpg/segments/2025-01-13-17-57-45__seg8/hama1__02__t+014.951s__f002957.jpg"
+     ],
+     "suspect": false
+    },
+    {
+     "a": "2025-01-10-18-12-06__seg34",
+     "a_split": "dev",
+     "b": "2025-01-10-16-17-40__seg2",
+     "b_split": "test",
+     "min_coverage": 0.066,
+     "coverage": {
+      "hama1": 0.875,
+      "hama2": 0.066
+     },
+     "near_pairs": 1898,
+     "min_distance": 2,
+     "example": [
+      "uniform_n4_sb0.5_eb0.5_jpg/segments/2025-01-10-18-12-06__seg34/hama1__01__t+007.489s__f014033.jpg",
+      "rest56/frames/2025-01-10-16-17-40__seg2/hama1__0005.jpg"
+     ],
+     "suspect": false
+    },
+    {
+     "a": "2025-01-10-18-12-06__seg31",
+     "a_split": "dev",
+     "b": "2025-01-13-17-40-45__seg16",
+     "b_split": "test",
+     "min_coverage": 0.06,
+     "coverage": {
+      "hama1": 0.762,
+      "hama2": 0.06,
+      "hand": 0.08
+     },
+     "near_pairs": 1464,
+     "min_distance": 1,
+     "example": [
+      "pilot30/frames/2025-01-10-18-12-06__seg31/hand__0179.jpg",
+      "pilot30/frames/2025-01-13-17-40-45__seg16/hand__0004.jpg"
+     ],
+     "suspect": false
+    },
+    {
+     "a": "2025-01-10-18-12-06__seg31",
+     "a_split": "dev",
+     "b": "2025-01-13-17-57-45__seg8",
+     "b_split": "test",
+     "min_coverage": 0.038,
+     "coverage": {
+      "hama1": 0.938,
+      "hama2": 0.438,
+      "hand": 0.038
+     },
+     "near_pairs": 4593,
+     "min_distance": 2,
+     "example": [
+      "uniform_n8_sb0.5_eb0.5_jpg/segments/2025-01-10-18-12-06__seg31/hama2__03__t+018.098s__f012690.jpg",
+      "rest56/frames/2025-01-13-17-57-45__seg8/hama2__0068.jpg"
+     ],
+     "suspect": false
+    }
+   ]
+  }
+ ]
+}

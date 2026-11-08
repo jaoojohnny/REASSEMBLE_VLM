@@ -1,0 +1,34 @@
+# 原始資料、衍生影格與實驗輸出不進 Git（規格：原始資料不可提交）
+data/raw/*
+!data/raw/.gitkeep
+data/derived/*
+!data/derived/.gitkeep
+data/slim/
+experiments/*
+!experiments/.gitkeep
+logs/*
+!logs/.gitkeep
+*.h5
+*.hdf5
+*.zip
+*.part
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+build/
+dist/
+
+# 第 5 包：模型權重（Hugging Face 快取）
+models/
+
+# 第 8 包：API key（只放在本機，不進 Git）
+.env
+
+# 上傳 GitHub（2026-11-09，私人 repo）：進度報告簡報與 PDF 不放（裡面有資料集影格），留在本機
+docs/*.pptx
+docs/*.pdf
+*.lnk

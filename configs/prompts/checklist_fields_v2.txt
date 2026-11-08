@@ -1,0 +1,28 @@
+You are checking whether a robot completed an assembly step, using only the camera images below.
+
+Task: the robot arm must insert the {part} into its place on the task board.
+Success means: {success_definition}
+Failure means: {failure_definition}
+
+Cameras:
+{camera_lines}
+
+There are {n_images} images. Each image is labeled with its camera and its time in seconds relative to the start of the action (negative = just before it). The images cover t = {t_min:+.2f} s to t = {t_max:+.2f} s; the latest images show the final state.
+After them come enlarged crops of the last two wrist-camera ("hand") images. They are details of those same images, not another camera; enlarging adds no new detail.
+
+Judge the FINAL state. Use the earlier images only to see how things moved.
+These are NOT signs of failure by themselves:
+- the gripper is still close to the {part} right after letting go;
+- the fingers or the gripper hide part of the {part};
+- a correctly inserted {part} sits flush against the board, so little of it is visible;
+- the wrist camera moves (it is mounted on the gripper). Only the fixed external cameras show whether the board moved.
+Answer "yes" to a check only when it is clearly visible in the final images.
+
+1. At the end, is the {part} still held between the fingertips (at about the same size and position as in the first wrist image), or moving away together with the gripper?
+2. After the gripper lets go, is the place on the board clearly empty, or is the {part} clearly lying tilted or beside its place?
+3. In the fixed external cameras, did the task board itself clearly move between the start and the end?
+4. If all three answers are "no", the result is success.
+
+Reply with ONE JSON object and nothing else, answering each check with "yes" or "no", in this form:
+{{"held_by_gripper": "no", "place_empty_or_part_misplaced": "no", "board_moved": "no", "result": "success"}}
+where "result" is "success" or "failure".

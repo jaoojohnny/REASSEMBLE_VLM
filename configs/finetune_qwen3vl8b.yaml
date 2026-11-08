@@ -1,0 +1,46 @@
+# 第 7 包主線：Qwen3-VL-8B 的 QLoRA 微調（事先登記 2026-10-14，在看任何訓練結果之前寫好）。
+# 訓練資料：其他零件的插入片段（和做法 A 的訓練池相同：零件 ≠ BNC、錄影不在 BNC 測試集的 48 支裡），
+#           答案只用資料集的成功／失敗標記；完全不用 BNC 的段。
+# 提示詞、相機、取樣、影像大小都和推論相同（configs/experiment_ft.yaml、configs/model.yaml 的 qwen3vl_8b），
+# 每個樣本只把零件名稱換成該零件（part_names）。目標答案：{"result": "success"} 或 {"result": "failure"}，只對答案算 loss。
+# 訓練輪數事先固定（epochs），用最後一輪的 adapter；每輪結束在 BNC 開發集打分只是記錄，不拿來挑輪數。
+# 執行：run_finetune.bat（先試跑 smoke，再正式訓練，最後在開發集推論）。跑過之後不要再改；要新版本另存新檔、換 name。
+finetune:
+  name: qwen3vl8b_lora_r16          # adapter 存在 models/ft/<name>/final
+  base_model: qwen3vl_8b            # configs/model.yaml 的 key（只讀，不修改）
+  models: configs/model.yaml
+  prompt_experiment: configs/experiment_ft.yaml
+  split_dir: data/splits/bnc_dev25_test75_s0
+  index_dir: data/index
+  action: insert
+  target_part: BNC
+  frames_root: data/derived/frames  # 每個零件的影格在 <frames_root>/insert_<零件>/（做法 A 已擷取）
+  n_frames: 4
+  out_dir: models/ft
+  cache_dir: experiments/_ft_inputs # 縮好的影格（和推論相同：長邊 512、JPEG 95）
+  part_names:                       # 給模型看的零件名稱（key＝索引裡的零件名稱）；沒列的：去掉結尾編號（round peg 2 → round peg）
+    BNC: BNC connector
+    D-SUB: D-SUB connector
+    Ethernet: Ethernet connector
+    USB: USB connector
+    waterproof: waterproof connector
+  lora:
+    r: 16
+    alpha: 32
+    dropout: 0.05
+    # 只加在語言模型的線性層；視覺編碼器不動
+    target_modules: '.*language_model.*\.(q_proj|k_proj|v_proj|o_proj|gate_proj|up_proj|down_proj)'
+  train:
+    epochs: 2
+    lr: 1.0e-4
+    grad_accum: 8                   # 每次 1 段，累積 8 段更新一次
+    warmup_ratio: 0.1               # 之後線性降到 0
+    weight_decay: 0.0
+    max_grad_norm: 1.0
+    class_weight: balanced          # 失敗段比較少：loss 依類別加權（兩類總權重相同）
+    max_seq_len: 6000               # 超過就略過該段（4 幀 × 3 相機約 2,700 tokens）
+    seed: 0
+  smoke:                            # 試跑：幾段就好，確認顯存與速度，估計正式訓練時間
+    n_train: 6
+    n_dev: 4
+    grad_accum: 2

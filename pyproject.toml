@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "assembly-monitor"
+version = "0.1.0"
+description = "REASSEMBLE x VLM 組裝視覺監督：HDF5 檢查、索引、影格擷取與 VLM 評估（逐包開發）"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "h5py>=3.9",
+  "numpy>=1.24",
+  "pyyaml>=6.0",
+  "requests>=2.28",
+  "tqdm>=4.64",
+]
+
+[project.optional-dependencies]
+media = ["av>=12.0", "opencv-python-headless>=4.8"]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+inspect-h5 = "assembly_monitor.cli:inspect_main"
+fetch-samples = "assembly_monitor.cli:fetch_main"
+am-envinfo = "assembly_monitor.cli:envinfo_main"
+export-check-clips = "assembly_monitor.cli:check_clips_main"
+index-segments = "assembly_monitor.cli:index_main"
+extract-frames = "assembly_monitor.cli:extract_main"
+make-split = "assembly_monitor.cli:split_main"
+annotate = "assembly_monitor.cli:annotate_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+assembly_monitor = ["web/*.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"

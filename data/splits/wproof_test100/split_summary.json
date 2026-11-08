@@ -1,0 +1,66 @@
+{
+ "spec": {
+  "name": "wproof_test100",
+  "action": "insert",
+  "part": "waterproof",
+  "ratios": {
+   "test": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "splits": {
+  "test": {
+   "n_groups": 58,
+   "n_segments": 64,
+   "n_failure": 8,
+   "n_success": 56,
+   "failure_rate": 0.125,
+   "by_date": {
+    "2025-01-09": 13,
+    "2025-01-10": 9,
+    "2025-01-11": 10,
+    "2025-01-13": 26,
+    "2025-01-14": 6
+   },
+   "failures_by_date": {
+    "2025-01-11": 2,
+    "2025-01-13": 6
+   },
+   "groups_with_failure": 7,
+   "failure_reasons": {
+    "（未標註）": 8
+   },
+   "n_gold": 0
+  },
+  "all": {
+   "n_groups": 58,
+   "n_segments": 64,
+   "n_failure": 8,
+   "n_success": 56,
+   "failure_rate": 0.125,
+   "by_date": {
+    "2025-01-09": 13,
+    "2025-01-10": 9,
+    "2025-01-11": 10,
+    "2025-01-13": 26,
+    "2025-01-14": 6
+   },
+   "failures_by_date": {
+    "2025-01-11": 2,
+    "2025-01-13": 6
+   },
+   "groups_with_failure": 7,
+   "failure_reasons": {
+    "（未標註）": 8
+   },
+   "n_gold": 0
+  }
+ }
+}

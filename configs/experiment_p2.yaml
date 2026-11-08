@@ -1,0 +1,46 @@
+# 第 5 包：提示詞第 2 版（2026-10-06）。只用開發集調整；測試集鎖定。
+# 為什麼改：第 1 版（experiment.yaml / dev_smoke）所有 VLM 都太常判失敗。有 5 段成功段每個模型都判成
+# incomplete_insert，理由幾乎都是「對準了但沒轉、沒鎖上」，等於照抄定義；旋轉從幾張靜止畫面看不到。
+# 這一版的改動（其他設定與第 1 版相同）：
+#   1. 明講旋轉通常看不到，不能只因為看不到旋轉就判「沒鎖上」
+#   2. 只有畫面中指得出具體證據時才判 failure，並寫出第幾張圖；看不出來就 uncertain
+#   3. 提醒同時看外部相機（腕部相機跟著夾爪動，會看不到帶起板子）
+#   4. 失敗原因改寫成看得到的線索，避免模型套用定義句
+#   5. confidence 改成「答對的機率」，證據間接時給低一點
+# 這份檔案就是第 2 版的紀錄，跑過之後不要再改；要再調整就另存 experiment_p3.yaml（新名稱、新版本號）。
+
+experiment:
+  name: dev_p2
+  models: [qwen35_9b, qwen3vl_8b, gemma4_12b, gemma4_e4b]   # 2026-10-07 加入 Gemma 4（只加模型，提示詞與其他設定不變）
+  split_dir: data/splits/bnc_dev25_test75_s0
+  include: [dev]
+  frames_root: data/derived/frames/insert_BNC
+  sampling_template: "uniform_n{n}_sb0.5_eb2_jpg"
+  frames: [1, 4, 8]
+  cameras: [hama1, hama2, hand]
+  out_dir: experiments
+  timeout_sec: 180
+  repair_retry: true
+  evidence_tolerance_sec: 0.05
+
+  prompt:
+    version: bnc-p2
+    template: configs/prompts/bnc_p2.txt
+
+  task:                     # 原因與相機的 key 必須和 annotation.yaml 一致（定義文字是給模型看的）
+    part: BNC connector
+    part_note: "A BNC connector is pushed onto its socket and then twisted (bayonet lock) to lock it."
+    success_definition: "the connector ends up fully down on the socket and locked; after the gripper opens and moves away, the connector stays on the socket."
+    failure_definition: "at the end, the connector is not correctly seated on the socket (for example beside it, tilted, not fully down, dropped, or carried away by the gripper), or the board was moved."
+    cameras:
+      hama1: "external camera 1 (fixed, looks at the task board)"
+      hama2: "external camera 2 (fixed, another angle on the task board)"
+      hand: "wrist camera mounted on the gripper (moves with the gripper)"
+    failure_reasons:
+      misalignment: "the connector is visibly offset from, tilted against, or stopped next to the socket, so it never sits on it"
+      incomplete_insert: "the connector reaches the socket but is visibly not fully down, comes back off when the gripper pulls away, or is loose or tilting after release (the lock twist itself is usually not visible: use these visible cues)"
+      slip_or_drop: "the connector visibly slips, turns or drops in the gripper, or slides out of the closed gripper"
+      board_lifted: "the board or fixture visibly lifts, shifts or moves while inserting, twisting or pulling away"
+      wrong_contact: "the connector or gripper visibly hits the wrong place (board surface, another part, a wrong socket) and never reaches the correct socket"
+      other: "a visible failure that fits none of the above"
+      unknown: "a failure is visible but the cause cannot be determined from the images"

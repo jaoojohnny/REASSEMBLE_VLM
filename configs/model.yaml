@@ -1,0 +1,110 @@
+# 第 5 包：模型設定。權重從 Hugging Face 下載（setup_vlm.bat 會先列出大小並詢問）；路徑由 HF_HOME 決定。
+# 授權與顯存依 2026-10 查到的模型卡與網路估計；實際顯存以 RTX 3060 試跑的 peak_vram_mb 為準。
+# revision 固定成下載時的 commit 可確保重現；main 表示最新版（run_config.json 會記下實際的 sha）。
+
+models:
+  qwen3vl_8b:                 # 主力
+    type: transformers
+    hf_id: Qwen/Qwen3-VL-8B-Instruct
+    revision: main
+    license: Apache-2.0
+    quantization: 4bit        # bitsandbytes NF4；4-bit 約 6 GB
+    quant_skip_modules: [model.visual, lm_head]   # 視覺編碼器與輸出層不量化（多約 1 GB）；名稱要從頂層寫起（transformers 5 用開頭比對）
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512       # 送進模型前把影格長邊縮到 512 px（640x480 → 512x384）
+    max_new_tokens: 384
+
+  qwen3vl_4b:                 # 對照：同家族、較小
+    type: transformers
+    hf_id: Qwen/Qwen3-VL-4B-Instruct
+    revision: main
+    license: Apache-2.0
+    quantization: 4bit        # 和 8B 同樣 4-bit，只比較模型大小
+    quant_skip_modules: [model.visual, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    max_new_tokens: 384
+
+  smolvlm2:                   # 極小基準
+    type: transformers
+    hf_id: HuggingFaceTB/SmolVLM2-2.2B-Instruct
+    revision: main
+    license: Apache-2.0
+    quantization: null        # 2.2B 用 bf16 即可（約 5 GB）
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    image_splitting: false    # 多張圖時不再切塊，控制 token 數
+    max_new_tokens: 384
+
+  qwen35_9b:                  # 新一代（2026-02）：原生多模態，模型卡上看圖測驗贏過 Qwen3-VL-30B
+    type: transformers
+    hf_id: Qwen/Qwen3.5-9B
+    revision: main
+    license: Apache-2.0
+    model_class: AutoModelForMultimodalLM   # 模型卡的載入方式（和 Qwen3-VL 不同）
+    chat_template_kwargs: {enable_thinking: false}   # 預設會先「思考」很久，關掉，直接回答 JSON
+    quantization: 4bit
+    quant_skip_modules: [model.visual, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    max_new_tokens: 384
+
+  qwen35_4b:                  # 新一代的 4B，對照 qwen3vl_4b
+    type: transformers
+    hf_id: Qwen/Qwen3.5-4B
+    revision: main
+    license: Apache-2.0
+    model_class: AutoModelForMultimodalLM
+    chat_template_kwargs: {enable_thinking: false}
+    quantization: 4bit
+    quant_skip_modules: [model.visual, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    max_new_tokens: 384
+
+  gemma4_12b:                 # Google Gemma 4 12B（2026，Apache-2.0、不需申請）：沒有獨立視覺編碼器，影像小塊直接投影進語言模型
+    type: transformers
+    hf_id: google/gemma-4-12B-it
+    revision: main
+    license: Apache-2.0
+    model_class: AutoModelForMultimodalLM
+    chat_template_kwargs: {enable_thinking: false}   # 預設就是關；明寫，下週做推理實驗時再打開
+    quantization: 4bit
+    quant_skip_modules: [model.embed_vision, model.embed_audio, lm_head]   # 影像投影層保持 bf16（不存在的名稱會被忽略）
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    max_new_tokens: 384
+
+  gemma4_e4b:                 # Gemma 4 E4B（約 4B 有效參數，邊緣裝置版），對照 Qwen3.5-4B
+    type: transformers
+    hf_id: google/gemma-4-E4B-it
+    revision: main
+    license: Apache-2.0
+    model_class: AutoModelForMultimodalLM
+    chat_template_kwargs: {enable_thinking: false}
+    quantization: 4bit
+    quant_skip_modules: [model.vision_tower, model.embed_vision, model.audio_tower, model.embed_audio, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    max_new_tokens: 384
+
+  dinov2_base:                # 做法 A：凍結的影像編碼器（訓練小分類器用，不會回答問題）
+    type: encoder
+    hf_id: facebook/dinov2-base
+    revision: main
+    license: Apache-2.0
+
+  majority:                   # 多數類基準：不看影格，一律答 success
+    type: majority
+    result: success
+
+  mock:                       # 部署檢查用：不載入模型，固定回答
+    type: mock
+    default: valid

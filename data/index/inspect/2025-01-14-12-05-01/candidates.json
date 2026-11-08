@@ -1,0 +1,4346 @@
+{
+ "file": {
+  "path": "data\\raw\\2025-01-14-12-05-01.h5",
+  "name": "2025-01-14-12-05-01.h5",
+  "stem": "2025-01-14-12-05-01",
+  "size_bytes": 1819979888,
+  "mtime": "2026-10-04T18:01:05+08:00",
+  "inspected_at": "2026-10-04T18:01:06+08:00",
+  "tool": "assembly_monitor.inspect_h5 0.1.0",
+  "h5py": "3.16.0",
+  "hdf5": "2.0.0",
+  "options": {
+   "preview_n": 5,
+   "max_read_mb": 64.0,
+   "media_probe": true,
+   "count_frames": true,
+   "collapse_threshold": 8,
+   "expected_cameras": [],
+   "max_depth": null
+  },
+  "libver": [
+   "earliest",
+   "v200"
+  ],
+  "userblock_size": 0
+ },
+ "segments": {
+  "patterns": [
+   {
+    "pattern": "/segments_info",
+    "level": 0,
+    "n_containers": 1,
+    "n_segments": 38,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [
+      "index"
+     ]
+    },
+    "keys_consistent": true,
+    "sub_groups": {
+     "low_level": 36
+    },
+    "non_segment_children": [],
+    "reason_like_keys": []
+   },
+   {
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "n_containers": 36,
+    "n_segments": 75,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": []
+    },
+    "keys_consistent": true,
+    "sub_groups": {},
+    "non_segment_children": [],
+    "reason_like_keys": []
+   }
+  ],
+  "containers": [
+   {
+    "path": "/segments_info",
+    "pattern": "/segments_info",
+    "n_segments": 38,
+    "n_with_start_end": 38,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [
+      "index"
+     ],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {
+     "low_level": 36
+    },
+    "non_segment_children": [],
+    "level": 0,
+    "parent_segment_path": null
+   },
+   {
+    "path": "/segments_info/1/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/1"
+   },
+   {
+    "path": "/segments_info/2/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/2"
+   },
+   {
+    "path": "/segments_info/3/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/3"
+   },
+   {
+    "path": "/segments_info/4/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 3,
+    "n_with_start_end": 3,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/4"
+   },
+   {
+    "path": "/segments_info/5/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/5"
+   },
+   {
+    "path": "/segments_info/6/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/6"
+   },
+   {
+    "path": "/segments_info/7/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/7"
+   },
+   {
+    "path": "/segments_info/8/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/8"
+   },
+   {
+    "path": "/segments_info/9/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/9"
+   },
+   {
+    "path": "/segments_info/10/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/10"
+   },
+   {
+    "path": "/segments_info/11/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 3,
+    "n_with_start_end": 3,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/11"
+   },
+   {
+    "path": "/segments_info/12/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/12"
+   },
+   {
+    "path": "/segments_info/13/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/13"
+   },
+   {
+    "path": "/segments_info/14/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/14"
+   },
+   {
+    "path": "/segments_info/15/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/15"
+   },
+   {
+    "path": "/segments_info/16/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/16"
+   },
+   {
+    "path": "/segments_info/17/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/17"
+   },
+   {
+    "path": "/segments_info/18/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/18"
+   },
+   {
+    "path": "/segments_info/19/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/19"
+   },
+   {
+    "path": "/segments_info/20/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/20"
+   },
+   {
+    "path": "/segments_info/21/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 3,
+    "n_with_start_end": 3,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/21"
+   },
+   {
+    "path": "/segments_info/22/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/22"
+   },
+   {
+    "path": "/segments_info/23/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/23"
+   },
+   {
+    "path": "/segments_info/24/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/24"
+   },
+   {
+    "path": "/segments_info/25/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/25"
+   },
+   {
+    "path": "/segments_info/26/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/26"
+   },
+   {
+    "path": "/segments_info/27/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/27"
+   },
+   {
+    "path": "/segments_info/28/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/28"
+   },
+   {
+    "path": "/segments_info/29/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/29"
+   },
+   {
+    "path": "/segments_info/30/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/30"
+   },
+   {
+    "path": "/segments_info/31/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/31"
+   },
+   {
+    "path": "/segments_info/32/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/32"
+   },
+   {
+    "path": "/segments_info/33/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/33"
+   },
+   {
+    "path": "/segments_info/34/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/34"
+   },
+   {
+    "path": "/segments_info/35/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/35"
+   },
+   {
+    "path": "/segments_info/36/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "n_segments": 2,
+    "n_with_start_end": 2,
+    "keys": {
+     "start": "start",
+     "end": "end",
+     "success": "success",
+     "text": "text",
+     "extra": [],
+     "success_by_name": true,
+     "text_by_name": true
+    },
+    "reason_like_keys": [],
+    "sub_groups": {},
+    "non_segment_children": [],
+    "level": 1,
+    "parent_segment_path": "/segments_info/36"
+   }
+  ],
+  "rows": [
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "0",
+    "path": "/segments_info/0",
+    "parent_path": null,
+    "start": 1736852701.8615818,
+    "end": 1736852703.7602143,
+    "duration": 1.898632526397705,
+    "success": true,
+    "success_raw": true,
+    "text": "No action.",
+    "extra": {
+     "index": 0
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "1",
+    "path": "/segments_info/1",
+    "parent_path": null,
+    "start": 1736852703.7767732,
+    "end": 1736852720.2767303,
+    "duration": 16.49995708465576,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove waterproof.",
+    "extra": {
+     "index": 1
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "2",
+    "path": "/segments_info/2",
+    "parent_path": null,
+    "start": 1736852720.2935624,
+    "end": 1736852725.2435353,
+    "duration": 4.949972867965698,
+    "success": true,
+    "success_raw": true,
+    "text": "Place waterproof.",
+    "extra": {
+     "index": 2
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "3",
+    "path": "/segments_info/3",
+    "parent_path": null,
+    "start": 1736852725.2600927,
+    "end": 1736852731.7767334,
+    "duration": 6.516640663146973,
+    "success": true,
+    "success_raw": true,
+    "text": "Pick square peg 1.",
+    "extra": {
+     "index": 3
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "4",
+    "path": "/segments_info/4",
+    "parent_path": null,
+    "start": 1736852731.7936954,
+    "end": 1736852746.1937923,
+    "duration": 14.400096893310547,
+    "success": true,
+    "success_raw": true,
+    "text": "Insert square peg 1.",
+    "extra": {
+     "index": 4
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "5",
+    "path": "/segments_info/5",
+    "parent_path": null,
+    "start": 1736852746.2103033,
+    "end": 1736852754.7935848,
+    "duration": 8.583281517028809,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove D-SUB.",
+    "extra": {
+     "index": 5
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "6",
+    "path": "/segments_info/6",
+    "parent_path": null,
+    "start": 1736852754.8107474,
+    "end": 1736852760.7600567,
+    "duration": 5.949309349060059,
+    "success": true,
+    "success_raw": true,
+    "text": "Place D-SUB.",
+    "extra": {
+     "index": 6
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "7",
+    "path": "/segments_info/7",
+    "parent_path": null,
+    "start": 1736852760.7767494,
+    "end": 1736852767.93004,
+    "duration": 7.153290510177612,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove USB.",
+    "extra": {
+     "index": 7
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "8",
+    "path": "/segments_info/8",
+    "parent_path": null,
+    "start": 1736852767.9434085,
+    "end": 1736852773.093797,
+    "duration": 5.150388479232788,
+    "success": true,
+    "success_raw": true,
+    "text": "Place USB.",
+    "extra": {
+     "index": 8
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "9",
+    "path": "/segments_info/9",
+    "parent_path": null,
+    "start": 1736852773.110111,
+    "end": 1736852781.0767202,
+    "duration": 7.966609239578247,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove Ethernet.",
+    "extra": {
+     "index": 9
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "10",
+    "path": "/segments_info/10",
+    "parent_path": null,
+    "start": 1736852781.093343,
+    "end": 1736852784.4100554,
+    "duration": 3.3167123794555664,
+    "success": true,
+    "success_raw": true,
+    "text": "Place Ethernet.",
+    "extra": {
+     "index": 10
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "11",
+    "path": "/segments_info/11",
+    "parent_path": null,
+    "start": 1736852784.426772,
+    "end": 1736852800.8267322,
+    "duration": 16.399960041046143,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove BNC.",
+    "extra": {
+     "index": 11
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "12",
+    "path": "/segments_info/12",
+    "parent_path": null,
+    "start": 1736852800.843609,
+    "end": 1736852804.243452,
+    "duration": 3.3998429775238037,
+    "success": true,
+    "success_raw": true,
+    "text": "Place BNC.",
+    "extra": {
+     "index": 12
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "13",
+    "path": "/segments_info/13",
+    "parent_path": null,
+    "start": 1736852804.2603877,
+    "end": 1736852811.0766926,
+    "duration": 6.816304922103882,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove round peg 1.",
+    "extra": {
+     "index": 13
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "14",
+    "path": "/segments_info/14",
+    "parent_path": null,
+    "start": 1736852811.0936165,
+    "end": 1736852814.8436775,
+    "duration": 3.75006103515625,
+    "success": true,
+    "success_raw": true,
+    "text": "Place round peg 1.",
+    "extra": {
+     "index": 14
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "15",
+    "path": "/segments_info/15",
+    "parent_path": null,
+    "start": 1736852814.8601043,
+    "end": 1736852821.1266878,
+    "duration": 6.266583442687988,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove round peg 2.",
+    "extra": {
+     "index": 15
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "16",
+    "path": "/segments_info/16",
+    "parent_path": null,
+    "start": 1736852821.1434538,
+    "end": 1736852824.67672,
+    "duration": 3.533266067504883,
+    "success": true,
+    "success_raw": true,
+    "text": "Place round peg 2.",
+    "extra": {
+     "index": 16
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "17",
+    "path": "/segments_info/17",
+    "parent_path": null,
+    "start": 1736852824.6938276,
+    "end": 1736852832.6101146,
+    "duration": 7.916286945343018,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove square peg 4.",
+    "extra": {
+     "index": 17
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "18",
+    "path": "/segments_info/18",
+    "parent_path": null,
+    "start": 1736852832.6267602,
+    "end": 1736852838.1601412,
+    "duration": 5.53338098526001,
+    "success": true,
+    "success_raw": true,
+    "text": "Place square peg 4.",
+    "extra": {
+     "index": 18
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "19",
+    "path": "/segments_info/19",
+    "parent_path": null,
+    "start": 1736852838.1768394,
+    "end": 1736852851.2600527,
+    "duration": 13.083213329315186,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove square peg 3.",
+    "extra": {
+     "index": 19
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "20",
+    "path": "/segments_info/20",
+    "parent_path": null,
+    "start": 1736852851.2766926,
+    "end": 1736852856.6434288,
+    "duration": 5.366736173629761,
+    "success": true,
+    "success_raw": true,
+    "text": "Place square peg 3.",
+    "extra": {
+     "index": 20
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "21",
+    "path": "/segments_info/21",
+    "parent_path": null,
+    "start": 1736852856.6600332,
+    "end": 1736852869.1600692,
+    "duration": 12.500036001205444,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove bolt 4.",
+    "extra": {
+     "index": 21
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "22",
+    "path": "/segments_info/22",
+    "parent_path": null,
+    "start": 1736852869.176914,
+    "end": 1736852873.093439,
+    "duration": 3.91652512550354,
+    "success": true,
+    "success_raw": true,
+    "text": "Place bolt 4.",
+    "extra": {
+     "index": 22
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "23",
+    "path": "/segments_info/23",
+    "parent_path": null,
+    "start": 1736852873.1100929,
+    "end": 1736852885.5100234,
+    "duration": 12.399930477142334,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove small gear.",
+    "extra": {
+     "index": 23
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "24",
+    "path": "/segments_info/24",
+    "parent_path": null,
+    "start": 1736852885.5295424,
+    "end": 1736852889.026858,
+    "duration": 3.4973156452178955,
+    "success": true,
+    "success_raw": true,
+    "text": "Place small gear.",
+    "extra": {
+     "index": 24
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "25",
+    "path": "/segments_info/25",
+    "parent_path": null,
+    "start": 1736852889.0434306,
+    "end": 1736852897.0267055,
+    "duration": 7.983274936676025,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove large gear.",
+    "extra": {
+     "index": 25
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "26",
+    "path": "/segments_info/26",
+    "parent_path": null,
+    "start": 1736852897.043506,
+    "end": 1736852900.7100904,
+    "duration": 3.6665844917297363,
+    "success": true,
+    "success_raw": true,
+    "text": "Place large gear.",
+    "extra": {
+     "index": 26
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "27",
+    "path": "/segments_info/27",
+    "parent_path": null,
+    "start": 1736852900.7267413,
+    "end": 1736852908.9100752,
+    "duration": 8.18333387374878,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove medium gear.",
+    "extra": {
+     "index": 27
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "28",
+    "path": "/segments_info/28",
+    "parent_path": null,
+    "start": 1736852908.9267445,
+    "end": 1736852912.6933837,
+    "duration": 3.766639232635498,
+    "success": true,
+    "success_raw": true,
+    "text": "Place medium gear.",
+    "extra": {
+     "index": 28
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "29",
+    "path": "/segments_info/29",
+    "parent_path": null,
+    "start": 1736852912.7108212,
+    "end": 1736852920.3100746,
+    "duration": 7.599253416061401,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove round peg 3.",
+    "extra": {
+     "index": 29
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "30",
+    "path": "/segments_info/30",
+    "parent_path": null,
+    "start": 1736852920.3267803,
+    "end": 1736852926.1937196,
+    "duration": 5.866939306259155,
+    "success": true,
+    "success_raw": true,
+    "text": "Place round peg 3.",
+    "extra": {
+     "index": 30
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "31",
+    "path": "/segments_info/31",
+    "parent_path": null,
+    "start": 1736852926.2101183,
+    "end": 1736852935.0435832,
+    "duration": 8.833464860916138,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove square peg 2.",
+    "extra": {
+     "index": 31
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "32",
+    "path": "/segments_info/32",
+    "parent_path": null,
+    "start": 1736852935.0601146,
+    "end": 1736852939.1433618,
+    "duration": 4.083247184753418,
+    "success": true,
+    "success_raw": true,
+    "text": "Place square peg 2.",
+    "extra": {
+     "index": 32
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "33",
+    "path": "/segments_info/33",
+    "parent_path": null,
+    "start": 1736852939.160085,
+    "end": 1736852948.0267022,
+    "duration": 8.866617202758789,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove round peg 4.",
+    "extra": {
+     "index": 33
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "34",
+    "path": "/segments_info/34",
+    "parent_path": null,
+    "start": 1736852948.0433953,
+    "end": 1736852954.3434434,
+    "duration": 6.300048112869263,
+    "success": true,
+    "success_raw": true,
+    "text": "Place round peg 4.",
+    "extra": {
+     "index": 34
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "35",
+    "path": "/segments_info/35",
+    "parent_path": null,
+    "start": 1736852954.360282,
+    "end": 1736852965.876776,
+    "duration": 11.516494035720825,
+    "success": true,
+    "success_raw": true,
+    "text": "Remove square peg 1.",
+    "extra": {
+     "index": 35
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "36",
+    "path": "/segments_info/36",
+    "parent_path": null,
+    "start": 1736852965.8935552,
+    "end": 1736852972.8766906,
+    "duration": 6.983135461807251,
+    "success": true,
+    "success_raw": true,
+    "text": "Place square peg 1.",
+    "extra": {
+     "index": 36
+    }
+   },
+   {
+    "container": "/segments_info",
+    "pattern": "/segments_info",
+    "level": 0,
+    "id": "37",
+    "path": "/segments_info/37",
+    "parent_path": null,
+    "start": 1736852972.893759,
+    "end": 1736852975.1435368,
+    "duration": 2.2497777938842773,
+    "success": true,
+    "success_raw": true,
+    "text": "No action.",
+    "extra": {
+     "index": 37
+    }
+   },
+   {
+    "container": "/segments_info/1/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/1/low_level/0",
+    "parent_path": "/segments_info/1",
+    "start": 1736852703.7767732,
+    "end": 1736852711.3937733,
+    "duration": 7.617000102996826,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/1/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/1/low_level/1",
+    "parent_path": "/segments_info/1",
+    "start": 1736852711.3937733,
+    "end": 1736852720.276714,
+    "duration": 8.882940769195557,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/2/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/2/low_level/0",
+    "parent_path": "/segments_info/2",
+    "start": 1736852720.2935624,
+    "end": 1736852724.6895623,
+    "duration": 4.395999908447266,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/2/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/2/low_level/1",
+    "parent_path": "/segments_info/2",
+    "start": 1736852724.6895623,
+    "end": 1736852725.2435212,
+    "duration": 0.5539588928222656,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/3/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/3/low_level/0",
+    "parent_path": "/segments_info/3",
+    "start": 1736852725.2600927,
+    "end": 1736852730.9490926,
+    "duration": 5.688999891281128,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/3/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/3/low_level/1",
+    "parent_path": "/segments_info/3",
+    "start": 1736852730.9490926,
+    "end": 1736852731.7767007,
+    "duration": 0.8276081085205078,
+    "success": true,
+    "success_raw": true,
+    "text": "Lift",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/4/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/4/low_level/0",
+    "parent_path": "/segments_info/4",
+    "start": 1736852731.7936954,
+    "end": 1736852743.5396955,
+    "duration": 11.746000051498413,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/4/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/4/low_level/1",
+    "parent_path": "/segments_info/4",
+    "start": 1736852743.5396955,
+    "end": 1736852744.6326954,
+    "duration": 1.0929999351501465,
+    "success": true,
+    "success_raw": true,
+    "text": "Align",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/4/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/4/low_level/2",
+    "parent_path": "/segments_info/4",
+    "start": 1736852744.6326954,
+    "end": 1736852746.1937792,
+    "duration": 1.5610837936401367,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/5/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/5/low_level/0",
+    "parent_path": "/segments_info/5",
+    "start": 1736852746.2103033,
+    "end": 1736852752.5973034,
+    "duration": 6.38700008392334,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/5/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/5/low_level/1",
+    "parent_path": "/segments_info/5",
+    "start": 1736852752.5973034,
+    "end": 1736852754.7935765,
+    "duration": 2.1962730884552,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/6/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/6/low_level/0",
+    "parent_path": "/segments_info/6",
+    "start": 1736852754.8107474,
+    "end": 1736852759.7877474,
+    "duration": 4.976999998092651,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/6/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/6/low_level/1",
+    "parent_path": "/segments_info/6",
+    "start": 1736852759.7877474,
+    "end": 1736852760.7600362,
+    "duration": 0.9722888469696045,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/7/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/7/low_level/0",
+    "parent_path": "/segments_info/7",
+    "start": 1736852760.7767494,
+    "end": 1736852766.4097493,
+    "duration": 5.632999897003174,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/7/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/7/low_level/1",
+    "parent_path": "/segments_info/7",
+    "start": 1736852766.4097493,
+    "end": 1736852767.9300354,
+    "duration": 1.5202860832214355,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/8/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/8/low_level/0",
+    "parent_path": "/segments_info/8",
+    "start": 1736852767.9434085,
+    "end": 1736852772.0394084,
+    "duration": 4.0959999561309814,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/8/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/8/low_level/1",
+    "parent_path": "/segments_info/8",
+    "start": 1736852772.0394084,
+    "end": 1736852773.0937834,
+    "duration": 1.0543749332427979,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/9/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/9/low_level/0",
+    "parent_path": "/segments_info/9",
+    "start": 1736852773.110111,
+    "end": 1736852779.387111,
+    "duration": 6.2769999504089355,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/9/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/9/low_level/1",
+    "parent_path": "/segments_info/9",
+    "start": 1736852779.387111,
+    "end": 1736852781.0766292,
+    "duration": 1.6895182132720947,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/10/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/10/low_level/0",
+    "parent_path": "/segments_info/10",
+    "start": 1736852781.093343,
+    "end": 1736852782.920343,
+    "duration": 1.8269999027252197,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/10/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/10/low_level/1",
+    "parent_path": "/segments_info/10",
+    "start": 1736852782.920343,
+    "end": 1736852784.4100022,
+    "duration": 1.489659309387207,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/11/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/11/low_level/0",
+    "parent_path": "/segments_info/11",
+    "start": 1736852784.426772,
+    "end": 1736852792.0737722,
+    "duration": 7.647000074386597,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/11/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/11/low_level/1",
+    "parent_path": "/segments_info/11",
+    "start": 1736852792.0737722,
+    "end": 1736852798.552772,
+    "duration": 6.478999853134155,
+    "success": true,
+    "success_raw": true,
+    "text": "Twist",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/11/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/11/low_level/2",
+    "parent_path": "/segments_info/11",
+    "start": 1736852798.552772,
+    "end": 1736852800.8267183,
+    "duration": 2.2739462852478027,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/12/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/12/low_level/0",
+    "parent_path": "/segments_info/12",
+    "start": 1736852800.843609,
+    "end": 1736852803.7966092,
+    "duration": 2.953000068664551,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/12/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/12/low_level/1",
+    "parent_path": "/segments_info/12",
+    "start": 1736852803.7966092,
+    "end": 1736852804.2434478,
+    "duration": 0.4468386173248291,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/13/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/13/low_level/0",
+    "parent_path": "/segments_info/13",
+    "start": 1736852804.2603877,
+    "end": 1736852810.0783877,
+    "duration": 5.818000078201294,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/13/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/13/low_level/1",
+    "parent_path": "/segments_info/13",
+    "start": 1736852810.0783877,
+    "end": 1736852811.0763876,
+    "duration": 0.997999906539917,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/14/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/14/low_level/0",
+    "parent_path": "/segments_info/14",
+    "start": 1736852811.0936165,
+    "end": 1736852814.2986164,
+    "duration": 3.2049999237060547,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/14/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/14/low_level/1",
+    "parent_path": "/segments_info/14",
+    "start": 1736852814.2986164,
+    "end": 1736852814.8436694,
+    "duration": 0.5450530052185059,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/15/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/15/low_level/0",
+    "parent_path": "/segments_info/15",
+    "start": 1736852814.8601043,
+    "end": 1736852820.0591042,
+    "duration": 5.198999881744385,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/15/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/15/low_level/1",
+    "parent_path": "/segments_info/15",
+    "start": 1736852820.0591042,
+    "end": 1736852821.1266713,
+    "duration": 1.0675671100616455,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/16/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/16/low_level/0",
+    "parent_path": "/segments_info/16",
+    "start": 1736852821.1434538,
+    "end": 1736852824.1694539,
+    "duration": 3.0260000228881836,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/16/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/16/low_level/1",
+    "parent_path": "/segments_info/16",
+    "start": 1736852824.1694539,
+    "end": 1736852824.6767159,
+    "duration": 0.5072619915008545,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/17/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/17/low_level/0",
+    "parent_path": "/segments_info/17",
+    "start": 1736852824.6938276,
+    "end": 1736852830.7308276,
+    "duration": 6.036999940872192,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/17/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/17/low_level/1",
+    "parent_path": "/segments_info/17",
+    "start": 1736852830.7308276,
+    "end": 1736852832.6100996,
+    "duration": 1.8792719841003418,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/18/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/18/low_level/0",
+    "parent_path": "/segments_info/18",
+    "start": 1736852832.6267602,
+    "end": 1736852837.7027602,
+    "duration": 5.075999975204468,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/18/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/18/low_level/1",
+    "parent_path": "/segments_info/18",
+    "start": 1736852837.7027602,
+    "end": 1736852838.1601162,
+    "duration": 0.45735597610473633,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/19/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/19/low_level/0",
+    "parent_path": "/segments_info/19",
+    "start": 1736852838.1768394,
+    "end": 1736852846.6928394,
+    "duration": 8.516000032424927,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/19/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/19/low_level/1",
+    "parent_path": "/segments_info/19",
+    "start": 1736852846.6928394,
+    "end": 1736852851.2600322,
+    "duration": 4.567192792892456,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/20/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/20/low_level/0",
+    "parent_path": "/segments_info/20",
+    "start": 1736852851.2766926,
+    "end": 1736852855.8876927,
+    "duration": 4.611000061035156,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/20/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/20/low_level/1",
+    "parent_path": "/segments_info/20",
+    "start": 1736852855.8876927,
+    "end": 1736852856.6436927,
+    "duration": 0.7560000419616699,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/21/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/21/low_level/0",
+    "parent_path": "/segments_info/21",
+    "start": 1736852856.6600332,
+    "end": 1736852865.2160332,
+    "duration": 8.555999994277954,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/21/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/21/low_level/1",
+    "parent_path": "/segments_info/21",
+    "start": 1736852865.2160332,
+    "end": 1736852868.0520332,
+    "duration": 2.8359999656677246,
+    "success": true,
+    "success_raw": true,
+    "text": "Twist",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/21/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "2",
+    "path": "/segments_info/21/low_level/2",
+    "parent_path": "/segments_info/21",
+    "start": 1736852868.0520332,
+    "end": 1736852869.1600533,
+    "duration": 1.1080200672149658,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/22/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/22/low_level/0",
+    "parent_path": "/segments_info/22",
+    "start": 1736852869.176914,
+    "end": 1736852872.674914,
+    "duration": 3.497999906539917,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/22/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/22/low_level/1",
+    "parent_path": "/segments_info/22",
+    "start": 1736852872.674914,
+    "end": 1736852873.0934231,
+    "duration": 0.41850924491882324,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/23/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/23/low_level/0",
+    "parent_path": "/segments_info/23",
+    "start": 1736852873.1100929,
+    "end": 1736852880.905093,
+    "duration": 7.795000076293945,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/23/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/23/low_level/1",
+    "parent_path": "/segments_info/23",
+    "start": 1736852880.905093,
+    "end": 1736852885.5100088,
+    "duration": 4.6049158573150635,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/24/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/24/low_level/0",
+    "parent_path": "/segments_info/24",
+    "start": 1736852885.5295424,
+    "end": 1736852888.4745424,
+    "duration": 2.944999933242798,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/24/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/24/low_level/1",
+    "parent_path": "/segments_info/24",
+    "start": 1736852888.4745424,
+    "end": 1736852889.0268514,
+    "duration": 0.5523090362548828,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/25/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/25/low_level/0",
+    "parent_path": "/segments_info/25",
+    "start": 1736852889.0434306,
+    "end": 1736852895.0084305,
+    "duration": 5.9649999141693115,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/25/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/25/low_level/1",
+    "parent_path": "/segments_info/25",
+    "start": 1736852895.0084305,
+    "end": 1736852897.0266855,
+    "duration": 2.0182549953460693,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/26/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/26/low_level/0",
+    "parent_path": "/segments_info/26",
+    "start": 1736852897.043506,
+    "end": 1736852900.279506,
+    "duration": 3.2360000610351562,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/26/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/26/low_level/1",
+    "parent_path": "/segments_info/26",
+    "start": 1736852900.279506,
+    "end": 1736852900.710036,
+    "duration": 0.4305300712585449,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/27/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/27/low_level/0",
+    "parent_path": "/segments_info/27",
+    "start": 1736852900.7267413,
+    "end": 1736852907.2497413,
+    "duration": 6.523000001907349,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/27/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/27/low_level/1",
+    "parent_path": "/segments_info/27",
+    "start": 1736852907.2497413,
+    "end": 1736852908.9100664,
+    "duration": 1.660325050354004,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/28/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/28/low_level/0",
+    "parent_path": "/segments_info/28",
+    "start": 1736852908.9267445,
+    "end": 1736852912.2707446,
+    "duration": 3.3440001010894775,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/28/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/28/low_level/1",
+    "parent_path": "/segments_info/28",
+    "start": 1736852912.2707446,
+    "end": 1736852912.6933575,
+    "duration": 0.42261290550231934,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/29/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/29/low_level/0",
+    "parent_path": "/segments_info/29",
+    "start": 1736852912.7108212,
+    "end": 1736852918.797821,
+    "duration": 6.086999893188477,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/29/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/29/low_level/1",
+    "parent_path": "/segments_info/29",
+    "start": 1736852918.797821,
+    "end": 1736852920.310064,
+    "duration": 1.5122430324554443,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/30/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/30/low_level/0",
+    "parent_path": "/segments_info/30",
+    "start": 1736852920.3267803,
+    "end": 1736852925.5557804,
+    "duration": 5.229000091552734,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/30/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/30/low_level/1",
+    "parent_path": "/segments_info/30",
+    "start": 1736852925.5557804,
+    "end": 1736852926.1937084,
+    "duration": 0.6379280090332031,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/31/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/31/low_level/0",
+    "parent_path": "/segments_info/31",
+    "start": 1736852926.2101183,
+    "end": 1736852933.2981184,
+    "duration": 7.088000059127808,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/31/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/31/low_level/1",
+    "parent_path": "/segments_info/31",
+    "start": 1736852933.2981184,
+    "end": 1736852935.0435362,
+    "duration": 1.745417833328247,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/32/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/32/low_level/0",
+    "parent_path": "/segments_info/32",
+    "start": 1736852935.0601146,
+    "end": 1736852938.5581145,
+    "duration": 3.497999906539917,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/32/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/32/low_level/1",
+    "parent_path": "/segments_info/32",
+    "start": 1736852938.5581145,
+    "end": 1736852939.1433516,
+    "duration": 0.5852370262145996,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/33/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/33/low_level/0",
+    "parent_path": "/segments_info/33",
+    "start": 1736852939.160085,
+    "end": 1736852946.409085,
+    "duration": 7.249000072479248,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/33/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/33/low_level/1",
+    "parent_path": "/segments_info/33",
+    "start": 1736852946.409085,
+    "end": 1736852948.026695,
+    "duration": 1.617609977722168,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/34/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/34/low_level/0",
+    "parent_path": "/segments_info/34",
+    "start": 1736852948.0433953,
+    "end": 1736852953.9313953,
+    "duration": 5.888000011444092,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/34/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/34/low_level/1",
+    "parent_path": "/segments_info/34",
+    "start": 1736852953.9313953,
+    "end": 1736852954.3434312,
+    "duration": 0.4120359420776367,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/35/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/35/low_level/0",
+    "parent_path": "/segments_info/35",
+    "start": 1736852954.360282,
+    "end": 1736852963.856282,
+    "duration": 9.496000051498413,
+    "success": true,
+    "success_raw": true,
+    "text": "Grasp",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/35/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/35/low_level/1",
+    "parent_path": "/segments_info/35",
+    "start": 1736852963.856282,
+    "end": 1736852965.876773,
+    "duration": 2.020491123199463,
+    "success": true,
+    "success_raw": true,
+    "text": "Pull",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/36/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "0",
+    "path": "/segments_info/36/low_level/0",
+    "parent_path": "/segments_info/36",
+    "start": 1736852965.8935552,
+    "end": 1736852971.7815552,
+    "duration": 5.888000011444092,
+    "success": true,
+    "success_raw": true,
+    "text": "Approach",
+    "extra": {}
+   },
+   {
+    "container": "/segments_info/36/low_level",
+    "pattern": "/segments_info/*/low_level",
+    "level": 1,
+    "id": "1",
+    "path": "/segments_info/36/low_level/1",
+    "parent_path": "/segments_info/36",
+    "start": 1736852971.7815552,
+    "end": 1736852972.8766673,
+    "duration": 1.0951120853424072,
+    "success": true,
+    "success_raw": true,
+    "text": "Release",
+    "extra": {}
+   }
+  ],
+  "n_level0": 38,
+  "n_level1plus": 75,
+  "actions": {
+   "level0": {
+    "no": {
+     "count": 2,
+     "success_true": 2,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "action.": {
+       "count": 2,
+       "success_true": 2,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "remove": {
+     "count": 17,
+     "success_true": 17,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "waterproof.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "D-SUB.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "USB.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "Ethernet.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "BNC.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "round peg 1.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "round peg 2.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "square peg 4.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "square peg 3.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "bolt 4.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "small gear.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "large gear.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "medium gear.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "round peg 3.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "square peg 2.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "round peg 4.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "square peg 1.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "place": {
+     "count": 17,
+     "success_true": 17,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "waterproof.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "D-SUB.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "USB.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "Ethernet.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "BNC.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "round peg 1.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "round peg 2.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "square peg 4.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "square peg 3.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "bolt 4.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "small gear.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "large gear.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "medium gear.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "round peg 3.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "square peg 2.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "round peg 4.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      },
+      "square peg 1.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "pick": {
+     "count": 1,
+     "success_true": 1,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "square peg 1.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "insert": {
+     "count": 1,
+     "success_true": 1,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "square peg 1.": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    }
+   },
+   "level1": {
+    "grasp": {
+     "count": 18,
+     "success_true": 18,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 18,
+       "success_true": 18,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "pull": {
+     "count": 17,
+     "success_true": 17,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 17,
+       "success_true": 17,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "approach": {
+     "count": 18,
+     "success_true": 18,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 18,
+       "success_true": 18,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "release": {
+     "count": 18,
+     "success_true": 18,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 18,
+       "success_true": 18,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "lift": {
+     "count": 1,
+     "success_true": 1,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "align": {
+     "count": 1,
+     "success_true": 1,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 1,
+       "success_true": 1,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    },
+    "twist": {
+     "count": 2,
+     "success_true": 2,
+     "success_false": 0,
+     "success_unknown": 0,
+     "objects": {
+      "(無)": {
+       "count": 2,
+       "success_true": 2,
+       "success_false": 0,
+       "success_unknown": 0
+      }
+     }
+    }
+   }
+  }
+ },
+ "streams": {
+  "cameras": [
+   {
+    "name": "capture_node-camera-image",
+    "path": "/capture_node-camera-image",
+    "encoding": "mp4",
+    "bytes": 3931127,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "h264",
+    "width": 346,
+    "height": 260,
+    "fps_nominal": 7.57,
+    "frames": 2067,
+    "frames_source": "header",
+    "duration_s": 273.05151915455747,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/capture_node-camera-image",
+    "ts_n": 2067,
+    "ts_first": 1736852701.9535987,
+    "ts_last": 1736852975.02651,
+    "ts_rate_hz": 7.573844142523854,
+    "ts_span_s": 273.0729112625122,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   },
+   {
+    "name": "hama1",
+    "path": "/hama1",
+    "encoding": "mp4",
+    "bytes": 14738611,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "h264",
+    "width": 640,
+    "height": 480,
+    "fps_nominal": 30.0,
+    "frames": 8199,
+    "frames_source": "header",
+    "duration_s": 273.3,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/hama1",
+    "ts_n": 8199,
+    "ts_first": 1736852701.8596933,
+    "ts_last": 1736852975.131375,
+    "ts_rate_hz": 30.98811986524026,
+    "ts_span_s": 273.2716817855835,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   },
+   {
+    "name": "hama2",
+    "path": "/hama2",
+    "encoding": "mp4",
+    "bytes": 14777231,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "h264",
+    "width": 640,
+    "height": 480,
+    "fps_nominal": 30.0,
+    "frames": 8199,
+    "frames_source": "header",
+    "duration_s": 273.3,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/hama2",
+    "ts_n": 8199,
+    "ts_first": 1736852701.8679776,
+    "ts_last": 1736852975.137427,
+    "ts_rate_hz": 31.018943553903895,
+    "ts_span_s": 273.26944947242737,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   },
+   {
+    "name": "hand",
+    "path": "/hand",
+    "encoding": "mp4",
+    "bytes": 16470835,
+    "access": "file-offset",
+    "probe_ok": true,
+    "probe_backend": "pyav 18.1.0",
+    "codec": "h264",
+    "width": 640,
+    "height": 480,
+    "fps_nominal": 30.0,
+    "frames": 7621,
+    "frames_source": "header",
+    "duration_s": 254.03333333333333,
+    "timestamps_match_score": 3,
+    "timestamps": "/timestamps/hand",
+    "ts_n": 7621,
+    "ts_first": 1736852701.8613317,
+    "ts_last": 1736852975.1332445,
+    "ts_rate_hz": 29.967876536153188,
+    "ts_span_s": 273.27191281318665,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "frames_minus_ts": 0
+   }
+  ],
+  "audio": [],
+  "image_arrays": [],
+  "other_streams": [
+   {
+    "name": "events",
+    "path": "/events",
+    "shape": [
+     48827944,
+     3
+    ],
+    "dtype": "int64",
+    "timestamps": "/timestamps/events",
+    "ts_n": 48827944,
+    "ts_first": 1736852701.828916,
+    "ts_last": 1736852975.103869,
+    "ts_rate_hz": 199728.7619047619,
+    "ts_span_s": 273.27495288848877,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": true,
+    "length_match": true
+   },
+   {
+    "name": "compensated_base_force",
+    "path": "/robot_state/compensated_base_force",
+    "shape": [
+     138494,
+     3
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/compensated_base_force",
+    "ts_n": 138494,
+    "ts_first": 1736852701.839423,
+    "ts_last": 1736852975.1416032,
+    "ts_rate_hz": 504.3049176385716,
+    "ts_span_s": 273.30218029022217,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "compensated_base_torque",
+    "path": "/robot_state/compensated_base_torque",
+    "shape": [
+     138494,
+     3
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/compensated_base_torque",
+    "ts_n": 138494,
+    "ts_first": 1736852701.839423,
+    "ts_last": 1736852975.1416032,
+    "ts_rate_hz": 504.3049176385716,
+    "ts_span_s": 273.30218029022217,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "gripper_efforts",
+    "path": "/robot_state/gripper_efforts",
+    "shape": [
+     265142,
+     2
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/gripper_efforts",
+    "ts_n": 265142,
+    "ts_first": 1736852701.845946,
+    "ts_last": 1736852975.144666,
+    "ts_rate_hz": 1003.9023456199138,
+    "ts_span_s": 273.2987198829651,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "gripper_positions",
+    "path": "/robot_state/gripper_positions",
+    "shape": [
+     265142,
+     2
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/gripper_positions",
+    "ts_n": 265142,
+    "ts_first": 1736852701.845946,
+    "ts_last": 1736852975.144666,
+    "ts_rate_hz": 1003.9023456199138,
+    "ts_span_s": 273.2987198829651,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "gripper_velocities",
+    "path": "/robot_state/gripper_velocities",
+    "shape": [
+     265142,
+     2
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/gripper_velocities",
+    "ts_n": 265142,
+    "ts_first": 1736852701.845946,
+    "ts_last": 1736852975.144666,
+    "ts_rate_hz": 1003.9023456199138,
+    "ts_span_s": 273.2987198829651,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "joint_efforts",
+    "path": "/robot_state/joint_efforts",
+    "shape": [
+     265142,
+     7
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/joint_efforts",
+    "ts_n": 265142,
+    "ts_first": 1736852701.845946,
+    "ts_last": 1736852975.144666,
+    "ts_rate_hz": 1003.9023456199138,
+    "ts_span_s": 273.2987198829651,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "joint_positions",
+    "path": "/robot_state/joint_positions",
+    "shape": [
+     265142,
+     7
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/joint_positions",
+    "ts_n": 265142,
+    "ts_first": 1736852701.845946,
+    "ts_last": 1736852975.144666,
+    "ts_rate_hz": 1003.9023456199138,
+    "ts_span_s": 273.2987198829651,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "joint_velocities",
+    "path": "/robot_state/joint_velocities",
+    "shape": [
+     265142,
+     7
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/joint_velocities",
+    "ts_n": 265142,
+    "ts_first": 1736852701.845946,
+    "ts_last": 1736852975.144666,
+    "ts_rate_hz": 1003.9023456199138,
+    "ts_span_s": 273.2987198829651,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "measured_force",
+    "path": "/robot_state/measured_force",
+    "shape": [
+     273306,
+     3
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/measured_force",
+    "ts_n": 273306,
+    "ts_first": 1736852701.8378503,
+    "ts_last": 1736852975.144582,
+    "ts_rate_hz": 1897.875113122172,
+    "ts_span_s": 273.3067317008972,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "measured_torque",
+    "path": "/robot_state/measured_torque",
+    "shape": [
+     273306,
+     3
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/measured_torque",
+    "ts_n": 273306,
+    "ts_first": 1736852701.8378503,
+    "ts_last": 1736852975.144582,
+    "ts_rate_hz": 1897.875113122172,
+    "ts_span_s": 273.3067317008972,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "pose",
+    "path": "/robot_state/pose",
+    "shape": [
+     157766,
+     7
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/pose",
+    "ts_n": 157766,
+    "ts_first": 1736852701.8363726,
+    "ts_last": 1736852975.1426804,
+    "ts_rate_hz": 605.1513490116866,
+    "ts_span_s": 273.3063077926636,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   },
+   {
+    "name": "velocity",
+    "path": "/robot_state/velocity",
+    "shape": [
+     157748,
+     6
+    ],
+    "dtype": "float64",
+    "timestamps": "/timestamps/velocity",
+    "ts_n": 157748,
+    "ts_first": 1736852701.836683,
+    "ts_last": 1736852975.1432235,
+    "ts_rate_hz": 614.1001464128843,
+    "ts_span_s": 273.3065404891968,
+    "ts_unit_guess": "s",
+    "ts_base_guess": "unix_epoch",
+    "ts_monotonic": true,
+    "ts_sampled": false,
+    "length_match": true
+   }
+  ],
+  "time_arrays": [
+   {
+    "path": "/timestamps/capture_node-camera-image",
+    "n": 2067,
+    "first": 1736852701.9535987,
+    "last": 1736852975.02651,
+    "min": 1736852701.9535987,
+    "max": 1736852975.02651,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.1320333480834961,
+    "median_dt_s": 0.1320333480834961,
+    "rate_hz": 7.573844142523854,
+    "span_s": 273.0729112625122,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.1415555477142334,
+    "first_utc": "2025-01-14T11:05:01.953+00:00",
+    "last_utc": "2025-01-14T11:09:35.026+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/compensated_base_force",
+    "n": 138494,
+    "first": 1736852701.839423,
+    "last": 1736852975.1416032,
+    "min": 1736852701.839423,
+    "max": 1736852975.1416032,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0019829273223876953,
+    "median_dt_s": 0.0019829273223876953,
+    "rate_hz": 504.3049176385716,
+    "span_s": 273.30218029022217,
+    "n_gaps_gt_3x_median": 764,
+    "max_dt_s": 0.02871537208557129,
+    "first_utc": "2025-01-14T11:05:01.839+00:00",
+    "last_utc": "2025-01-14T11:09:35.141+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/compensated_base_torque",
+    "n": 138494,
+    "first": 1736852701.839423,
+    "last": 1736852975.1416032,
+    "min": 1736852701.839423,
+    "max": 1736852975.1416032,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0019829273223876953,
+    "median_dt_s": 0.0019829273223876953,
+    "rate_hz": 504.3049176385716,
+    "span_s": 273.30218029022217,
+    "n_gaps_gt_3x_median": 764,
+    "max_dt_s": 0.02871537208557129,
+    "first_utc": "2025-01-14T11:05:01.839+00:00",
+    "last_utc": "2025-01-14T11:09:35.141+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/events",
+    "n": 48827944,
+    "first": 1736852701.828916,
+    "last": 1736852975.103869,
+    "min": 1736852701.828916,
+    "max": 1736852975.103869,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 171040,
+    "median_dt": 5.0067901611328125e-06,
+    "median_dt_s": 5.0067901611328125e-06,
+    "rate_hz": 199728.7619047619,
+    "span_s": 273.27495288848877,
+    "n_gaps_gt_3x_median": 303845,
+    "max_dt_s": 0.0002942085266113281,
+    "first_utc": "2025-01-14T11:05:01.828+00:00",
+    "last_utc": "2025-01-14T11:09:35.103+00:00",
+    "sampled": true,
+    "note": "陣列過大（48827944 筆），只取 10 段各 200000 筆做統計",
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/gripper_efforts",
+    "n": 265142,
+    "first": 1736852701.845946,
+    "last": 1736852975.144666,
+    "min": 1736852701.845946,
+    "max": 1736852975.144666,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009961128234863281,
+    "median_dt_s": 0.0009961128234863281,
+    "rate_hz": 1003.9023456199138,
+    "span_s": 273.2987198829651,
+    "n_gaps_gt_3x_median": 7085,
+    "max_dt_s": 0.04357647895812988,
+    "first_utc": "2025-01-14T11:05:01.845+00:00",
+    "last_utc": "2025-01-14T11:09:35.144+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/gripper_positions",
+    "n": 265142,
+    "first": 1736852701.845946,
+    "last": 1736852975.144666,
+    "min": 1736852701.845946,
+    "max": 1736852975.144666,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009961128234863281,
+    "median_dt_s": 0.0009961128234863281,
+    "rate_hz": 1003.9023456199138,
+    "span_s": 273.2987198829651,
+    "n_gaps_gt_3x_median": 7085,
+    "max_dt_s": 0.04357647895812988,
+    "first_utc": "2025-01-14T11:05:01.845+00:00",
+    "last_utc": "2025-01-14T11:09:35.144+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/gripper_velocities",
+    "n": 265142,
+    "first": 1736852701.845946,
+    "last": 1736852975.144666,
+    "min": 1736852701.845946,
+    "max": 1736852975.144666,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009961128234863281,
+    "median_dt_s": 0.0009961128234863281,
+    "rate_hz": 1003.9023456199138,
+    "span_s": 273.2987198829651,
+    "n_gaps_gt_3x_median": 7085,
+    "max_dt_s": 0.04357647895812988,
+    "first_utc": "2025-01-14T11:05:01.845+00:00",
+    "last_utc": "2025-01-14T11:09:35.144+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/hama1",
+    "n": 8199,
+    "first": 1736852701.8596933,
+    "last": 1736852975.131375,
+    "min": 1736852701.8596933,
+    "max": 1736852975.131375,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.03227043151855469,
+    "median_dt_s": 0.03227043151855469,
+    "rate_hz": 30.98811986524026,
+    "span_s": 273.2716817855835,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.055649518966674805,
+    "first_utc": "2025-01-14T11:05:01.859+00:00",
+    "last_utc": "2025-01-14T11:09:35.131+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/hama2",
+    "n": 8199,
+    "first": 1736852701.8679776,
+    "last": 1736852975.137427,
+    "min": 1736852701.8679776,
+    "max": 1736852975.137427,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.03223836421966553,
+    "median_dt_s": 0.03223836421966553,
+    "rate_hz": 31.018943553903895,
+    "span_s": 273.26944947242737,
+    "n_gaps_gt_3x_median": 0,
+    "max_dt_s": 0.05284762382507324,
+    "first_utc": "2025-01-14T11:05:01.867+00:00",
+    "last_utc": "2025-01-14T11:09:35.137+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/hand",
+    "n": 7621,
+    "first": 1736852701.8613317,
+    "last": 1736852975.1332445,
+    "min": 1736852701.8613317,
+    "max": 1736852975.1332445,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.03336906433105469,
+    "median_dt_s": 0.03336906433105469,
+    "rate_hz": 29.967876536153188,
+    "span_s": 273.27191281318665,
+    "n_gaps_gt_3x_median": 174,
+    "max_dt_s": 0.16817498207092285,
+    "first_utc": "2025-01-14T11:05:01.861+00:00",
+    "last_utc": "2025-01-14T11:09:35.133+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/joint_efforts",
+    "n": 265142,
+    "first": 1736852701.845946,
+    "last": 1736852975.144666,
+    "min": 1736852701.845946,
+    "max": 1736852975.144666,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009961128234863281,
+    "median_dt_s": 0.0009961128234863281,
+    "rate_hz": 1003.9023456199138,
+    "span_s": 273.2987198829651,
+    "n_gaps_gt_3x_median": 7085,
+    "max_dt_s": 0.04357647895812988,
+    "first_utc": "2025-01-14T11:05:01.845+00:00",
+    "last_utc": "2025-01-14T11:09:35.144+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/joint_positions",
+    "n": 265142,
+    "first": 1736852701.845946,
+    "last": 1736852975.144666,
+    "min": 1736852701.845946,
+    "max": 1736852975.144666,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009961128234863281,
+    "median_dt_s": 0.0009961128234863281,
+    "rate_hz": 1003.9023456199138,
+    "span_s": 273.2987198829651,
+    "n_gaps_gt_3x_median": 7085,
+    "max_dt_s": 0.04357647895812988,
+    "first_utc": "2025-01-14T11:05:01.845+00:00",
+    "last_utc": "2025-01-14T11:09:35.144+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/joint_velocities",
+    "n": 265142,
+    "first": 1736852701.845946,
+    "last": 1736852975.144666,
+    "min": 1736852701.845946,
+    "max": 1736852975.144666,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0009961128234863281,
+    "median_dt_s": 0.0009961128234863281,
+    "rate_hz": 1003.9023456199138,
+    "span_s": 273.2987198829651,
+    "n_gaps_gt_3x_median": 7085,
+    "max_dt_s": 0.04357647895812988,
+    "first_utc": "2025-01-14T11:05:01.845+00:00",
+    "last_utc": "2025-01-14T11:09:35.144+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/measured_force",
+    "n": 273306,
+    "first": 1736852701.8378503,
+    "last": 1736852975.144582,
+    "min": 1736852701.8378503,
+    "max": 1736852975.144582,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0005269050598144531,
+    "median_dt_s": 0.0005269050598144531,
+    "rate_hz": 1897.875113122172,
+    "span_s": 273.3067317008972,
+    "n_gaps_gt_3x_median": 134421,
+    "max_dt_s": 0.028827428817749023,
+    "first_utc": "2025-01-14T11:05:01.837+00:00",
+    "last_utc": "2025-01-14T11:09:35.144+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/measured_torque",
+    "n": 273306,
+    "first": 1736852701.8378503,
+    "last": 1736852975.144582,
+    "min": 1736852701.8378503,
+    "max": 1736852975.144582,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0005269050598144531,
+    "median_dt_s": 0.0005269050598144531,
+    "rate_hz": 1897.875113122172,
+    "span_s": 273.3067317008972,
+    "n_gaps_gt_3x_median": 134421,
+    "max_dt_s": 0.028827428817749023,
+    "first_utc": "2025-01-14T11:05:01.837+00:00",
+    "last_utc": "2025-01-14T11:09:35.144+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/pose",
+    "n": 157766,
+    "first": 1736852701.8363726,
+    "last": 1736852975.1426804,
+    "min": 1736852701.8363726,
+    "max": 1736852975.1426804,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0016524791717529297,
+    "median_dt_s": 0.0016524791717529297,
+    "rate_hz": 605.1513490116866,
+    "span_s": 273.3063077926636,
+    "n_gaps_gt_3x_median": 1936,
+    "max_dt_s": 0.02866649627685547,
+    "first_utc": "2025-01-14T11:05:01.836+00:00",
+    "last_utc": "2025-01-14T11:09:35.142+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   },
+   {
+    "path": "/timestamps/velocity",
+    "n": 157748,
+    "first": 1736852701.836683,
+    "last": 1736852975.1432235,
+    "min": 1736852701.836683,
+    "max": 1736852975.1432235,
+    "monotonic_non_decreasing": true,
+    "n_backward_steps": 0,
+    "n_repeated": 0,
+    "median_dt": 0.0016283988952636719,
+    "median_dt_s": 0.0016283988952636719,
+    "rate_hz": 614.1001464128843,
+    "span_s": 273.3065404891968,
+    "n_gaps_gt_3x_median": 2034,
+    "max_dt_s": 0.028942108154296875,
+    "first_utc": "2025-01-14T11:05:01.836+00:00",
+    "last_utc": "2025-01-14T11:09:35.143+00:00",
+    "sampled": false,
+    "note": null,
+    "unit_guess": {
+     "unit": "s",
+     "to_seconds": 1.0,
+     "base": "unix_epoch",
+     "confidence": "high"
+    }
+   }
+  ],
+  "unpaired_time_arrays": [],
+  "expected_cameras_missing": []
+ },
+ "time_base": {
+  "segment_min": 1736852701.8615818,
+  "segment_max": 1736852975.1435368,
+  "n_segments": 38,
+  "candidates": [
+   {
+    "timestamps": "/timestamps/capture_node-camera-image",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.9535987,
+    "ts_max": 1736852975.02651,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/compensated_base_force",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.839423,
+    "ts_max": 1736852975.1416032,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/compensated_base_torque",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.839423,
+    "ts_max": 1736852975.1416032,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/events",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.828916,
+    "ts_max": 1736852975.103869,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/gripper_efforts",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.845946,
+    "ts_max": 1736852975.144666,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/gripper_positions",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.845946,
+    "ts_max": 1736852975.144666,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/gripper_velocities",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.845946,
+    "ts_max": 1736852975.144666,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/hama1",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.8596933,
+    "ts_max": 1736852975.131375,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/hama2",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.8679776,
+    "ts_max": 1736852975.137427,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/hand",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.8613317,
+    "ts_max": 1736852975.1332445,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/joint_efforts",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.845946,
+    "ts_max": 1736852975.144666,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/joint_positions",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.845946,
+    "ts_max": 1736852975.144666,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/joint_velocities",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.845946,
+    "ts_max": 1736852975.144666,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/measured_force",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.8378503,
+    "ts_max": 1736852975.144582,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/measured_torque",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.8378503,
+    "ts_max": 1736852975.144582,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/pose",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.8363726,
+    "ts_max": 1736852975.1426804,
+    "unit_guess": "s"
+   },
+   {
+    "timestamps": "/timestamps/velocity",
+    "fraction_inside_same": 1.0,
+    "fraction_inside_relative": 0.0,
+    "ts_min": 1736852701.836683,
+    "ts_max": 1736852975.1432235,
+    "unit_guess": "s"
+   }
+  ],
+  "relation": "same_as",
+  "reference": "/timestamps/hand",
+  "fraction_inside": 1.0,
+  "unit_guess": "s"
+ },
+ "anomalies": [
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/compensated_base_force 有 764 處間隔大於中位數 3 倍（最大 0.0287154 秒）",
+   "path": "/timestamps/compensated_base_force"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/compensated_base_torque 有 764 處間隔大於中位數 3 倍（最大 0.0287154 秒）",
+   "path": "/timestamps/compensated_base_torque"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/events 有 303845 處間隔大於中位數 3 倍（最大 0.000294209 秒）",
+   "path": "/timestamps/events"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/gripper_efforts 有 7085 處間隔大於中位數 3 倍（最大 0.0435765 秒）",
+   "path": "/timestamps/gripper_efforts"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/gripper_positions 有 7085 處間隔大於中位數 3 倍（最大 0.0435765 秒）",
+   "path": "/timestamps/gripper_positions"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/gripper_velocities 有 7085 處間隔大於中位數 3 倍（最大 0.0435765 秒）",
+   "path": "/timestamps/gripper_velocities"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/hand 有 174 處間隔大於中位數 3 倍（最大 0.168175 秒）",
+   "path": "/timestamps/hand"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/joint_efforts 有 7085 處間隔大於中位數 3 倍（最大 0.0435765 秒）",
+   "path": "/timestamps/joint_efforts"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/joint_positions 有 7085 處間隔大於中位數 3 倍（最大 0.0435765 秒）",
+   "path": "/timestamps/joint_positions"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/joint_velocities 有 7085 處間隔大於中位數 3 倍（最大 0.0435765 秒）",
+   "path": "/timestamps/joint_velocities"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/measured_force 有 134421 處間隔大於中位數 3 倍（最大 0.0288274 秒）",
+   "path": "/timestamps/measured_force"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/measured_torque 有 134421 處間隔大於中位數 3 倍（最大 0.0288274 秒）",
+   "path": "/timestamps/measured_torque"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/pose 有 1936 處間隔大於中位數 3 倍（最大 0.0286665 秒）",
+   "path": "/timestamps/pose"
+  },
+  {
+   "code": "TS_GAPS",
+   "severity": "info",
+   "message": "/timestamps/velocity 有 2034 處間隔大於中位數 3 倍（最大 0.0289421 秒）",
+   "path": "/timestamps/velocity"
+  }
+ ],
+ "manual_check": [
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "0",
+   "path": "/segments_info/0",
+   "parent_path": null,
+   "start": 1736852701.8615818,
+   "end": 1736852703.7602143,
+   "duration": 1.898632526397705,
+   "success": true,
+   "success_raw": true,
+   "text": "No action.",
+   "extra": {
+    "index": 0
+   }
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "4",
+   "path": "/segments_info/4",
+   "parent_path": null,
+   "start": 1736852731.7936954,
+   "end": 1736852746.1937923,
+   "duration": 14.400096893310547,
+   "success": true,
+   "success_raw": true,
+   "text": "Insert square peg 1.",
+   "extra": {
+    "index": 4
+   }
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "10",
+   "path": "/segments_info/10",
+   "parent_path": null,
+   "start": 1736852781.093343,
+   "end": 1736852784.4100554,
+   "duration": 3.3167123794555664,
+   "success": true,
+   "success_raw": true,
+   "text": "Place Ethernet.",
+   "extra": {
+    "index": 10
+   }
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "19",
+   "path": "/segments_info/19",
+   "parent_path": null,
+   "start": 1736852838.1768394,
+   "end": 1736852851.2600527,
+   "duration": 13.083213329315186,
+   "success": true,
+   "success_raw": true,
+   "text": "Remove square peg 3.",
+   "extra": {
+    "index": 19
+   }
+  },
+  {
+   "container": "/segments_info",
+   "pattern": "/segments_info",
+   "level": 0,
+   "id": "28",
+   "path": "/segments_info/28",
+   "parent_path": null,
+   "start": 1736852908.9267445,
+   "end": 1736852912.6933837,
+   "duration": 3.766639232635498,
+   "success": true,
+   "success_raw": true,
+   "text": "Place medium gear.",
+   "extra": {
+    "index": 28
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "Q1",
+   "topic": "segment 欄位",
+   "question": "`/segments_info`（第 0 層，共 38 段）：start=`start`、end=`end`、success=`success`、text=`text`，其他欄位 ['index']。這些是否就是 segment 起訖、成功標記與動作描述？",
+   "evidence": {
+    "sub_groups": {
+     "low_level": 36
+    },
+    "non_segment_children": []
+   }
+  },
+  {
+   "id": "Q2",
+   "topic": "segment 欄位",
+   "question": "`/segments_info/*/low_level`（第 1 層，共 75 段，分散在 36 個容器）：start=`start`、end=`end`、success=`success`、text=`text`，其他欄位 無。這些是否就是 segment 起訖、成功標記與動作描述？",
+   "evidence": {
+    "sub_groups": {},
+    "non_segment_children": []
+   }
+  },
+  {
+   "id": "Q3",
+   "topic": "時間單位與基準",
+   "question": "segment 起訖範圍 1736852701.861582–1736852975.143537 落在 `/timestamps/hand` 的範圍內（100%），推測兩者同一時間基準、單位 s。請確認單位與是否為 Unix 時間。",
+   "evidence": [
+    {
+     "timestamps": "/timestamps/capture_node-camera-image",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.9535987,
+     "ts_max": 1736852975.02651,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/compensated_base_force",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.839423,
+     "ts_max": 1736852975.1416032,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/compensated_base_torque",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.839423,
+     "ts_max": 1736852975.1416032,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/events",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.828916,
+     "ts_max": 1736852975.103869,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/gripper_efforts",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.845946,
+     "ts_max": 1736852975.144666,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/gripper_positions",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.845946,
+     "ts_max": 1736852975.144666,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/gripper_velocities",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.845946,
+     "ts_max": 1736852975.144666,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/hama1",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.8596933,
+     "ts_max": 1736852975.131375,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/hama2",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.8679776,
+     "ts_max": 1736852975.137427,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/hand",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.8613317,
+     "ts_max": 1736852975.1332445,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/joint_efforts",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.845946,
+     "ts_max": 1736852975.144666,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/joint_positions",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.845946,
+     "ts_max": 1736852975.144666,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/joint_velocities",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.845946,
+     "ts_max": 1736852975.144666,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/measured_force",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.8378503,
+     "ts_max": 1736852975.144582,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/measured_torque",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.8378503,
+     "ts_max": 1736852975.144582,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/pose",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.8363726,
+     "ts_max": 1736852975.1426804,
+     "unit_guess": "s"
+    },
+    {
+     "timestamps": "/timestamps/velocity",
+     "fraction_inside_same": 1.0,
+     "fraction_inside_relative": 0.0,
+     "ts_min": 1736852701.836683,
+     "ts_max": 1736852975.1432235,
+     "unit_guess": "s"
+    }
+   ]
+  },
+  {
+   "id": "Q4",
+   "topic": "action / part 解析",
+   "question": "高層 text 第一個詞的分佈：{'remove': 17, 'place': 17, 'no': 2, 'pick': 1, 'insert': 1}。是否以第一個詞當 action、其餘字串當零件（part）？",
+   "evidence": null
+  },
+  {
+   "id": "Q5",
+   "topic": "Insert 零件候選",
+   "question": "這些樣本中的 Insert 零件：{'square peg 1.': '1 段（成功 1 / 失敗 0）'}。研究要選哪一種？（失敗數需等第 2 包全量索引才準）",
+   "evidence": null
+  },
+  {
+   "id": "Q6",
+   "topic": "失敗原因與證據時間",
+   "question": "資料中沒有失敗原因、證據時間欄位（符合規格預期）。這些將在第 3 包走人工標註流程，請確認。",
+   "evidence": null
+  },
+  {
+   "id": "Q7",
+   "topic": "低階 segment",
+   "question": "第 1 層（如 Low_level）動作分佈：{'grasp': 18, 'pull': 17, 'approach': 18, 'release': 18, 'lift': 1, 'align': 1, 'twist': 2}。要不要拿來當證據時間的候選區間？",
+   "evidence": null
+  },
+  {
+   "id": "Q8",
+   "topic": "相機清單",
+   "question": "偵測到的內嵌影片：{'capture_node-camera-image': '346x260, 7.57 fps, 2067 幀', 'hama1': '640x480, 30 fps, 8199 幀', 'hama2': '640x480, 30 fps, 8199 幀', 'hand': '640x480, 30 fps, 7621 幀'}。哪些是外部視角、哪個是腕部相機？best_camera 的候選集合為何？",
+   "evidence": null
+  },
+  {
+   "id": "Q9",
+   "topic": "影格與時間戳",
+   "question": "capture_node-camera-image：影片 2067 幀、標稱 7.57 fps；`/timestamps/capture_node-camera-image` 有 2067 筆，實測約 7.57384 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  },
+  {
+   "id": "Q10",
+   "topic": "影格與時間戳",
+   "question": "hama1：影片 8199 幀、標稱 30 fps；`/timestamps/hama1` 有 8199 筆，實測約 30.9881 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  },
+  {
+   "id": "Q11",
+   "topic": "影格與時間戳",
+   "question": "hama2：影片 8199 幀、標稱 30 fps；`/timestamps/hama2` 有 8199 筆，實測約 31.0189 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  },
+  {
+   "id": "Q12",
+   "topic": "影格與時間戳",
+   "question": "hand：影片 7621 幀、標稱 30 fps；`/timestamps/hand` 有 7621 筆，實測約 29.9679 Hz。第 i 幀是否對應第 i 個時間戳？",
+   "evidence": {
+    "frames_minus_ts": 0
+   }
+  }
+ ]
+}

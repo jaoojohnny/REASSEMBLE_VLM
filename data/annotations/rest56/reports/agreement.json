@@ -1,0 +1,368 @@
+{
+ "task": "rest56",
+ "generated_at": "2026-10-14T13:02:32+08:00",
+ "sources": {
+  "A": {
+   "annotator": "張立醒",
+   "annotator_type": "human",
+   "n": 56
+  },
+  "B": {
+   "annotator": "claude",
+   "annotator_type": "ai",
+   "n": 56
+  },
+  "C": {
+   "annotator": "dataset_lowlevel",
+   "annotator_type": "reference",
+   "n": 56
+  }
+ },
+ "pairs": {
+  "A|B": {
+   "names": [
+    "A",
+    "B"
+   ],
+   "n_a": 56,
+   "n_b": 56,
+   "n_common": 56,
+   "only_a": [],
+   "only_b": [],
+   "result": {
+    "n": 56,
+    "agree": 56,
+    "rate": 1.0,
+    "kappa": 1.0,
+    "kappa_ci95": [
+     1.0,
+     1.0
+    ],
+    "rate_ci95": [
+     1.0,
+     1.0
+    ]
+   },
+   "failure_reason": {
+    "n": 10,
+    "agree": 3,
+    "rate": 0.3,
+    "kappa": 0.1358,
+    "kappa_ci95": [
+     -0.2121,
+     0.4444
+    ],
+    "rate_ci95": [
+     0.0,
+     0.6
+    ],
+    "confusion": {
+     "incomplete_insert": {
+      "misalignment": 1,
+      "incomplete_insert": 1
+     },
+     "misalignment": {
+      "incomplete_insert": 2,
+      "misalignment": 1
+     },
+     "other": {
+      "unknown": 1,
+      "wrong_contact": 1
+     },
+     "slip_or_drop": {
+      "incomplete_insert": 2,
+      "slip_or_drop": 1
+     }
+    }
+   },
+   "best_camera": {
+    "n": 56,
+    "agree": 55,
+    "rate": 0.9821,
+    "kappa": 0.7934,
+    "kappa_ci95": [
+     0.0,
+     1.0
+    ],
+    "rate_ci95": [
+     0.9464,
+     1.0
+    ]
+   },
+   "evidence": {
+    "n": 56,
+    "mean_iou": 0.2293,
+    "median_iou": 0.1284,
+    "mean_iou_ci95": [
+     0.1663,
+     0.2984
+    ],
+    "hit": 7,
+    "hit_rate": 0.125,
+    "start_mae_s": 7.396,
+    "end_mae_s": 1.914,
+    "iou_threshold": 0.5,
+    "endpoint_tolerance_sec": 1.0
+   },
+   "visibility": {
+    "hama1": {
+     "n": 56,
+     "agree": 52,
+     "rate": 0.9286
+    },
+    "hama2": {
+     "n": 56,
+     "agree": 53,
+     "rate": 0.9464
+    },
+    "hand": {
+     "n": 56,
+     "agree": 53,
+     "rate": 0.9464
+    }
+   },
+   "n_disputes": 7,
+   "dispute_fields": {
+    "failure_reason": 7,
+    "best_camera": 1
+   },
+   "blocking_fields": [
+    "result",
+    "failure_reason",
+    "best_camera"
+   ],
+   "n_with_differences": 54,
+   "difference_fields": {
+    "evidence": 49,
+    "failure_reason": 7,
+    "best_camera": 1
+   }
+  },
+  "A|C": {
+   "names": [
+    "A",
+    "C"
+   ],
+   "n_a": 56,
+   "n_b": 56,
+   "n_common": 56,
+   "only_a": [],
+   "only_b": [],
+   "result": {
+    "n": 56,
+    "agree": 56,
+    "rate": 1.0,
+    "kappa": 1.0,
+    "kappa_ci95": [
+     1.0,
+     1.0
+    ],
+    "rate_ci95": [
+     1.0,
+     1.0
+    ]
+   },
+   "failure_reason": {
+    "n": 10,
+    "agree": 1,
+    "rate": 0.1,
+    "kappa": 0.0,
+    "kappa_ci95": [
+     -0.1392,
+     0.1667
+    ],
+    "rate_ci95": [
+     0.0,
+     0.3
+    ],
+    "confusion": {
+     "incomplete_insert": {
+      "unknown": 2
+     },
+     "misalignment": {
+      "wrong_contact": 1,
+      "misalignment": 1,
+      "incomplete_insert": 1
+     },
+     "other": {
+      "wrong_contact": 2
+     },
+     "slip_or_drop": {
+      "unknown": 1,
+      "incomplete_insert": 1,
+      "misalignment": 1
+     }
+    }
+   },
+   "best_camera": {
+    "n": 0,
+    "agree": 0,
+    "rate": null,
+    "kappa": null,
+    "kappa_ci95": null,
+    "rate_ci95": null
+   },
+   "evidence": {
+    "n": 53,
+    "mean_iou": 0.1255,
+    "median_iou": 0.0,
+    "mean_iou_ci95": [
+     0.0491,
+     0.2072
+    ],
+    "hit": 8,
+    "hit_rate": 0.1509,
+    "start_mae_s": 8.938,
+    "end_mae_s": 1.232,
+    "iou_threshold": 0.5,
+    "endpoint_tolerance_sec": 1.0
+   },
+   "visibility": {
+    "hama1": {
+     "n": 0,
+     "agree": 0,
+     "rate": null
+    },
+    "hama2": {
+     "n": 0,
+     "agree": 0,
+     "rate": null
+    },
+    "hand": {
+     "n": 0,
+     "agree": 0,
+     "rate": null
+    }
+   },
+   "n_disputes": 9,
+   "dispute_fields": {
+    "failure_reason": 9
+   },
+   "blocking_fields": [
+    "result",
+    "failure_reason",
+    "best_camera"
+   ],
+   "n_with_differences": 54,
+   "difference_fields": {
+    "evidence": 45,
+    "failure_reason": 9
+   }
+  },
+  "B|C": {
+   "names": [
+    "B",
+    "C"
+   ],
+   "n_a": 56,
+   "n_b": 56,
+   "n_common": 56,
+   "only_a": [],
+   "only_b": [],
+   "result": {
+    "n": 56,
+    "agree": 56,
+    "rate": 1.0,
+    "kappa": 1.0,
+    "kappa_ci95": [
+     1.0,
+     1.0
+    ],
+    "rate_ci95": [
+     1.0,
+     1.0
+    ]
+   },
+   "failure_reason": {
+    "n": 10,
+    "agree": 4,
+    "rate": 0.4,
+    "kappa": 0.25,
+    "kappa_ci95": [
+     -0.039,
+     0.5833
+    ],
+    "rate_ci95": [
+     0.1,
+     0.7
+    ],
+    "confusion": {
+     "incomplete_insert": {
+      "wrong_contact": 1,
+      "unknown": 2,
+      "incomplete_insert": 2
+     },
+     "misalignment": {
+      "unknown": 1,
+      "misalignment": 1
+     },
+     "slip_or_drop": {
+      "misalignment": 1
+     },
+     "unknown": {
+      "wrong_contact": 1
+     },
+     "wrong_contact": {
+      "wrong_contact": 1
+     }
+    }
+   },
+   "best_camera": {
+    "n": 0,
+    "agree": 0,
+    "rate": null,
+    "kappa": null,
+    "kappa_ci95": null,
+    "rate_ci95": null
+   },
+   "evidence": {
+    "n": 53,
+    "mean_iou": 0.3768,
+    "median_iou": 0.3055,
+    "mean_iou_ci95": [
+     0.328,
+     0.435
+    ],
+    "hit": 9,
+    "hit_rate": 0.1698,
+    "start_mae_s": 1.972,
+    "end_mae_s": 0.744,
+    "iou_threshold": 0.5,
+    "endpoint_tolerance_sec": 1.0
+   },
+   "visibility": {
+    "hama1": {
+     "n": 0,
+     "agree": 0,
+     "rate": null
+    },
+    "hama2": {
+     "n": 0,
+     "agree": 0,
+     "rate": null
+    },
+    "hand": {
+     "n": 0,
+     "agree": 0,
+     "rate": null
+    }
+   },
+   "n_disputes": 6,
+   "dispute_fields": {
+    "failure_reason": 6
+   },
+   "blocking_fields": [
+    "result",
+    "failure_reason",
+    "best_camera"
+   ],
+   "n_with_differences": 48,
+   "difference_fields": {
+    "evidence": 44,
+    "failure_reason": 6
+   }
+  }
+ },
+ "primary": "A",
+ "second": "B"
+}

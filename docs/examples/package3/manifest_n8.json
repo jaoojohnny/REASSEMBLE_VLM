@@ -1,0 +1,300 @@
+{
+ "generated_at": "2026-10-05T14:45:31+08:00",
+ "sampling": {
+  "n_frames": 8,
+  "start_buffer": 0.5,
+  "end_buffer": 2.0,
+  "fmt": "jpg",
+  "jpeg_quality": 95,
+  "strategy": "uniform",
+  "seed": 0
+ },
+ "n_segments": 40,
+ "n_failure": 20,
+ "n_success": 20,
+ "n_frames_written": 960,
+ "n_missing_frames": 0,
+ "n_far_frames": 6,
+ "segments": [
+  {
+   "dir": "segments/2025-01-09-14-28-47__seg11",
+   "recording_id": "2025-01-09-14-28-47",
+   "segment_id": "11",
+   "label_success": true,
+   "cache_key": "ee72efcfaaf236db"
+  },
+  {
+   "dir": "segments/2025-01-09-15-37-27__seg25",
+   "recording_id": "2025-01-09-15-37-27",
+   "segment_id": "25",
+   "label_success": false,
+   "cache_key": "bafcaa438248fd21"
+  },
+  {
+   "dir": "segments/2025-01-09-17-03-05__seg4",
+   "recording_id": "2025-01-09-17-03-05",
+   "segment_id": "4",
+   "label_success": false,
+   "cache_key": "cd41fe413e92ce86"
+  },
+  {
+   "dir": "segments/2025-01-09-17-03-05__seg6",
+   "recording_id": "2025-01-09-17-03-05",
+   "segment_id": "6",
+   "label_success": true,
+   "cache_key": "12b8f936e655064a"
+  },
+  {
+   "dir": "segments/2025-01-09-17-23-07__seg14",
+   "recording_id": "2025-01-09-17-23-07",
+   "segment_id": "14",
+   "label_success": false,
+   "cache_key": "e57699d5ef08e986"
+  },
+  {
+   "dir": "segments/2025-01-09-17-23-07__seg19",
+   "recording_id": "2025-01-09-17-23-07",
+   "segment_id": "19",
+   "label_success": true,
+   "cache_key": "d03be570be85b30f"
+  },
+  {
+   "dir": "segments/2025-01-09-17-40-57__seg13",
+   "recording_id": "2025-01-09-17-40-57",
+   "segment_id": "13",
+   "label_success": false,
+   "cache_key": "2a0180548b8c91a7"
+  },
+  {
+   "dir": "segments/2025-01-09-18-08-36__seg16",
+   "recording_id": "2025-01-09-18-08-36",
+   "segment_id": "16",
+   "label_success": false,
+   "cache_key": "3a04f7721e1432e9"
+  },
+  {
+   "dir": "segments/2025-01-09-18-08-36__seg19",
+   "recording_id": "2025-01-09-18-08-36",
+   "segment_id": "19",
+   "label_success": true,
+   "cache_key": "f0adf39799459934"
+  },
+  {
+   "dir": "segments/2025-01-09-18-34-34__seg11",
+   "recording_id": "2025-01-09-18-34-34",
+   "segment_id": "11",
+   "label_success": true,
+   "cache_key": "1dc4330d72669b67"
+  },
+  {
+   "dir": "segments/2025-01-09-19-15-33__seg40",
+   "recording_id": "2025-01-09-19-15-33",
+   "segment_id": "40",
+   "label_success": false,
+   "cache_key": "8bb0e2140ae78d79"
+  },
+  {
+   "dir": "segments/2025-01-09-19-15-33__seg41",
+   "recording_id": "2025-01-09-19-15-33",
+   "segment_id": "41",
+   "label_success": true,
+   "cache_key": "3b9b0f339fd06650"
+  },
+  {
+   "dir": "segments/2025-01-10-17-25-29__seg30",
+   "recording_id": "2025-01-10-17-25-29",
+   "segment_id": "30",
+   "label_success": false,
+   "cache_key": "882817c1d37d55a3"
+  },
+  {
+   "dir": "segments/2025-01-10-17-25-29__seg31",
+   "recording_id": "2025-01-10-17-25-29",
+   "segment_id": "31",
+   "label_success": true,
+   "cache_key": "009da3aa87178ce0"
+  },
+  {
+   "dir": "segments/2025-01-10-17-54-09__seg14",
+   "recording_id": "2025-01-10-17-54-09",
+   "segment_id": "14",
+   "label_success": true,
+   "cache_key": "eb6a79e7f67a8abf"
+  },
+  {
+   "dir": "segments/2025-01-10-18-12-06__seg31",
+   "recording_id": "2025-01-10-18-12-06",
+   "segment_id": "31",
+   "label_success": false,
+   "cache_key": "cfe7e19f58059826"
+  },
+  {
+   "dir": "segments/2025-01-11-11-29-58__seg6",
+   "recording_id": "2025-01-11-11-29-58",
+   "segment_id": "6",
+   "label_success": true,
+   "cache_key": "13568ea6bebb9aff"
+  },
+  {
+   "dir": "segments/2025-01-11-11-59-40__seg6",
+   "recording_id": "2025-01-11-11-59-40",
+   "segment_id": "6",
+   "label_success": true,
+   "cache_key": "7e2fa17d113ebb37"
+  },
+  {
+   "dir": "segments/2025-01-11-14-09-00__seg7",
+   "recording_id": "2025-01-11-14-09-00",
+   "segment_id": "7",
+   "label_success": true,
+   "cache_key": "63d52712275da23e"
+  },
+  {
+   "dir": "segments/2025-01-11-14-35-33__seg17",
+   "recording_id": "2025-01-11-14-35-33",
+   "segment_id": "17",
+   "label_success": false,
+   "cache_key": "8e5e40c49ddc3bae"
+  },
+  {
+   "dir": "segments/2025-01-11-15-18-22__seg36",
+   "recording_id": "2025-01-11-15-18-22",
+   "segment_id": "36",
+   "label_success": false,
+   "cache_key": "4ea36af9496cf480"
+  },
+  {
+   "dir": "segments/2025-01-11-15-18-22__seg39",
+   "recording_id": "2025-01-11-15-18-22",
+   "segment_id": "39",
+   "label_success": true,
+   "cache_key": "74e964ab1300ddcb"
+  },
+  {
+   "dir": "segments/2025-01-13-09-43-29__seg11",
+   "recording_id": "2025-01-13-09-43-29",
+   "segment_id": "11",
+   "label_success": false,
+   "cache_key": "fad1e28808d1801b"
+  },
+  {
+   "dir": "segments/2025-01-13-11-07-43__seg6",
+   "recording_id": "2025-01-13-11-07-43",
+   "segment_id": "6",
+   "label_success": false,
+   "cache_key": "ef6cdb7687d85561"
+  },
+  {
+   "dir": "segments/2025-01-13-11-23-17__seg26",
+   "recording_id": "2025-01-13-11-23-17",
+   "segment_id": "26",
+   "label_success": false,
+   "cache_key": "a0fc05ac41944e5f"
+  },
+  {
+   "dir": "segments/2025-01-13-11-44-13__seg16",
+   "recording_id": "2025-01-13-11-44-13",
+   "segment_id": "16",
+   "label_success": false,
+   "cache_key": "a478ef16bb0f89d1"
+  },
+  {
+   "dir": "segments/2025-01-13-15-50-28__seg11",
+   "recording_id": "2025-01-13-15-50-28",
+   "segment_id": "11",
+   "label_success": false,
+   "cache_key": "9cbbb9c699a91d92"
+  },
+  {
+   "dir": "segments/2025-01-13-15-50-28__seg13",
+   "recording_id": "2025-01-13-15-50-28",
+   "segment_id": "13",
+   "label_success": true,
+   "cache_key": "ac926f9d9aebc91b"
+  },
+  {
+   "dir": "segments/2025-01-13-16-19-55__seg4",
+   "recording_id": "2025-01-13-16-19-55",
+   "segment_id": "4",
+   "label_success": false,
+   "cache_key": "cdfc103922539000"
+  },
+  {
+   "dir": "segments/2025-01-13-16-57-41__seg2",
+   "recording_id": "2025-01-13-16-57-41",
+   "segment_id": "2",
+   "label_success": false,
+   "cache_key": "8f6772c7065a49e7"
+  },
+  {
+   "dir": "segments/2025-01-13-16-57-41__seg3",
+   "recording_id": "2025-01-13-16-57-41",
+   "segment_id": "3",
+   "label_success": true,
+   "cache_key": "b3a3f5715cb5a931"
+  },
+  {
+   "dir": "segments/2025-01-13-17-40-45__seg16",
+   "recording_id": "2025-01-13-17-40-45",
+   "segment_id": "16",
+   "label_success": false,
+   "cache_key": "0aa2329750a2ae13"
+  },
+  {
+   "dir": "segments/2025-01-13-17-46-07__seg2",
+   "recording_id": "2025-01-13-17-46-07",
+   "segment_id": "2",
+   "label_success": false,
+   "cache_key": "66fcf48bf958fa8e"
+  },
+  {
+   "dir": "segments/2025-01-13-17-57-45__seg8",
+   "recording_id": "2025-01-13-17-57-45",
+   "segment_id": "8",
+   "label_success": true,
+   "cache_key": "d89d2c3ad79c7a01"
+  },
+  {
+   "dir": "segments/2025-01-13-18-45-09__seg3",
+   "recording_id": "2025-01-13-18-45-09",
+   "segment_id": "3",
+   "label_success": true,
+   "cache_key": "49a6d770497f5e0d"
+  },
+  {
+   "dir": "segments/2025-01-13-19-04-46__seg5",
+   "recording_id": "2025-01-13-19-04-46",
+   "segment_id": "5",
+   "label_success": false,
+   "cache_key": "55f18ff35a1ca463"
+  },
+  {
+   "dir": "segments/2025-01-14-09-57-36__seg23",
+   "recording_id": "2025-01-14-09-57-36",
+   "segment_id": "23",
+   "label_success": true,
+   "cache_key": "a5b440cf4747431b"
+  },
+  {
+   "dir": "segments/2025-01-14-10-57-14__seg2",
+   "recording_id": "2025-01-14-10-57-14",
+   "segment_id": "2",
+   "label_success": true,
+   "cache_key": "c31b5085b068efe8"
+  },
+  {
+   "dir": "segments/2025-01-14-11-36-55__seg14",
+   "recording_id": "2025-01-14-11-36-55",
+   "segment_id": "14",
+   "label_success": true,
+   "cache_key": "f8a34b78a0ff3dd6"
+  },
+  {
+   "dir": "segments/2025-01-14-11-53-50__seg15",
+   "recording_id": "2025-01-14-11-53-50",
+   "segment_id": "15",
+   "label_success": true,
+   "cache_key": "0d193f4cf04afcae"
+  }
+ ]
+}

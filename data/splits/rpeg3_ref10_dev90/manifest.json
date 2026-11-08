@@ -1,0 +1,59 @@
+{
+ "name": "rpeg3_ref10_dev90",
+ "created_at": "2026-10-30T20:46:04+08:00",
+ "tool": "assembly_monitor.split 0.1.0",
+ "spec": {
+  "name": "rpeg3_ref10_dev90",
+  "action": "insert",
+  "part": "round peg 3",
+  "ratios": {
+   "ref": 0.1,
+   "dev": 0.9
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "counts": {
+  "ref": {
+   "n_groups": 5,
+   "n_segments": 6,
+   "n_failure": 1,
+   "n_success": 5
+  },
+  "dev": {
+   "n_groups": 53,
+   "n_segments": 65,
+   "n_failure": 13,
+   "n_success": 52
+  },
+  "all": {
+   "n_groups": 58,
+   "n_segments": 71,
+   "n_failure": 14,
+   "n_success": 57
+  }
+ },
+ "lock": {
+  "segments_sha256": "8e3ac0881132b26f2a77f170ab356001e122ce877280a99cf23c3fa0574da9a9",
+  "per_split": {
+   "dev": {
+    "n_segments": 65,
+    "sha256": "bd16eea927323a49c6e43691f8ed301ef708af4dd2f3dcb9dabdd8b1637155e7"
+   },
+   "ref": {
+    "n_segments": 6,
+    "sha256": "67ebe45c83196de78247a565a7cd718e9231c6c08be2b95acf701de800cb459c"
+   }
+  }
+ },
+ "split_csv_sha256": "fe996a9b1f346f7d4024e3a7c2e789df7856f1ba277c68f207f4a20ba115fbfa",
+ "locked": true,
+ "leakage_status": "pass",
+ "note": "test 清單已鎖定：開發階段只用 dev；最終評估才讀 test（load_split(..., allow_test=True)）。"
+}

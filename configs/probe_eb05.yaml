@@ -1,0 +1,34 @@
+# 下週實驗（事先登記，2026-10-07）：做法 A 改用段結束後 0.5 秒的影格，檢查 2 秒版本是不是靠「下一個動作」猜對。
+# 做法 A：有訓練的對照組。用其他零件的插入片段（資料集成功／失敗標記）訓練小分類器，在 BNC 上評分。
+# 訓練池排除 BNC 測試集的 48 支錄影（只讀錄影 ID，不讀答案）；BNC 開發集用來看結果，測試集要 --unlock-test 才評。
+# 注意：訓練池含 BNC 開發集那 14 支錄影裡的其他零件，開發集分數可能略為樂觀；測試集分數不受影響。
+
+probe:
+  name: probe_dinov2_eb05         # 在摘要表裡的模型名稱
+  experiment_name: dev_eb05         # 和同一個最後一張設定的 VLM 放在同一個資料夾
+  final_experiment_name: final_test_eb05
+  split_dir: data/splits/bnc_dev25_test75_s0
+  index_dir: data/index
+  action: insert
+  target_part: BNC
+  frames_root: data/derived/frames
+  sampling_template: "uniform_n{n}_sb0.5_eb0.5_jpg"
+  end_buffer: 0.5                  # 最後一張＝段結束後 0.5 秒（預設 2 秒）
+  frames: [1, 4, 8]
+  cameras: [hama1, hama2, hand]
+  out_dir: experiments            # 特徵快取在 experiments/_features/
+
+  encoder:                        # 凍結，不訓練；每張圖取 CLS＋patch 平均（1536 維）
+    hf_id: facebook/dinov2-base
+    revision: main
+    dtype: float16
+    batch_size: 32
+    processor_kwargs:             # 不做中央裁切（避免切掉畫面左右兩側）；224x294 維持約 4:3，兩邊都是 14 的倍數
+      do_center_crop: false
+      size: {height: 224, width: 294}
+
+  classifier:                     # 標準化 → PCA → 邏輯迴歸（失敗、成功等權）
+    C_grid: [0.01, 0.1, 1.0]
+    pca_grid: [32, 64]
+    cv_folds: 5                   # 依錄影分組的交叉驗證（同一支錄影不會同時在訓練和驗證）
+    seed: 0

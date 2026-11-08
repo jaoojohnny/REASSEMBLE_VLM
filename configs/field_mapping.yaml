@@ -1,0 +1,58 @@
+# 欄位映射（已確認）：第 2 包 indexer 讀這份檔案，程式裡不寫死任何 HDF5 key。
+# 來源：第 1 包對 3 個真實樣本的 inspect 結果 + 使用者 2026-10-04 的核對與決定。
+# 修改後請同步更新 confirmed_at，並重跑 index-segments。
+
+version: 1
+status: confirmed
+confirmed_at: 2026-10-04
+confirmed_by: 使用者（對話中核對 5 段 segment 並回答 4 題）
+
+segments:
+  container: /segments_info          # 子群組 0..N-1，依示範順序命名
+  id: group_name
+  fields:
+    start: start                     # float64，Unix 秒（UTC）
+    end: end
+    success: success                 # bool：True=成功、False=失敗
+    text: text                       # 例如 "Insert USB."
+    order: index                     # 選用；實測等於子群組名稱
+  time_unit: s
+  time_base: unix_epoch
+  exclude_text: ["No action."]       # 使用者確認：頭尾閒置段排除
+  low_level:
+    container: low_level             # 每個高層 segment 底下的低階技能（小寫）
+    fields: {start: start, end: end, success: success, text: text}
+
+action_parse:
+  source: text
+  regex: '^\s*(?P<action>[A-Za-z]+)\s+(?P<part>.+?)\.?\s*$'   # 使用者確認：第一個字=動作，其餘去句號=零件
+  action_lowercase: true
+  target_action: insert
+  target_part: BNC                   # 使用者 2026-10-05 選定（全量索引：86 段、失敗 30、62 個錄製檔）
+
+cameras:                             # 使用者核對短片確認角色
+  hama1: {video: /hama1, timestamps: /timestamps/hama1, role: external}
+  hama2: {video: /hama2, timestamps: /timestamps/hama2, role: external}
+  hand: {video: /hand, timestamps: /timestamps/hand, role: wrist}
+  capture_node-camera-image:
+    video: /capture_node-camera-image
+    timestamps: /timestamps/capture_node-camera-image
+    role: event
+
+camera_time:
+  frame_to_time: index               # 第 i 幀 ↔ timestamps 第 i 筆（3 檔 × 4 相機幀數 = 筆數）
+  seconds_from: timestamps           # 不可用 frame_idx / 30
+
+best_camera_candidates: [hama1, hama2, hand]   # 使用者確認：事件相機不納入
+
+extraction:                          # 第 3 包取影格時使用
+  start_buffer_sec: 0.5
+  end_buffer_sec: 2.0                # 人工核對：Insert USB 段結束早 1–2 秒；相鄰段只隔約 0.017 s，
+                                     # 所以緩衝會跨進下一段開頭，這是刻意的（最後狀態在下一段開頭才看得到）
+
+missing_fields:                      # 規格輸出需要、資料中沒有 → 第 4 包人工標註
+  - failure_reason
+  - evidence_start_sec
+  - evidence_end_sec
+  - best_camera
+  - visible_evidence

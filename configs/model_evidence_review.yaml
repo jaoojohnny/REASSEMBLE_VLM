@@ -1,0 +1,15 @@
+models:
+  qwen3vl_8b_evidence:
+    type: transformers
+    hf_id: Qwen/Qwen3-VL-8B-Instruct
+    revision: main
+    license: Apache-2.0
+    quantization: 4bit
+    quant_skip_modules:
+    - model.visual
+    - lm_head
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    max_new_tokens: 256
+    skill: evidence_review

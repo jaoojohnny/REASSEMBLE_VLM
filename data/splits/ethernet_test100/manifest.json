@@ -1,0 +1,48 @@
+{
+ "name": "ethernet_test100",
+ "created_at": "2026-10-30T12:49:40+08:00",
+ "tool": "assembly_monitor.split 0.1.0",
+ "spec": {
+  "name": "ethernet_test100",
+  "action": "insert",
+  "part": "Ethernet",
+  "ratios": {
+   "test": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "counts": {
+  "test": {
+   "n_groups": 59,
+   "n_segments": 72,
+   "n_failure": 20,
+   "n_success": 52
+  },
+  "all": {
+   "n_groups": 59,
+   "n_segments": 72,
+   "n_failure": 20,
+   "n_success": 52
+  }
+ },
+ "lock": {
+  "segments_sha256": "c74a76afc8d90bc43216ae4df3f27e950aa4ef67974c70a998dd19366fc0411f",
+  "per_split": {
+   "test": {
+    "n_segments": 72,
+    "sha256": "ba55c50996a9f906e3bce1dcf2fe155a6f396472defbff0e1986cf06429612c0"
+   }
+  }
+ },
+ "split_csv_sha256": "5c332220f23d5bd38181821d421d307fab294c9f3238669ba539cc7232988d8a",
+ "locked": true,
+ "leakage_status": "pass",
+ "note": "test 清單已鎖定：開發階段只用 dev；最終評估才讀 test（load_split(..., allow_test=True)）。"
+}

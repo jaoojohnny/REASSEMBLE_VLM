@@ -1,0 +1,35 @@
+# 第 7 包副線：做法 A 改良（事先登記 2026-10-14，在跑任何候選之前寫好）。
+# 每個（編碼器 × 最後一張的時間 × 幀數 × 時間彙整）都用同一個訓練池（其他零件，排除 BNC 測試集的錄影）
+# 做依錄影分組的交叉驗證；挑選規則：交叉驗證平衡準確率最高 → 失敗召回 → 幀數少 → 下面的順序。
+# BNC 開發集只列出來看，不參與挑選。選到的設定自動寫進 selected_config，給測試集的凍結設定引用。
+# 執行：python -m scripts.probe sweep --config configs/probe_sweep_v2.yaml（run_probe_v2.bat）。跑過之後不要再改。
+probe_sweep:
+  name: probe_v2
+  base: configs/probe_eb05.yaml     # 資料池、相機、分類器的網格都沿用（只換編碼器、最後一張的時間、彙整方式）
+  experiment_name: dev_probe_v2     # 開發集結果：experiments/dev_probe_v2/<候選>/f<幀數>
+  final_experiment_name: final_test_train
+  end_buffers: [0.5, 1]             # 最後一張在段結束後幾秒（兩種影格都已擷取）
+  frames: [1, 4, 8]
+  temporal: [concat, last_mean]     # concat＝依時間串接（原本的做法）；last_mean＝最後一張＋時間平均（1 幀時只算 concat）
+  encoders:                         # 都凍結、不訓練
+    dinov2_base:                    # 原本的編碼器（設定完全相同，沿用已算好的特徵）
+      hf_id: facebook/dinov2-base
+      revision: main
+      dtype: float16
+      batch_size: 32
+      processor_kwargs: {do_center_crop: false, size: {height: 224, width: 294}}
+    dinov2_large:                   # 較大的 DINOv2（configs/model_train.yaml，需下載約 1.2 GB）
+      hf_id: facebook/dinov2-large
+      revision: main
+      dtype: float16
+      batch_size: 32
+      processor_kwargs: {do_center_crop: false, size: {height: 224, width: 294}}
+    siglip2_b384:                   # SigLIP 2 影像分支（384x384 輸入；需下載約 1.5 GB）
+      hf_id: google/siglip2-base-patch16-384
+      revision: main
+      dtype: float16
+      batch_size: 32
+      submodule: vision_model
+      pool: pooler_mean
+  selected_config: configs/probe_v2_selected.yaml
+  selection_out: experiments/probe_selection

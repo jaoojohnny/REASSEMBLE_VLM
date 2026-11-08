@@ -1,0 +1,93 @@
+# 第 4 包標註設定：標註頁、驗證、比較、參考標籤都讀這份（相機清單取自 field_mapping.yaml 的 best_camera_candidates）。
+# 修訂類別時請改 reason_set 與 label_version，並在 history 記一筆。
+
+version: 1
+label_version: v2
+reason_set: bnc-v2
+
+history:
+  - {reason_set: bnc-pilot-v1, label_version: v1, note: "pilot 30 段的初版"}
+  - {reason_set: bnc-v2, label_version: v2, date: "2026-10-05",
+     note: "依 pilot 修訂：新增 board_lifted；以「旋轉時接頭和插座是否同軸」區分對不準與沒鎖上；接頭從夾爪滑出歸 slip_or_drop；證據區間採主標註者的定義；新增畫面難度 visual_difficulty；證據區間差異不再列為爭議"}
+
+task:                      # 預設的 pilot 任務：從第 3 包已核對的 40 段挑
+  name: pilot30
+  n_fail: 20
+  n_ok: 10
+  seed: 0
+
+results:
+  success:   {zh: 成功,     definition: "接頭插到底、卡口轉緊，夾爪放開後接頭留在插座上"}
+  failure:   {zh: 失敗,     definition: "這一段結束時，接頭沒有正確插在插座上"}
+  uncertain: {zh: 無法判斷, definition: "畫面看不出成敗（遮擋、模糊或畫面不足）"}
+
+failure_reasons:           # 順序＝標註頁顯示順序
+  misalignment:
+    zh: 對不準
+    definition: "接頭沒有和插座對齊：偏位、角度歪或停在插座旁邊；旋轉或推入時插座法蘭不在接頭正後方（不同軸），沒有套進插座"
+    lowlevel_hint: Align
+  incomplete_insert:
+    zh: 沒插到底／沒鎖上
+    definition: "接頭和插座同軸（有套上），但沒推到底或卡口沒轉緊：旋轉不足或轉回原位就放開、被夾爪直直帶出、放開後鬆脫或歪斜"
+    lowlevel_hint: Twist
+  slip_or_drop:
+    zh: 滑脫或掉落
+    definition: "接頭在夾爪中滑動、轉動或掉落；包括夾爪閉合後退、接頭從夾爪滑出留在插座上"
+  board_lifted:
+    zh: 帶起板子
+    definition: "插入、旋轉或抬起時把板子／治具帶起來、推動或移位（外部相機看得到，腕部相機常看不出來）"
+  wrong_contact:
+    zh: 接觸錯誤
+    definition: "碰到錯誤位置（板面、其他零件或錯的插座）或發生碰撞，沒有到達正確插座"
+    lowlevel_hint: Approach
+  other:
+    zh: 其他
+    definition: "以上都不是；請在備註寫出原因（之後用來修訂類別）"
+    requires_notes: true
+  unknown:
+    zh: 看不出原因
+    definition: "看得出失敗，但畫面不足以判斷原因"
+
+visibility:                # 各視角「接頭與插座的接觸區」可見度
+  clear:    {zh: 清楚}
+  partial:  {zh: 部分}
+  occluded: {zh: 看不到}
+
+visual_difficulty:         # v2：結果在畫面上有多容易看出來（第 6 包分開統計）
+  required: true           # label_version 為目前版本的人工／AI 紀錄必填（草稿除外）
+  default_for_approved: clear   # gold 合併時，沒有爭議、也沒有逐段裁決的段預設這個值
+  levels:
+    clear:       {zh: 清楚,     definition: "看完整段就能確定結果，例如接頭被帶出、板子被抬起、完整鎖緊後放開且接頭留在插座上"}
+    subtle:      {zh: 細微,     definition: "要仔細看才看得出，例如旋轉角度偏小、轉回原位、只有一個視角看得到"}
+    not_visible: {zh: 看不出來, definition: "畫面和相反的結果幾乎一樣，要靠資料集標註或前後段才知道"}
+
+review_status: [draft, submitted, approved, disputed, adjudicated, rejected]
+annotator_types: [human, ai, reference]
+
+evidence:
+  required_for: [success, failure]   # 這兩種結果必須填證據區間、最佳視角、看得到的依據
+  tolerance_sec: 0.05                # 允許稍微超出 [起點 − start_buffer, 終點 + end_buffer]
+  min_length_sec: 0.2                # 比這短（例如起點＝終點）視為沒設好：標註頁要求重設，比較時列入裁決
+  hint: "成功：從卡入（逆時針）到鎖緊（順時針）、放開；失敗：導致失敗的那段動作，到失敗看得出來為止"
+
+dense_frames:              # 標註頁用的密集影格
+  fps: 5
+  max_width: 640
+  jpeg_quality: 82
+
+review_sheets:             # Claude 獨立標註用的檢視圖（overview 8 欄＋腕部相機 12 格）
+  overview_n: 8
+  detail_camera: hand
+  detail_n: 12
+
+compare:
+  blocking_fields: [result, failure_reason, best_camera]   # 這些欄位不同才需要裁決；證據區間差異只列入統計（2026-10-05 決定）
+  iou_threshold: 0.5               # 證據區間「命中」：IoU ≥ 此值
+  endpoint_tolerance_sec: 1.0      # 或起訖都在這個誤差內
+  bootstrap: 1000
+  seed: 0
+
+reference:                 # 由資料集低階技能推得的參考標籤（啟發式，只供比較）
+  annotator: dataset_lowlevel
+  skill_to_reason: {Align: misalignment, Twist: incomplete_insert, Approach: wrong_contact, Grasp: slip_or_drop, Lift: slip_or_drop}
+  no_failed_skill: unknown

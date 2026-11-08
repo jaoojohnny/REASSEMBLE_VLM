@@ -1,0 +1,59 @@
+{
+ "name": "dsub_ref10_dev90",
+ "created_at": "2026-10-30T20:46:06+08:00",
+ "tool": "assembly_monitor.split 0.1.0",
+ "spec": {
+  "name": "dsub_ref10_dev90",
+  "action": "insert",
+  "part": "D-SUB",
+  "ratios": {
+   "ref": 0.1,
+   "dev": 0.9
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "counts": {
+  "ref": {
+   "n_groups": 6,
+   "n_segments": 7,
+   "n_failure": 1,
+   "n_success": 6
+  },
+  "dev": {
+   "n_groups": 51,
+   "n_segments": 56,
+   "n_failure": 9,
+   "n_success": 47
+  },
+  "all": {
+   "n_groups": 57,
+   "n_segments": 63,
+   "n_failure": 10,
+   "n_success": 53
+  }
+ },
+ "lock": {
+  "segments_sha256": "b83537ba0e030d7cb4926265d1efc4c1db17a7972833f832bb147db27bfcce89",
+  "per_split": {
+   "dev": {
+    "n_segments": 56,
+    "sha256": "c215ec989c5e30e90e190140d79b9881c5f6a9aa82b9475dfaf683eb41a27702"
+   },
+   "ref": {
+    "n_segments": 7,
+    "sha256": "df9f3c3070832d3667bb82eb3dcc02ebb664eb0effa562f64176a44cad565461"
+   }
+  }
+ },
+ "split_csv_sha256": "c416c2c4c3e7c86b0d4a037200376f3f398b7b6cc9fde1b55d2506c282cb4f6d",
+ "locked": true,
+ "leakage_status": "pass",
+ "note": "test 清單已鎖定：開發階段只用 dev；最終評估才讀 test（load_split(..., allow_test=True)）。"
+}

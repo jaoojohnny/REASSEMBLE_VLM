@@ -1,0 +1,45 @@
+# 第 7 包（訓練，事先登記 2026-10-14；在看任何訓練結果之前寫好）：LoRA 微調後的 Qwen3-VL-8B 和「同一個提示詞的原始模型」比較。
+# 提示詞 ft-generic 不提任何零件專屬的細節（訓練用的是其他零件），只要求回答 {"result": "success" | "failure"}。
+# 微調時每個訓練樣本把 task.part 換成該零件的名稱（configs/finetune_qwen3vl8b.yaml 的 part_names），其他文字完全相同。
+# 取樣和主方法相同：4 幀、最後一張在段結束後 0.5 秒。只跑開發集（看看而已，不用來挑設定）；測試集要另外凍結再跑一次。
+# 執行：run_finetune.bat（--models 同時讀 configs/model.yaml 與 configs/model_train.yaml）。跑過之後不要再改；要新版本另存新檔。
+experiment:
+  name: dev_ft
+  models:
+  - qwen3vl_8b_ft      # LoRA 微調（configs/model_train.yaml）
+  - qwen3vl_8b         # 對照：同一個提示詞、沒有微調
+  split_dir: data/splits/bnc_dev25_test75_s0
+  include:
+  - dev
+  frames_root: data/derived/frames/insert_BNC
+  sampling_template: uniform_n{n}_sb0.5_eb0.5_jpg
+  frames:
+  - 4
+  cameras:
+  - hama1
+  - hama2
+  - hand
+  out_dir: experiments
+  timeout_sec: 180
+  repair_retry: true
+  evidence_tolerance_sec: 0.05
+  prompt:
+    version: ft-generic
+    template: configs/prompts/ft_generic.txt
+  task:
+    part: BNC connector
+    part_note: ""
+    success_definition: the part ends up fully inserted in its place on the board; after the gripper opens and moves away, the part stays there.
+    failure_definition: at the end of the images, the part is not correctly and fully inserted (for example beside its place, tilted, not fully in, dropped, or carried away by the gripper), or the board was moved.
+    cameras:
+      hama1: external camera 1 (fixed, looks at the task board)
+      hama2: external camera 2 (fixed, another angle on the task board)
+      hand: wrist camera mounted on the gripper (moves with the gripper)
+    failure_reasons:   # 提示詞不顯示（只答成敗）；保留是為了和標註設定的類別一致（程式會檢查）
+      misalignment: 'connector not aligned with the socket: offset, tilted, or stopped next to it; not coaxial with the socket while pushing or twisting'
+      incomplete_insert: 'connector is on the socket (coaxial) but not pushed fully or not twisted to lock: too little rotation, rotated back before release, pulled straight off, or loose after release'
+      slip_or_drop: connector slips, rotates or drops in the gripper, including sliding out of the closed gripper
+      board_lifted: the board or fixture is lifted, pushed or moved while inserting, twisting or lifting
+      wrong_contact: touches the wrong place (board surface, another part, a wrong socket) or collides, never reaching the correct socket
+      other: none of the above
+      unknown: a failure is visible but the cause cannot be determined from the images

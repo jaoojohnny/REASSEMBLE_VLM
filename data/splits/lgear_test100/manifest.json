@@ -1,0 +1,48 @@
+{
+ "name": "lgear_test100",
+ "created_at": "2026-11-02T15:51:55+08:00",
+ "tool": "assembly_monitor.split 0.1.0",
+ "spec": {
+  "name": "lgear_test100",
+  "action": "insert",
+  "part": "large gear",
+  "ratios": {
+   "test": 1.0
+  },
+  "seed": 0,
+  "group_key": "recording_id",
+  "stratify": "has_failure",
+  "unit": "segment",
+  "window": {
+   "start_buffer": 0.5,
+   "end_buffer": 2.0
+  }
+ },
+ "counts": {
+  "test": {
+   "n_groups": 57,
+   "n_segments": 63,
+   "n_failure": 6,
+   "n_success": 57
+  },
+  "all": {
+   "n_groups": 57,
+   "n_segments": 63,
+   "n_failure": 6,
+   "n_success": 57
+  }
+ },
+ "lock": {
+  "segments_sha256": "5b5ad4688bebf107f46fcc015ff56c7d1d073cf563b988125e5be3651ec95068",
+  "per_split": {
+   "test": {
+    "n_segments": 63,
+    "sha256": "65181a1b9b512ac0fcf70ec68f613e4b0e52c9fbf6f6c734c852552f37ee8906"
+   }
+  }
+ },
+ "split_csv_sha256": "e9cae3181828942b07a93eff973a282b2447a1141fbd59f28608c179c218105c",
+ "locked": true,
+ "leakage_status": "pass",
+ "note": "test 清單已鎖定：開發階段只用 dev；最終評估才讀 test（load_split(..., allow_test=True)）。"
+}

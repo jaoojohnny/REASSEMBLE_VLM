@@ -1,0 +1,15 @@
+# 第 9 包（2026-10-30 事先登記）：bolt 4 測試集用的 Claude 設定。和 model_p8.yaml 的 claude_sonnet55 是同一個模型、同一個提示詞，
+# 只把 max_tokens 從 1024 加到 8000：Sonnet 5.5 預設會先推理（adaptive thinking），max_tokens 涵蓋推理＋回答；
+# USB 測試集用 1024 時有 5 段推理就用完、沒有給答案（依規定算錯）。推理程度用預設（high），推理內容不回傳（預設 omitted）。
+# model_p8.yaml 已被 USB 測試集鎖定，所以另存這個檔。用 --models configs/model.yaml configs/model_p8.yaml configs/model_skill2.yaml configs/model_p9.yaml 一起讀。
+models:
+  claude_sonnet55_8k:
+    type: anthropic
+    model_id: claude-sonnet-5-5
+    license: commercial API
+    image_max_side: 512
+    max_tokens: 8000
+    request_timeout: 300
+    max_retries: 4
+    price_in_per_mtok: 2.0
+    price_out_per_mtok: 10.0

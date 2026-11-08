@@ -1,0 +1,42 @@
+# 第 8 包：放大鏡 Skill 第二版（2026-10-27 決定，跑之前寫好）。只在 BNC 開發集 86 段，和沒有 Skill、第一版比。
+# 第一版（model_p8.yaml 的 qwen3vl_8b_zoom，已鎖定不能改）的問題：外部相機裡接頭太小，Qwen 框不準；手腕相機的框大多正確。
+# 外部相機不能用固定位置裁切：任務板每支錄影的位置、角度都不同（logs/p8v2_hama1_last16.jpg、p8v2_hama2_last16.jpg）。
+# 手腕相機裝在夾爪上，接頭與插座幾乎都在畫面中下方、兩根手指之間（logs/p8v2_hand_last16.jpg）→ 可以固定裁切。
+# 模型本身和 model.yaml 的 qwen3vl_8b 完全相同（4-bit、長邊 512、同提示詞），只多了 Skill。
+# 用 --models configs/model.yaml configs/model_p8.yaml configs/model_skill2.yaml 一起讀。跑過之後不要再改；要改另存新檔。
+models:
+  qwen3vl_8b_zoomfix:             # A：手腕相機固定裁切（不叫模型找位置，只呼叫一次）
+    type: transformers
+    hf_id: Qwen/Qwen3-VL-8B-Instruct
+    revision: main
+    license: Apache-2.0
+    quantization: 4bit
+    quant_skip_modules: [model.visual, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    max_new_tokens: 384
+    skill: zoom
+    zoom_mode: fixed
+    zoom_cameras: [hand]
+    zoom_fixed_box: [0.2, 0.2, 0.8, 0.8]   # 最後一張手腕影格的中間 60%×60%（原圖 384×288 px）→ 放大到長邊 512（約 1.3 倍；比原本縮到 512 的影像大約 1.7 倍）
+    zoom_side: 512
+
+  qwen3vl_8b_zoomhand:            # B：第一版只保留手腕相機（Qwen 先框位置 → 裁切放大 → 再判斷）
+    type: transformers
+    hf_id: Qwen/Qwen3-VL-8B-Instruct
+    revision: main
+    license: Apache-2.0
+    quantization: 4bit
+    quant_skip_modules: [model.visual, lm_head]
+    dtype: bfloat16
+    attn_implementation: sdpa
+    image_max_side: 512
+    max_new_tokens: 384
+    skill: zoom
+    zoom_mode: locate
+    zoom_cameras: [hand]
+    zoom_side: 512
+    zoom_margin: 0.3              # 和第一版相同
+    zoom_min_frac: 0.25
+    locate_max_new_tokens: 160
