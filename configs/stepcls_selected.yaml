@@ -1,0 +1,45 @@
+# 第 19 包凍結的做法（docs/package19_stepcls.md）；不要手動改
+{
+ "package": 19,
+ "frozen_at": "2026-11-16T01:29:03+0800",
+ "recipe": "F2S2",
+ "offset_s": 1.0,
+ "dev_avg": {
+  "0": 0.6572186618805093,
+  "0.5": 0.7192645704615156,
+  "1": 0.7495239509967863
+ },
+ "gate": 0.65,
+ "dev_tasks": [
+  "BNC Align",
+  "BNC Twist",
+  "square peg 2 Align",
+  "D-SUB Align",
+  "medium gear Push"
+ ],
+ "min_each": 7,
+ "grid": {
+  "k": [
+   2,
+   4,
+   6,
+   8,
+   10
+  ],
+  "c1": [
+   0.05,
+   0.2,
+   1.0
+  ],
+  "c2": [
+   0.01,
+   0.1,
+   1.0
+  ]
+ },
+ "cv": {
+  "outer": 5,
+  "inner": 4,
+  "repeats": 5
+ }
+}

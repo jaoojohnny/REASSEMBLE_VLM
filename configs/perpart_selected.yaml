@@ -1,0 +1,63 @@
+# 第 14 包：在 5 個開發零件依事先寫好的規則選出的做法（自動寫入、凍結）。測試零件只用這份；不要手動改。
+perpart_selected:
+  frozen: true
+  frozen_at: '2026-11-09T14:38:06+08:00'
+  recipe: F2S2
+  features: 只看接頭：手腕相機中間 60%（1,536 維）
+  selector: L1 挑 k 個 → L2 重新擬合
+  dev_avg_balanced_accuracy:
+    F2S1: 0.756
+    F2S2: 0.7785
+    F1S1: 0.5688
+    F1S2: 0.699
+    F3S1: 0.6613
+    F3S2: 0.7645
+  k_grid:
+  - 2
+  - 4
+  - 6
+  - 8
+  - 10
+  c2_grid:
+  - 0.01
+  - 0.1
+  - 1.0
+  c1_grid:
+  - 0.05
+  - 0.2
+  - 1.0
+  outer: 5
+  inner: 4
+  repeats: 5
+  sampling: uniform_n1_sb0.5_eb1_jpg
+  cameras:
+  - hama1
+  - hama2
+  - hand
+  encoder: facebook/dinov2-base
+  crop_box:
+  - 0.2
+  - 0.2
+  - 0.8
+  - 0.8
+  close: 0.02
+  dev_parts:
+  - BNC
+  - square peg 2
+  - round peg 3
+  - D-SUB
+  - medium gear
+  test_parts:
+  - USB
+  - bolt 4
+  - Ethernet
+  - square peg 1
+  - square peg 3
+  - square peg 4
+  - round peg 1
+  - round peg 2
+  - waterproof
+  - large gear
+  reserved:
+  - round peg 4
+  - small gear

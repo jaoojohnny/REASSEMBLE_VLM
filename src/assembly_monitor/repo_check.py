@@ -57,15 +57,18 @@ def check(paths: list[str], root: str | Path = ".") -> list[str]:
     return problems
 
 
-COMMIT_MSG = """REASSEMBLE × VLM 組裝視覺監督：原始碼、設定、測試與 Docker 環境
+COMMIT_MSG = """REASSEMBLE × VLM：補上第 14～20 包（每零件分類器、M12 外部資料、步驟分類器）
 
-- src/assembly_monitor：HDF5 檢查、索引、影格擷取、標註、切分、VLM／API 評估、第 13 包 REBOOT 外部資料流程
-- configs、tests、scripts、Windows 一鍵檔（*.bat）、docs（說明文件）
-- Dockerfile、docker-compose.yml（用法見 docs/docker.md）
-- 不含：原始資料、衍生影格、模型權重、實驗結果、.env（API key）、進度報告簡報與 PDF
+- 第 14 包 每種零件各自一個小分類器（perpart、perpart_final）
+- 第 15 包 每零件分類器＋本機 Qwen 機率門檻（combo）
+- 第 16、17 包 bolt 4 模型套到 REBOOT M12、先用 OpenCV 調光線（reboot_m12、m12_light）
+- 第 18 包 bolt 4 失敗在哪一步（failstep）
+- 第 19 包 每個步驟自己的小分類器（stepcls）；第 20 包 補強步驟分類器（stepcls2，結論保留原做法）
+- 各包凍結設定 configs/*_selected.yaml、步驟索引 data/index_steps/、對應的 tests、scripts、*.bat、docs/package14～20
+- 不含：原始資料、衍生影格、模型權重、實驗結果、.env（API key）、簡報與 PDF、docs 裡的示範影片與影格圖
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_01AobrD5XmtnXCKLBPRYg7zW
+Claude-Session: https://claude.ai/code/session_01AuFDuvjbM9hiRzvf2m9kVH
 """
 
 

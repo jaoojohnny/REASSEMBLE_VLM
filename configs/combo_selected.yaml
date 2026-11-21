@@ -1,0 +1,15 @@
+# 第 15 包：在 5 個開發零件依事先寫好的規則選出的組合方法（自動寫入、凍結）。測試零件只用這份。
+combo_selected:
+  frozen: true
+  frozen_at: '2026-11-09T15:42:01+08:00'
+  method: M0
+  name: 每零件分類器
+  tau: 0.999089
+  perpart_recipe: F2S2
+  dev_avg_balanced_accuracy:
+    M0: 0.7785
+    M1: 0.6513
+    C2: 0.7095
+    C3: 0.7204
+    C1: 0.762
+    C4: 0.79

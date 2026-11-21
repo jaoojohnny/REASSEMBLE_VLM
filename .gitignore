@@ -32,3 +32,7 @@ models/
 docs/*.pptx
 docs/*.pdf
 *.lnk
+
+# 2026-11-21：docs 裡的示範影片與影格圖（有資料集影格），留在本機
+docs/*.mp4
+docs/*.png
